@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody))]
 public class BobbySwim : MonoBehaviour
 {
     [Header("Movement")]
@@ -11,10 +11,11 @@ public class BobbySwim : MonoBehaviour
     //[SerializeField] private float acceleration = 15f;
     [SerializeField] private float damping = 0.88f;
     [SerializeField] private float Buoyancy = 3f;
+    [SerializeField] private float sprintMultiplier = 2f;
 
     [SerializeField] private CameraMangager manager;
 
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private BobbyControls controls;
     private Vector2 moveInput;
 
@@ -28,8 +29,8 @@ public class BobbySwim : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = false;
         //rb.linearDamping = 0f;
 
         //initilize controls
@@ -101,7 +102,7 @@ public class BobbySwim : MonoBehaviour
         
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = Vector3.zero;
             return;
         }
         
@@ -109,11 +110,16 @@ public class BobbySwim : MonoBehaviour
         {
             manager.SwitchToFollowBobbyCamera();
 
-            rb.AddForce(moveInput.normalized * moveForce);
+            bool isSprinting = Keyboard.current.leftShiftKey.isPressed;
+            float currentForce = isSprinting ? moveForce * sprintMultiplier : moveForce;
+            rb.AddForce(new Vector3(moveInput.x, moveInput.y, 0) * currentForce);
 
+            float currentMaxSpeed = isSprinting ? maxSpeed * sprintMultiplier : maxSpeed;
+            if (rb.linearVelocity.magnitude > currentMaxSpeed)
+                rb.linearVelocity = rb.linearVelocity.normalized * currentMaxSpeed;
             //Restrict the maxspeed, don't make it as unlimited acceleration please
-            if(rb.linearVelocity.magnitude > maxSpeed)
-                rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+            //if (rb.linearVelocity.magnitude > maxSpeed)
+            //    rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
 
         else
@@ -127,40 +133,18 @@ public class BobbySwim : MonoBehaviour
             //float bob = Mathf.Sin(bobTimer * bobSpeed) * bobAmount;
             //rb.AddForce(new Vector2(0f, bob));
 
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x * damping, rb.linearVelocity.y);
-
-            if (Mathf.Abs(rb.linearVelocity.x) < 0.01f)
-                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-
             bobTimer += Time.fixedDeltaTime;
             float bobY = Mathf.Sin(bobTimer * bobSpeed) * bobAmount;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, bobY);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x * damping, bobY, 0f);
 
+            if (Mathf.Abs(rb.linearVelocity.x) < 0.01f)
+                rb.linearVelocity = new Vector3(0f, rb.linearVelocity.y);
 
-
+            //bobTimer += Time.fixedDeltaTime;
+            //float bobY = Mathf.Sin(bobTimer * bobSpeed) * bobAmount;
+            //rb.linearVelocity = new Vector2(rb.linearVelocity.x, bobY);
         }
 
-        //{
-        //    // When player press the button
-        //    // Bobby! How fast you can
-        //    //Vector2 targetVelocity = moveInput.normalized * swimSpeed;
-        //    //rb.linearVelocity = Vector2.MoveTowards(
-        //    //    rb.linearVelocity,
-        //    //    targetVelocity,
-        //    //    acceleration * Time.fixedDeltaTime
-        //    );
-
-        //    // TODO: need to refactor linearVelocity assignment,
-        //    // instead use rb.AddForce so that we can add move velocity + bubble velocity (up direction)
-        //}
-        //else
-        //{
-        //    // When player release the button
-        //    rb.linearVelocity *= damping;
-
-        //    if (rb.linearVelocity.magnitude < 0.01f)
-        //        rb.linearVelocity = Vector2.zero;
-        //}
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
