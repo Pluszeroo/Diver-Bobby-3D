@@ -31,7 +31,7 @@ public class DialogueTrigger : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
@@ -40,7 +40,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collider)
+    private void OnTriggerExit(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {

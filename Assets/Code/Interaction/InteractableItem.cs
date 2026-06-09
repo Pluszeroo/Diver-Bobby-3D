@@ -11,13 +11,13 @@ public class InteractableItem : MonoBehaviour
 
     public UnityEvent onInteract;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (!collision.CompareTag("Player")) return;
         QuestManager.GetInstance().ClosestInteractable = this;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (!collision.CompareTag("Player")) return;
         QuestManager.GetInstance().ClosestInteractable = null; 

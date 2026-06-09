@@ -18,6 +18,7 @@ public class BobbySwim : MonoBehaviour
     private Rigidbody rb;
     private BobbyControls controls;
     private Vector2 moveInput;
+    private bool isSprinting = false;
 
     [Header("Bobbing")]
     [SerializeField] private float bobSpeed = 2f;
@@ -44,6 +45,8 @@ public class BobbySwim : MonoBehaviour
         controls.Player.Move.canceled += OnMoveCanceled;
         controls.Player.DialogueInteract.performed += OnSpacePerformed;
         controls.Player.Interact.performed += OnInteractPerformed;
+        controls.Player.Sprint.performed += OnSprintPerformed;
+        controls.Player.Sprint.canceled += OnSprintCanceled;
     } 
 
     private void OnDisable()
@@ -52,6 +55,8 @@ public class BobbySwim : MonoBehaviour
         controls.Player.Move.canceled -= OnMoveCanceled;
         controls.Player.DialogueInteract.performed -= OnSpacePerformed;
         controls.Player.Interact.performed -= OnInteractPerformed;
+        controls.Player.Sprint.performed -= OnSprintPerformed;
+        controls.Player.Sprint.canceled -= OnSprintCanceled;
         controls.Player.Disable();
     }
 
@@ -70,15 +75,38 @@ public class BobbySwim : MonoBehaviour
         DialogueManager.GetInstance().OnSpacePressed(ctx);
     }
 
+    private void OnSprintPerformed(InputAction.CallbackContext ctx)
+    {
+        isSprinting = true;
+    }
+
+    private void OnSprintCanceled(InputAction.CallbackContext ctx)
+    {
+        isSprinting = false;
+    }
+
     private void OnInteractPerformed(InputAction.CallbackContext ctx)
     {
-        QuestManager.GetInstance().TryInteract();
+        //QuestManager.GetInstance().TryInteract();
 
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            DialogueManager.GetInstance().OnSpacePressed(ctx);
-            return;
-        }
+        //if (DialogueManager.GetInstance().dialogueIsPlaying)
+        //{
+        //    DialogueManager.GetInstance().OnSpacePressed(ctx);
+        //    return;
+        //}
+
+        //if (DialogueManager.GetInstance().closestTrigger != null)
+        //{
+        //    DialogueManager.GetInstance().EnterDialogueMode();
+        //    return;
+        //}
+
+        //if (manager.isinPuzzleMode)
+        //{
+        //    manager.ExitPuzzleMode();
+        //    return;
+
+        if (DialogueManager.GetInstance().dialogueIsPlaying) return;
 
         if (DialogueManager.GetInstance().closestTrigger != null)
         {
@@ -86,16 +114,15 @@ public class BobbySwim : MonoBehaviour
             return;
         }
 
+        QuestManager.GetInstance().TryInteract();
+
         if (manager.isinPuzzleMode)
         {
             manager.ExitPuzzleMode();
             return;
         }
-        //if (manager.isinPuzzleMode)
-        //{
-        //    manager.ExitPuzzleMode();
-        //}
-    }
+
+}
 
     private void FixedUpdate()
     {
@@ -110,7 +137,6 @@ public class BobbySwim : MonoBehaviour
         {
             manager.SwitchToFollowBobbyCamera();
 
-            bool isSprinting = Keyboard.current.leftShiftKey.isPressed;
             float currentForce = isSprinting ? moveForce * sprintMultiplier : moveForce;
             rb.AddForce(new Vector3(moveInput.x, moveInput.y, 0) * currentForce);
 
