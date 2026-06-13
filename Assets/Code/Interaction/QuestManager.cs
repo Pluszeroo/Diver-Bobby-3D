@@ -12,6 +12,7 @@ public class QuestManager : MonoBehaviour
 
     [Header("Scene Reference")]
     [SerializeField] private GameObject Starfish;
+    [SerializeField] private GameObject Mirror;
     [SerializeField] private GameObject Shell;
     [SerializeField] private GameObject StarfishLeg;
     [SerializeField] private GameObject Spiralshell;
@@ -41,10 +42,28 @@ public class QuestManager : MonoBehaviour
         return instance;
     }
 
-    private void StartFindingMirror()
+    public void StartStarQuest()
+    {
+        CurrentState = QuestState.FindingShell;
+    }
+
+    public void StartFindingMirror()
     {
         CurrentState = QuestState.FindingMirror;
-        DialogueManager.GetInstance().closestTrigger = beforeMirrorDialogue.GetComponent<DialogueTrigger>();
+    }
+
+    public void PickUpMirror()
+    {
+        CurrentState = QuestState.CarryingMirror;
+        Mirror.SetActive(false);
+        itemHolder.ShowItem(ItemType.Mirror, Mirror);
+    }
+
+    public void GiveMirrorToShell()
+    {
+        CurrentState = QuestState.ReadyToPickShell;
+        itemHolder.HideItem();
+        DialogueManager.GetInstance().closestTrigger = afterMirrorDialogue.GetComponent<DialogueTrigger>();
         DialogueManager.GetInstance().EnterDialogueMode();
     }
 
@@ -95,12 +114,36 @@ public class QuestManager : MonoBehaviour
 
     public bool TryInteract()
     {
+        //Debug.Log("State: " +  CurrentState + ", Closest: " + (ClosestInteractable == null ? "null" : ClosestInteractable.itemType.ToString()));
         switch (CurrentState)
         {
             case QuestState.BeforeStarfishTalk:
                 break;
             case QuestState.FindingShell:
+                break;
+            case QuestState.FindingMirror:
+                if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Mirror)
+                {
+                    ClosestInteractable.onInteract?.Invoke();
+                    PickUpMirror();
+                    return true;
+                }
+                break;
+            case QuestState.CarryingMirror:
                 if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Shell)
+                {
+                    ClosestInteractable.onInteract?.Invoke();
+                    GiveMirrorToShell();
+                    return true;
+                }
+                else
+                {
+                    itemHolder.DropItem();
+                    CurrentState = QuestState.FindingMirror;
+                    return true;
+                }
+            case QuestState.ReadyToPickShell:
+                if(ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Shell)
                 {
                     ClosestInteractable.onInteract?.Invoke();
                     PickUpShell();
@@ -117,10 +160,9 @@ public class QuestManager : MonoBehaviour
                 else
                 {
                     itemHolder.DropItem();
-                    CurrentState = QuestState.FindingShell;
+                    CurrentState = QuestState.ReadyToPickShell;
                     return true;
                 }
-                break;
             case QuestState.PickingUpLegs:
                 if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.StarfishLeg)
                 {

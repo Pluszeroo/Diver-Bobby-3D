@@ -27,11 +27,11 @@ public class ItemHolder : MonoBehaviour
         ItemHolderPanel.SetActive(true);
         switch (type)
         {
-            case ItemType.Shell:
-                itemIcon.sprite = ShellSprite;
-                break;
             case ItemType.Mirror:
                 itemIcon.sprite = MirrorSprite;
+                break;
+            case ItemType.Shell:
+                itemIcon.sprite = ShellSprite;
                 break;
             case ItemType.StarfishLeg:
                 itemIcon.sprite = LegSprite;

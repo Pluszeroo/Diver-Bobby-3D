@@ -12,8 +12,11 @@ public class DialogueTrigger : MonoBehaviour
 
     public UnityEvent onEnd;
 
-    private bool playerInRange;
+    [Header("Play Once")]
+    [SerializeField] private bool playOnce = false;
+    private bool hasPlayed = false;
 
+    private bool playerInRange = false;
     private void Awake()
     {
         playerInRange = false;
@@ -31,11 +34,23 @@ public class DialogueTrigger : MonoBehaviour
 
     }
 
+    //Call this when dialogue actually starts
+    public void MarkPlayed()
+    {
+        hasPlayed = true;
+    }
+
+    public bool IsPlayOnceFinished()
+    {
+        return playOnce && hasPlayed;
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
-            playerInRange=true;
+            if (!playOnce && hasPlayed) return;
+            playerInRange = true;
             DialogueManager.GetInstance().closestTrigger = this;
         }
     }
@@ -44,10 +59,10 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            playerInRange=false;
+            playerInRange = false;
             //DialogueManager.GetInstance().closestTrigger = null;
            // if (DialogueManager.GetInstance().closestTrigger = this)
-                DialogueManager.GetInstance().closestTrigger = null;
+            DialogueManager.GetInstance().closestTrigger = null;
         }
     }
 

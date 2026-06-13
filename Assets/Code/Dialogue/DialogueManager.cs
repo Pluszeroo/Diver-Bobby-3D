@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
 
     private float lastSpaceTime = -1f;
-    private float spaceCooldown = 0f;
+    private float spaceCooldown = 0.1f;
 
     private Story currentStory;
     public DialogueTrigger closestTrigger;
@@ -121,6 +121,15 @@ public class DialogueManager : MonoBehaviour
     {
         // if we are not near any dialogue triggers, do nothing
         if (!closestTrigger) return;
+
+        // if this trigger is play once and already played, refuse it and clear it
+        if (closestTrigger.IsPlayOnceFinished())
+        {
+            closestTrigger = null;
+            return;
+        }
+
+        closestTrigger.MarkPlayed();
         // otherwise, enter dialogue mode using the inkJSON of the closest dialogue trigger
         currentStory = new Story(closestTrigger.inkJSON.text);
         dialogueIsPlaying = true;
