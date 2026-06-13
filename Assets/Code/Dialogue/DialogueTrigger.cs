@@ -46,7 +46,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             playerInRange=false;
             //DialogueManager.GetInstance().closestTrigger = null;
-            if (DialogueManager.GetInstance().closestTrigger = this)
+           // if (DialogueManager.GetInstance().closestTrigger = this)
                 DialogueManager.GetInstance().closestTrigger = null;
         }
     }

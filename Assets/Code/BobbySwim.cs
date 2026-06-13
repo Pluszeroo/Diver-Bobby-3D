@@ -87,13 +87,13 @@ public class BobbySwim : MonoBehaviour
 
     private void OnInteractPerformed(InputAction.CallbackContext ctx)
     {
-        //QuestManager.GetInstance().TryInteract();
 
-        //if (DialogueManager.GetInstance().dialogueIsPlaying)
+        if (DialogueManager.GetInstance().dialogueIsPlaying) return;
         //{
         //    DialogueManager.GetInstance().OnSpacePressed(ctx);
         //    return;
         //}
+        if (QuestManager.GetInstance().TryInteract()) return;
 
         //if (DialogueManager.GetInstance().closestTrigger != null)
         //{
@@ -101,28 +101,13 @@ public class BobbySwim : MonoBehaviour
         //    return;
         //}
 
-        //if (manager.isinPuzzleMode)
-        //{
-        //    manager.ExitPuzzleMode();
-        //    return;
-
-        if (DialogueManager.GetInstance().dialogueIsPlaying) return;
-
-        if (DialogueManager.GetInstance().closestTrigger != null)
-        {
-            DialogueManager.GetInstance().EnterDialogueMode();
-            return;
-        }
-
-        QuestManager.GetInstance().TryInteract();
-
         if (manager.isinPuzzleMode)
         {
             manager.ExitPuzzleMode();
-            return;
+            //return;
         }
 
-}
+    }
 
     private void FixedUpdate()
     {

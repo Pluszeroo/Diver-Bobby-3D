@@ -1,7 +1,7 @@
 using UnityEngine;
 public enum QuestState
 {
-    BeforeStarfishTalk, FindingShell, CarryingShell, PickingUpLegs, CarryingLegs, PickingUpScissors, CarryingScissor, Done
+    BeforeStarfishTalk, FindingShell, FindingMirror, CarryingMirror, ReadyToPickShell, CarryingShell, PickingUpLegs, CarryingLegs, PickingUpScissors, CarryingScissor, Done
 }
 
 public class QuestManager : MonoBehaviour
@@ -22,6 +22,12 @@ public class QuestManager : MonoBehaviour
     [Header("Starfish Dialogues")]
     [SerializeField] private GameObject beforeShell;
     [SerializeField] private GameObject afterShell;
+    [SerializeField] private GameObject carryingShellDialogue;
+    [SerializeField] private GameObject starfishIdleDialogue;
+
+    [Header("Shellfish Dialogue")]
+    [SerializeField] private GameObject beforeMirrorDialogue;
+    [SerializeField] private GameObject afterMirrorDialogue;
 
     public InteractableItem ClosestInteractable { get; set; }
 
@@ -35,31 +41,46 @@ public class QuestManager : MonoBehaviour
         return instance;
     }
 
+    private void StartFindingMirror()
+    {
+        CurrentState = QuestState.FindingMirror;
+        DialogueManager.GetInstance().closestTrigger = beforeMirrorDialogue.GetComponent<DialogueTrigger>();
+        DialogueManager.GetInstance().EnterDialogueMode();
+    }
+
     private void PickUpShell()
     {
         CurrentState = QuestState.CarryingShell;
         Shell.SetActive(false);
         itemHolder.ShowItem(ItemType.Shell, Shell);
         beforeShell.SetActive(false);
-        afterShell.SetActive(true);
+        carryingShellDialogue.SetActive(true);
     }
 
     private void GiveShellToStarfish()
     {
         CurrentState = QuestState.PickingUpLegs;
         itemHolder.HideItem();
+        carryingShellDialogue.SetActive(false);
+        afterShell.SetActive(true);
+        DialogueManager.GetInstance().closestTrigger = afterShell.GetComponent<DialogueTrigger>();
+        DialogueManager.GetInstance().EnterDialogueMode();
     }
 
     private void PickUpLegs()
     {
         CurrentState = QuestState.CarryingLegs;
         itemHolder.ShowItem(ItemType.StarfishLeg, StarfishLeg);
+        //afterShell.SetActive(false);
+        //starfishIdleDialogue.SetActive(true);
+        DialogueManager.GetInstance().closestTrigger = null;
     }
 
     private void GiveLegsToSpiralshell()
     {
         CurrentState = QuestState.PickingUpScissors;
         StarfishLeg.SetActive(false);
+        Spiralshell.SetActive(false);
         Scissor.SetActive(true);
         itemHolder.HideItem();
     }
@@ -72,7 +93,7 @@ public class QuestManager : MonoBehaviour
           
     }
 
-    public void TryInteract()
+    public bool TryInteract()
     {
         switch (CurrentState)
         {
@@ -83,6 +104,7 @@ public class QuestManager : MonoBehaviour
                 {
                     ClosestInteractable.onInteract?.Invoke();
                     PickUpShell();
+                    return true;
                 }
                 break;
             case QuestState.CarryingShell:
@@ -90,11 +112,13 @@ public class QuestManager : MonoBehaviour
                 {
                     ClosestInteractable.onInteract?.Invoke();
                     GiveShellToStarfish();
+                    return true;
                 }
                 else
                 {
                     itemHolder.DropItem();
                     CurrentState = QuestState.FindingShell;
+                    return true;
                 }
                 break;
             case QuestState.PickingUpLegs:
@@ -102,6 +126,7 @@ public class QuestManager : MonoBehaviour
                 {
                     ClosestInteractable.onInteract?.Invoke();
                     PickUpLegs();
+                    return true;
                 }
                 break;
             case QuestState.CarryingLegs:
@@ -109,12 +134,12 @@ public class QuestManager : MonoBehaviour
                 {
                     ClosestInteractable.onInteract?.Invoke();
                     GiveLegsToSpiralshell();
+                    return true;
                 }
                 else
                 {
                     itemHolder.DropItem();
                     CurrentState = QuestState.PickingUpLegs;
-                    Debug.Log("Find you!");
                 }
                     break;
             case QuestState.PickingUpScissors:
@@ -122,10 +147,11 @@ public class QuestManager : MonoBehaviour
                 {
                     ClosestInteractable.onInteract?.Invoke();
                     PickUpScissor();
+                    return true;
                 }
                 break;
-
         }
+        return false;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -137,6 +163,6 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       // Debug.Log(ClosestInteractable.gameObject.name);
     }
 }

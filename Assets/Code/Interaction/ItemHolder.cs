@@ -5,6 +5,7 @@ public class ItemHolder : MonoBehaviour
     [SerializeField] private GameObject ItemHolderPanel;
     [SerializeField] private UnityEngine.UI.Image itemIcon;
     [SerializeField] private Sprite ShellSprite;
+    [SerializeField] private Sprite MirrorSprite;
     [SerializeField] private Sprite LegSprite;
     [SerializeField] private Sprite Scissor;
 
@@ -28,6 +29,9 @@ public class ItemHolder : MonoBehaviour
         {
             case ItemType.Shell:
                 itemIcon.sprite = ShellSprite;
+                break;
+            case ItemType.Mirror:
+                itemIcon.sprite = MirrorSprite;
                 break;
             case ItemType.StarfishLeg:
                 itemIcon.sprite = LegSprite;
