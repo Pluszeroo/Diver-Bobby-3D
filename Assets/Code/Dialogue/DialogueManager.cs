@@ -6,12 +6,22 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+
+    [Header("Speaker UI")]
+    [SerializeField] private TextMeshProUGUI speakerName;
+    [SerializeField] private UnityEngine.UI.Image speakerPortrait;
+
+    [SerializeField] private Sprite StarfishPortrait;
+    [SerializeField] private Sprite ShellfishPortrait;
+    [SerializeField] private Sprite BobbyPortrait;
+    [SerializeField] private Sprite GuidefishPortrait;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -32,7 +42,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Found more than one Dialogue Manager in the scene");
+            //Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
         instance = this;
     }
@@ -47,7 +57,6 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
-        // get all of the choices text
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
         foreach (GameObject choice in choices)
@@ -59,23 +68,10 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        //return right away if dialogue isn't playing
-        /*if (!dialogueIsPlaying)
-        {
-            return;
-        }*/
-        //Handle continuing to the next line in the dialogue when submit is pressed
-        /*if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.E))
-        {
-            ContinueStory();
-        }*/
     }
 
-    // On + name of the action (InputAction.CallbackContext context)
     public void OnSpacePressed(InputAction.CallbackContext context)
     {
-        // do nothing EXCEPT when the action is started (the button is pressed down)
-
         if (!context.performed) return;
 
         if (Time.unscaledTime - lastSpaceTime < spaceCooldown) return;
@@ -96,7 +92,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         ContinueStory();
-
     }
 
     private int GetCurrentlySelectedChoiceIndex()
@@ -116,13 +111,10 @@ public class DialogueManager : MonoBehaviour
         return 0;
     }
 
-    // enter dialogue mode with the closest trigger we have
     public void EnterDialogueMode()
     {
-        // if we are not near any dialogue triggers, do nothing
         if (!closestTrigger) return;
 
-        // if this trigger is play once and already played, refuse it and clear it
         if (closestTrigger.IsPlayOnceFinished())
         {
             closestTrigger = null;
@@ -130,7 +122,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         closestTrigger.MarkPlayed();
-        // otherwise, enter dialogue mode using the inkJSON of the closest dialogue trigger
         currentStory = new Story(closestTrigger.inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
@@ -152,9 +143,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            //set tsxt for the current dialogue line
             dialogueText.text = currentStory.Continue();
-            // diaplay choices, if any, for this dialogue line
+            HandleTags(currentStory.currentTags);
             DisplayChoices();
         }
         else
@@ -163,11 +153,46 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+            if (splitTag.Length != 2) continue;
+
+            string key = splitTag[0].Trim();
+            string value = splitTag[1].Trim();
+
+            if (key == "speaker")
+            {
+                speakerName.text = value;
+
+                switch (value)
+                {
+                    case "Guidefish":
+                        speakerPortrait.sprite = GuidefishPortrait;
+                        break;
+                    case "Starfish":
+                        speakerPortrait.sprite = StarfishPortrait;
+                        break;
+                    case "Shellfish":
+                        speakerPortrait.sprite = ShellfishPortrait;
+                        break;
+                    case "Bobby":
+                        speakerPortrait.sprite = BobbyPortrait;
+                        break;
+                    default:
+                        Debug.LogWarning("Unknown speaker: " + value);
+                        break;
+                }
+            }
+        }
+    }
+
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        //defensive check to make sure our UI can support the number of choices coming in.
         if (currentChoices.Count > choices.Length)
         {
             Debug.LogError("More choices were given than the UI can support. Number of choices given: " + currentChoices.Count);
@@ -180,7 +205,6 @@ public class DialogueManager : MonoBehaviour
             choicesText[index].text = choice.text;
             index++;
         }
-        // go though the remaining choices the UI supports and make sure they're hidden
         for (int i = index; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
@@ -191,8 +215,6 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator SelectFirstChoice()
     {
-        // Event System requires we clear it first, then wait
-        // for at least one frame before we set the current selected object.
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);

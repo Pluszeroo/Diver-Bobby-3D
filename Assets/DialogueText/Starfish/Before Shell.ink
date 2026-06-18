@@ -11,5 +11,5 @@
         -> chosen("I don't think there will have any gift.")
         
 === chosen(Motivation) ===
-You chose {Motivation}!
+You think I want some {Motivation}?
 -> END
