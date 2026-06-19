@@ -11,11 +11,11 @@ public class GuitarTriggers : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-            manager.EnterPuzzleMode();
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //        manager.EnterPuzzleMode();
+    //}
 
     // Update is called once per frame
     void Update()

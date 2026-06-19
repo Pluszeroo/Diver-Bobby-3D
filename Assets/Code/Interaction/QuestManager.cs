@@ -117,8 +117,8 @@ public class QuestManager : MonoBehaviour
         //Debug.Log("State: " +  CurrentState + ", Closest: " + (ClosestInteractable == null ? "null" : ClosestInteractable.itemType.ToString()));
         switch (CurrentState)
         {
-            case QuestState.BeforeStarfishTalk:
-                break;
+            //case QuestState.BeforeStarfishTalk:
+            //    break;
             case QuestState.FindingShell:
                 break;
             case QuestState.FindingMirror:

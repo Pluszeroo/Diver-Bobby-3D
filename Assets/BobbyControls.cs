@@ -62,6 +62,42 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skip"",
+                    ""type"": ""Button"",
+                    ""id"": ""0fbcd803-b429-41de-88b7-985b7f998d58"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleInventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""dbad7828-5c1b-4ed6-bc0b-b3b4a2688743"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InventoryNext"",
+                    ""type"": ""Value"",
+                    ""id"": ""4cda6861-bcb2-44bf-9e4f-846b582d42b8"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""InventoryPrev"",
+                    ""type"": ""Value"",
+                    ""id"": ""cffba8d8-4ba8-4c03-9a34-a3aa5fa08fa1"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -207,6 +243,116 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc0c4145-fdef-41f3-9d59-4e2b4c4dea03"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""59974984-5a7a-439e-98c9-8a9168e9bae8"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83920f26-1af4-4c79-a807-1d8ec023d7e5"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleInventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3dd7d8ee-4668-4d1a-82e9-d27ddb8eec2d"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleInventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cca9276d-6ede-47b0-87ba-52835a0737f5"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d8e0fe0c-67a0-489b-8e39-4f49adeaf393"",
+                    ""path"": ""<Keyboard>/rightBracket"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04af821f-6025-4161-a01e-f7805bdfc5d5"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dda75a5c-370d-4790-9b22-317c1479428f"",
+                    ""path"": ""<Mouse>/scroll/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryPrev"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ca05c288-9b6a-482a-a83c-a735eee0636e"",
+                    ""path"": ""<Keyboard>/leftBracket"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryPrev"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e59d817-59ab-4418-817e-684ff8349dd2"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryPrev"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -289,6 +435,10 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
         m_Player_DialogueInteract = m_Player.FindAction("DialogueInteract", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
+        m_Player_Skip = m_Player.FindAction("Skip", throwIfNotFound: true);
+        m_Player_ToggleInventory = m_Player.FindAction("ToggleInventory", throwIfNotFound: true);
+        m_Player_InventoryNext = m_Player.FindAction("InventoryNext", throwIfNotFound: true);
+        m_Player_InventoryPrev = m_Player.FindAction("InventoryPrev", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
@@ -364,6 +514,10 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_DialogueInteract;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Sprint;
+    private readonly InputAction m_Player_Skip;
+    private readonly InputAction m_Player_ToggleInventory;
+    private readonly InputAction m_Player_InventoryNext;
+    private readonly InputAction m_Player_InventoryPrev;
     public struct PlayerActions
     {
         private @BobbyControls m_Wrapper;
@@ -372,6 +526,10 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
         public InputAction @DialogueInteract => m_Wrapper.m_Player_DialogueInteract;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
+        public InputAction @Skip => m_Wrapper.m_Player_Skip;
+        public InputAction @ToggleInventory => m_Wrapper.m_Player_ToggleInventory;
+        public InputAction @InventoryNext => m_Wrapper.m_Player_InventoryNext;
+        public InputAction @InventoryPrev => m_Wrapper.m_Player_InventoryPrev;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -393,6 +551,18 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
+            @Skip.started += instance.OnSkip;
+            @Skip.performed += instance.OnSkip;
+            @Skip.canceled += instance.OnSkip;
+            @ToggleInventory.started += instance.OnToggleInventory;
+            @ToggleInventory.performed += instance.OnToggleInventory;
+            @ToggleInventory.canceled += instance.OnToggleInventory;
+            @InventoryNext.started += instance.OnInventoryNext;
+            @InventoryNext.performed += instance.OnInventoryNext;
+            @InventoryNext.canceled += instance.OnInventoryNext;
+            @InventoryPrev.started += instance.OnInventoryPrev;
+            @InventoryPrev.performed += instance.OnInventoryPrev;
+            @InventoryPrev.canceled += instance.OnInventoryPrev;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -409,6 +579,18 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
+            @Skip.started -= instance.OnSkip;
+            @Skip.performed -= instance.OnSkip;
+            @Skip.canceled -= instance.OnSkip;
+            @ToggleInventory.started -= instance.OnToggleInventory;
+            @ToggleInventory.performed -= instance.OnToggleInventory;
+            @ToggleInventory.canceled -= instance.OnToggleInventory;
+            @InventoryNext.started -= instance.OnInventoryNext;
+            @InventoryNext.performed -= instance.OnInventoryNext;
+            @InventoryNext.canceled -= instance.OnInventoryNext;
+            @InventoryPrev.started -= instance.OnInventoryPrev;
+            @InventoryPrev.performed -= instance.OnInventoryPrev;
+            @InventoryPrev.canceled -= instance.OnInventoryPrev;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -486,6 +668,10 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
         void OnDialogueInteract(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
+        void OnSkip(InputAction.CallbackContext context);
+        void OnToggleInventory(InputAction.CallbackContext context);
+        void OnInventoryNext(InputAction.CallbackContext context);
+        void OnInventoryPrev(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

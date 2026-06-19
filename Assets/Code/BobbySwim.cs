@@ -47,6 +47,8 @@ public class BobbySwim : MonoBehaviour
         controls.Player.Interact.performed += OnInteractPerformed;
         controls.Player.Sprint.performed += OnSprintPerformed;
         controls.Player.Sprint.canceled += OnSprintCanceled;
+        controls.Player.Skip.started += OnSkipStarted;
+        controls.Player.Skip.canceled += OnSkipCanceled;
     } 
 
     private void OnDisable()
@@ -57,6 +59,8 @@ public class BobbySwim : MonoBehaviour
         controls.Player.Interact.performed -= OnInteractPerformed;
         controls.Player.Sprint.performed -= OnSprintPerformed;
         controls.Player.Sprint.canceled -= OnSprintCanceled;
+        controls.Player.Skip.started -= OnSkipStarted;
+        controls.Player.Skip.canceled -= OnSkipCanceled;
         controls.Player.Disable();
     }
 
@@ -85,28 +89,31 @@ public class BobbySwim : MonoBehaviour
         isSprinting = false;
     }
 
+    private void OnSkipStarted(InputAction.CallbackContext ctx)
+    {
+        DialogueManager.GetInstance().OnSkipHoldStarted();
+    }
+
+    private void OnSkipCanceled(InputAction.CallbackContext ctx)
+    {
+        DialogueManager.GetInstance().OnSkipHoldCanceled();
+    }
+
     private void OnInteractPerformed(InputAction.CallbackContext ctx)
     {
 
-        if (DialogueManager.GetInstance().dialogueIsPlaying) return;
-        //{
-        //    DialogueManager.GetInstance().OnSpacePressed(ctx);
-        //    return;
-        //}
-        if (QuestManager.GetInstance().TryInteract()) return;
-
-        //if (DialogueManager.GetInstance().closestTrigger != null)
-        //{
-        //    DialogueManager.GetInstance().EnterDialogueMode();
-        //    return;
-        //}
-
-        if (manager.isinPuzzleMode)
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            manager.ExitPuzzleMode();
-            //return;
+            DialogueManager.GetInstance().OnSpacePressed(ctx);
+            return;
         }
 
+        //if (InventoryManager.Instance.IsOpen) return;
+
+        if (QuestManager.GetInstance().TryInteract()) return;
+
+        if (DialogueManager.GetInstance().closestTrigger != null)
+            DialogueManager.GetInstance().EnterDialogueMode();
     }
 
     private void FixedUpdate()

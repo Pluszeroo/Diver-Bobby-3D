@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
+using NUnit.Framework.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -33,6 +34,13 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     public DialogueTrigger closestTrigger;
 
+    [Header("Skip Hold")]
+    [SerializeField] private float skipHoldDuration = 0.8f;
+    [SerializeField] private Image skipProgressRing;
+    [SerializeField] private GameObject skipProgressRoot;
+
+    private bool isHoldingSkip = false;
+    private float skipHoldTimer = 0f;
 
     public bool dialogueIsPlaying { get; private set; }
 
@@ -64,10 +72,6 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
-    }
-
-    private void Update()
-    {
     }
 
     public void OnSpacePressed(InputAction.CallbackContext context)
@@ -139,18 +143,91 @@ public class DialogueManager : MonoBehaviour
         closestTrigger.onEnd?.Invoke();
     }
 
+    private void ApplyLine(string line)
+    {
+        dialogueText.text = line;
+        HandleTags(currentStory.currentTags);
+    }
+
     private void ContinueStory()
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
-            HandleTags(currentStory.currentTags);
+            ApplyLine(currentStory.Continue());
             DisplayChoices();
+            //dialogueText.text = currentStory.Continue();
+            //HandleTags(currentStory.currentTags);
+            //DisplayChoices();
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
         }
+    }
+
+    public void SkipDialogue()
+    {
+        if (!dialogueIsPlaying) return;
+
+        while (currentStory.canContinue)
+        {
+            string line = currentStory.Continue();
+
+            //Options appear after advancing -> Stay in here, do tag, show the options, give it to player
+            if (currentStory.currentChoices.Count > 0)
+            {
+                ApplyLine(line);
+                DisplayChoices();
+                return;
+            }
+        }
+
+        StartCoroutine(ExitDialogueMode());
+    }
+
+    public void OnSkipHoldStarted()
+    {
+        if (!dialogueIsPlaying) return;
+        isHoldingSkip = true;
+    }
+
+    public void OnSkipHoldCanceled()
+    {
+        isHoldingSkip = false;
+        skipHoldTimer = 0f;
+        UpdateSkipRing();
+    }
+
+    private void Update()
+    {
+        if (!isHoldingSkip) return;
+
+        if (!dialogueIsPlaying)
+        {
+            OnSkipHoldCanceled();
+            return;
+        }
+
+        skipHoldTimer += Time.unscaledDeltaTime;
+        UpdateSkipRing();
+
+        if (skipHoldTimer >= skipHoldDuration)
+        {
+            isHoldingSkip = false;
+            skipHoldTimer = 0f;
+            UpdateSkipRing();
+            SkipDialogue();
+        }
+
+    }
+
+    private void UpdateSkipRing()
+    {
+        if (skipProgressRoot != null)
+            skipProgressRoot.SetActive(isHoldingSkip && skipHoldTimer > 0f);
+
+        if (skipProgressRing != null)
+            skipProgressRing.fillAmount = Mathf.Clamp01(skipHoldTimer / skipHoldDuration);
     }
 
     private void HandleTags(List<string> currentTags)

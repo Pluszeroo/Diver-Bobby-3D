@@ -8,7 +8,10 @@ using UnityEngine.Events;
 public class InteractableItem : MonoBehaviour
 {
     public ItemType itemType;
+    public InteractionKind kind = InteractionKind.QuestItem;
     public UnityEvent onInteract;
+
+    public enum InteractionKind { QuestItem, FreeInteract}
 
     [SerializeField] private GameObject visualCue;
 
