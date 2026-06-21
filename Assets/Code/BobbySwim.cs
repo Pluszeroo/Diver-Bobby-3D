@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -43,24 +42,30 @@ public class BobbySwim : MonoBehaviour
         controls.Player.Enable();
         controls.Player.Move.performed += OnMovePerformed;
         controls.Player.Move.canceled += OnMoveCanceled;
-        controls.Player.DialogueInteract.performed += OnSpacePerformed;
+        //controls.Player.DialogueInteract.performed += OnSpacePerformed;
+        controls.Player.DialogueInteract.started += OnSpaceStarted;
+        controls.Player.DialogueInteract.canceled += OnSpaceCanceled;
         controls.Player.Interact.performed += OnInteractPerformed;
         controls.Player.Sprint.performed += OnSprintPerformed;
         controls.Player.Sprint.canceled += OnSprintCanceled;
-        controls.Player.Skip.started += OnSkipStarted;
-        controls.Player.Skip.canceled += OnSkipCanceled;
+        controls.Player.InventoryNext.performed += OnCycleNext;
+        controls.Player.InventoryPrev.performed += OnCyclePrev;
+        controls.Player.Drop.performed += OnDrop;
     } 
 
     private void OnDisable()
     {
         controls.Player.Move.performed -= OnMovePerformed;
         controls.Player.Move.canceled -= OnMoveCanceled;
-        controls.Player.DialogueInteract.performed -= OnSpacePerformed;
+        //controls.Player.DialogueInteract.performed -= OnSpacePerformed;
+        controls.Player.DialogueInteract.started -= OnSpaceStarted;
+        controls.Player.DialogueInteract.canceled -= OnSpaceCanceled;
         controls.Player.Interact.performed -= OnInteractPerformed;
         controls.Player.Sprint.performed -= OnSprintPerformed;
         controls.Player.Sprint.canceled -= OnSprintCanceled;
-        controls.Player.Skip.started -= OnSkipStarted;
-        controls.Player.Skip.canceled -= OnSkipCanceled;
+        controls.Player.InventoryNext.performed -= OnCycleNext;
+        controls.Player.InventoryPrev.performed -= OnCyclePrev;
+        controls.Player.Drop.performed -= OnDrop;
         controls.Player.Disable();
     }
 
@@ -74,11 +79,6 @@ public class BobbySwim : MonoBehaviour
         moveInput = Vector2.zero;
     }
 
-    private void OnSpacePerformed(InputAction.CallbackContext ctx)
-    {
-        DialogueManager.GetInstance().OnSpacePressed(ctx);
-    }
-
     private void OnSprintPerformed(InputAction.CallbackContext ctx)
     {
         isSprinting = true;
@@ -89,32 +89,31 @@ public class BobbySwim : MonoBehaviour
         isSprinting = false;
     }
 
-    private void OnSkipStarted(InputAction.CallbackContext ctx)
-    {
-        DialogueManager.GetInstance().OnSkipHoldStarted();
-    }
-
-    private void OnSkipCanceled(InputAction.CallbackContext ctx)
-    {
-        DialogueManager.GetInstance().OnSkipHoldCanceled();
-    }
-
     private void OnInteractPerformed(InputAction.CallbackContext ctx)
     {
 
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            DialogueManager.GetInstance().OnSpacePressed(ctx);
+            DialogueManager.GetInstance().AdvanceOrChoose();
             return;
         }
 
-        //if (InventoryManager.Instance.IsOpen) return;
+        if (QuestManager.GetInstance().TryPickUp()) return;
 
-        if (QuestManager.GetInstance().TryInteract()) return;
+        if (QuestManager.GetInstance().TryUseSelected()) return;
 
         if (DialogueManager.GetInstance().closestTrigger != null)
             DialogueManager.GetInstance().EnterDialogueMode();
     }
+
+    private void OnCycleNext(InputAction.CallbackContext ctx) => ItemHolder.Instance.Cycle(1);
+    private void OnCyclePrev(InputAction.CallbackContext ctx) => ItemHolder.Instance.Cycle(-1);
+    private void OnDrop(InputAction.CallbackContext ctx) => ItemHolder.Instance.DropSelected();
+
+    private void OnSpaceStarted(InputAction.CallbackContext ctx)
+                => DialogueManager.GetInstance().OnSpaceStarted(ctx);
+    private void OnSpaceCanceled(InputAction.CallbackContext ctx)
+                => DialogueManager.GetInstance().OnSpaceCanceled(ctx);
 
     private void FixedUpdate()
     {
@@ -135,7 +134,7 @@ public class BobbySwim : MonoBehaviour
             float currentMaxSpeed = isSprinting ? maxSpeed * sprintMultiplier : maxSpeed;
             if (rb.linearVelocity.magnitude > currentMaxSpeed)
                 rb.linearVelocity = rb.linearVelocity.normalized * currentMaxSpeed;
-            //Restrict the maxspeed, don't make it as unlimited acceleration please
+
             //if (rb.linearVelocity.magnitude > maxSpeed)
             //    rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }

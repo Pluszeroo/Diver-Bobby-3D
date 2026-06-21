@@ -1,34 +1,42 @@
-using UnityEngine;
-public enum QuestState
+﻿using UnityEngine;
+public enum QuestStage
 {
-    BeforeStarfishTalk, FindingShell, FindingMirror, CarryingMirror, ReadyToPickShell, CarryingShell, PickingUpLegs, CarryingLegs, PickingUpScissors, CarryingScissor, Done
+    Intro, FreeExploring, MetNPC, InProgress, GotLegs, ScissorMade, Done
 }
 
 public class QuestManager : MonoBehaviour
 {
     private static QuestManager instance;
+    public static QuestManager GetInstance() => instance;
 
-    public QuestState CurrentState { get; private set; } = QuestState.FindingShell;
+    public QuestStage Stage { get; private set; } = QuestStage.FreeExploring;
 
-    [Header("Scene Reference")]
-    [SerializeField] private GameObject Starfish;
-    [SerializeField] private GameObject Mirror;
-    [SerializeField] private GameObject Shell;
-    [SerializeField] private GameObject StarfishLeg;
-    [SerializeField] private GameObject Spiralshell;
-    [SerializeField] private GameObject Scissor;
-    [SerializeField] private Transform legsPosition;
-    [SerializeField] private ItemHolder itemHolder;
+    [Header("Player")]
+    [SerializeField] private Transform player;
 
-    [Header("Starfish Dialogues")]
-    [SerializeField] private GameObject beforeShell;
-    [SerializeField] private GameObject afterShell;
-    [SerializeField] private GameObject carryingShellDialogue;
-    [SerializeField] private GameObject starfishIdleDialogue;
+    [Header("Scene NPCs / Items")]
+    [SerializeField] private GameObject starfish;
+    [SerializeField] private GameObject shellfish;
+    [SerializeField] private GameObject poisonFish;
+    [SerializeField] private GameObject spiralshell;
 
-    [Header("Shellfish Dialogue")]
-    [SerializeField] private GameObject beforeMirrorDialogue;
-    [SerializeField] private GameObject afterMirrorDialogue;
+    [Header("Spawned Objects")]
+    [SerializeField] private GameObject shellInJawObject; 
+    [SerializeField] private GameObject starfishLegObject;
+    [SerializeField] private GameObject scissorObject;
+
+    [Header("Mirror Reflect Zone")]
+    [SerializeField] private Collider mirrorReflectZone;
+
+    [Header("Dialogues (DialogueTrigger objects)")]
+    [SerializeField] private GameObject captureShellDialogue;   // Using jaw catch Shell
+    [SerializeField] private GameObject giveStarfishDialogue;   // Give Shell to starfish
+    [SerializeField] private GameObject mirrorPoisonDialogue;   // Mirror in the right place
+    [SerializeField] private GameObject makeScissorDialogue;    // Get scissor
+    [SerializeField] private GameObject cutGuitarDialogue;      // Cut string
+    [SerializeField] private GameObject lockedReactionDialogue; 
+
+    private bool legsObtained = false;
 
     public InteractableItem ClosestInteractable { get; set; }
 
@@ -37,163 +45,156 @@ public class QuestManager : MonoBehaviour
     {
         instance = this;
     }
-    public static QuestManager GetInstance()
-    {
-        return instance;
-    }
+    public void SetStage(QuestStage s) => Stage = s;
 
-    public void StartStarQuest()
+    //Press E/X -> pick up item
+    public bool TryPickUp()
     {
-        CurrentState = QuestState.FindingShell;
-    }
+        InteractableItem item = ClosestInteractable;
+        if (item == null) return false;
 
-    public void StartFindingMirror()
-    {
-        CurrentState = QuestState.FindingMirror;
-    }
-
-    public void PickUpMirror()
-    {
-        CurrentState = QuestState.CarryingMirror;
-        Mirror.SetActive(false);
-        itemHolder.ShowItem(ItemType.Mirror, Mirror);
-    }
-
-    public void GiveMirrorToShell()
-    {
-        CurrentState = QuestState.ReadyToPickShell;
-        itemHolder.HideItem();
-        DialogueManager.GetInstance().closestTrigger = afterMirrorDialogue.GetComponent<DialogueTrigger>();
-        DialogueManager.GetInstance().EnterDialogueMode();
-    }
-
-    private void PickUpShell()
-    {
-        CurrentState = QuestState.CarryingShell;
-        Shell.SetActive(false);
-        itemHolder.ShowItem(ItemType.Shell, Shell);
-        beforeShell.SetActive(false);
-        carryingShellDialogue.SetActive(true);
-    }
-
-    private void GiveShellToStarfish()
-    {
-        CurrentState = QuestState.PickingUpLegs;
-        itemHolder.HideItem();
-        carryingShellDialogue.SetActive(false);
-        afterShell.SetActive(true);
-        DialogueManager.GetInstance().closestTrigger = afterShell.GetComponent<DialogueTrigger>();
-        DialogueManager.GetInstance().EnterDialogueMode();
-    }
-
-    private void PickUpLegs()
-    {
-        CurrentState = QuestState.CarryingLegs;
-        itemHolder.ShowItem(ItemType.StarfishLeg, StarfishLeg);
-        //afterShell.SetActive(false);
-        //starfishIdleDialogue.SetActive(true);
-        DialogueManager.GetInstance().closestTrigger = null;
-    }
-
-    private void GiveLegsToSpiralshell()
-    {
-        CurrentState = QuestState.PickingUpScissors;
-        StarfishLeg.SetActive(false);
-        Spiralshell.SetActive(false);
-        Scissor.SetActive(true);
-        itemHolder.HideItem();
-    }
-
-    private void PickUpScissor()
-    {
-        CurrentState = QuestState.CarryingScissor;
-        Scissor.SetActive(false);
-        itemHolder.ShowItem(ItemType.Scissor, Scissor);
-          
-    }
-
-    public bool TryInteract()
-    {
-        //Debug.Log("State: " +  CurrentState + ", Closest: " + (ClosestInteractable == null ? "null" : ClosestInteractable.itemType.ToString()));
-        switch (CurrentState)
+        switch (item.itemType)
         {
-            //case QuestState.BeforeStarfishTalk:
-            //    break;
-            case QuestState.FindingShell:
-                break;
-            case QuestState.FindingMirror:
-                if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Mirror)
+            case ItemType.Jaw:
+            case ItemType.Mirror:
+            case ItemType.ShellInJaw:
+            case ItemType.StarfishLeg:
+            case ItemType.Spiralshell:
+
+                if (ItemHolder.Instance.TryAdd(item.itemType))
                 {
-                    ClosestInteractable.onInteract?.Invoke();
-                    PickUpMirror();
+                    item.onInteract?.Invoke();
+                    item.gameObject.SetActive(false);
+                    ClosestInteractable = null;
                     return true;
                 }
-                break;
-            case QuestState.CarryingMirror:
-                if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Shell)
-                {
-                    ClosestInteractable.onInteract?.Invoke();
-                    GiveMirrorToShell();
-                    return true;
-                }
-                else
-                {
-                    itemHolder.DropItem();
-                    CurrentState = QuestState.FindingMirror;
-                    return true;
-                }
-            case QuestState.ReadyToPickShell:
-                if(ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Shell)
-                {
-                    ClosestInteractable.onInteract?.Invoke();
-                    PickUpShell();
-                    return true;
-                }
-                break;
-            case QuestState.CarryingShell:
-                if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Starfish)
-                {
-                    ClosestInteractable.onInteract?.Invoke();
-                    GiveShellToStarfish();
-                    return true;
-                }
-                else
-                {
-                    itemHolder.DropItem();
-                    CurrentState = QuestState.ReadyToPickShell;
-                    return true;
-                }
-            case QuestState.PickingUpLegs:
-                if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.StarfishLeg)
-                {
-                    ClosestInteractable.onInteract?.Invoke();
-                    PickUpLegs();
-                    return true;
-                }
-                break;
-            case QuestState.CarryingLegs:
-                if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Spiralshell)
-                {
-                    ClosestInteractable.onInteract?.Invoke();
-                    GiveLegsToSpiralshell();
-                    return true;
-                }
-                else
-                {
-                    itemHolder.DropItem();
-                    CurrentState = QuestState.PickingUpLegs;
-                }
-                    break;
-            case QuestState.PickingUpScissors:
-                if (ClosestInteractable != null && ClosestInteractable.itemType == ItemType.Scissor)
-                {
-                    ClosestInteractable.onInteract?.Invoke();
-                    PickUpScissor();
-                    return true;
-                }
-                break;
+                return false;
         }
         return false;
+    }
+
+    public bool TryUseSelected()
+    {
+        ItemType? sel = ItemHolder.Instance.GetSelected();
+        if (sel == null) return false;
+
+        ItemType item = sel.Value;
+        InteractableItem target = ClosestInteractable;
+
+        if (item == ItemType.Mirror)
+        {
+            bool inZone = mirrorReflectZone != null
+                          && mirrorReflectZone.bounds.Contains(player.position);
+            if (!inZone) return false;
+
+            if (legsObtained)
+            {
+                PlayDialogue(lockedReactionDialogue);
+                return true;
+            }
+
+            if (ItemHolder.Instance.Has(ItemType.ShellInJaw))
+            {
+                ItemHolder.Instance.Consume(ItemType.ShellInJaw);
+                ReleaseShellfish();
+            }
+
+            ItemHolder.Instance.Consume(ItemType.Mirror);
+            if (poisonFish != null) poisonFish.SetActive(true);
+            PlayDialogue(mirrorPoisonDialogue);
+            return true;
+        }
+
+        //Requires target is NPC
+        if (target == null) return false;
+
+
+        if (item == ItemType.Jaw && target.itemType == ItemType.Shell)
+        {
+            if (legsObtained)
+            {
+                PlayDialogue(lockedReactionDialogue);
+                return true;
+            }
+
+            shellfish.SetActive(false);
+            ItemHolder.Instance.Consume(ItemType.Jaw);
+            PlayDialogue(captureShellDialogue);
+            // onEnd → SpawnShellInJaw
+            return true;
+        }
+
+        // Give ShellInJaw to Starfish
+        if (item == ItemType.ShellInJaw && target.itemType == ItemType.Starfish)
+        {
+            ItemHolder.Instance.Consume(ItemType.ShellInJaw);
+            PlayDialogue(giveStarfishDialogue);
+            return true;
+        }
+
+        // StarfishLeg to Spiralshell: get scissor
+        if (item == ItemType.StarfishLeg && target.itemType == ItemType.Spiralshell)
+        {
+            if (spiralshell != null) spiralshell.SetActive(false);
+            ItemHolder.Instance.Consume(ItemType.StarfishLeg);
+            PlayDialogue(makeScissorDialogue);
+            // onEnd → SpawnScissor
+            return true;
+        }
+
+        // Scissor to guitar: cut the string
+        if (item == ItemType.Scissor && target.itemType == ItemType.Guitar)
+        {
+            ItemHolder.Instance.Consume(ItemType.Scissor);
+            PlayDialogue(cutGuitarDialogue);
+            // onEnd → FinishPuzzle
+            return true;
+        }
+
+        //Item and target mismatch -> No hit
+        return false;
+    }
+
+    // Shellfish will showing up on starfish's position
+    private void ReleaseShellfish()
+    {
+        // Starfish say goodbye
+        shellfish.transform.position = starfish.transform.position;
+        shellfish.SetActive(true);
+    }
+
+    public void SpawnShellInJaw()
+    {
+        if (shellInJawObject != null) shellInJawObject.SetActive(true);
+        SetStage(QuestStage.InProgress);
+    }
+
+    public void SpawnLegs()
+    {
+        if (starfishLegObject != null) starfishLegObject.SetActive(true);
+        legsObtained = true;
+        SetStage(QuestStage.GotLegs);
+    }
+
+    public void SpawnScissor()
+    {
+        if (scissorObject != null) scissorObject.SetActive(true);
+        SetStage(QuestStage.ScissorMade);
+    }
+
+    public void FinishPuzzle()
+    {
+        SetStage(QuestStage.Done);
+    }
+
+    //Trigger a dialogue
+    private void PlayDialogue(GameObject dialogueObj)
+    {
+        if (dialogueObj == null) return;
+        var trigger = dialogueObj.GetComponent<DialogueTrigger>();
+        if (trigger == null) return;
+        DialogueManager.GetInstance().closestTrigger = trigger;
+        DialogueManager.GetInstance().EnterDialogueMode();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
     public enum ItemType
     {
-        Starfish, Shell, StarfishLeg, Spiralshell, Scissor, Mirror
+        Starfish, Shell, StarfishLeg, Spiralshell, Scissor, Mirror, Jaw, ShellInJaw, Guitar
     }
 
 public class InteractableItem : MonoBehaviour
@@ -41,7 +41,8 @@ public class InteractableItem : MonoBehaviour
     {
         if (!collision.CompareTag("Player")) return;
         playerInRange = false;
-        QuestManager.GetInstance().ClosestInteractable = null; 
+        if (QuestManager.GetInstance().ClosestInteractable == this)
+            QuestManager.GetInstance().ClosestInteractable = null;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

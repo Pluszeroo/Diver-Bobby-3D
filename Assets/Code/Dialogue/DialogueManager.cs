@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
-using NUnit.Framework.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,7 +16,6 @@ public class DialogueManager : MonoBehaviour
     [Header("Speaker UI")]
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private UnityEngine.UI.Image speakerPortrait;
-
     [SerializeField] private Sprite StarfishPortrait;
     [SerializeField] private Sprite ShellfishPortrait;
     [SerializeField] private Sprite BobbyPortrait;
@@ -28,19 +25,22 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
-    private float lastSpaceTime = -1f;
-    private float spaceCooldown = 0.1f;
-
-    private Story currentStory;
-    public DialogueTrigger closestTrigger;
-
-    [Header("Skip Hold")]
+    [Header("Space Hold-to-Skip")]
     [SerializeField] private float skipHoldDuration = 0.8f;
     [SerializeField] private Image skipProgressRing;
     [SerializeField] private GameObject skipProgressRoot;
 
-    private bool isHoldingSkip = false;
-    private float skipHoldTimer = 0f;
+    private bool isHoldingSpace = false;
+    private float spaceHoldTimer = 0f;
+    private bool skipFired = false;
+
+    private Story currentStory;
+    public DialogueTrigger closestTrigger;
+
+    //[Header("Skip Hold")]
+    //[SerializeField] private float skipHoldDuration = 0.8f;
+    //[SerializeField] private Image skipProgressRing;
+    //[SerializeField] private GameObject skipProgressRoot;
 
     public bool dialogueIsPlaying { get; private set; }
 
@@ -64,6 +64,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+        if (skipProgressRoot != null) skipProgressRoot.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -74,27 +75,42 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void OnSpacePressed(InputAction.CallbackContext context)
+    public void OnSpaceStarted(InputAction.CallbackContext ctx)
     {
-        if (!context.performed) return;
-
-        if (Time.unscaledTime - lastSpaceTime < spaceCooldown) return;
-        lastSpaceTime = Time.unscaledTime;
-
         if (!dialogueIsPlaying)
         {
-            if (closestTrigger != null)
-                EnterDialogueMode();
+            if (closestTrigger != null) EnterDialogueMode();
             return;
         }
+        isHoldingSpace = true;
+        spaceHoldTimer = 0f;
+        skipFired = false;
+    }
 
-        if (currentStory.currentChoices.Count > 0)
+    public void OnSpaceCanceled(InputAction.CallbackContext ctx)
+    {
+        if (!isHoldingSpace) return;
+        isHoldingSpace = false;
+
+        if (skipFired)
         {
-            int selectedChoiceIndex = GetCurrentlySelectedChoiceIndex();
-            MakeChoice(selectedChoiceIndex);
+            skipFired = false;
+            UpdateSkipRing();
             return;
         }
 
+        UpdateSkipRing();
+        AdvanceOrChoose();
+    }
+
+    public void AdvanceOrChoose()
+    {
+        if (!dialogueIsPlaying) return;
+        if (currentStory.currentChoices.Count > 0 && currentStory != null)
+        {
+            MakeChoice(GetCurrentlySelectedChoiceIndex());
+            return;
+        }
         ContinueStory();
     }
 
@@ -129,6 +145,10 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(closestTrigger.inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+
+        if (skipProgressRoot != null) skipProgressRoot.SetActive(true); // Always in here
+        if (skipProgressRing != null) skipProgressRing.fillAmount = 0f;
+
         ContinueStory();
     }
 
@@ -140,7 +160,12 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
 
-        closestTrigger.onEnd?.Invoke();
+        if (skipProgressRoot != null) skipProgressRoot.SetActive(false);
+        if (skipProgressRing != null) skipProgressRing.fillAmount = 0f;
+
+        var finished = closestTrigger;
+        closestTrigger = null;
+        if (finished != null) finished.onEnd?.Invoke();
     }
 
     private void ApplyLine(string line)
@@ -185,36 +210,30 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(ExitDialogueMode());
     }
 
-    public void OnSkipHoldStarted()
+    private void CancelHold()
     {
-        if (!dialogueIsPlaying) return;
-        isHoldingSkip = true;
-    }
-
-    public void OnSkipHoldCanceled()
-    {
-        isHoldingSkip = false;
-        skipHoldTimer = 0f;
+        isHoldingSpace = false;
+        spaceHoldTimer = 0f;
         UpdateSkipRing();
     }
 
     private void Update()
     {
-        if (!isHoldingSkip) return;
 
-        if (!dialogueIsPlaying)
-        {
-            OnSkipHoldCanceled();
-            return;
-        }
+        if (!isHoldingSpace) return;
 
-        skipHoldTimer += Time.unscaledDeltaTime;
+        if (!dialogueIsPlaying) { CancelHold(); return; }
+
+        if (currentStory.currentChoices.Count > 0) { CancelHold(); return; }
+
+        spaceHoldTimer += Time.unscaledDeltaTime;
         UpdateSkipRing();
 
-        if (skipHoldTimer >= skipHoldDuration)
+        if (spaceHoldTimer >= skipHoldDuration)
         {
-            isHoldingSkip = false;
-            skipHoldTimer = 0f;
+            skipFired = true;
+            isHoldingSpace = false;
+            spaceHoldTimer = 0f;
             UpdateSkipRing();
             SkipDialogue();
         }
@@ -223,11 +242,8 @@ public class DialogueManager : MonoBehaviour
 
     private void UpdateSkipRing()
     {
-        if (skipProgressRoot != null)
-            skipProgressRoot.SetActive(isHoldingSkip && skipHoldTimer > 0f);
-
         if (skipProgressRing != null)
-            skipProgressRing.fillAmount = Mathf.Clamp01(skipHoldTimer / skipHoldDuration);
+            skipProgressRing.fillAmount = Mathf.Clamp01(spaceHoldTimer / skipHoldDuration);
     }
 
     private void HandleTags(List<string> currentTags)
@@ -287,7 +303,8 @@ public class DialogueManager : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
 
-        StartCoroutine(SelectFirstChoice());
+        if (currentChoices.Count > 0)
+            StartCoroutine(SelectFirstChoice());
     }
 
     private IEnumerator SelectFirstChoice()
@@ -302,4 +319,6 @@ public class DialogueManager : MonoBehaviour
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }
+
+
 }

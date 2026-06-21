@@ -1,59 +1,125 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+[System.Serializable]
+public class InventoryEntry
+{
+    public ItemType type;
+    public Sprite icon;
+    public GameObject placePrefab;
+}
 
 public class ItemHolder : MonoBehaviour
 {
-    [SerializeField] private GameObject ItemHolderPanel;
-    [SerializeField] private UnityEngine.UI.Image itemIcon;
-    [SerializeField] private Sprite ShellSprite;
-    [SerializeField] private Sprite MirrorSprite;
-    [SerializeField] private Sprite LegSprite;
-    [SerializeField] private Sprite Scissor;
+    public static ItemHolder Instance { get; private set; }
 
-    private GameObject heldItem;
+    [Header("UI")]
+    [SerializeField] private GameObject panel;
+    [SerializeField] private Image[] slotIcons;
+    [SerializeField] private GameObject fullHint;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Item Icons")]
+    [SerializeField] private InventoryEntry[] entries; 
+
+    private const int MAX = 3;
+    private System.Collections.Generic.List<ItemType> held
+        = new System.Collections.Generic.List<ItemType>();
+    private int selected = 0;
+
+    private void Awake()
     {
-        ItemHolderPanel.SetActive(false);
+        Instance = this;
+        if (fullHint != null) fullHint.SetActive(false);
+        RefreshBar();
     }
 
-    public void HideItem()
+    public bool IsFull => held.Count >= MAX;
+    public bool IsEmpty => held.Count == 0;
+
+    public ItemType? GetSelected()
     {
-        ItemHolderPanel.SetActive(false);
+        if (held.Count == 0) return null;
+        return held[selected];
     }
 
-    public void ShowItem(ItemType type, GameObject itemObject)
+    public bool Has(ItemType type) => held.Contains(type);
+
+    // Pick up: empty is true，No free holder false
+    public bool TryAdd(ItemType type)
     {
-        ItemHolderPanel.SetActive(true);
-        switch (type)
+        if (IsFull)
         {
-            case ItemType.Mirror:
-                itemIcon.sprite = MirrorSprite;
-                break;
-            case ItemType.Shell:
-                itemIcon.sprite = ShellSprite;
-                break;
-            case ItemType.StarfishLeg:
-                itemIcon.sprite = LegSprite;
-                break;
-            case ItemType.Scissor:
-                itemIcon.sprite = Scissor;
-                break;
+            ShowFullHint();
+            return false;
         }
-        heldItem = itemObject;
+        held.Add(type);
+        selected = held.Count - 1;   // auto select previous one
+        RefreshBar();
+        return true;
     }
 
-    public void DropItem()
+    public bool Consume(ItemType type)
     {
-        heldItem.transform.position = transform.position;
-        heldItem.SetActive(true);
-        heldItem = null;
-        HideItem();
+        int idx = held.IndexOf(type);
+        if (idx < 0) return false;
+        held.RemoveAt(idx);
+        if (selected >= held.Count) selected = Mathf.Max(0, held.Count - 1);
+        RefreshBar();
+        return true;
     }
 
-    // Update is called once per frame
-    void Update()
+    // LB/RB switch
+    public void Cycle(int dir)
     {
-        
+        if (held.Count == 0) return;
+        selected = (selected + dir + held.Count) % held.Count;
+        RefreshBar();
+    }
+
+    // Q/B Discard currently selected item
+    public void DropSelected()
+    {
+        if (held.Count == 0) return;
+        held.RemoveAt(selected);
+        if (selected >= held.Count) selected = Mathf.Max(0, held.Count - 1);
+        RefreshBar();
+        // To drop the item back into the scene, Instantiate the corresponding prefab here
+        // Temporarily remove from hand only.
+    }
+
+    private void ShowFullHint()
+    {
+        if (fullHint == null) return;
+        fullHint.SetActive(true);
+        CancelInvoke(nameof(HideFullHint));
+        Invoke(nameof(HideFullHint), 1.5f);
+    }
+    private void HideFullHint()
+    {
+        if (fullHint != null) fullHint.SetActive(false);
+    }
+
+    private void RefreshBar()
+    {
+        if (panel != null) panel.SetActive(held.Count > 0);
+
+        for (int i = 0; i < slotIcons.Length; i++)
+        {
+            if (i < held.Count)
+            {
+                slotIcons[i].gameObject.SetActive(true);
+                slotIcons[i].sprite = IconFor(held[i]);
+                bool sel = (i == selected);
+                slotIcons[i].transform.localScale = Vector3.one * (sel ? 1.25f : 1f);
+                var c = slotIcons[i].color; c.a = sel ? 1f : 0.5f; slotIcons[i].color = c;
+            }
+            else slotIcons[i].gameObject.SetActive(false);
+        }
+    }
+
+    private Sprite IconFor(ItemType t)
+    {
+        foreach (var e in entries) if (e.type == t) return e.icon;
+        return null;
     }
 }
