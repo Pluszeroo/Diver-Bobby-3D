@@ -166,21 +166,21 @@ public class BobbySwim : MonoBehaviour
 
     }
 
-    private void HandleAnimations()
-    {
-        if(rb.linearVelocity.x >= 0.1f)
-        {
-            animator.Play("Move_Right");
-        }
-        if(rb.linearVelocity.x <= -0.1f)
-        {
-            animator.Play("Move_Left");
-        }
-        if(rb.linearVelocity.x == 0)
-        {
-            animator.Play("Idle");
-        }
-    }
+    //private void HandleAnimations()
+    //{
+    //    if(rb.linearVelocity.x >= 0.1f)
+    //    {
+    //        animator.Play("Move_Right");
+    //    }
+    //    if(rb.linearVelocity.x <= -0.1f)
+    //    {
+    //        animator.Play("Move_Left");
+    //    }
+    //    if(rb.linearVelocity.x == 0)
+    //    {
+    //        animator.Play("Idle");
+    //    }
+    //}
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -191,6 +191,6 @@ public class BobbySwim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleAnimations();
+        //HandleAnimations();
     }
 }

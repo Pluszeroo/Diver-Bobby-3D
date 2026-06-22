@@ -20,13 +20,19 @@ public class DialogueTrigger : MonoBehaviour
     private void Awake()
     {
         playerInRange = false;
-        visualCue.SetActive(false);
+        if (visualCue != null) visualCue.SetActive(false);
     }
 
     private void Update()
     {
         // update the visibility of the cue
-        visualCue.SetActive(playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying);
+        if (visualCue == null) return;
+        var dm = DialogueManager.GetInstance();
+        bool shouldShow = playerInRange && dm != null && !dm.dialogueIsPlaying;
+        visualCue.SetActive(shouldShow);
+
+        if (playerInRange)
+            Debug.Log(name + " playerInRange=TRUE shouldShow=" + shouldShow + " cueActive=" + visualCue.activeSelf);
     }
 
     public void EnterDialogue()
@@ -47,23 +53,26 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Player"))
-        {
-            if (!playOnce && hasPlayed) return;
+        Debug.Log("Something entered: " + collider.name + " tag=" + collider.tag);
+        if (collider.CompareTag("Player")) return;
+        if (playOnce && hasPlayed) return;
+
             playerInRange = true;
             DialogueManager.GetInstance().closestTrigger = this;
-        }
+
     }
 
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.CompareTag("Player"))
-        {
+        if (collider.CompareTag("Player")) return;
+
             playerInRange = false;
+
             //DialogueManager.GetInstance().closestTrigger = null;
-           // if (DialogueManager.GetInstance().closestTrigger = this)
-            DialogueManager.GetInstance().closestTrigger = null;
-        }
+            // if (DialogueManager.GetInstance().closestTrigger = this)
+            if (DialogueManager.GetInstance().closestTrigger == this)
+                DialogueManager.GetInstance().closestTrigger = null;
     }
+
 
 }

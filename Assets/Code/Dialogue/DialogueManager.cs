@@ -77,6 +77,7 @@ public class DialogueManager : MonoBehaviour
 
     public void OnSpaceStarted(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Space pressed. closestTrigger=" + (closestTrigger == null ? "NULL" : closestTrigger.name) + " playing=" + dialogueIsPlaying);
         if (!dialogueIsPlaying)
         {
             if (closestTrigger != null) EnterDialogueMode();
