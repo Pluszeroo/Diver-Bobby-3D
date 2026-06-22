@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.VFX;
 using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
@@ -54,25 +53,25 @@ public class DialogueTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Something entered: " + collider.name + " tag=" + collider.tag);
-        if (collider.CompareTag("Player")) return;
-        if (playOnce && hasPlayed) return;
-
+        if (collider.CompareTag("Player"))
+        {
             playerInRange = true;
             DialogueManager.GetInstance().closestTrigger = this;
+            if (playOnce && hasPlayed) return;
+        }
 
     }
 
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.CompareTag("Player")) return;
-
+        if (collider.CompareTag("Player"))
+        {
             playerInRange = false;
 
             //DialogueManager.GetInstance().closestTrigger = null;
             // if (DialogueManager.GetInstance().closestTrigger = this)
             if (DialogueManager.GetInstance().closestTrigger == this)
                 DialogueManager.GetInstance().closestTrigger = null;
+        }
     }
-
-
 }
