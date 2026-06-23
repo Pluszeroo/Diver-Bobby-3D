@@ -21,7 +21,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject spiralshell;
 
     [Header("Spawned Objects")]
-    [SerializeField] private GameObject shellInJawObject; 
+    [SerializeField] private GameObject shellInJawObject;
     [SerializeField] private GameObject starfishLegObject;
     [SerializeField] private GameObject scissorObject;
 
@@ -34,9 +34,11 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject mirrorPoisonDialogue;   // Mirror in the right place
     [SerializeField] private GameObject makeScissorDialogue;    // Get scissor
     [SerializeField] private GameObject cutGuitarDialogue;      // Cut string
-    [SerializeField] private GameObject lockedReactionDialogue; 
+    [SerializeField] private GameObject lockedReactionDialogue;
 
     private bool legsObtained = false;
+
+    [SerializeField] private GameObject cannotCaptureDialogue;
 
     public InteractableItem ClosestInteractable { get; set; }
 
@@ -75,54 +77,59 @@ public class QuestManager : MonoBehaviour
 
     public bool TryUseSelected()
     {
-        ItemType? sel = ItemHolder.Instance.GetSelected();
-        if (sel == null) return false;
-
-        ItemType item = sel.Value;
         InteractableItem target = ClosestInteractable;
+        ItemType? selNullable = ItemHolder.Instance.GetSelected();
 
-        if (item == ItemType.Mirror)
+        if (target != null && target.itemType == ItemType.Shell)
         {
-            bool inZone = mirrorReflectZone != null
-                          && mirrorReflectZone.bounds.Contains(player.position);
-            if (!inZone) return false;
+            Debug.Log("Shellfish branch hit. legsObtained=" + legsObtained
+              + " selected=" + (ItemHolder.Instance.GetSelected()?.ToString() ?? "EMPTY")
+              + " cannotCaptureDialogue=" + (cannotCaptureDialogue == null ? "NULL" : "OK"));
 
             if (legsObtained)
             {
                 PlayDialogue(lockedReactionDialogue);
                 return true;
             }
+
+            //Have jaw
+            if (selNullable == ItemType.Jaw)
+            {
+                shellfish.SetActive(false);
+                ItemHolder.Instance.Consume(ItemType.Jaw);
+                PlayDialogue(captureShellDialogue);   // onEnd → SpawnShellInJaw
+                return true;
+            }
+
+            //No jaw
+            PlayDialogue(cannotCaptureDialogue);
+            return true;
+        }
+
+        // Requires something in the hands
+        if (selNullable == null) return false;
+        ItemType item = selNullable.Value;
+
+        // Is Bobby in the refleaction area?
+        if (item == ItemType.Mirror)
+        {
+            bool inZone = mirrorReflectZone != null
+                          && mirrorReflectZone.bounds.Contains(player.position);
+            if (!inZone) return false;
+            if (legsObtained) { PlayDialogue(lockedReactionDialogue); return true; }
 
             if (ItemHolder.Instance.Has(ItemType.ShellInJaw))
             {
                 ItemHolder.Instance.Consume(ItemType.ShellInJaw);
                 ReleaseShellfish();
             }
-
             ItemHolder.Instance.Consume(ItemType.Mirror);
             if (poisonFish != null) poisonFish.SetActive(true);
             PlayDialogue(mirrorPoisonDialogue);
             return true;
         }
 
-        //Requires target is NPC
         if (target == null) return false;
-
-
-        if (item == ItemType.Jaw && target.itemType == ItemType.Shell)
-        {
-            if (legsObtained)
-            {
-                PlayDialogue(lockedReactionDialogue);
-                return true;
-            }
-
-            shellfish.SetActive(false);
-            ItemHolder.Instance.Consume(ItemType.Jaw);
-            PlayDialogue(captureShellDialogue);
-            // onEnd → SpawnShellInJaw
-            return true;
-        }
 
         // Give ShellInJaw to Starfish
         if (item == ItemType.ShellInJaw && target.itemType == ItemType.Starfish)
@@ -138,7 +145,6 @@ public class QuestManager : MonoBehaviour
             if (spiralshell != null) spiralshell.SetActive(false);
             ItemHolder.Instance.Consume(ItemType.StarfishLeg);
             PlayDialogue(makeScissorDialogue);
-            // onEnd → SpawnScissor
             return true;
         }
 
@@ -147,7 +153,6 @@ public class QuestManager : MonoBehaviour
         {
             ItemHolder.Instance.Consume(ItemType.Scissor);
             PlayDialogue(cutGuitarDialogue);
-            // onEnd → FinishPuzzle
             return true;
         }
 
@@ -193,6 +198,7 @@ public class QuestManager : MonoBehaviour
         if (dialogueObj == null) return;
         var trigger = dialogueObj.GetComponent<DialogueTrigger>();
         if (trigger == null) return;
+        Debug.Log("PlayDialogue: playing " + dialogueObj.name + " ink=" + (trigger.inkJSON == null ? "NULL" : trigger.inkJSON.name));
         DialogueManager.GetInstance().closestTrigger = trigger;
         DialogueManager.GetInstance().EnterDialogueMode();
     }
@@ -206,6 +212,6 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log(ClosestInteractable.gameObject.name);
+        // Debug.Log(ClosestInteractable.gameObject.name);
     }
 }

@@ -29,9 +29,6 @@ public class DialogueTrigger : MonoBehaviour
         var dm = DialogueManager.GetInstance();
         bool shouldShow = playerInRange && dm != null && !dm.dialogueIsPlaying;
         visualCue.SetActive(shouldShow);
-
-        if (playerInRange)
-            Debug.Log(name + " playerInRange=TRUE shouldShow=" + shouldShow + " cueActive=" + visualCue.activeSelf);
     }
 
     public void EnterDialogue()
@@ -52,12 +49,11 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Something entered: " + collider.name + " tag=" + collider.tag);
         if (collider.CompareTag("Player"))
         {
+            if (playOnce && hasPlayed) return;
             playerInRange = true;
             DialogueManager.GetInstance().closestTrigger = this;
-            if (playOnce && hasPlayed) return;
         }
 
     }

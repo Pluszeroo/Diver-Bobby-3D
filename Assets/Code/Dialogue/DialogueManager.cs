@@ -77,7 +77,6 @@ public class DialogueManager : MonoBehaviour
 
     public void OnSpaceStarted(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Space pressed. closestTrigger=" + (closestTrigger == null ? "NULL" : closestTrigger.name) + " playing=" + dialogueIsPlaying);
         if (!dialogueIsPlaying)
         {
             if (closestTrigger != null) EnterDialogueMode();
@@ -107,7 +106,7 @@ public class DialogueManager : MonoBehaviour
     public void AdvanceOrChoose()
     {
         if (!dialogueIsPlaying) return;
-        if (currentStory.currentChoices.Count > 0 && currentStory != null)
+        if (currentStory != null && currentStory.currentChoices.Count > 0)
         {
             MakeChoice(GetCurrentlySelectedChoiceIndex());
             return;
