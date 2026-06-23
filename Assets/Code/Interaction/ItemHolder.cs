@@ -12,6 +12,8 @@ public class InventoryEntry
 
 public class ItemHolder : MonoBehaviour
 {
+    [Header("Player")]
+    [SerializeField] private Transform player;
     public static ItemHolder Instance { get; private set; }
 
     [Header("UI")]
@@ -80,11 +82,22 @@ public class ItemHolder : MonoBehaviour
     public void DropSelected()
     {
         if (held.Count == 0) return;
+
+        ItemType droppedType = held[selected];
         held.RemoveAt(selected);
         if (selected >= held.Count) selected = Mathf.Max(0, held.Count - 1);
         RefreshBar();
         // To drop the item back into the scene, Instantiate the corresponding prefab here
         // Temporarily remove from hand only.
+        foreach (var e in entries)
+        {
+            if (e.type == droppedType && e.placePrefab != null)
+            {
+                e.placePrefab.transform.position = player.position;
+                e.placePrefab.SetActive(true);
+                break;
+            }
+        }
     }
 
     private void ShowFullHint()
