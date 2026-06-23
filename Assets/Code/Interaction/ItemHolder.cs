@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -22,8 +23,7 @@ public class ItemHolder : MonoBehaviour
     [SerializeField] private InventoryEntry[] entries; 
 
     private const int MAX = 3;
-    private System.Collections.Generic.List<ItemType> held
-        = new System.Collections.Generic.List<ItemType>();
+    List<ItemType> held = new List<ItemType>();
     private int selected = 0;
 
     private void Awake()
