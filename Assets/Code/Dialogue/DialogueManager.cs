@@ -35,7 +35,8 @@ public class DialogueManager : MonoBehaviour
     private bool skipFired = false;
 
     private Story currentStory;
-    public DialogueTrigger closestTrigger;
+    public DialogueTrigger closestTrigger; //Sapce - Talk
+    public DialogueTrigger closestInteractTrigger; // E - interact/pickup
 
     //[Header("Skip Hold")]
     //[SerializeField] private float skipHoldDuration = 0.8f;
@@ -74,6 +75,18 @@ public class DialogueManager : MonoBehaviour
             index++;
         }
     }
+
+    //public void OnSpace(InputAction.CallbackContext context)
+    //{
+    //    if (context.started)
+    //    {
+    //        OnSpaceStarted(context);
+    //    }
+    //    else if (context.canceled)
+    //    {
+    //        OnSpaceCanceled(context);
+    //    }
+    //}
 
     public void OnSpaceStarted(InputAction.CallbackContext ctx)
     {
@@ -131,22 +144,24 @@ public class DialogueManager : MonoBehaviour
         return 0;
     }
 
-    public void EnterDialogueMode()
+    public void EnterDialogueMode(bool useInteractTrigger = false)
     {
-        if (!closestTrigger) return;
+        var trigger = useInteractTrigger ? closestInteractTrigger : closestTrigger;
+        if (!trigger) return;
 
-        if (closestTrigger.IsPlayOnceFinished())
+        if (trigger.IsPlayOnceFinished())
         {
-            closestTrigger = null;
+            if (useInteractTrigger) closestInteractTrigger = null;
+            else closestTrigger = null;
             return;
         }
 
-        closestTrigger.MarkPlayed();
-        currentStory = new Story(closestTrigger.inkJSON.text);
+        trigger.MarkPlayed();
+        currentStory = new Story(trigger.inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        if (skipProgressRoot != null) skipProgressRoot.SetActive(true); // Always in here
+        if (skipProgressRoot != null) skipProgressRoot.SetActive(true);
         if (skipProgressRing != null) skipProgressRing.fillAmount = 0f;
 
         ContinueStory();
@@ -163,8 +178,9 @@ public class DialogueManager : MonoBehaviour
         if (skipProgressRoot != null) skipProgressRoot.SetActive(false);
         if (skipProgressRing != null) skipProgressRing.fillAmount = 0f;
 
-        var finished = closestTrigger;
+        var finished = closestTrigger ?? closestInteractTrigger;
         closestTrigger = null;
+        closestInteractTrigger = null;
         if (finished != null) finished.onEnd?.Invoke();
     }
 

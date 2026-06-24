@@ -42,6 +42,8 @@ public class QuestManager : MonoBehaviour
 
     public InteractableItem ClosestInteractable { get; set; }
 
+    [SerializeField] private GameObject tryPickUpShellDialogue;
+
 
     private void Awake()
     {
@@ -102,8 +104,10 @@ public class QuestManager : MonoBehaviour
             }
 
             //No jaw
-            PlayDialogue(cannotCaptureDialogue);
+            PlayDialogue(tryPickUpShellDialogue);
             return true;
+            //PlayDialogue(cannotCaptureDialogue);
+            //return true;
         }
 
         // Requires something in the hands
@@ -195,10 +199,11 @@ public class QuestManager : MonoBehaviour
     //Trigger a dialogue
     private void PlayDialogue(GameObject dialogueObj)
     {
-        if (dialogueObj == null) return;
+        if (dialogueObj == null) { Debug.Log("dialogueObj NULL"); return; }
         var trigger = dialogueObj.GetComponent<DialogueTrigger>();
-        if (trigger == null) return;
+        if (trigger == null) { Debug.Log("trigger NULL"); return; }
         Debug.Log("PlayDialogue: playing " + dialogueObj.name + " ink=" + (trigger.inkJSON == null ? "NULL" : trigger.inkJSON.name));
+        Debug.Log("DialogueManager instance=" + (DialogueManager.GetInstance() == null ? "NULL" : "OK"));
         DialogueManager.GetInstance().closestTrigger = trigger;
         DialogueManager.GetInstance().EnterDialogueMode();
     }

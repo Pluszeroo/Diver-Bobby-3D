@@ -93,7 +93,6 @@ public class BobbySwim : MonoBehaviour
 
     private void OnInteractPerformed(InputAction.CallbackContext ctx)
     {
-
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
             DialogueManager.GetInstance().AdvanceOrChoose();
@@ -101,6 +100,13 @@ public class BobbySwim : MonoBehaviour
         }
 
         if (QuestManager.GetInstance().TryPickUp()) return;
+
+        // Check interact trigger before TryUseSelected
+        if (DialogueManager.GetInstance().closestInteractTrigger != null)
+        {
+            DialogueManager.GetInstance().EnterDialogueMode(true);
+            return;
+        }
 
         if (QuestManager.GetInstance().TryUseSelected()) return;
 

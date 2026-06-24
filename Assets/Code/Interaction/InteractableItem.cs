@@ -11,6 +11,7 @@ public class InteractableItem : MonoBehaviour
     public InteractionKind kind = InteractionKind.QuestItem;
     public UnityEvent onInteract;
 
+
     public enum InteractionKind { QuestItem, FreeInteract}
 
     [SerializeField] private GameObject visualCue;

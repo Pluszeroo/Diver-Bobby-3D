@@ -15,6 +15,8 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool playOnce = false;
     private bool hasPlayed = false;
 
+    public bool isInteractTrigger = false;
+
     private bool playerInRange = false;
     private void Awake()
     {
@@ -53,7 +55,10 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (playOnce && hasPlayed) return;
             playerInRange = true;
-            DialogueManager.GetInstance().closestTrigger = this;
+            if (isInteractTrigger)
+                DialogueManager.GetInstance().closestInteractTrigger = this;
+            else
+                DialogueManager.GetInstance().closestTrigger = this;
         }
 
     }
@@ -68,6 +73,8 @@ public class DialogueTrigger : MonoBehaviour
             // if (DialogueManager.GetInstance().closestTrigger = this)
             if (DialogueManager.GetInstance().closestTrigger == this)
                 DialogueManager.GetInstance().closestTrigger = null;
+            else if (DialogueManager.GetInstance().closestInteractTrigger == this)
+                DialogueManager.GetInstance().closestInteractTrigger = null;
         }
     }
 }
