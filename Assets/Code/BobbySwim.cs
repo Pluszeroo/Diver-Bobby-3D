@@ -197,6 +197,21 @@ public class BobbySwim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //HandleAnimations();
+        animator.SetFloat("x", moveInput.x);
+        animator.SetFloat("y", moveInput.y);
+
+        FaceDirection();
+    }
+
+    private void FaceDirection()
+    {
+        if(moveInput.x > 0.01)
+        {
+            animator.SetFloat("FacingRight", 0);
+        }
+        else if(moveInput.x < -0.01)
+        {
+            animator.SetFloat("FacingRight", 1);
+        }
     }
 }
