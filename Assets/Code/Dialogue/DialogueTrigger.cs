@@ -16,6 +16,7 @@ public class DialogueTrigger : MonoBehaviour
     private bool hasPlayed = false;
 
     public bool isInteractTrigger = false;
+    public bool PlayerInRange => playerInRange;
 
     private bool playerInRange = false;
     private void Awake()
@@ -77,4 +78,14 @@ public class DialogueTrigger : MonoBehaviour
                 DialogueManager.GetInstance().closestInteractTrigger = null;
         }
     }
+
+    private void OnDisable()
+    {
+        playerInRange = false;
+        var dm = DialogueManager.GetInstance();
+        if (dm == null) return;
+        if (dm.closestTrigger == this) dm.closestTrigger = null;
+        if (dm.closestInteractTrigger == this) dm.closestInteractTrigger = null;
+    }
+
 }

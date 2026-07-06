@@ -46,6 +46,14 @@ public class InteractableItem : MonoBehaviour
             QuestManager.GetInstance().ClosestInteractable = null;
     }
 
+    private void OnDisable()
+    {
+        playerInRange = false;
+        var qm = QuestManager.GetInstance();
+        if (qm != null && qm.ClosestInteractable == this)
+            qm.ClosestInteractable = null;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

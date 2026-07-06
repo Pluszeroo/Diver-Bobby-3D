@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Light : MonoBehaviour
+public class LightPuzzle : MonoBehaviour
 {
     [SerializeField]
     private GameObject lightRay;
@@ -30,6 +30,11 @@ public class Light : MonoBehaviour
         {
             lightRay.SetActive(true);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        lightOn = false;
     }
 
 }

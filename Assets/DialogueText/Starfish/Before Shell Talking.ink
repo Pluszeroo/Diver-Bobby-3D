@@ -1,12 +1,12 @@
 What are you doing? Meow. # speaker: Bobby
 Waiting for my treats. # speaker: Starfish
 They come from above. # speaker: Starfish
-From above? # speaker: Bobby
+From above? # speaker: Bobby # mood: Shock
 Yes. # speaker: Starfish
 They’re from my 'God'. # speaker: Starfish
 Delicious treats. # speaker: Starfish
 Clams, oysters, shells...hmmm. # speaker: Starfish
-From your ‘god’? # speaker: Bobby
+From your ‘god’? # speaker: Bobby # mood: Shock
 Yes, the people up there above.
 Meow, I don’t think those are gods.. # speaker: Bobby
 But they send me things, they’re kind to me # speaker: Starfish

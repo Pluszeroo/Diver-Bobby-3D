@@ -1706,13 +1706,14 @@ Transform:
   m_GameObject: {fileID: 303828055}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.98, y: 2.17, z: 0}
+  m_LocalPosition: {x: 24.81, y: 2.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1163556232}
   - {fileID: 2142751818}
   - {fileID: 1474071739}
+  - {fileID: 379279455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &303828058
@@ -2102,6 +2103,79 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &379279454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379279455}
+  - component: {fileID: 379279457}
+  - component: {fileID: 379279456}
+  m_Layer: 0
+  m_Name: captureShellDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &379279455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379279454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 303828057}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &379279456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379279454}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &379279457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379279454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43d0a28fdd1bc841ab0c5a7a72cd3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualCue: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: 5fb63719ee3098845add240114295e1d, type: 3}
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  playOnce: 0
+  isInteractTrigger: 0
 --- !u!1 &382030883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3284,7 +3358,7 @@ Transform:
   m_GameObject: {fileID: 592141319}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.03, y: 2.15, z: -1.5539179}
+  m_LocalPosition: {x: 24.57, y: 2.15, z: -1.5539179}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3672,7 +3746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &692327740
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8353,8 +8427,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.4019165, y: 1.4976101, z: 1}
+  m_Center: {x: 0.009567261, y: 0.038277626, z: 0}
 --- !u!1 &1496092030
 GameObject:
   m_ObjectHideFlags: 0
@@ -11183,7 +11257,6 @@ GameObject:
   - component: {fileID: 1813895523}
   - component: {fileID: 1813895525}
   - component: {fileID: 1813895526}
-  - component: {fileID: 1813895527}
   m_Layer: 0
   m_Name: Mirror
   m_TagString: Untagged
@@ -11302,20 +11375,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.6}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1813895527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813895522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6f4f10e537a0845b96d89e9d4c7ffb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightRay: {fileID: 692327739}
-  lightOn: 0
 --- !u!1 &1816019657
 GameObject:
   m_ObjectHideFlags: 0
@@ -11690,7 +11749,7 @@ MonoBehaviour:
   speakerPortrait: {fileID: 1893888307}
   StarfishPortrait: {fileID: 21300000, guid: 4f300b0d5093f0c41a71560557ff9b43, type: 3}
   ShellfishPortrait: {fileID: 21300000, guid: 9ef3f4c5961442e4eaa05fced4cd5154, type: 3}
-  BobbyPortrait: {fileID: 21300000, guid: da8bf7f18f462794397d4039bdf8a519, type: 3}
+  BobbyPortrait: {fileID: 21300000, guid: aa82e7dde8c344b4f9d05482a59ea7dd, type: 3}
   GuidefishPortrait: {fileID: 0}
   choices:
   - {fileID: 885127515}
@@ -11699,6 +11758,15 @@ MonoBehaviour:
   skipHoldDuration: 0.8
   skipProgressRing: {fileID: 1193301953}
   skipProgressRoot: {fileID: 1103379324}
+  bobbyMoods:
+  - mood: Normal
+    portrait: {fileID: 21300000, guid: aa82e7dde8c344b4f9d05482a59ea7dd, type: 3}
+  - mood: Begging
+    portrait: {fileID: 21300000, guid: 5fc4ad4f4190d0945955316be0a57c90, type: 3}
+  - mood: Mock
+    portrait: {fileID: 21300000, guid: 22480c37f35e0f842baf65395350a9be, type: 3}
+  - mood: Shock
+    portrait: {fileID: 21300000, guid: 4f40eafdfeadb374da424af5648bfbea, type: 3}
   closestTrigger: {fileID: 0}
   closestInteractTrigger: {fileID: 0}
 --- !u!1 &1892740691
@@ -12417,6 +12485,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1949160577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949160578}
+  m_Layer: 0
+  m_Name: Mirror Place Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949160578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949160577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.41, y: 2.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989280517
 GameObject:
   m_ObjectHideFlags: 0
@@ -13019,18 +13118,20 @@ MonoBehaviour:
   shellfish: {fileID: 303828055}
   poisonFish: {fileID: 1760336458}
   spiralshell: {fileID: 2041257209}
+  mirrorObject: {fileID: 1813895522}
   shellInJawObject: {fileID: 592141319}
   starfishLegObject: {fileID: 871165398}
   scissorObject: {fileID: 1167755123}
-  mirrorReflectZone: {fileID: 0}
-  captureShellDialogue: {fileID: 927443219}
+  mirrorReflectZone: {fileID: 1447681307}
+  mirrorPlacePoint: {fileID: 1949160578}
+  placeDistance: 3
+  mirrorLightRay: {fileID: 692327739}
+  captureShellDialogue: {fileID: 379279454}
   giveStarfishDialogue: {fileID: 0}
   mirrorPoisonDialogue: {fileID: 0}
   makeScissorDialogue: {fileID: 0}
   cutGuitarDialogue: {fileID: 0}
   lockedReactionDialogue: {fileID: 0}
-  cannotCaptureDialogue: {fileID: 672955914}
-  tryPickUpShellDialogue: {fileID: 672955914}
 --- !u!1 &2063679175
 GameObject:
   m_ObjectHideFlags: 0
@@ -13979,3 +14080,4 @@ SceneRoots:
   - {fileID: 1447681310}
   - {fileID: 1785854305}
   - {fileID: 1460401381}
+  - {fileID: 1949160578}

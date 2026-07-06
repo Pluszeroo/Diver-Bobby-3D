@@ -93,6 +93,11 @@ public class BobbySwim : MonoBehaviour
 
     private void OnInteractPerformed(InputAction.CallbackContext ctx)
     {
+        var dm = DialogueManager.GetInstance();
+        Debug.Log("E pressed: interactTrig=" + (dm.closestInteractTrigger ? dm.closestInteractTrigger.gameObject.name : "null")
+            + " | trig=" + (dm.closestTrigger ? dm.closestTrigger.gameObject.name : "null")
+            + " | holding=" + (ItemHolder.Instance.GetSelected()?.ToString() ?? "EMPTY"));
+
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
             DialogueManager.GetInstance().AdvanceOrChoose();
@@ -101,6 +106,8 @@ public class BobbySwim : MonoBehaviour
 
         if (QuestManager.GetInstance().TryPickUp()) return;
 
+        if (QuestManager.GetInstance().TryUseSelected()) return;
+
         // Check interact trigger before TryUseSelected
         if (DialogueManager.GetInstance().closestInteractTrigger != null)
         {
@@ -108,9 +115,7 @@ public class BobbySwim : MonoBehaviour
             return;
         }
 
-        if (QuestManager.GetInstance().TryUseSelected()) return;
-
-        if (DialogueManager.GetInstance().closestTrigger != null)
+        else if (DialogueManager.GetInstance().closestTrigger != null)
             DialogueManager.GetInstance().EnterDialogueMode();
     }
 

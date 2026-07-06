@@ -30,6 +30,16 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image skipProgressRing;
     [SerializeField] private GameObject skipProgressRoot;
 
+    [Header("Bobby Moods")]
+    [SerializeField] private BobbyMood[] bobbyMoods;
+
+    [System.Serializable]
+    public class BobbyMood
+    {
+        public string mood;
+        public Sprite portrait;
+    }
+
     private bool isHoldingSpace = false;
     private float spaceHoldTimer = 0f;
     private bool skipFired = false;
@@ -43,6 +53,7 @@ public class DialogueManager : MonoBehaviour
     //[SerializeField] private Image skipProgressRing;
     //[SerializeField] private GameObject skipProgressRoot;
 
+    private DialogueTrigger activeTrigger;
     public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
@@ -149,12 +160,20 @@ public class DialogueManager : MonoBehaviour
         var trigger = useInteractTrigger ? closestInteractTrigger : closestTrigger;
         if (!trigger) return;
 
+        if (trigger.inkJSON == null)
+        {
+            Debug.LogError("DialogueTrigger There's no ink file: " + trigger.gameObject.name);
+            return;
+        }
+
         if (trigger.IsPlayOnceFinished())
         {
             if (useInteractTrigger) closestInteractTrigger = null;
             else closestTrigger = null;
             return;
         }
+
+        activeTrigger = trigger;
 
         trigger.MarkPlayed();
         currentStory = new Story(trigger.inkJSON.text);
@@ -178,10 +197,16 @@ public class DialogueManager : MonoBehaviour
         if (skipProgressRoot != null) skipProgressRoot.SetActive(false);
         if (skipProgressRing != null) skipProgressRing.fillAmount = 0f;
 
-        var finished = closestTrigger ?? closestInteractTrigger;
-        closestTrigger = null;
-        closestInteractTrigger = null;
-        if (finished != null) finished.onEnd?.Invoke();
+        var finished = activeTrigger;
+        activeTrigger = null;
+
+        if (!finished.PlayerInRange)
+        {
+            if (closestTrigger == finished) closestTrigger = null;
+            if (closestInteractTrigger == finished) closestInteractTrigger = null;
+        }
+
+        finished.onEnd?.Invoke();
     }
 
     private void ApplyLine(string line)
@@ -295,6 +320,19 @@ public class DialogueManager : MonoBehaviour
                         break;
                 }
             }
+
+            else if (key == "mood")
+            {
+                foreach (var m in bobbyMoods)
+                {
+                    if (m.mood == value)
+                    {
+                        speakerPortrait.sprite = m.portrait;
+                        break;
+                    }
+                }
+            }
+
         }
     }
 
@@ -335,6 +373,5 @@ public class DialogueManager : MonoBehaviour
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }
-
 
 }

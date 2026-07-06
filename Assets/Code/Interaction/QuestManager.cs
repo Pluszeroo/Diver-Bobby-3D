@@ -19,6 +19,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject shellfish;
     [SerializeField] private GameObject poisonFish;
     [SerializeField] private GameObject spiralshell;
+    [SerializeField] private GameObject mirrorObject;
 
     [Header("Spawned Objects")]
     [SerializeField] private GameObject shellInJawObject;
@@ -27,6 +28,11 @@ public class QuestManager : MonoBehaviour
 
     [Header("Mirror Reflect Zone")]
     [SerializeField] private Collider mirrorReflectZone;
+
+    [Header("Mirror Puzzle")]
+    [SerializeField] private Transform mirrorPlacePoint;
+    [SerializeField] private float placeDistance = 3f;
+    [SerializeField] private GameObject mirrorLightRay;
 
     [Header("Dialogues (DialogueTrigger objects)")]
     [SerializeField] private GameObject captureShellDialogue;   // Using jaw catch Shell
@@ -38,11 +44,11 @@ public class QuestManager : MonoBehaviour
 
     private bool legsObtained = false;
 
-    [SerializeField] private GameObject cannotCaptureDialogue;
+    //[SerializeField] private GameObject cannotCaptureDialogue;
 
     public InteractableItem ClosestInteractable { get; set; }
 
-    [SerializeField] private GameObject tryPickUpShellDialogue;
+    //[SerializeField] private GameObject tryPickUpShellDialogue;
 
 
     private void Awake()
@@ -84,10 +90,6 @@ public class QuestManager : MonoBehaviour
 
         if (target != null && target.itemType == ItemType.Shell)
         {
-            Debug.Log("Shellfish branch hit. legsObtained=" + legsObtained
-              + " selected=" + (ItemHolder.Instance.GetSelected()?.ToString() ?? "EMPTY")
-              + " cannotCaptureDialogue=" + (cannotCaptureDialogue == null ? "NULL" : "OK"));
-
             if (legsObtained)
             {
                 PlayDialogue(lockedReactionDialogue);
@@ -97,15 +99,14 @@ public class QuestManager : MonoBehaviour
             //Have jaw
             if (selNullable == ItemType.Jaw)
             {
-                shellfish.SetActive(false);
                 ItemHolder.Instance.Consume(ItemType.Jaw);
-                PlayDialogue(captureShellDialogue);   // onEnd → SpawnShellInJaw
+                shellfish.SetActive(false);
+                SpawnShellInJaw();
                 return true;
             }
 
             //No jaw
-            PlayDialogue(tryPickUpShellDialogue);
-            return true;
+            return false;
             //PlayDialogue(cannotCaptureDialogue);
             //return true;
         }
@@ -117,19 +118,28 @@ public class QuestManager : MonoBehaviour
         // Is Bobby in the refleaction area?
         if (item == ItemType.Mirror)
         {
-            bool inZone = mirrorReflectZone != null
-                          && mirrorReflectZone.bounds.Contains(player.position);
+            bool inZone = Vector3.Distance(player.position, mirrorPlacePoint.position) < placeDistance;
+            Debug.Log("Mirror use: inZone=" + inZone);
             if (!inZone) return false;
+
             if (legsObtained) { PlayDialogue(lockedReactionDialogue); return true; }
+
+            ItemHolder.Instance.Consume(ItemType.Mirror);
+
+            mirrorObject.transform.position = mirrorPlacePoint.position;
+            mirrorObject.SetActive(true);
+            mirrorLightRay.SetActive(true);
+            Destroy(mirrorObject.GetComponent<InteractableItem>());
 
             if (ItemHolder.Instance.Has(ItemType.ShellInJaw))
             {
                 ItemHolder.Instance.Consume(ItemType.ShellInJaw);
                 ReleaseShellfish();
             }
-            ItemHolder.Instance.Consume(ItemType.Mirror);
+
             if (poisonFish != null) poisonFish.SetActive(true);
             PlayDialogue(mirrorPoisonDialogue);
+
             return true;
         }
 
@@ -174,8 +184,13 @@ public class QuestManager : MonoBehaviour
 
     public void SpawnShellInJaw()
     {
-        if (shellInJawObject != null) shellInJawObject.SetActive(true);
+        if (shellInJawObject != null)
+        {
+            shellInJawObject.transform.position = shellfish.transform.position;
+            shellInJawObject.SetActive(true);
+        }
         SetStage(QuestStage.InProgress);
+        PlayDialogue(captureShellDialogue);
     }
 
     public void SpawnLegs()
