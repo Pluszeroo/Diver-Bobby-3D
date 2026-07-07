@@ -106,25 +106,34 @@ public class DialogueManager : MonoBehaviour
             if (closestTrigger != null) EnterDialogueMode();
             return;
         }
+
         isHoldingSpace = true;
         spaceHoldTimer = 0f;
         skipFired = false;
+        if (skipProgressRoot != null) skipProgressRoot.SetActive(true);
     }
 
     public void OnSpaceCanceled(InputAction.CallbackContext ctx)
     {
         if (!isHoldingSpace) return;
-        isHoldingSpace = false;
 
-        if (skipFired)
-        {
-            skipFired = false;
-            UpdateSkipRing();
-            return;
-        }
+        bool wasSkip = skipFired;
+        skipFired = false;
+        CancelHold();
 
-        UpdateSkipRing();
-        AdvanceOrChoose();
+        if (!wasSkip) AdvanceOrChoose();
+
+        //isHoldingSpace = false;
+
+        //if (skipFired)
+        //{
+        //    skipFired = false;
+        //    UpdateSkipRing();
+        //    return;
+        //}
+
+        //UpdateSkipRing();
+        //AdvanceOrChoose();
     }
 
     public void AdvanceOrChoose()
@@ -179,9 +188,6 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(trigger.inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-
-        if (skipProgressRoot != null) skipProgressRoot.SetActive(true);
-        if (skipProgressRing != null) skipProgressRing.fillAmount = 0f;
 
         ContinueStory();
     }
@@ -256,6 +262,7 @@ public class DialogueManager : MonoBehaviour
         isHoldingSpace = false;
         spaceHoldTimer = 0f;
         UpdateSkipRing();
+        if (skipProgressRoot != null) skipProgressRoot.SetActive(false);
     }
 
     private void Update()

@@ -69,7 +69,7 @@ public class QuestManager : MonoBehaviour
             case ItemType.Mirror:
             case ItemType.ShellInJaw:
             case ItemType.StarfishLeg:
-            case ItemType.Spiralshell:
+            case ItemType.Scissor:
 
                 if (ItemHolder.Instance.TryAdd(item.itemType))
                 {
@@ -159,6 +159,7 @@ public class QuestManager : MonoBehaviour
             if (spiralshell != null) spiralshell.SetActive(false);
             ItemHolder.Instance.Consume(ItemType.StarfishLeg);
             PlayDialogue(makeScissorDialogue);
+            SpawnScissor();
             return true;
         }
 
@@ -204,6 +205,7 @@ public class QuestManager : MonoBehaviour
     {
         if (scissorObject != null) scissorObject.SetActive(true);
         SetStage(QuestStage.ScissorMade);
+        PlayDialogue(makeScissorDialogue);
     }
 
     public void FinishPuzzle()
