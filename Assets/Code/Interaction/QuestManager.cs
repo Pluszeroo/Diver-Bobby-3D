@@ -26,13 +26,18 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject starfishLegObject;
     [SerializeField] private GameObject scissorObject;
 
-    [Header("Mirror Reflect Zone")]
-    [SerializeField] private Collider mirrorReflectZone;
+    //[Header("Mirror Reflect Zone")]
+    //[SerializeField] private Collider mirrorReflectZone;
 
     [Header("Mirror Puzzle")]
     [SerializeField] private Transform mirrorPlacePoint;
     [SerializeField] private float placeDistance = 3f;
     [SerializeField] private GameObject mirrorLightRay;
+
+    [Header("Route Lock Dialogues")]
+    [SerializeField] private GameObject shellRouteLockedDialogue;
+    [SerializeField] private GameObject mirrorRouteLockedDialogue;
+    [SerializeField] private GameObject mirrorConfirmDialogue;
 
     [Header("Dialogues (DialogueTrigger objects)")]
     [SerializeField] private GameObject captureShellDialogue;   // Using jaw catch Shell
@@ -40,9 +45,19 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject mirrorPoisonDialogue;   // Mirror in the right place
     [SerializeField] private GameObject makeScissorDialogue;    // Get scissor
     [SerializeField] private GameObject cutGuitarDialogue;      // Cut string
-    [SerializeField] private GameObject lockedReactionDialogue;
+    //[SerializeField] private GameObject lockedReactionDialogue;
+    [SerializeField] private GameObject jawUselessDialogue;
+    [SerializeField] private DialogueTrigger starfishFirstTalk;
+
+    [Header("Starfish Goodbye")]
+    [SerializeField] private Transform starfishRetreatPoint;
+    [SerializeField] private TextAsset goodbyePhilosophyInk;
+    [SerializeField] private TextAsset goodbyeSadInk;
+
+    [SerializeField] private DialogueTrigger starfishMouth;
 
     private bool legsObtained = false;
+    private bool mirrorPlaced = false;
 
     //[SerializeField] private GameObject cannotCaptureDialogue;
 
@@ -90,15 +105,12 @@ public class QuestManager : MonoBehaviour
 
         if (target != null && target.itemType == ItemType.Shell)
         {
-            if (legsObtained)
-            {
-                PlayDialogue(lockedReactionDialogue);
-                return true;
-            }
-
             //Have jaw
             if (selNullable == ItemType.Jaw)
             {
+                if (legsObtained) { PlayDialogue(mirrorRouteLockedDialogue); return true; }
+                //if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
+
                 ItemHolder.Instance.Consume(ItemType.Jaw);
                 shellfish.SetActive(false);
                 SpawnShellInJaw();
@@ -118,28 +130,15 @@ public class QuestManager : MonoBehaviour
         // Is Bobby in the refleaction area?
         if (item == ItemType.Mirror)
         {
-            bool inZone = Vector3.Distance(player.position, mirrorPlacePoint.position) < placeDistance;
-            Debug.Log("Mirror use: inZone=" + inZone);
-            if (!inZone) return false;
+            //return true;
+            Vector2 playerXY = new Vector2(player.position.x, player.position.y);
+            Vector2 pointXY = new Vector2(mirrorPlacePoint.position.x, mirrorPlacePoint.position.y);
+            if (Vector2.Distance(playerXY, pointXY) >= placeDistance) return false;
 
-            if (legsObtained) { PlayDialogue(lockedReactionDialogue); return true; }
+            if (mirrorPlaced) return false;
+            if (legsObtained) { PlayDialogue(mirrorRouteLockedDialogue); return true; }
 
-            ItemHolder.Instance.Consume(ItemType.Mirror);
-
-            mirrorObject.transform.position = mirrorPlacePoint.position;
-            mirrorObject.SetActive(true);
-            mirrorLightRay.SetActive(true);
-            Destroy(mirrorObject.GetComponent<InteractableItem>());
-
-            if (ItemHolder.Instance.Has(ItemType.ShellInJaw))
-            {
-                ItemHolder.Instance.Consume(ItemType.ShellInJaw);
-                ReleaseShellfish();
-            }
-
-            if (poisonFish != null) poisonFish.SetActive(true);
-            PlayDialogue(mirrorPoisonDialogue);
-
+            PlayDialogue(mirrorConfirmDialogue);
             return true;
         }
 
@@ -148,8 +147,11 @@ public class QuestManager : MonoBehaviour
         // Give ShellInJaw to Starfish
         if (item == ItemType.ShellInJaw && target.itemType == ItemType.Starfish)
         {
+            if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
+
             ItemHolder.Instance.Consume(ItemType.ShellInJaw);
             PlayDialogue(giveStarfishDialogue);
+            legsObtained = true;
             return true;
         }
 
@@ -159,7 +161,6 @@ public class QuestManager : MonoBehaviour
             if (spiralshell != null) spiralshell.SetActive(false);
             ItemHolder.Instance.Consume(ItemType.StarfishLeg);
             PlayDialogue(makeScissorDialogue);
-            SpawnScissor();
             return true;
         }
 
@@ -181,6 +182,35 @@ public class QuestManager : MonoBehaviour
         // Starfish say goodbye
         shellfish.transform.position = starfish.transform.position;
         shellfish.SetActive(true);
+        Debug.Log("Shellfish released at " + shellfish.transform.position);
+    }
+
+    public void OnMirrorConfirmEnd()
+    {
+        if (!DialogueManager.GetInstance().GetStoryBool("confirmed")) return;
+        if (!ItemHolder.Instance.Has(ItemType.Mirror)) return;
+
+        ItemHolder.Instance.Consume(ItemType.Mirror);
+        mirrorObject.transform.position = mirrorPlacePoint.position;
+        mirrorObject.SetActive(true);
+        mirrorLightRay.SetActive(true);
+        //Destroy(mirrorObject.GetComponent<InteractableItem>());
+        mirrorPlaced = true;
+        if (shellfish != null) Destroy(shellfish.GetComponent<InteractableItem>());
+
+        if (ItemHolder.Instance.Has(ItemType.ShellInJaw))
+        {
+            ItemHolder.Instance.Consume(ItemType.ShellInJaw);
+            ReleaseShellfish();
+        }
+
+        if (poisonFish != null) poisonFish.SetActive(true);
+        PlayDialogue(mirrorPoisonDialogue);
+    }
+
+    public void OnJawPickedUp()
+    {
+        if (mirrorPlaced || legsObtained) PlayDialogue(jawUselessDialogue);
     }
 
     public void SpawnShellInJaw()
@@ -196,16 +226,34 @@ public class QuestManager : MonoBehaviour
 
     public void SpawnLegs()
     {
-        if (starfishLegObject != null) starfishLegObject.SetActive(true);
-        legsObtained = true;
+        if (starfishLegObject != null)
+        {
+            starfishLegObject.transform.position = starfish.transform.position + Vector3.down * 1f;
+            starfishLegObject.SetActive(true);
+        }
         SetStage(QuestStage.GotLegs);
+
+        Vector3 StarfishNewSpot = starfishRetreatPoint.position;
+        starfish.transform.position = new Vector3(StarfishNewSpot.x, StarfishNewSpot.y, starfish.transform.position.z);
+
+        //starfish.transform.position = starfishRetreatPoint.position;
+        starfishMouth.inkJSON = mirrorPlaced ? goodbyeSadInk : goodbyePhilosophyInk;
+        starfishMouth.onEnd.RemoveListener(OnStarfishGoodbyeEnd);
+        starfishMouth.onEnd.AddListener(OnStarfishGoodbyeEnd);
+        starfishMouth.gameObject.SetActive(true);
+        starfishFirstTalk.gameObject.SetActive(false);
+    }
+
+    public void OnStarfishGoodbyeEnd()
+    {
+        starfish.SetActive(false);
     }
 
     public void SpawnScissor()
     {
+        scissorObject.transform.position = spiralshell.transform.position;
         if (scissorObject != null) scissorObject.SetActive(true);
         SetStage(QuestStage.ScissorMade);
-        PlayDialogue(makeScissorDialogue);
     }
 
     public void FinishPuzzle()

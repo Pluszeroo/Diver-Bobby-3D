@@ -107,6 +107,12 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        if (currentStory != null && currentStory.currentChoices.Count > 0)
+        {
+            AdvanceOrChoose();
+            return;
+        }
+
         isHoldingSpace = true;
         spaceHoldTimer = 0f;
         skipFired = false;
@@ -366,6 +372,13 @@ public class DialogueManager : MonoBehaviour
 
         if (currentChoices.Count > 0)
             StartCoroutine(SelectFirstChoice());
+    }
+
+    public bool GetStoryBool(string varName)
+    {
+        if (currentStory == null) return false;
+        object v = currentStory.variablesState[varName];
+        return v is bool b && b;
     }
 
     private IEnumerator SelectFirstChoice()

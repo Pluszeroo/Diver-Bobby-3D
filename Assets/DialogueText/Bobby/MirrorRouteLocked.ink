@@ -1,0 +1,1 @@
+Starfish is already enjoying the meal... this mirror is pointless now.
