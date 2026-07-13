@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Sprite ShellfishPortrait;
     [SerializeField] private Sprite BobbyPortrait;
     [SerializeField] private Sprite GuidefishPortrait;
+    [SerializeField] private Sprite LegLessPortrait;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;

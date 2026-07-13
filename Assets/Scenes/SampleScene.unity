@@ -5397,6 +5397,7 @@ Transform:
   - {fileID: 1214765950}
   - {fileID: 187619888}
   - {fileID: 1668264912}
+  - {fileID: 1883380192}
   - {fileID: 595676317}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6476,7 +6477,7 @@ MonoBehaviour:
   onEnd:
     m_PersistentCalls:
       m_Calls: []
-  playOnce: 1
+  playOnce: 0
   isInteractTrigger: 0
 --- !u!1 &1164553686
 GameObject:
@@ -9108,6 +9109,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2060603684}
         m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
         m_MethodName: SpawnLegs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2060603684}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: MoveStarfishToRetreat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12157,6 +12170,79 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1883380191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883380192}
+  - component: {fileID: 1883380194}
+  - component: {fileID: 1883380193}
+  m_Layer: 0
+  m_Name: Shellfish Revenge Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1883380192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883380191}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.331348, y: -3.716331, z: 1.5539179}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 947585034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1883380193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883380191}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1883380194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883380191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43d0a28fdd1bc841ab0c5a7a72cd3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualCue: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: 7221faebdeae9e549b6ce0f31be83d7a, type: 3}
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  playOnce: 0
+  isInteractTrigger: 0
 --- !u!1 &1886238730
 GameObject:
   m_ObjectHideFlags: 0
@@ -12209,6 +12295,7 @@ MonoBehaviour:
   ShellfishPortrait: {fileID: 21300000, guid: 9ef3f4c5961442e4eaa05fced4cd5154, type: 3}
   BobbyPortrait: {fileID: 21300000, guid: aa82e7dde8c344b4f9d05482a59ea7dd, type: 3}
   GuidefishPortrait: {fileID: 0}
+  LegLessPortrait: {fileID: 0}
   choices:
   - {fileID: 885127515}
   - {fileID: 1916070581}
@@ -13718,10 +13805,16 @@ MonoBehaviour:
   cutGuitarDialogue: {fileID: 595676315}
   jawUselessDialogue: {fileID: 1668264910}
   starfishFirstTalk: {fileID: 579871089}
+  shellfishRevengeDialogue: {fileID: 1883380191}
   starfishRetreatPoint: {fileID: 388910216}
   goodbyePhilosophyInk: {fileID: 4900000, guid: 0f03f169032b0f648a6b45c94272ecd9, type: 3}
   goodbyeSadInk: {fileID: 4900000, guid: b3e734c202f34334aa6ac1e84aa346bb, type: 3}
+  starfishAfterPhilosophyInk: {fileID: 4900000, guid: 1ebfac09957b5c84bae1961ed46bb9ea, type: 3}
+  shellfishMouth: {fileID: 1163556234}
+  shellfishCantCapture: {fileID: 1474071741}
+  shellfishRescuedInk: {fileID: 4900000, guid: 81cc6965907e5374cbe487ccabb8705f, type: 3}
   starfishMouth: {fileID: 66030613}
+  positionOffset: 2
 --- !u!1 &2063679175
 GameObject:
   m_ObjectHideFlags: 0
