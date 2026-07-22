@@ -2179,8 +2179,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.3406725, y: 0, z: 19.783417, w: -6.0274963}
+  m_margin: {x: 3.3406725, y: 6.760115, z: 7.8230896, w: -6.0274963}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2248,7 +2248,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 170.5, y: -33.1}
-  m_SizeDelta: {x: 427.8311, y: 32.148}
+  m_SizeDelta: {x: 369.0698, y: 32.148}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &388910215
 GameObject:
@@ -4412,8 +4412,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.2, y: 23.9}
-  m_SizeDelta: {x: 200, y: 25.06}
+  m_AnchoredPosition: {x: -67.55994, y: 23.9}
+  m_SizeDelta: {x: 192.7199, y: 25.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717958710
 MonoBehaviour:
@@ -12291,11 +12291,12 @@ MonoBehaviour:
   dialogueText: {fileID: 382030884}
   speakerName: {fileID: 717958710}
   speakerPortrait: {fileID: 1893888307}
-  StarfishPortrait: {fileID: 21300000, guid: 4f300b0d5093f0c41a71560557ff9b43, type: 3}
+  StarfishPortrait: {fileID: 21300000, guid: 0a790430c92a62249b096caad0589315, type: 3}
   ShellfishPortrait: {fileID: 21300000, guid: 9ef3f4c5961442e4eaa05fced4cd5154, type: 3}
   BobbyPortrait: {fileID: 21300000, guid: aa82e7dde8c344b4f9d05482a59ea7dd, type: 3}
-  GuidefishPortrait: {fileID: 0}
+  PufferfishPortrait: {fileID: 21300000, guid: b80072d0ce82e9b47bd424d78a8eddc2, type: 3}
   LegLessPortrait: {fileID: 0}
+  ScientishPortrait: {fileID: 21300000, guid: b3ed0ca29cc2c254b85f4e799e374472, type: 3}
   choices:
   - {fileID: 885127515}
   - {fileID: 1916070581}

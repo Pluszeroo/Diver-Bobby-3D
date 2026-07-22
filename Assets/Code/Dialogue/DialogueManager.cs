@@ -19,8 +19,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Sprite StarfishPortrait;
     [SerializeField] private Sprite ShellfishPortrait;
     [SerializeField] private Sprite BobbyPortrait;
-    [SerializeField] private Sprite GuidefishPortrait;
+    [SerializeField] private Sprite PufferfishPortrait;
     [SerializeField] private Sprite LegLessPortrait;
+    [SerializeField] private Sprite ScientishPortrait;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -317,8 +318,8 @@ public class DialogueManager : MonoBehaviour
 
                 switch (value)
                 {
-                    case "Guidefish":
-                        speakerPortrait.sprite = GuidefishPortrait;
+                    case "Pufferfish":
+                        speakerPortrait.sprite = PufferfishPortrait;
                         break;
                     case "Starfish":
                         speakerPortrait.sprite = StarfishPortrait;
@@ -328,6 +329,9 @@ public class DialogueManager : MonoBehaviour
                         break;
                     case "Bobby":
                         speakerPortrait.sprite = BobbyPortrait;
+                        break;
+                    case "Scientish":
+                        speakerPortrait.sprite = ScientishPortrait;
                         break;
                     default:
                         Debug.LogWarning("Unknown speaker: " + value);

@@ -3,8 +3,7 @@ using System.Collections;
 
 public class ScientishTalk : MonoBehaviour
 {
-    [SerializeField] private DialogueTrigger scientishDialogue
-        ;
+    [SerializeField] private DialogueTrigger scientishDialogue;
 
     private IEnumerator Start()
     {
