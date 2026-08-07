@@ -21,6 +21,7 @@ public class CameraMangager : MonoBehaviour
     {
         if (hasSwitchedToFollowBobbyCamera) { return; }
         hasSwitchedToFollowBobbyCamera = true;
+
         panorama.gameObject.SetActive(false);
         FollowBobbyCamera.gameObject.SetActive(true);
         //panorama.Priority = 0;
