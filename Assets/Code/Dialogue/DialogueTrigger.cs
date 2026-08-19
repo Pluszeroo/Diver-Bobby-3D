@@ -16,6 +16,8 @@ public class DialogueTrigger : MonoBehaviour
     private bool hasPlayed = false;
 
     public bool isInteractTrigger = false;
+    public bool isOnHitTrigger = false;
+
     public bool PlayerInRange => playerInRange;
 
     private bool playerInRange = false;
@@ -61,7 +63,16 @@ public class DialogueTrigger : MonoBehaviour
             else
                 DialogueManager.GetInstance().closestTrigger = this;
         }
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            if (playOnce && hasPlayed) return;
+            DialogueManager.GetInstance().closestTrigger = this;
+            DialogueManager.GetInstance().OnManualStart();
+        }
     }
 
     private void OnTriggerExit(Collider collider)

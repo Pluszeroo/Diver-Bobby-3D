@@ -121,6 +121,26 @@ public class DialogueManager : MonoBehaviour
         if (skipProgressRoot != null) skipProgressRoot.SetActive(true);
     }
 
+    public void OnManualStart()
+    {
+        if (!dialogueIsPlaying)
+        {
+            if (closestTrigger != null) EnterDialogueMode();
+            return;
+        }
+
+        if (currentStory != null && currentStory.currentChoices.Count > 0)
+        {
+            AdvanceOrChoose();
+            return;
+        }
+
+        isHoldingSpace = true;
+        spaceHoldTimer = 0f;
+        skipFired = false;
+        if (skipProgressRoot != null) skipProgressRoot.SetActive(true);
+    }
+
     public void OnSpaceCanceled(InputAction.CallbackContext ctx)
     {
         if (!isHoldingSpace) return;
