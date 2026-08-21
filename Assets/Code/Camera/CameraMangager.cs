@@ -24,7 +24,6 @@ public class CameraMangager : MonoBehaviour
 
         panorama.gameObject.SetActive(false);
         FollowBobbyCamera.gameObject.SetActive(true);
-        print(FollowBobbyCamera.Target.TrackingTarget.name);
 
         //panorama.Priority = 0;
         //FollowBobbyCamera.Priority = 10;
