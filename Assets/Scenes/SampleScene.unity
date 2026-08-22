@@ -6895,6 +6895,8 @@ GameObject:
   - component: {fileID: 999021446}
   - component: {fileID: 999021445}
   - component: {fileID: 999021447}
+  - component: {fileID: 999021449}
+  - component: {fileID: 999021448}
   m_Layer: 0
   m_Name: Bobby
   m_TagString: Player
@@ -7079,6 +7081,32 @@ MonoBehaviour:
   - type: 4
     icon: {fileID: -7787360922138207735, guid: 4b1958a83dd213944893da8ff00f8726, type: 3}
     placePrefab: {fileID: 1167755123}
+--- !u!114 &999021448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999021438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cea83dbbc735054cb92af1d5002d487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: {fileID: 364264991}
+--- !u!114 &999021449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999021438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed47b532791d354fa9372c1b918250f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <CurrentState>k__BackingField: 0
 --- !u!1 &1059378714
 GameObject:
   m_ObjectHideFlags: 0
