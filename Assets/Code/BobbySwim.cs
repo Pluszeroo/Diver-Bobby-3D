@@ -136,6 +136,12 @@ public class BobbySwim : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             return;
         }
+
+        if (!CanSwim())
+        {
+            rb.linearVelocity = Vector3.zero;
+            return;
+        }
         
         if (moveInput != Vector2.zero)
         {
@@ -219,5 +225,16 @@ public class BobbySwim : MonoBehaviour
         {
             animator.SetFloat("FacingRight", 1);
         }
+    }
+
+    public bool CanSwim()
+    {
+        return BobbyGameState.Instance.CurrentState switch
+        {
+            BobbyState.Idle => true,
+            BobbyState.Dialogue => false,
+            BobbyState.Map => false,
+            _ => throw new System.NotImplementedException(),
+        };
     }
 }

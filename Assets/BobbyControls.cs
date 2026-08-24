@@ -89,6 +89,15 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Map"",
+                    ""type"": ""Button"",
+                    ""id"": ""950fa178-0377-49a4-95fc-85cfa448825c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -300,6 +309,28 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
                     ""action"": ""InventoryPrev"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""268fcd5f-9718-4aaa-8b49-814d9ff48a5a"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e459f1f0-574a-471d-bdb8-dadd37d4b46f"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -385,6 +416,7 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
         m_Player_Drop = m_Player.FindAction("Drop", throwIfNotFound: true);
         m_Player_InventoryNext = m_Player.FindAction("InventoryNext", throwIfNotFound: true);
         m_Player_InventoryPrev = m_Player.FindAction("InventoryPrev", throwIfNotFound: true);
+        m_Player_Map = m_Player.FindAction("Map", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
@@ -463,6 +495,7 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Drop;
     private readonly InputAction m_Player_InventoryNext;
     private readonly InputAction m_Player_InventoryPrev;
+    private readonly InputAction m_Player_Map;
     public struct PlayerActions
     {
         private @BobbyControls m_Wrapper;
@@ -474,6 +507,7 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
         public InputAction @Drop => m_Wrapper.m_Player_Drop;
         public InputAction @InventoryNext => m_Wrapper.m_Player_InventoryNext;
         public InputAction @InventoryPrev => m_Wrapper.m_Player_InventoryPrev;
+        public InputAction @Map => m_Wrapper.m_Player_Map;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -504,6 +538,9 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
             @InventoryPrev.started += instance.OnInventoryPrev;
             @InventoryPrev.performed += instance.OnInventoryPrev;
             @InventoryPrev.canceled += instance.OnInventoryPrev;
+            @Map.started += instance.OnMap;
+            @Map.performed += instance.OnMap;
+            @Map.canceled += instance.OnMap;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -529,6 +566,9 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
             @InventoryPrev.started -= instance.OnInventoryPrev;
             @InventoryPrev.performed -= instance.OnInventoryPrev;
             @InventoryPrev.canceled -= instance.OnInventoryPrev;
+            @Map.started -= instance.OnMap;
+            @Map.performed -= instance.OnMap;
+            @Map.canceled -= instance.OnMap;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -609,6 +649,7 @@ public partial class @BobbyControls: IInputActionCollection2, IDisposable
         void OnDrop(InputAction.CallbackContext context);
         void OnInventoryNext(InputAction.CallbackContext context);
         void OnInventoryPrev(InputAction.CallbackContext context);
+        void OnMap(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
