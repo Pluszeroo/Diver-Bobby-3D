@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 public enum QuestStage
 {
     Intro, FreeExploring, MetNPC, InProgress, GotLegs, ScissorMade, Done
@@ -22,7 +23,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject mirrorObject;
 
     [Header("Spawned Objects")]
-    [SerializeField] private GameObject shellInJawObject;
+    [SerializeField] private GameObject shellInJarObject;
     [SerializeField] private GameObject starfishLegObject;
     [SerializeField] private GameObject scissorObject;
 
@@ -46,7 +47,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject makeScissorDialogue;    // Get scissor
     [SerializeField] private GameObject cutGuitarDialogue;      // Cut string
     //[SerializeField] private GameObject lockedReactionDialogue;
-    [SerializeField] private GameObject jawUselessDialogue;
+    [SerializeField] private GameObject jarUselessDialogue;
     [SerializeField] private DialogueTrigger starfishFirstTalk;
     [SerializeField] private GameObject shellfishRevengeDialogue;
 
@@ -90,12 +91,12 @@ public class QuestManager : MonoBehaviour
 
         switch (item.itemType)
         {
-            case ItemType.Jaw:
+            case ItemType.Jar:
             case ItemType.Mirror:
-            case ItemType.ShellInJaw:
+            case ItemType.ShellInJar:
             case ItemType.StarfishLeg:
             case ItemType.Scissor:
-
+            case ItemType.Glove:
                 if (ItemHolder.Instance.TryAdd(item.itemType))
                 {
                     item.onInteract?.Invoke();
@@ -115,13 +116,13 @@ public class QuestManager : MonoBehaviour
 
         if (target != null && target.itemType == ItemType.Shell)
         {
-            //Have jaw
-            if (selNullable == ItemType.Jaw)
+            //Have jar and glove in inventory
+            if (ItemHolder.Instance.Has(ItemType.Jar) && ItemHolder.Instance.Has(ItemType.Glove))
             {
                 if (legsObtained) { PlayDialogue(mirrorRouteLockedDialogue); return true; }
                 //if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
 
-                ItemHolder.Instance.Consume(ItemType.Jaw);
+                ItemHolder.Instance.Consume(ItemType.Jar);
                 shellfish.SetActive(false);
                 SpawnShellInJaw();
                 return true;
@@ -155,11 +156,11 @@ public class QuestManager : MonoBehaviour
         if (target == null) return false;
 
         // Give ShellInJaw to Starfish
-        if (item == ItemType.ShellInJaw && target.itemType == ItemType.Starfish)
+        if (item == ItemType.ShellInJar && target.itemType == ItemType.Starfish)
         {
             if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
 
-            ItemHolder.Instance.Consume(ItemType.ShellInJaw);
+            ItemHolder.Instance.Consume(ItemType.ShellInJar);
             PlayDialogue(giveStarfishDialogue);
             legsObtained = true;
             return true;
@@ -215,14 +216,14 @@ public class QuestManager : MonoBehaviour
         mirrorPlaced = true;
         if (shellfish != null) Destroy(shellfish.GetComponent<InteractableItem>());
 
-        if (ItemHolder.Instance.Has(ItemType.ShellInJaw))
+        if (ItemHolder.Instance.Has(ItemType.ShellInJar))
         {
-            ItemHolder.Instance.Consume(ItemType.ShellInJaw);
+            ItemHolder.Instance.Consume(ItemType.ShellInJar);
             shellRescued = true;
         }
-        else if (shellInJawObject != null && shellInJawObject.activeSelf)
+        else if (shellInJarObject != null && shellInJarObject.activeSelf)
         {
-            shellInJawObject.SetActive(false);
+            shellInJarObject.SetActive(false);
             shellRescued = true;
         }
 
@@ -238,17 +239,17 @@ public class QuestManager : MonoBehaviour
         starfish.transform.position = new Vector3(NewStarposition.x, NewStarposition.y, starfish.transform.position.z);
     }
 
-    public void OnJawPickedUp()
+    public void OnJarPickedUp()
     {
-        if (mirrorPlaced || legsObtained) PlayDialogue(jawUselessDialogue);
+        if (mirrorPlaced || legsObtained) PlayDialogue(jarUselessDialogue);
     }
 
     public void SpawnShellInJaw()
     {
-        if (shellInJawObject != null)
+        if (shellInJarObject != null)
         {
-            shellInJawObject.transform.position = shellfish.transform.position;
-            shellInJawObject.SetActive(true);
+            shellInJarObject.transform.position = shellfish.transform.position;
+            shellInJarObject.SetActive(true);
         }
         SetStage(QuestStage.InProgress);
         PlayDialogue(captureShellDialogue);
