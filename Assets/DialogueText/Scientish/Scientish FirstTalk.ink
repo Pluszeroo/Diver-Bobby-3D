@@ -28,7 +28,7 @@ Will you help me?
 
 === already_agreed ===
 # speaker: Scientish
-- Here, this is the result of my studies. 
+Here, this is the result of my studies. 
 # speaker: Scientish
 You will be needing this.
 -> END
