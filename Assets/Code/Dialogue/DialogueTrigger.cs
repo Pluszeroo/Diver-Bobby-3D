@@ -1,26 +1,31 @@
+using Ink.Runtime;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
 {
     [Header("Visual Cue")]
-    [SerializeField] private GameObject visualCue;
+    [SerializeField] protected GameObject visualCue;
 
     [Header("Ink JSON")]
     public TextAsset inkJSON;
 
+    protected Story currentStory;
+
     public UnityEvent onEnd;
 
     [Header("Play Once")]
-    [SerializeField] private bool playOnce = false;
-    private bool hasPlayed = false;
+    [SerializeField] protected bool playOnce = false;
+    protected bool hasPlayed = false;
 
     public bool isInteractTrigger = false;
-    public bool isOnHitTrigger = false;
+    public bool isOnHitTrigger = false;  
 
     public bool PlayerInRange => playerInRange;
 
-    private bool playerInRange = false;
+    protected bool playerInRange = false;
+
     private void Awake()
     {
         playerInRange = false;
@@ -36,9 +41,10 @@ public class DialogueTrigger : MonoBehaviour
         visualCue.SetActive(shouldShow);
     }
 
-    public void EnterDialogue()
+    public virtual Story GetStory()
     {
-
+        currentStory = new Story(inkJSON.text);
+        return currentStory;
     }
 
     //Call this when dialogue actually starts

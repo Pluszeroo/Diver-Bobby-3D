@@ -1,20 +1,27 @@
 using UnityEngine;
 using System.Collections;
+using Ink.Runtime;
 
-public class ScientishTalk : MonoBehaviour
+public class ScientishTalk : DialogueTrigger
 {
-    [SerializeField] private DialogueTrigger scientishDialogue;
+    bool agreed = false;
 
-    private IEnumerator Start()
+    public override Story GetStory()
     {
-        yield return null;
-        DialogueManager.GetInstance().closestTrigger = scientishDialogue;
-        DialogueManager.GetInstance().EnterDialogueMode();
+        currentStory = new Story(inkJSON.text);
+        currentStory.variablesState["agreed"] = agreed;
+        return currentStory;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetVariableState()
     {
-        
+        agreed = (bool)currentStory.variablesState["agreed"];
+    }
+
+    public void OpenQuestStele()
+    {
+        if (!agreed) return;
+
+        QuestListManager.Instance.OpenQuestList();
     }
 }

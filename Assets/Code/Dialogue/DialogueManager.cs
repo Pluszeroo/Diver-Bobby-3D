@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Speaker UI")]
     [SerializeField] private TextMeshProUGUI speakerName;
-    [SerializeField] private UnityEngine.UI.Image speakerPortrait;
+    [SerializeField] private Image speakerPortrait;
     [SerializeField] private Sprite StarfishPortrait;
     [SerializeField] private Sprite ShellfishPortrait;
     [SerializeField] private Sprite BobbyPortrait;
@@ -213,7 +213,7 @@ public class DialogueManager : MonoBehaviour
         activeTrigger = trigger;
 
         trigger.MarkPlayed();
-        currentStory = new Story(trigger.inkJSON.text);
+        currentStory = trigger.GetStory();
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 

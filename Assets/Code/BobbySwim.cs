@@ -109,14 +109,16 @@ public class BobbySwim : MonoBehaviour
         if (QuestManager.GetInstance().TryUseSelected()) return;
 
         // Check interact trigger before TryUseSelected
-        if (DialogueManager.GetInstance().closestInteractTrigger != null)
+        if (DialogueManager.GetInstance().closestInteractTrigger != null && CanInteract())
         {
             DialogueManager.GetInstance().EnterDialogueMode(true);
             return;
         }
 
-        else if (DialogueManager.GetInstance().closestTrigger != null)
+        else if (DialogueManager.GetInstance().closestTrigger != null && CanInteract())
             DialogueManager.GetInstance().EnterDialogueMode();
+
+        QuestListManager.Instance.InteractWithQuestList();
     }
 
     private void OnCycleNext(InputAction.CallbackContext ctx) => ItemHolder.Instance.Cycle(1);
@@ -234,6 +236,19 @@ public class BobbySwim : MonoBehaviour
             BobbyState.Idle => true,
             BobbyState.Dialogue => false,
             BobbyState.Map => false,
+            BobbyState.Stele => false,
+            _ => throw new System.NotImplementedException(),
+        };
+    }
+
+    public bool CanInteract()
+    {
+        return BobbyGameState.Instance.CurrentState switch
+        {
+            BobbyState.Idle => true,
+            BobbyState.Dialogue => false,
+            BobbyState.Map => false,
+            BobbyState.Stele => false,
             _ => throw new System.NotImplementedException(),
         };
     }

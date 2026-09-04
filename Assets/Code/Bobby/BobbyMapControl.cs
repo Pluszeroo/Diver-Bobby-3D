@@ -48,6 +48,7 @@ public class BobbyMapControl : MonoBehaviour
             BobbyState.Idle => true,
             BobbyState.Dialogue => false,
             BobbyState.Map => true,
+            BobbyState.Stele => false,
             _ => throw new System.NotImplementedException(),
         };
     }

@@ -29,4 +29,5 @@ public enum BobbyState
     Idle,
     Dialogue,
     Map,
+    Stele,
 }
