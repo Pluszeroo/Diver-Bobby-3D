@@ -7795,7 +7795,7 @@ Transform:
   m_GameObject: {fileID: 999021438}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102.8, y: 18.1, z: 0}
+  m_LocalPosition: {x: 33.51, y: 44.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7894,19 +7894,19 @@ MonoBehaviour:
   fullHint: {fileID: 2141327783}
   entries:
   - type: 5
-    icon: {fileID: 21300000, guid: 312449a73d8dfcc43809b41e12625f3a, type: 3}
+    icon: {fileID: 21300000, guid: ffa5c5fe09d1f284fa1f9d9fdf8c30ce, type: 3}
     placePrefab: {fileID: 1813895522}
   - type: 6
-    icon: {fileID: 21300000, guid: ff49e4c9c624aba4794887c7bdfe5c5c, type: 3}
+    icon: {fileID: 21300000, guid: 28b9d7af54230bc44b92657ff4d4810c, type: 3}
     placePrefab: {fileID: 438006143}
   - type: 7
-    icon: {fileID: 21300000, guid: 04909b9b7776d3245b8b308604bb9017, type: 3}
+    icon: {fileID: 21300000, guid: 67e52ecb76da02144b4a27695732a26c, type: 3}
     placePrefab: {fileID: 592141319}
   - type: 2
-    icon: {fileID: 8442483440489259830, guid: 7efd64543e2ddbb49aecde09e8de612f, type: 3}
+    icon: {fileID: 21300000, guid: 6df5c75432b082942a51cbf8c2c7ec57, type: 3}
     placePrefab: {fileID: 871165398}
   - type: 4
-    icon: {fileID: -7787360922138207735, guid: 4b1958a83dd213944893da8ff00f8726, type: 3}
+    icon: {fileID: 21300000, guid: ddfc470306be3074dbe683ed48652922, type: 3}
     placePrefab: {fileID: 1167755123}
 --- !u!114 &999021448
 MonoBehaviour:
@@ -8171,7 +8171,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 4.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1064448882
@@ -9453,7 +9453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.432, y: -0.648}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190113136
@@ -10069,7 +10069,7 @@ Transform:
   m_GameObject: {fileID: 1276978237}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0.92, z: 0}
   m_LocalScale: {x: 0.6075934, y: 0.6075934, z: 0.6075934}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11310,7 +11310,7 @@ Transform:
   m_GameObject: {fileID: 1434920459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102.8, y: 18.1, z: -25}
+  m_LocalPosition: {x: 33.51, y: 44.21, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11450,7 +11450,7 @@ Transform:
   m_GameObject: {fileID: 1438376641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5094948, z: 0}
   m_LocalScale: {x: 1.8898, y: 1.8898, z: 1.8898}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14054,7 +14054,7 @@ GameObject:
   - component: {fileID: 1772431542}
   - component: {fileID: 1772431546}
   m_Layer: 0
-  m_Name: Guidefish
+  m_Name: Puffer Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14145,7 +14145,7 @@ Transform:
   m_GameObject: {fileID: 1772431541}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 73.8, z: 0}
+  m_LocalPosition: {x: 0.21, y: 50.71, z: 0}
   m_LocalScale: {x: 0.81839514, y: 0.74122435, z: 0.66412}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16843,7 +16843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.638, y: -14.03}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063372786

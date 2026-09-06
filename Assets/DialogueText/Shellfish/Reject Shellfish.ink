@@ -1,2 +1,2 @@
 # speaker: Bobby
-Slippery...can't seem to hold onto it
+Argh it’s so slippery, my paws can’t grab it...maybe I could catch it with something...

@@ -1,4 +1,10 @@
+What’s this? 
 # speaker: Starfish
-Oh! Thank you! 
+Oooh shellfish, my favourite! Wait does this mean...you are a god?!
 # speaker: Starfish
-That is exactly what I want now!
+What?? No.
+# speaker: Bobby
+Yes. You bring me delicious food, just like the gods do. 
+# speaker: Starfish
+You are one of them. Thank you, I knew you were special.
+# speaker: Starfish
