@@ -2216,7 +2216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258649696}
   - component: {fileID: 258649698}
-  - component: {fileID: 258649697}
+  - component: {fileID: 258649699}
   m_Layer: 0
   m_Name: Scientish First Talk (1)
   m_TagString: Untagged
@@ -2240,62 +2240,6 @@ Transform:
   - {fileID: 163308783}
   m_Father: {fileID: 1970177507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &258649697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258649695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45cecaa6b8c1df44a8bc4f29cd097d8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visualCue: {fileID: 163308782}
-  inkJSON: {fileID: 4900000, guid: 2ddb6c724b430304bbce6158f509f513, type: 3}
-  onEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 186789947}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 258649697}
-        m_TargetAssemblyTypeName: ScientishTalk, Assembly-CSharp
-        m_MethodName: SetVariableState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 258649697}
-        m_TargetAssemblyTypeName: ScientishTalk, Assembly-CSharp
-        m_MethodName: OpenQuestStele
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  playOnce: 0
-  isInteractTrigger: 0
-  isOnHitTrigger: 0
 --- !u!65 &258649698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2317,6 +2261,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1, y: 2.1176474, z: 1.1}
   m_Center: {x: 0, y: -0.056536086, z: 0}
+--- !u!114 &258649699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258649695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43d0a28fdd1bc841ab0c5a7a72cd3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualCue: {fileID: 163308782}
+  inkJSON: {fileID: 4900000, guid: 2ddb6c724b430304bbce6158f509f513, type: 3}
+  onEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 186789947}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2147461072}
+        m_TargetAssemblyTypeName: QuestListManager, Assembly-CSharp
+        m_MethodName: OpenQuestList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  playOnce: 0
+  isInteractTrigger: 0
+  isOnHitTrigger: 0
 --- !u!1 &260724534
 GameObject:
   m_ObjectHideFlags: 0
@@ -16237,7 +16225,6 @@ GameObject:
   - component: {fileID: 1970177507}
   - component: {fileID: 1970177506}
   - component: {fileID: 1970177508}
-  - component: {fileID: 1970177509}
   m_Layer: 0
   m_Name: Scientish
   m_TagString: Untagged
@@ -16338,26 +16325,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5022354, y: 2.5317802, z: 0.2}
   m_Center: {x: -0.014772415, y: 0, z: 0}
---- !u!114 &1970177509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970177505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45cecaa6b8c1df44a8bc4f29cd097d8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visualCue: {fileID: 0}
-  inkJSON: {fileID: 0}
-  onEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  playOnce: 0
-  isInteractTrigger: 0
-  isOnHitTrigger: 0
 --- !u!1 &1970921772
 GameObject:
   m_ObjectHideFlags: 0
