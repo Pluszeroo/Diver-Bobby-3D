@@ -10562,6 +10562,9 @@ MonoBehaviour:
   - type: 4
     icon: {fileID: 21300000, guid: ddfc470306be3074dbe683ed48652922, type: 3}
     placePrefab: {fileID: 1167755123}
+  - type: 9
+    icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    placePrefab: {fileID: 2065042717}
 --- !u!114 &999021448
 MonoBehaviour:
   m_ObjectHideFlags: 0
