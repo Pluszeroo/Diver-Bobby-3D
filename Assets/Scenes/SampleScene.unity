@@ -5278,6 +5278,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1321819142}
+        m_TargetAssemblyTypeName: CameraMangager, Assembly-CSharp
+        m_MethodName: LookAtGuitarCutScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   playOnce: 0
   isInteractTrigger: 0
   isOnHitTrigger: 0
@@ -10475,7 +10487,7 @@ MonoBehaviour:
   damping: 0.88
   Buoyancy: 0.8
   sprintMultiplier: 2
-  manager: {fileID: 1434920464}
+  manager: {fileID: 1321819142}
   animator: {fileID: 487331648}
   bobSpeed: 0.5
   bobAmount: 0.3
@@ -14039,6 +14051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1321819141}
+  - component: {fileID: 1321819142}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -14066,6 +14079,20 @@ Transform:
   - {fileID: 2131766436}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1321819142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321819140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7416ac62aa554f24da3360827daa8923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panorama: {fileID: 653097928}
+  FollowBobbyCamera: {fileID: 1434920465}
 --- !u!1 &1341647351
 GameObject:
   m_ObjectHideFlags: 0
@@ -14883,7 +14910,6 @@ GameObject:
   - component: {fileID: 1434920465}
   - component: {fileID: 1434920466}
   - component: {fileID: 1434920463}
-  - component: {fileID: 1434920464}
   m_Layer: 0
   m_Name: FollowBobbyCamera
   m_TagString: Untagged
@@ -14926,20 +14952,6 @@ MonoBehaviour:
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
---- !u!114 &1434920464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434920459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7416ac62aa554f24da3360827daa8923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panorama: {fileID: 653097928}
-  FollowBobbyCamera: {fileID: 1434920465}
 --- !u!114 &1434920465
 MonoBehaviour:
   m_ObjectHideFlags: 0

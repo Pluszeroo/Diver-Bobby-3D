@@ -69,6 +69,7 @@ public class QuestListManager : MonoBehaviour
             BobbyState.Dialogue => false,
             BobbyState.Map => false,
             BobbyState.Stele => true,
+            BobbyState.CutScene => false,
             _ => throw new System.NotImplementedException(),
         };
     }

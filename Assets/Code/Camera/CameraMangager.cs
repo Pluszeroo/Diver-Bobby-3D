@@ -1,5 +1,6 @@
 using UnityEngine;
 using Unity.Cinemachine;
+using System.Collections;
 
 public class CameraMangager : MonoBehaviour
 {
@@ -29,9 +30,21 @@ public class CameraMangager : MonoBehaviour
         //FollowBobbyCamera.Priority = 10;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LookAtGuitarCutScene()
     {
-        
+        StartCoroutine(LookAtGuitar());
+    }
+
+    private IEnumerator LookAtGuitar()
+    {
+        BobbyGameState.Instance.SetBobbyState(BobbyState.CutScene);
+        panorama.gameObject.SetActive(true);
+        FollowBobbyCamera.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(3);
+
+        BobbyGameState.Instance.SetBobbyState(BobbyState.Idle);
+        panorama.gameObject.SetActive(false);
+        FollowBobbyCamera.gameObject.SetActive(true);
     }
 }

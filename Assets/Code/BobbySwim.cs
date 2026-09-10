@@ -237,6 +237,7 @@ public class BobbySwim : MonoBehaviour
             BobbyState.Dialogue => false,
             BobbyState.Map => false,
             BobbyState.Stele => false,
+            BobbyState.CutScene => false,
             _ => throw new System.NotImplementedException(),
         };
     }
@@ -249,6 +250,7 @@ public class BobbySwim : MonoBehaviour
             BobbyState.Dialogue => false,
             BobbyState.Map => false,
             BobbyState.Stele => false,
+            BobbyState.CutScene => false,
             _ => throw new System.NotImplementedException(),
         };
     }

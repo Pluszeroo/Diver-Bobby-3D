@@ -30,4 +30,5 @@ public enum BobbyState
     Dialogue,
     Map,
     Stele,
+    CutScene,
 }
