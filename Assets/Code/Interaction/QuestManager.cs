@@ -41,7 +41,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject mirrorConfirmDialogue;
 
     [Header("Dialogues (DialogueTrigger objects)")]
-    [SerializeField] private GameObject captureShellDialogue;   // Using jaw catch Shell
+    [SerializeField] private GameObject captureShellDialogue;   // Using jar catch Shell
     [SerializeField] private GameObject giveStarfishDialogue;   // Give Shell to starfish
     [SerializeField] private GameObject mirrorPoisonDialogue;   // Mirror in the right place
     [SerializeField] private GameObject makeScissorDialogue;    // Get scissor
@@ -50,6 +50,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject jarUselessDialogue;
     [SerializeField] private DialogueTrigger starfishFirstTalk;
     [SerializeField] private GameObject shellfishRevengeDialogue;
+    [SerializeField] private ShellFishCapture _shellFishCaptureDialogue;
 
     [Header("Starfish Goodbye")]
     [SerializeField] private Transform starfishRetreatPoint;
@@ -116,15 +117,14 @@ public class QuestManager : MonoBehaviour
 
         if (target != null && target.itemType == ItemType.Shell)
         {
-            //Have jar and glove in inventory
-            if (ItemHolder.Instance.Has(ItemType.Jar) && ItemHolder.Instance.Has(ItemType.Glove))
+            if (_shellFishCaptureDialogue.CheckItems(selNullable))
             {
                 if (legsObtained) { PlayDialogue(mirrorRouteLockedDialogue); return true; }
                 //if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
 
-                ItemHolder.Instance.Consume(ItemType.Jar);
+                //ItemHolder.Instance.Consume(ItemType.Jar);
                 shellfish.SetActive(false);
-                SpawnShellInJaw();
+                SpawnShellInJar();
                 return true;
             }
 
@@ -244,7 +244,7 @@ public class QuestManager : MonoBehaviour
         if (mirrorPlaced || legsObtained) PlayDialogue(jarUselessDialogue);
     }
 
-    public void SpawnShellInJaw()
+    public void SpawnShellInJar()
     {
         if (shellInJarObject != null)
         {
