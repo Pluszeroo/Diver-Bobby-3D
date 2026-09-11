@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 public enum QuestStage
 {
@@ -155,7 +156,7 @@ public class QuestManager : MonoBehaviour
 
         if (target == null) return false;
 
-        // Give ShellInJaw to Starfish
+        // Give ShellInJar to Starfish
         if (item == ItemType.ShellInJar && target.itemType == ItemType.Starfish)
         {
             if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
@@ -196,8 +197,8 @@ public class QuestManager : MonoBehaviour
         shellfish.SetActive(true);
         Debug.Log("Shellfish released at " + shellfish.transform.position);
 
-        shellfishCantCapture.gameObject.SetActive(false); 
         shellfishMouth.inkJSON = shellfishRescuedInk;
+        shellfishCantCapture.gameObject.SetActive(false); 
     }
 
     public void OnMirrorConfirmEnd()
@@ -212,15 +213,17 @@ public class QuestManager : MonoBehaviour
         mirrorObject.SetActive(true);
         mirrorLightRay.SetActive(true);
         ReleaseShellfish();
-        //Destroy(mirrorObject.GetComponent<InteractableItem>());
+        Destroy(mirrorObject.GetComponent<InteractableItem>());
+        Destroy(mirrorObject.GetComponentInChildren<TextMeshProUGUI>());
         mirrorPlaced = true;
         
         if (shellfish != null)
         {
             Destroy(shellfish.GetComponent<InteractableItem>());
+            
             foreach(DialogueTrigger trigger in shellfish.GetComponentsInChildren<DialogueTrigger>())
             {
-                trigger.gameObject.SetActive(false);
+                Destroy(trigger.gameObject);
             }
         }
 
