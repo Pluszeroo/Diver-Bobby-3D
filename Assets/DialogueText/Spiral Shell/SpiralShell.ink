@@ -1,1 +1,1 @@
-Ohhhh yeaah!! I got the scissor!
+Ohhhh yeaah!! I got the scissor! # speaker: Bobby

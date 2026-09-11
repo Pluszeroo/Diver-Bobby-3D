@@ -214,7 +214,15 @@ public class QuestManager : MonoBehaviour
         ReleaseShellfish();
         //Destroy(mirrorObject.GetComponent<InteractableItem>());
         mirrorPlaced = true;
-        if (shellfish != null) Destroy(shellfish.GetComponent<InteractableItem>());
+        
+        if (shellfish != null)
+        {
+            Destroy(shellfish.GetComponent<InteractableItem>());
+            foreach(DialogueTrigger trigger in shellfish.GetComponentsInChildren<DialogueTrigger>())
+            {
+                trigger.gameObject.SetActive(false);
+            }
+        }
 
         if (ItemHolder.Instance.Has(ItemType.ShellInJar))
         {
@@ -259,7 +267,7 @@ public class QuestManager : MonoBehaviour
     {
         if (starfishLegObject != null)
         {
-            starfishLegObject.transform.position = starfish.transform.position + Vector3.down * 1f;
+            starfishLegObject.transform.position = starfish.transform.position + Vector3.up * 1f;
             starfishLegObject.SetActive(true);
         }
         SetStage(QuestStage.GotLegs);
