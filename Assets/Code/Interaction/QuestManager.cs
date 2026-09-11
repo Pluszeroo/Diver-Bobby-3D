@@ -314,6 +314,8 @@ public class QuestManager : MonoBehaviour
     public void FinishPuzzle()
     {
         SetStage(QuestStage.Done);
+        QuestListManager.Instance.CrossEntry(QuestType.Quest1);
+        QuestListManager.Instance.OpenQuestList();
     }
 
     //Trigger a dialogue

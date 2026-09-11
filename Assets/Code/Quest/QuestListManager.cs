@@ -31,12 +31,17 @@ public class QuestListManager : MonoBehaviour
 
     public void EnableEntry(QuestType type)
     {
-        _questDictionary[type].gameObject.SetActive(true);
+        _questDictionary[type].SetActive(true);
     }
 
     public void DisableEntry(QuestType type)
     {
-        _questDictionary[type].gameObject.SetActive(false);
+        _questDictionary[type].SetActive(false);
+    }
+
+    public void CrossEntry(QuestType type)
+    {
+        _questDictionary[type].GetComponent<QuestEntry>().CrossOut();
     }
 
     public void OpenQuestList()
