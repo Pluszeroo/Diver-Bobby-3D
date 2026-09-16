@@ -26,6 +26,7 @@ public class QuestManager : MonoBehaviour
     [Header("Spawned Objects")]
     [SerializeField] private GameObject shellInJarObject;
     [SerializeField] private GameObject starfishLegObject;
+    [SerializeField] private Transform starfishLegSpawnPosition;
     [SerializeField] private GameObject scissorObject;
 
     //[Header("Mirror Reflect Zone")]
@@ -270,7 +271,7 @@ public class QuestManager : MonoBehaviour
     {
         if (starfishLegObject != null)
         {
-            starfishLegObject.transform.position = starfish.transform.position + Vector3.up * 1f;
+            starfishLegObject.transform.position = starfishLegSpawnPosition.position;
             starfishLegObject.SetActive(true);
         }
         SetStage(QuestStage.GotLegs);

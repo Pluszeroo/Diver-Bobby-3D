@@ -17359,7 +17359,7 @@ Transform:
   m_GameObject: {fileID: 999021438}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.15, y: 7.73, z: 0}
+  m_LocalPosition: {x: 41.25, y: 5.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22773,7 +22773,7 @@ Transform:
   m_GameObject: {fileID: 1434920459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.15, y: 7.73, z: -25}
+  m_LocalPosition: {x: 41.25, y: 5.49, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29089,7 +29089,7 @@ Transform:
   m_GameObject: {fileID: 1921010826}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 0.46, z: 0}
+  m_LocalPosition: {x: 4.64, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30246,6 +30246,7 @@ MonoBehaviour:
   mirrorObject: {fileID: 1813895522}
   shellInJarObject: {fileID: 592141319}
   starfishLegObject: {fileID: 871165398}
+  starfishLegSpawnPosition: {fileID: 1921010827}
   scissorObject: {fileID: 1167755123}
   mirrorPlacePoint: {fileID: 1949160578}
   placeDistance: 3
