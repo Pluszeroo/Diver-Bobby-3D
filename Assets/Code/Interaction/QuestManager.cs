@@ -28,6 +28,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject starfishLegObject;
     [SerializeField] private Transform starfishLegSpawnPosition;
     [SerializeField] private GameObject scissorObject;
+    [SerializeField] private Transform waterBottleSpawnPosition;
+    [SerializeField] private GameObject waterBottleObject;
 
     //[Header("Mirror Reflect Zone")]
     //[SerializeField] private Collider mirrorReflectZone;
@@ -100,6 +102,8 @@ public class QuestManager : MonoBehaviour
             case ItemType.StarfishLeg:
             case ItemType.Scissor:
             case ItemType.Glove:
+            case ItemType.GlassBottle:
+            case ItemType.WaterBottle:
                 if (ItemHolder.Instance.TryAdd(item.itemType))
                 {
                     item.onInteract?.Invoke();
@@ -310,6 +314,19 @@ public class QuestManager : MonoBehaviour
         scissorObject.transform.position = spiralshell.transform.position;
         if (scissorObject != null) scissorObject.SetActive(true);
         SetStage(QuestStage.ScissorMade);
+    }
+
+    public void SpawnWaterBottle()
+    {
+        if(waterBottleObject != null)
+        {
+            waterBottleObject.transform.position = waterBottleSpawnPosition.position;
+            waterBottleObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Water bottle object is missing!");
+        }
     }
 
     public void FinishPuzzle()
