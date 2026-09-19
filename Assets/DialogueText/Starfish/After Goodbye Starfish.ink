@@ -1,1 +1,0 @@
-It's quiet today # speaker: Starfish
