@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class ItemPlacement : MonoBehaviour
 {
-    [SerializeField] private ItemType[] _placeAbleItems;
+    [SerializeField] private List<ItemType> _placeAbleItems = new();
 
     [SerializeField] private GameObject _visualCue;
+    public UnityEvent OnPlace;
     [SerializeField] private bool _playerInRange = false;
-
-    public UnityEvent OnInteract;
+    [SerializeField] public bool ItemPlaced { get; private set; } = false;
 
     private void OnEnable()
     {
@@ -18,6 +19,43 @@ public class ItemPlacement : MonoBehaviour
     private void Update()
     {
         if (_visualCue == null) return;
-        _visualCue.SetActive(_playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying);
+        _visualCue.SetActive(_playerInRange && CanPlaceItem() && !DialogueManager.GetInstance().dialogueIsPlaying);
+    }
+
+    public bool CanPlaceItem()
+    {
+        ItemType? selectedItem = ItemHolder.Instance.GetSelected();
+        return selectedItem.HasValue && _placeAbleItems.Contains(selectedItem.Value);
+    }
+
+    public bool TryPlaceItem()
+    {
+        ItemType? selectedItem = ItemHolder.Instance.GetSelected();
+        
+        if (!CanPlaceItem() || selectedItem == null) return false;
+
+        if(ItemHolder.Instance.Consume(selectedItem.Value))
+        {
+            QuestManager.GetInstance().ClosestPlacement = null;
+            ItemPlaced = true;
+            OnPlace?.Invoke();
+            return true;
+        }
+
+        return false;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (!collision.CompareTag("Player")) return;
+        _playerInRange = true;
+        QuestManager.GetInstance().ClosestPlacement = this;
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if (!collision.CompareTag("Player")) return;
+        _playerInRange = false;
+        QuestManager.GetInstance().ClosestPlacement = null;
     }
 }

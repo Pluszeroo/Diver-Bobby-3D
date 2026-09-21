@@ -108,6 +108,8 @@ public class BobbySwim : MonoBehaviour
 
         if (QuestManager.GetInstance().TryUseSelected()) return;
 
+        if (QuestManager.GetInstance().TryPlacing()) return;
+
         // Check interact trigger before TryUseSelected
         if (DialogueManager.GetInstance().closestInteractTrigger != null && CanInteract())
         {
@@ -118,7 +120,7 @@ public class BobbySwim : MonoBehaviour
         else if (DialogueManager.GetInstance().closestTrigger != null && CanInteract())
             DialogueManager.GetInstance().EnterDialogueMode();
 
-        QuestListManager.Instance.InteractWithQuestList();
+        //QuestListManager.Instance.InteractWithQuestList();
     }
 
     private void OnCycleNext(InputAction.CallbackContext ctx) => ItemHolder.Instance.Cycle(1);

@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     public DialogueTrigger closestTrigger; //Sapce - Talk
     public DialogueTrigger closestInteractTrigger; // E - interact/pickup
+    public ItemPlacement ClosestItemPlacement;
 
     //[Header("Skip Hold")]
     //[SerializeField] private float skipHoldDuration = 0.8f;

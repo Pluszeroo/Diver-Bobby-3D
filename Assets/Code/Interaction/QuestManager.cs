@@ -39,6 +39,11 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private float placeDistance = 3f;
     [SerializeField] private GameObject mirrorLightRay;
 
+    [Header("Scale Puzzle")]
+    [SerializeField] private ItemPlacement waterBottlePlacement;
+    [SerializeField] private ItemPlacement glassBottlePlacement;
+    [SerializeField] private Transform mirrorSpawnPoint;
+
     [Header("Route Lock Dialogues")]
     [SerializeField] private GameObject shellRouteLockedDialogue;
     [SerializeField] private GameObject mirrorRouteLockedDialogue;
@@ -79,6 +84,8 @@ public class QuestManager : MonoBehaviour
 
     public InteractableItem ClosestInteractable { get; set; }
 
+    public ItemPlacement ClosestPlacement { get; set; }
+
     //[SerializeField] private GameObject tryPickUpShellDialogue;
 
 
@@ -114,6 +121,12 @@ public class QuestManager : MonoBehaviour
                 return false;
         }
         return false;
+    }
+
+    public bool TryPlacing()
+    {
+        if (ClosestPlacement == null) return false;
+        return ClosestPlacement.TryPlaceItem();
     }
 
     public bool TryUseSelected()
@@ -326,6 +339,15 @@ public class QuestManager : MonoBehaviour
         else
         {
             Debug.LogError("Water bottle object is missing!");
+        }
+    }
+
+    public void SpawnMirror()
+    {
+        if(waterBottlePlacement.ItemPlaced && glassBottlePlacement.ItemPlaced)
+        {
+            mirrorObject.SetActive(true);
+            mirrorObject.transform.position = mirrorSpawnPoint.position;
         }
     }
 
