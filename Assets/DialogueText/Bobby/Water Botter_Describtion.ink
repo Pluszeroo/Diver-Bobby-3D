@@ -1,1 +1,1 @@
-A sparkly water bottle. According to several fish, the water isn't even salty. Yuck!
+A sparkly water bottle. According to several fish, the water isn't even salty. Yuck! #speaker: Water Bottle
