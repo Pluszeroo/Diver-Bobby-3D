@@ -109,7 +109,7 @@ public class QuestManager : MonoBehaviour
             case ItemType.StarfishLeg:
             case ItemType.Scissor:
             case ItemType.Glove:
-            case ItemType.GlassBottle:
+            case ItemType.BhasiBottle:
             case ItemType.WaterBottle:
                 if (ItemHolder.Instance.TryAdd(item.itemType))
                 {

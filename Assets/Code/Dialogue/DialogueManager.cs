@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Sprite PufferfishPortrait;
     [SerializeField] private Sprite LegLessPortrait;
     [SerializeField] private Sprite ScientishPortrait;
+    [SerializeField] private Sprite BhasiPortrait;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -353,6 +354,10 @@ public class DialogueManager : MonoBehaviour
                         break;
                     case "Scientish":
                         speakerPortrait.sprite = ScientishPortrait;
+                        break;
+                    case "Bhasi":
+                        speakerPortrait.sprite = BhasiPortrait;
+                        Debug.Log("HELLLOOOO");
                         break;
                     default:
                         Debug.LogWarning("Unknown speaker: " + value);

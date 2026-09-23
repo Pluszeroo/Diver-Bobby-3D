@@ -1,1 +1,1 @@
-Japanese beer! Nothing beats it with yakitori at an izakaya!
+Japanese beer! Nothing beats it with yakitori at an izakaya! #speaker: Bhasi
