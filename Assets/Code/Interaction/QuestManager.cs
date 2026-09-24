@@ -111,6 +111,7 @@ public class QuestManager : MonoBehaviour
             case ItemType.Glove:
             case ItemType.BhasiBottle:
             case ItemType.WaterBottle:
+            case ItemType.PearlNecklace:
                 if (ItemHolder.Instance.TryAdd(item.itemType))
                 {
                     item.onInteract?.Invoke();

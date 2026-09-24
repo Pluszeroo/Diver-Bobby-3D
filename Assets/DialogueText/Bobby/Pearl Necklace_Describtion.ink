@@ -1,1 +1,1 @@
-Looks expensive, like something a queen would wear. RIP.
+Looks expensive, like something a queen would wear. RIP. #speaker: Pearl Necklace
