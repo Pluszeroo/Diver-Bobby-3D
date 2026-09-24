@@ -1,1 +1,1 @@
-A shiny Thessaloniki souvenir coin with some Greek mythology on it, made in China, obviously.
+A shiny Thessaloniki souvenir coin with some Greek mythology on it, made in China, obviously. #speaker: coin
