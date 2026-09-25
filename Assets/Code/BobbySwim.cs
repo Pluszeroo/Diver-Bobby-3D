@@ -120,7 +120,7 @@ public class BobbySwim : MonoBehaviour
         else if (DialogueManager.GetInstance().closestTrigger != null && CanInteract())
             DialogueManager.GetInstance().EnterDialogueMode();
 
-        //QuestListManager.Instance.InteractWithQuestList();
+        QuestListManager.Instance.InteractWithQuestList();
     }
 
     private void OnCycleNext(InputAction.CallbackContext ctx) => ItemHolder.Instance.Cycle(1);
