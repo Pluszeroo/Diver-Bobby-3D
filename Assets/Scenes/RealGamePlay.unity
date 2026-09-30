@@ -38892,9 +38892,9 @@ MonoBehaviour:
   shellfishRevengeDialogue: {fileID: 1883380191}
   _shellFishCaptureDialogue: {fileID: 1474071743}
   starfishRetreatPoint: {fileID: 388910216}
-  goodbyePhilosophyInk: {fileID: 4900000, guid: 0f03f169032b0f648a6b45c94272ecd9, type: 3}
-  goodbyeSadInk: {fileID: 4900000, guid: b3e734c202f34334aa6ac1e84aa346bb, type: 3}
-  starfishAfterPhilosophyInk: {fileID: 4900000, guid: 1ebfac09957b5c84bae1961ed46bb9ea, type: 3}
+  goodbyePhilosophyInk: {fileID: 4900000, guid: aedbbd352cdf6134384cc59a903d08f7, type: 3}
+  goodbyeSadInk: {fileID: 4900000, guid: 2cbfe6255cb8d80468be6820ff0667fe, type: 3}
+  starfishAfterPhilosophyInk: {fileID: 0}
   shellfishMouth: {fileID: 1163556234}
   shellfishCantCapture: {fileID: 1474071743}
   shellfishRescuedInk: {fileID: 4900000, guid: 81cc6965907e5374cbe487ccabb8705f, type: 3}
