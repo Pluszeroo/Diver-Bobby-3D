@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 21cd5da10cf77d42ad251f4eea10a2d6
     GuidInternal: 
-    m_lastTime: -8584108294681671105
+    m_lastTime: -8584107442001024171
     List: []
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
@@ -80,7 +80,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5a4973edae30a0408dd7c6364eeb1d06
     GuidInternal: 
-    m_lastTime: -8584108294681763142
+    m_lastTime: -8584107442000977759
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
@@ -139,7 +139,7 @@ MonoBehaviour:
     m_lastTime: -8584108294681631055
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

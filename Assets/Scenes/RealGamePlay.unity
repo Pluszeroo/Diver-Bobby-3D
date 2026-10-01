@@ -6960,6 +6960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394882141}
   - component: {fileID: 394882140}
+  - component: {fileID: 394882142}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
