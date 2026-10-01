@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Diver Bobby 3D_WwiseProject",
+   "GUID": "{9080B4F5-FD83-43C1-9D1E-E11EAC5CB923}",
+   "Generator": "2024.1.8.8898"
+  },
+  "CacheRoot": "../../../../Diver Bobby 3D_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{06FAD701-658F-48A6-8C38-725D77EE6736}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{D2546959-6CE6-49AF-83CD-72DF12F62A87}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{BD790667-3877-43B0-BB99-C7B2CF066054}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{0AE3F9DD-EAA1-4ADC-97C6-E3C52252A7C2}"
+ }
+}
