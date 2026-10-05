@@ -41959,7 +41959,7 @@ MonoBehaviour:
   ShellfishPortrait: {fileID: 21300000, guid: 34725906bc0dec34e8dae2187459276f, type: 3}
   BobbyPortrait: {fileID: 21300000, guid: aa82e7dde8c344b4f9d05482a59ea7dd, type: 3}
   PufferfishPortrait: {fileID: 21300000, guid: a7fb018e7659ae8478a6ba750a959ec9, type: 3}
-  LegLessPortrait: {fileID: 0}
+  LegLessPortrait: {fileID: 21300000, guid: 21123b18aeb4af04a98f4ec46d7a12d1, type: 3}
   ScientishPortrait: {fileID: 21300000, guid: b3ed0ca29cc2c254b85f4e799e374472, type: 3}
   LumpPortrait: {fileID: 21300000, guid: 8de228c94ccdbfc4bb3e2fc6f7df32b5, type: 3}
   NapoleanPortrait: {fileID: 21300000, guid: c84e40e5eda5f354ab7d16a2823d03c6, type: 3}
