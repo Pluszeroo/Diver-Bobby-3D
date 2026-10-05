@@ -1,48 +1,39 @@
 Hmm...most unusual.  # speaker: Scientish
 In all my experience I have not seen something like this before... # speaker: Scientish
-Meow. Who are you? # speaker: Bobby
+Meow. Hello, are those glasses? I didn’t know fish wore glasses. # speaker: Bobby
 I am Scientish. # speaker: Scientish
-An ocean renowned researcher and scientist. # speaker: Scientish
-They have labs down here?  # speaker: Bobby
-Never mind that. # speaker: Scientish
-I need this thing, it belongs to a girl above shore. # speaker: Bobby
+An ocean renowned researcher and scientist. And I need these glasses. # speaker: Scientish
+No, no! They look good.  # speaker: Bobby
+sigh* Why are you bothering me? # speaker: Scientish
+I need this thing, it belongs to a girl above shore. I need to bring it back. # speaker: Bobby
 But how will you get it up there? # speaker: Scientish
-By my calculations, with your skinny frame and the object’s weight # speaker: Scientish
+By my calculations, with your skinny frame and the object’s weight. # speaker: Scientish
 you will never be able to carry it. # speaker: Scientish
-...rude. # speaker: Bobby
-I must do some more experiments. # speaker: Scientish
-Normally I work alone, as there is no one as smart as me # speaker: Scientish
+...rude. I think you’re underestimating the stubbornness of a cat. # speaker: Bobby # mood: Begging
+Normally I work alone, as there is no one as smart as me. # speaker: Scientish
 but alas I think I need your help. # speaker: Scientish
 I thought you were ‘ocean renowned’. # speaker: Bobby # mood: Mock
-Shut up and listen. # speaker: Scientish
-...I am? # speaker: Bobby # mood: Begging
+Stop babbling and listen to me. # speaker: Scientish
+Can’t you see? My ears are up. That means I’m listening. # speaker: Bobby # mood: Begging
 I have gathered research from the shore that will aid us in removing this unknown object.  # speaker: Scientish
-As I said earlier # speaker: Scientish
-you will never be able to carry it alone. # speaker: Scientish
-Yeah, I get it. # speaker: Bobby
-But if it were broken up into pieces that were more proportionate to your physical abilities # speaker: Scientish
+As I said earlier, you will never be able to carry it alone. # speaker: Scientish
+Well, obviously. But I will have help. # speaker: Bobby
+But if it were broken up into pieces that were more proportionate to your physical abilities. # speaker: Scientish
 you could haul it back to shore piece by piece. # speaker: Scientish
-I guess that makes sense. # speaker: Bobby
-Of course it does.  # speaker: Scientish
-There are five steps in total # speaker: Scientish
-And each step will require you to find or craft a tool. # speaker: Scientish
-What?? I’m not making tools!  # speaker: Bobby # mood: Shock
-What do you think I am?? # speaker: Bobby # mood: Shock
-Once you have these tools # speaker: Scientish
-you will use them to break up the guitar and thus carry it to the shore with ease. # speaker: Scientish
-No. Not happening. # speaker: Bobby
-I have found no alternative. # speaker: Scientish
-I wanted to do something nice, but this is too much. # speaker: Bobby # mood: Begging
+Whaaaaat?! Break it up?! I can’t do that! # speaker: Bobby # mood: Shock
+I have found no alternative.  # speaker: Scientish
+There are five steps in total and each step will require you to find or craft a tool.  # speaker: Scientish
+Use tools?? But I don’t have opposable thumbs! # speaker: Bobby # mood: Shock
+Once you have these tools. # speaker: Scientish
+You will use them to break up the guitar and thus carry it to the shore with ease. # speaker: Scientish
+Destroying it is a crazy idea! I don’t need to do that, Eleni’s god will help me. # speaker: Bobby # mood: Shock
+She said her god will bring her guitar back. # speaker: Bobby # mood: Begging
+sigh* I don’t have time for this nonsense. If you want to take this guitar back to the dry, you need to do it yourself. # speaker: Scientish
+I wanted to do something nice, but this is too much. # speaker: Bobby
 I’m going back to the beach. # speaker: Bobby # mood: Begging
-I thought you said the object belonged to a girl. # speaker: Scientish
-...yeah. It does. # speaker: Bobby # mood: Begging
-Will she not be missing it? # speaker: Scientish
-Don’t guilt trip me. I’m a cat not an engineer. # speaker: Bobby # mood: Begging
-Fine. # speaker: Scientish
-I will have to find another way to destroy it. # speaker: Scientish
-...no, you can’t destroy it. # speaker: Bobby # mood: Shock
+Okay, fine. I know a basking shark that will destroy it. # speaker: Scientish
+No!! Please don’t… # speaker: Bobby # mood: Shock
 You’re very indecisive. # speaker: Scientish
+Either you follow my instructions or I will organise for the thing to be destroyed. # speaker: Scientish
 Alright, alright, I’ll do it. # speaker: Bobby # mood: Begging
-Great! Here you’ll need this stone. # speaker: Scientish
-
--> END
+Great! Here you’ll need this stone and the map of ocean. # speaker: Scientish
