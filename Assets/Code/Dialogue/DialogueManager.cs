@@ -112,7 +112,7 @@ public class DialogueManager : MonoBehaviour
 
     public void OnSpaceStarted(InputAction.CallbackContext ctx)
     {
-        if (!dialogueIsPlaying)
+        if (!dialogueIsPlaying && CanGetInDialogue())
         {
             if (closestTrigger != null) EnterDialogueMode();
             return;
@@ -452,4 +452,16 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();
     }
 
+    private bool CanGetInDialogue()
+    {
+        return BobbyGameState.Instance.CurrentState switch
+        {
+            BobbyState.Idle => true,
+            BobbyState.Dialogue => false,
+            BobbyState.Map => false,
+            BobbyState.Stele => false,
+            BobbyState.CutScene => false,
+            _ => throw new System.NotImplementedException(),
+        };
+    }
 }

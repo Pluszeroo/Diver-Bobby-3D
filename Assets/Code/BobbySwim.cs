@@ -116,9 +116,11 @@ public class BobbySwim : MonoBehaviour
             DialogueManager.GetInstance().EnterDialogueMode(true);
             return;
         }
-
         else if (DialogueManager.GetInstance().closestTrigger != null && CanInteract())
+        {
             DialogueManager.GetInstance().EnterDialogueMode();
+            return;
+        }
 
         QuestListManager.Instance.InteractWithQuestList();
     }
