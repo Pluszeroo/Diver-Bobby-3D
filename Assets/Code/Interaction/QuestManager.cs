@@ -28,8 +28,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject starfishLegObject;
     [SerializeField] private Transform starfishLegSpawnPosition;
     [SerializeField] private GameObject scissorObject;
-    [SerializeField] private Transform waterBottleSpawnPosition;
-    [SerializeField] private GameObject waterBottleObject;
+    [SerializeField] private Transform gloveSpawnPosition;
+    [SerializeField] private GameObject gloveObject;
 
     //[Header("Mirror Reflect Zone")]
     //[SerializeField] private Collider mirrorReflectZone;
@@ -60,6 +60,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private DialogueTrigger starfishFirstTalk;
     [SerializeField] private GameObject shellfishRevengeDialogue;
     [SerializeField] private ShellFishCapture _shellFishCaptureDialogue;
+    [SerializeField] private GameObject _scaleCompleteDialogue;
 
     [Header("Starfish Goodbye")]
     [SerializeField] private Transform starfishRetreatPoint;
@@ -275,6 +276,11 @@ public class QuestManager : MonoBehaviour
         if (mirrorPlaced || legsObtained) PlayDialogue(jarUselessDialogue);
     }
 
+    public void OnScalePuzzleComplete()
+    {
+        PlayDialogue(_scaleCompleteDialogue);
+    }
+
     public void SpawnShellInJar()
     {
         if (shellInJarObject != null)
@@ -331,16 +337,16 @@ public class QuestManager : MonoBehaviour
         SetStage(QuestStage.ScissorMade);
     }
 
-    public void SpawnWaterBottle()
+    public void SpawnGlove()
     {
-        if(waterBottleObject != null)
+        if(gloveObject != null)
         {
-            waterBottleObject.transform.position = waterBottleSpawnPosition.position;
-            waterBottleObject.SetActive(true);
+            gloveObject.transform.position = gloveSpawnPosition.position;
+            gloveObject.SetActive(true);
         }
         else
         {
-            Debug.LogError("Water bottle object is missing!");
+            Debug.LogError("Glove object is missing!");
         }
     }
 
