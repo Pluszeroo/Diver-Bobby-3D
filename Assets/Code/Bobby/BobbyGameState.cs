@@ -31,4 +31,5 @@ public enum BobbyState
     Map,
     Stele,
     CutScene,
+    Popup,
 }

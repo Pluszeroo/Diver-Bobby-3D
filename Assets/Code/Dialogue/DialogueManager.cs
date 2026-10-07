@@ -464,6 +464,7 @@ public class DialogueManager : MonoBehaviour
             BobbyState.Map => false,
             BobbyState.Stele => false,
             BobbyState.CutScene => false,
+            BobbyState.Popup => false,
             _ => throw new System.NotImplementedException(),
         };
     }

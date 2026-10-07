@@ -98,6 +98,12 @@ public class BobbySwim : MonoBehaviour
             + " | trig=" + (dm.closestTrigger ? dm.closestTrigger.gameObject.name : "null")
             + " | holding=" + (ItemHolder.Instance.GetSelected()?.ToString() ?? "EMPTY"));
 
+        if(PopupManager.Instance.IsPopupActive())
+        {
+            PopupManager.Instance.ClosePopup();
+            return;
+        }
+        
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
             DialogueManager.GetInstance().AdvanceOrChoose();
@@ -242,6 +248,7 @@ public class BobbySwim : MonoBehaviour
             BobbyState.Map => false,
             BobbyState.Stele => false,
             BobbyState.CutScene => false,
+            BobbyState.Popup => false,
             _ => throw new System.NotImplementedException(),
         };
     }
@@ -255,6 +262,7 @@ public class BobbySwim : MonoBehaviour
             BobbyState.Map => false,
             BobbyState.Stele => false,
             BobbyState.CutScene => false,
+            BobbyState.Popup => false,
             _ => throw new System.NotImplementedException(),
         };
     }
