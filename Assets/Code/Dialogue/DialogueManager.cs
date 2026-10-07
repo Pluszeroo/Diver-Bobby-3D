@@ -353,6 +353,9 @@ public class DialogueManager : MonoBehaviour
                     case "Starfish":
                         speakerPortrait.sprite = StarfishPortrait;
                         break;
+                    case "Starfish Legless":
+                        speakerPortrait.sprite = LegLessPortrait;
+                        break;
                     case "Shellfish":
                         speakerPortrait.sprite = ShellfishPortrait;
                         break;
