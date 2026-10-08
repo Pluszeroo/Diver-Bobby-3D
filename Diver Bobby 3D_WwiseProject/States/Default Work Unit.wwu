@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{940EA88F-B83F-4609-BB88-6EF1FBC06668}" SchemaVersion="123">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{940EA88F-B83F-4609-BB88-6EF1FBC06668}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{940EA88F-B83F-4609-BB88-6EF1FBC06668}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="MUSIC_STATE" ID="{6317074C-2C14-427D-80B4-CE9355265D75}">
+					<ChildrenList>
+						<State Name="None" ID="{A6713F0D-083F-4CA5-994C-4164A12F2D57}"/>
+						<State Name="MENU" ID="{D34450C9-A047-4E77-BB44-B201F0A7D2E2}"/>
+						<State Name="PRE_GAMEPLAY" ID="{85D944CE-2FE6-4C67-A92D-BB6C51DE3CEB}"/>
+						<State Name="GAMEPLAY_MARIIA" ID="{F7F6E1C2-7E64-4CAA-878D-9016113B759F}"/>
+						<State Name="GAMEPLAY_PABLO" ID="{A8E889C2-E6DC-4271-9A00-618D3ABFEFC9}"/>
+						<State Name="FINAL_SONG" ID="{6D832066-E09C-49F3-8842-C00BAE54EEAF}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{A6713F0D-083F-4CA5-994C-4164A12F2D57}"/>
+							<EndState Name="GAMEPLAY_MARIIA" ID="{F7F6E1C2-7E64-4CAA-878D-9016113B759F}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
