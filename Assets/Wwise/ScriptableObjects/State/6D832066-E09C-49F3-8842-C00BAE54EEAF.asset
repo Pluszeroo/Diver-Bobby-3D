@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: FINAL_SONG
   id: 3771498789
   guid: 6D832066-E09C-49F3-8842-C00BAE54EEAF
-  WwiseStateGroupReference: {fileID: 0}
+  WwiseStateGroupReference: {fileID: 11400000, guid: 4a5bae07be4d1604b88458c11eaf4117, type: 2}

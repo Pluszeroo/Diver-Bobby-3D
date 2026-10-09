@@ -80,8 +80,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5a4973edae30a0408dd7c6364eeb1d06
     GuidInternal: 
-    m_lastTime: -8584104118019610665
-    List: []
+    m_lastTime: -8584101177337720820
+    List:
+    - name: Play_Music
+      guid: f8b32a601672ed4fa958bb29d482ba62
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: f8b32a601672ed4fa958bb29d482ba62
+      Path: Events\Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -108,8 +125,122 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8fa80e943fb80946bb886ef1fbc06668
     GuidInternal: 
-    m_lastTime: -8584104118019518300
-    List: []
+    m_lastTime: -8584101191370451700
+    List:
+    - name: MUSIC_STATE
+      guid: 4c071763142c7d4280b4ce9355265d75
+      id: 3826569560
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8fa80e943fb80946bb886ef1fbc06668
+      - ElementName: MUSIC_STATE
+        ObjectType: 9
+        guid: 4c071763142c7d4280b4ce9355265d75
+      Path: States\Default Work Unit\MUSIC_STATE
+      values:
+      - name: FINAL_SONG
+        guid: 6620836d9ce0f3498842c00bae54eeaf
+        id: 3771498789
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8fa80e943fb80946bb886ef1fbc06668
+        - ElementName: MUSIC_STATE
+          ObjectType: 9
+          guid: 4c071763142c7d4280b4ce9355265d75
+        - ElementName: FINAL_SONG
+          ObjectType: 8
+          guid: 6620836d9ce0f3498842c00bae54eeaf
+      - name: GAMEPLAY_MARIIA
+        guid: c2e1f6f7647eaa4c878d9016113b759f
+        id: 1570568219
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8fa80e943fb80946bb886ef1fbc06668
+        - ElementName: MUSIC_STATE
+          ObjectType: 9
+          guid: 4c071763142c7d4280b4ce9355265d75
+        - ElementName: GAMEPLAY_MARIIA
+          ObjectType: 8
+          guid: c2e1f6f7647eaa4c878d9016113b759f
+      - name: GAMEPLAY_PABLO
+        guid: c289e8a8dce671429a00618d3abfefc9
+        id: 2035976102
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8fa80e943fb80946bb886ef1fbc06668
+        - ElementName: MUSIC_STATE
+          ObjectType: 9
+          guid: 4c071763142c7d4280b4ce9355265d75
+        - ElementName: GAMEPLAY_PABLO
+          ObjectType: 8
+          guid: c289e8a8dce671429a00618d3abfefc9
+      - name: MENU
+        guid: c95044d347a0774ebb44b201f0a7d2e2
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8fa80e943fb80946bb886ef1fbc06668
+        - ElementName: MUSIC_STATE
+          ObjectType: 9
+          guid: 4c071763142c7d4280b4ce9355265d75
+        - ElementName: MENU
+          ObjectType: 8
+          guid: c95044d347a0774ebb44b201f0a7d2e2
+      - name: None
+        guid: 0d3f71a63f08a54c994c4164a12f2d57
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8fa80e943fb80946bb886ef1fbc06668
+        - ElementName: MUSIC_STATE
+          ObjectType: 9
+          guid: 4c071763142c7d4280b4ce9355265d75
+        - ElementName: None
+          ObjectType: 8
+          guid: 0d3f71a63f08a54c994c4164a12f2d57
+      - name: PRE_GAMEPLAY
+        guid: ce44d985e62f674ca92dbb6c51de3ceb
+        id: 527426183
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8fa80e943fb80946bb886ef1fbc06668
+        - ElementName: MUSIC_STATE
+          ObjectType: 9
+          guid: 4c071763142c7d4280b4ce9355265d75
+        - ElementName: PRE_GAMEPLAY
+          ObjectType: 8
+          guid: ce44d985e62f674ca92dbb6c51de3ceb
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -122,8 +253,42 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 8572a870b6fefc4091b9285cfc8df495
     GuidInternal: 
-    m_lastTime: -8584104118019499031
-    List: []
+    m_lastTime: -8584101191370441646
+    List:
+    - name: MUSIC_STATE
+      guid: 4efa066acfa3204e858e3c1e14be1cc5
+      id: 3826569560
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8572a870b6fefc4091b9285cfc8df495
+      - ElementName: MUSIC_STATE
+        ObjectType: 11
+        guid: 4efa066acfa3204e858e3c1e14be1cc5
+      Path: Switches\Default Work Unit\MUSIC_STATE
+      values:
+      - name: MENU
+        guid: ad7adb75939f324693cfde37cddb1f06
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: MUSIC_STATE
+          ObjectType: 11
+          guid: 4efa066acfa3204e858e3c1e14be1cc5
+        - ElementName: MENU
+          ObjectType: 10
+          guid: ad7adb75939f324693cfde37cddb1f06
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +304,7 @@ MonoBehaviour:
     m_lastTime: -8584104118019499031
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000b0000000c000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

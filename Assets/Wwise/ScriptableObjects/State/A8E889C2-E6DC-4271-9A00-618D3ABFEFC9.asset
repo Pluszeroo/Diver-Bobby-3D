@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: GAMEPLAY_PABLO
   id: 2035976102
   guid: A8E889C2-E6DC-4271-9A00-618D3ABFEFC9
-  WwiseStateGroupReference: {fileID: 0}
+  WwiseStateGroupReference: {fileID: 11400000, guid: 4a5bae07be4d1604b88458c11eaf4117, type: 2}

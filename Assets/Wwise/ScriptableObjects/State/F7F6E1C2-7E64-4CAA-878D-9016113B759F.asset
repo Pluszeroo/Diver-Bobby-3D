@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: GAMEPLAY_MARIIA
   id: 1570568219
   guid: F7F6E1C2-7E64-4CAA-878D-9016113B759F
-  WwiseStateGroupReference: {fileID: 0}
+  WwiseStateGroupReference: {fileID: 11400000, guid: 4a5bae07be4d1604b88458c11eaf4117, type: 2}

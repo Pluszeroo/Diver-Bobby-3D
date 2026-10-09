@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: PRE_GAMEPLAY
   id: 527426183
   guid: 85D944CE-2FE6-4C67-A92D-BB6C51DE3CEB
-  WwiseStateGroupReference: {fileID: 0}
+  WwiseStateGroupReference: {fileID: 11400000, guid: 4a5bae07be4d1604b88458c11eaf4117, type: 2}
