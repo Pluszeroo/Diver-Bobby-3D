@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6204dd79236cf4cb4548b53f968b8d, type: 3}
+  m_Name: F7F6E1C2-7E64-4CAA-878D-9016113B759F
+  m_EditorClassIdentifier: 
+  objectName: GAMEPLAY_MARIIA
+  id: 1570568219
+  guid: F7F6E1C2-7E64-4CAA-878D-9016113B759F
+  WwiseStateGroupReference: {fileID: 0}

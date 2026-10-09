@@ -1,3 +1,14 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3826569560	MUSIC_STATE			\Default Work Unit\MUSIC_STATE	
+
+State	ID	Name	State Group			Notes
+	527426183	PRE_GAMEPLAY	MUSIC_STATE			
+	748895195	None	MUSIC_STATE			
+	1570568219	GAMEPLAY_MARIIA	MUSIC_STATE			
+	2035976102	GAMEPLAY_PABLO	MUSIC_STATE			
+	2607556080	MENU	MUSIC_STATE			
+	3771498789	FINAL_SONG	MUSIC_STATE			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

@@ -1,0 +1,478 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2932040671",
+    "Type": "Event",
+    "GUID": "{602AB3F8-7216-4FED-A958-BB29D482BA62}",
+    "Language": "SFX",
+    "Hash": "{53322234-B27C-3BE4-9A7D-5F75CE5CFC3B}",
+    "ObjectPath": "Play_Music",
+    "ShortName": "Play_Music",
+    "Path": "Event/Play_Music.bnk",
+    "Media": [
+     {
+      "Id": "13707598",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "British - CG2.wav",
+      "Path": "Media/13707598.wem",
+      "CachePath": "23/{238820FF-0A22-9515-CDA2-231B2936475E}.wem"
+     },
+     {
+      "Id": "53545697",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "DB_q02_v03_MainLoopPablo_BASS.wav",
+      "Path": "Media/53545697.wem",
+      "CachePath": "C7/{C7A03860-F010-DBB5-8057-BADF2FAD978A}.wem"
+     },
+     {
+      "Id": "67267458",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass_CG2.wav",
+      "Path": "Media/67267458.wem",
+      "CachePath": "1D/{1DFC5A53-176C-703B-881A-86ACE8A3E56E}.wem"
+     },
+     {
+      "Id": "89768648",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FemaleChoir_CG2.wav",
+      "Path": "Media/89768648.wem",
+      "CachePath": "A9/{A90DD9A5-4972-C9D7-AABA-EAB7E08B4D7E}.wem"
+     },
+     {
+      "Id": "136188056",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Silly cat theme.wav",
+      "Path": "Media/136188056.wem",
+      "CachePath": "58/{581EA815-EE05-8CDD-0363-F3D6AFD151B9}.wem"
+     },
+     {
+      "Id": "136771829",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ABU2 - CG1.wav",
+      "Path": "Media/136771829.wem",
+      "CachePath": "85/{850C2D27-8983-3961-4AB0-74BC00D9480F}.wem"
+     },
+     {
+      "Id": "291672276",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Flute_CG2.wav",
+      "Path": "Media/291672276.wem",
+      "CachePath": "A3/{A3D80947-3245-73CF-E26E-9B966C9671D9}.wem"
+     },
+     {
+      "Id": "353750112",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "DB_q02_v03_MainLoopPablo_Guitar.wav",
+      "Path": "Media/353750112.wem",
+      "CachePath": "62/{6232D8A4-8A9B-BC64-2D16-1B8DE5CD6F93}.wem"
+     },
+     {
+      "Id": "380390510",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "DB_q02_v03_MainLoopPablo_Flute.wav",
+      "Path": "Media/380390510.wem",
+      "CachePath": "4F/{4FDEED13-4A79-B587-AE00-BEAC9F7BDBC4}.wem"
+     },
+     {
+      "Id": "388821434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambient piano - CG1.wav",
+      "Path": "Media/388821434.wem",
+      "CachePath": "62/{6292D88C-777A-D299-91AC-AEA09068C94C}.wem"
+     },
+     {
+      "Id": "403844060",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Whispered - CG1.wav",
+      "Path": "Media/403844060.wem",
+      "CachePath": "E6/{E62C5D8C-8988-EFA7-2A9E-6ECB74A6C39B}.wem"
+     },
+     {
+      "Id": "414200120",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Celeste_CG2.wav",
+      "Path": "Media/414200120.wem",
+      "CachePath": "FB/{FB6E745D-A245-4C4D-ACF1-26F3BF8D2A54}.wem"
+     },
+     {
+      "Id": "431988404",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bassoon_CG2.wav",
+      "Path": "Media/431988404.wem",
+      "CachePath": "2E/{2EC473E8-82C6-6EC6-D4C2-1CD2EAE02055}.wem"
+     },
+     {
+      "Id": "436719603",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Celeste_CG1.wav",
+      "Path": "Media/436719603.wem",
+      "CachePath": "A6/{A6638AA8-BB28-152F-F24D-7E875BD9B82A}.wem"
+     },
+     {
+      "Id": "574026029",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "DB_q02_v03_MainLoopPablo_Tuned Perc.wav",
+      "Path": "Media/574026029.wem",
+      "CachePath": "3D/{3D150383-90B1-0B23-8D10-C5E5AA111231}.wem"
+     },
+     {
+      "Id": "608437136",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Oboe_CG2.wav",
+      "Path": "Media/608437136.wem",
+      "CachePath": "0A/{0ADC43AE-6DAE-5CFD-503B-8F31D3E66E43}.wem"
+     },
+     {
+      "Id": "612521524",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Distant memoris - CG1.wav",
+      "Path": "Media/612521524.wem",
+      "CachePath": "21/{218E6C51-068B-4A32-A9A5-2366CC5F4EA5}.wem"
+     },
+     {
+      "Id": "670554641",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Accordion - CG2.wav",
+      "Path": "Media/670554641.wem",
+      "CachePath": "2F/{2F4A3924-47B2-FD35-3462-3594D3799870}.wem"
+     },
+     {
+      "Id": "673306978",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cello - CG2.wav",
+      "Path": "Media/673306978.wem",
+      "CachePath": "D0/{D0941A50-BE9B-1596-C69D-A5AFB8A03CAC}.wem"
+     },
+     {
+      "Id": "726853979",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "bass drum - CG2.wav",
+      "Path": "Media/726853979.wem",
+      "CachePath": "22/{229862A6-135E-28F1-DBB4-4FF1300CB5BA}.wem"
+     },
+     {
+      "Id": "805188948",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toy piano wash - CG2.wav",
+      "Path": "Media/805188948.wem",
+      "CachePath": "65/{65762982-349F-6E86-3F86-8FAF17C16EFF}.wem"
+     },
+     {
+      "Id": "834745156",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toy piano wash - CG1.wav",
+      "Path": "Media/834745156.wem",
+      "CachePath": "C0/{C0F3C224-921F-71DF-05EE-2715CDA9DB7B}.wem"
+     },
+     {
+      "Id": "850329270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FemaleChoir_CG1.wav",
+      "Path": "Media/850329270.wem",
+      "CachePath": "82/{82A925B0-5B4A-8C86-1564-8239C99A0FF7}.wem"
+     },
+     {
+      "Id": "898582590",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Clarinet_CG2.wav",
+      "Path": "Media/898582590.wem",
+      "CachePath": "11/{11FD27AA-8049-3F88-227D-170EA1F78ADB}.wem"
+     },
+     {
+      "Id": "1007961711",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Tambourine_CG2.wav",
+      "Path": "Media/1007961711.wem",
+      "CachePath": "F8/{F8A6B220-3239-2612-1E8E-D086A71404A2}.wem"
+     },
+     {
+      "Id": "1008126661",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "DB_q02_v03_MainLoopPablo_Keys.wav",
+      "Path": "Media/1008126661.wem",
+      "CachePath": "64/{6476ED06-D374-67F0-A1C8-7C6914DEC1F0}.wem"
+     },
+     {
+      "Id": "1014853457",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sunburn - CG1.wav",
+      "Path": "Media/1014853457.wem",
+      "CachePath": "45/{4595FAA4-224D-A5DF-EDF3-1DF9377BF6FA}.wem"
+     },
+     {
+      "Id": "1033336554",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FINAL SONG DEMO.wav",
+      "Path": "Media/1033336554.wem",
+      "CachePath": "61/{612E0FF9-BAE8-1F06-CFAE-C0A329BF6F0D}.wem"
+     },
+     {
+      "Id": "1047363299",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "DB_q02_v03_MainLoopPablo_Perc.wav",
+      "Path": "Media/1047363299.wem",
+      "CachePath": "7E/{7EFE469B-EF4F-5D6F-566F-D57DC8BA512A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2932040671",
+      "Name": "Play_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music",
+      "GUID": "{602AB3F8-7216-4FED-A958-BB29D482BA62}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3826569560",
+         "Id": "3771498789",
+         "GUID": "{6D832066-E09C-49F3-8842-C00BAE54EEAF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1033336554"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3826569560",
+         "Id": "1570568219",
+         "GUID": "{F7F6E1C2-7E64-4CAA-878D-9016113B759F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "13707598"
+         },
+         {
+          "Id": "67267458"
+         },
+         {
+          "Id": "89768648"
+         },
+         {
+          "Id": "291672276"
+         },
+         {
+          "Id": "414200120"
+         },
+         {
+          "Id": "431988404"
+         },
+         {
+          "Id": "608437136"
+         },
+         {
+          "Id": "670554641"
+         },
+         {
+          "Id": "673306978"
+         },
+         {
+          "Id": "726853979"
+         },
+         {
+          "Id": "805188948"
+         },
+         {
+          "Id": "898582590"
+         },
+         {
+          "Id": "1007961711"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3826569560",
+         "Id": "2035976102",
+         "GUID": "{A8E889C2-E6DC-4271-9A00-618D3ABFEFC9}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "53545697"
+         },
+         {
+          "Id": "353750112"
+         },
+         {
+          "Id": "380390510"
+         },
+         {
+          "Id": "574026029"
+         },
+         {
+          "Id": "1008126661"
+         },
+         {
+          "Id": "1047363299"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3826569560",
+         "Id": "2607556080",
+         "GUID": "{D34450C9-A047-4E77-BB44-B201F0A7D2E2}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "136188056"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3826569560",
+         "Id": "527426183",
+         "GUID": "{85D944CE-2FE6-4C67-A92D-BB6C51DE3CEB}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "136771829"
+         },
+         {
+          "Id": "388821434"
+         },
+         {
+          "Id": "403844060"
+         },
+         {
+          "Id": "436719603"
+         },
+         {
+          "Id": "612521524"
+         },
+         {
+          "Id": "834745156"
+         },
+         {
+          "Id": "850329270"
+         },
+         {
+          "Id": "1014853457"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3826569560",
+      "Name": "MUSIC_STATE",
+      "ObjectPath": "\\States\\Default Work Unit\\MUSIC_STATE",
+      "GUID": "{6317074C-2C14-427D-80B4-CE9355265D75}",
+      "States": [
+       {
+        "Id": "527426183",
+        "Name": "PRE_GAMEPLAY",
+        "ObjectPath": "\\States\\Default Work Unit\\MUSIC_STATE\\PRE_GAMEPLAY",
+        "GUID": "{85D944CE-2FE6-4C67-A92D-BB6C51DE3CEB}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MUSIC_STATE\\None",
+        "GUID": "{A6713F0D-083F-4CA5-994C-4164A12F2D57}"
+       },
+       {
+        "Id": "1570568219",
+        "Name": "GAMEPLAY_MARIIA",
+        "ObjectPath": "\\States\\Default Work Unit\\MUSIC_STATE\\GAMEPLAY_MARIIA",
+        "GUID": "{F7F6E1C2-7E64-4CAA-878D-9016113B759F}"
+       },
+       {
+        "Id": "2035976102",
+        "Name": "GAMEPLAY_PABLO",
+        "ObjectPath": "\\States\\Default Work Unit\\MUSIC_STATE\\GAMEPLAY_PABLO",
+        "GUID": "{A8E889C2-E6DC-4271-9A00-618D3ABFEFC9}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "MENU",
+        "ObjectPath": "\\States\\Default Work Unit\\MUSIC_STATE\\MENU",
+        "GUID": "{D34450C9-A047-4E77-BB44-B201F0A7D2E2}"
+       },
+       {
+        "Id": "3771498789",
+        "Name": "FINAL_SONG",
+        "ObjectPath": "\\States\\Default Work Unit\\MUSIC_STATE\\FINAL_SONG",
+        "GUID": "{6D832066-E09C-49F3-8842-C00BAE54EEAF}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3C3133EF-5DF9-9A39-D2AA-91125F5C55A5}"
+ }
+}
