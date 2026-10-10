@@ -36,7 +36,7 @@ public class ItemPlacement : MonoBehaviour
 
         if(ItemHolder.Instance.Consume(selectedItem.Value))
         {
-            QuestManager.GetInstance().ClosestPlacement = null;
+            //QuestManager.GetInstance().ClosestPlacement = null;
             ItemPlaced = true;
             OnPlace?.Invoke();
             return true;

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
     public enum ItemType
     {
-        Starfish, Shell, StarfishLeg, Spiralshell, Scissor, Mirror, Jar, ShellInJar, Guitar, Glove, WaterBottle, BhasiBottle, PearlNecklace, Coin
+        Starfish, Shell, StarfishLeg, Spiralshell, Scissor, Mirror, Jar, ShellInJar, Guitar, Glove, WaterBottle, BhasiBottle, PearlNecklace, Coin, Coin2, Coin3, Garbage, Garbage2, Garbage3
     }
 
 public class InteractableItem : MonoBehaviour

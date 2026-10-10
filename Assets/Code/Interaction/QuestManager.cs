@@ -61,6 +61,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject shellfishRevengeDialogue;
     [SerializeField] private ShellFishCapture _shellFishCaptureDialogue;
     [SerializeField] private GameObject _scaleCompleteDialogue;
+    [SerializeField] private GameObject _tutorialCompleteDialogue;
 
     [Header("Starfish Goodbye")]
     [SerializeField] private Transform starfishRetreatPoint;
@@ -114,6 +115,11 @@ public class QuestManager : MonoBehaviour
             case ItemType.WaterBottle:
             case ItemType.PearlNecklace:
             case ItemType.Coin:
+            case ItemType.Coin2:
+            case ItemType.Coin3:
+            case ItemType.Garbage:
+            case ItemType.Garbage2:
+            case ItemType.Garbage3:
                 if (ItemHolder.Instance.TryAdd(item.itemType))
                 {
                     item.onInteract?.Invoke();
@@ -279,6 +285,11 @@ public class QuestManager : MonoBehaviour
     public void OnScalePuzzleComplete()
     {
         PlayDialogue(_scaleCompleteDialogue);
+    }
+
+    public void OnTutorialComplete()
+    {
+        PlayDialogue(_tutorialCompleteDialogue);
     }
 
     public void SpawnShellInJar()
