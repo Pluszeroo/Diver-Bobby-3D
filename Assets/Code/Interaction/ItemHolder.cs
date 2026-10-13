@@ -120,13 +120,13 @@ public class ItemHolder : MonoBehaviour
         {
             if (i < held.Count)
             {
-                slotIcons[i].gameObject.SetActive(true);
+                slotIcons[i].transform.parent.gameObject.SetActive(true);
                 slotIcons[i].sprite = IconFor(held[i]);
                 bool sel = (i == selected);
                 slotIcons[i].transform.localScale = Vector3.one * (sel ? 1.25f : 1f);
                 var c = slotIcons[i].color; c.a = sel ? 1f : 0.5f; slotIcons[i].color = c;
             }
-            else slotIcons[i].gameObject.SetActive(false);
+            else slotIcons[i].transform.parent.gameObject.SetActive(false);
         }
     }
 
