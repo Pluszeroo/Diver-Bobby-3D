@@ -12,8 +12,8 @@ public class CameraMangager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        panorama.gameObject.SetActive(true);
-        FollowBobbyCamera.gameObject.SetActive(false);
+        //panorama.gameObject.SetActive(true);
+        //FollowBobbyCamera.gameObject.SetActive(false);
         //panorama.Priority = 10;
         //FollowBobbyCamera.Priority = 0;
     }

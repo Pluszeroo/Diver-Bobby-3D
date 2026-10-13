@@ -157,7 +157,6 @@ public class BobbySwim : MonoBehaviour
         
         if (moveInput != Vector2.zero)
         {
-            manager.SwitchToFollowBobbyCamera();
             //manager.SwitchToFollowBobbyCamera();
 
             float currentForce = isSprinting ? moveForce * sprintMultiplier : moveForce;

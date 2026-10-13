@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class TutorialPopup : MonoBehaviour
 {
+    [SerializeField] private Tutorial _tutorialToTrigger;
+    [SerializeField] private bool _selfClose = false;
+
     [SerializeField] private GameObject _keyboardInstruction;
     [SerializeField] private GameObject _controllerInstruction;
 
@@ -14,7 +17,7 @@ public class TutorialPopup : MonoBehaviour
         _keyboardInstruction.SetActive(false);
         _controllerInstruction.SetActive(false);
     }
-    private void OnEnable() => InputSystem.onActionChange += OnActionChange;
+    /*private void OnEnable() => InputSystem.onActionChange += OnActionChange;
     private void OnDisable() => InputSystem.onActionChange -= OnActionChange;
 
     private void OnActionChange(object obj, InputActionChange change)
@@ -32,7 +35,7 @@ public class TutorialPopup : MonoBehaviour
 
     private void Update()
     {
-        if(_playerInRange)
+        if (_playerInRange)
         {
             _keyboardInstruction.SetActive(!_usingGamepad);
             _controllerInstruction.SetActive(_usingGamepad);
@@ -42,17 +45,20 @@ public class TutorialPopup : MonoBehaviour
             _keyboardInstruction.SetActive(false);
             _controllerInstruction.SetActive(false);
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        _playerInRange = true;
+        //_playerInRange = true;
+
+        PopupManager.Instance.PopupTutorialInstruction(_tutorialToTrigger);
+        if (_selfClose) gameObject.SetActive(false);
     }
 
-    private void OnTriggerExit(Collider other)
+    /*private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player")) return;
         _playerInRange = false;
-    }
+    }*/
 }

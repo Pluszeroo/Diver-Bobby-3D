@@ -28,6 +28,8 @@ public class ItemHolder : MonoBehaviour
     List<ItemType> held = new List<ItemType>();
     private int selected = 0;
 
+    private bool _shownCycleInstruction = false;
+
     private void Awake()
     {
         Instance = this;
@@ -54,9 +56,17 @@ public class ItemHolder : MonoBehaviour
             ShowFullHint();
             return false;
         }
+
         held.Add(type);
         selected = held.Count - 1;   // auto select previous one
         RefreshBar();
+
+        if(!_shownCycleInstruction && held.Count >= 2)
+        {
+            PopupManager.Instance.PopupTutorialInstruction(Tutorial.itemCycle);
+            _shownCycleInstruction = true;
+        }
+
         return true;
     }
 
