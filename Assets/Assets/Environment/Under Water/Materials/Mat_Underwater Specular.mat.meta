@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f72f98f27f019ec4f810e450e7836d0a
+timeCreated: 1578125985
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163805
+  packageName: Under Water - Animation Assets
+  packageVersion: 1.0
+  assetPath: Assets/Assets/Environment/Under Water/Materials/Mat_Underwater Specular.mat
+  uploadId: 354868
