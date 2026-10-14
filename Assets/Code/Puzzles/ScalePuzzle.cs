@@ -5,21 +5,21 @@ public class ScalePuzzle : MonoBehaviour
     [SerializeField] private int _coinRequirement = 3;
     [SerializeField] private int _currentCoinCount = 0;
 
-    [SerializeField] private GameObject _mirror;
-    [SerializeField] private Transform _mirrorSpawnPosition;
+    [SerializeField] private InteractableItem _mirror;
+
+    [SerializeField] private Animator _scaleAnimator;
 
     public void PlaceCoin()
     {
         _currentCoinCount++;
 
-        //play animation
+        _scaleAnimator.SetTrigger("Next Stage");
 
-        if(_currentCoinCount >= _coinRequirement)
+        if (_currentCoinCount >= _coinRequirement)
         {
             if(_mirror != null)
             {
-                _mirror.transform.position = _mirrorSpawnPosition.position;
-                _mirror.SetActive(true);
+                _mirror.enabled = true;
             }
             else
             {
