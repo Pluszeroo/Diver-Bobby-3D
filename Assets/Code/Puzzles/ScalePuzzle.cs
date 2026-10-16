@@ -5,7 +5,7 @@ public class ScalePuzzle : MonoBehaviour
     [SerializeField] private int _coinRequirement = 3;
     [SerializeField] private int _currentCoinCount = 0;
 
-    [SerializeField] private InteractableItem _mirror;
+    [SerializeField] private Collider _mirrorCollider;
 
     [SerializeField] private Animator _scaleAnimator;
 
@@ -17,9 +17,9 @@ public class ScalePuzzle : MonoBehaviour
 
         if (_currentCoinCount >= _coinRequirement)
         {
-            if(_mirror != null)
+            if(_mirrorCollider != null)
             {
-                _mirror.enabled = true;
+                _mirrorCollider.enabled = true;
             }
             else
             {
