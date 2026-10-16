@@ -2204,7 +2204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fa9cbbe5751774c9d781d818f7ad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: 2
+  music: 1
 --- !u!4 &80142904
 Transform:
   m_ObjectHideFlags: 0
