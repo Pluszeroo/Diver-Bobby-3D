@@ -11,6 +11,8 @@ public class ItemPlacement : MonoBehaviour
     [SerializeField] private bool _playerInRange = false;
     [SerializeField] public bool ItemPlaced { get; private set; } = false;
 
+    [SerializeField] private bool _wontConsume = false;
+
     private void OnEnable()
     {
         if (_visualCue != null) _visualCue.SetActive(false);
@@ -33,6 +35,13 @@ public class ItemPlacement : MonoBehaviour
         ItemType? selectedItem = ItemHolder.Instance.GetSelected();
         
         if (!CanPlaceItem() || selectedItem == null) return false;
+
+        if(_wontConsume)
+        {
+            ItemPlaced = true;
+            OnPlace?.Invoke();
+            return true;
+        }
 
         if(ItemHolder.Instance.Consume(selectedItem.Value))
         {
