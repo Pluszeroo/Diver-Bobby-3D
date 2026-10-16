@@ -10,7 +10,7 @@ Whose music would you like to listen to? #speaker: Goldfish
         ~Track1 = true
         -> END
     *[Pablo!]
-        Here you go! #speaker: Goldfish
+        Very nice! #speaker: Goldfish
         ~Track1 = false
         -> END
 -> END

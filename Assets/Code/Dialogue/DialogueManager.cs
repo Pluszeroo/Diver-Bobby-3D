@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Sprite ScientishPortrait;
     [SerializeField] private Sprite LumpPortrait;
     [SerializeField] private Sprite NapoleanPortrait;
+    [SerializeField] private Sprite GoldfishPorttrait;
     [SerializeField] private Sprite BhasiPortrait;
     [SerializeField] private Sprite WaterBottlePortrait;
     [SerializeField] private Sprite PearlNecklacePortrait;
@@ -370,6 +371,9 @@ public class DialogueManager : MonoBehaviour
                         break;
                     case "Napoleon":
                         speakerPortrait.sprite = NapoleanPortrait;
+                        break;
+                    case "Goldfish":
+                        speakerPortrait.sprite = GoldfishPorttrait;
                         break;
                     case "Bhasi":
                         speakerPortrait.sprite = BhasiPortrait;

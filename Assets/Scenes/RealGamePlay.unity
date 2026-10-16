@@ -15359,7 +15359,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.010000103, y: 42.210003, z: -25}
+  m_LocalPosition: {x: -0.5499999, y: 42.790005, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33238,7 +33238,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
+  m_Size: {x: 3.26, y: 2.67, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &903271328
 MonoBehaviour:
@@ -36060,7 +36060,7 @@ Transform:
   m_GameObject: {fileID: 999021438}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 42.21, z: 0}
+  m_LocalPosition: {x: -0.55, y: 42.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36174,7 +36174,7 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: ddfc470306be3074dbe683ed48652922, type: 3}
     placePrefab: {fileID: 1167755123}
   - type: 9
-    icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    icon: {fileID: 21300000, guid: 6f8622aa5b6420a4da3d372e153f8602, type: 3}
     placePrefab: {fileID: 2065042717}
   - type: 10
     icon: {fileID: 21300000, guid: 3c21904531109ea4ab380190b02522de, type: 3}
@@ -48778,7 +48778,7 @@ Transform:
   m_GameObject: {fileID: 1434920459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 42.21, z: -25}
+  m_LocalPosition: {x: -0.55, y: 42.79, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63027,6 +63027,7 @@ MonoBehaviour:
   ScientishPortrait: {fileID: 21300000, guid: b3ed0ca29cc2c254b85f4e799e374472, type: 3}
   LumpPortrait: {fileID: 21300000, guid: 8de228c94ccdbfc4bb3e2fc6f7df32b5, type: 3}
   NapoleanPortrait: {fileID: 21300000, guid: c84e40e5eda5f354ab7d16a2823d03c6, type: 3}
+  GoldfishPorttrait: {fileID: 21300000, guid: a0f21560a2c025149a523d621eeea0e2, type: 3}
   BhasiPortrait: {fileID: 21300000, guid: 2e5c959d3ebb6e74390bc11aecb3d017, type: 3}
   WaterBottlePortrait: {fileID: 21300000, guid: 3c21904531109ea4ab380190b02522de, type: 3}
   PearlNecklacePortrait: {fileID: 21300000, guid: ead356b6ff6519d4388c7301b0987846, type: 3}
@@ -68319,7 +68320,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
+  m_Size: {x: 3.26, y: 2.67, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2065042720
 MonoBehaviour:
