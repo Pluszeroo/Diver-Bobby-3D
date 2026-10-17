@@ -44,12 +44,10 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
-        // State must be set BEFORE posting, otherwise MUSIC_STATE is "None" = silence.
         SetMusic(startingState);
         StartMusic();
     }
 
-    /// <summary>Switch to another song. Wwise handles the transition.</summary>
     public void SetMusic(MusicState state)
     {
         AK.Wwise.State target = GetState(state);
@@ -64,7 +62,6 @@ public class MusicManager : MonoBehaviour
         Debug.Log($"[MusicManager] MUSIC_STATE -> {state}");
     }
 
-    /// <summary>Start the music container. Only needs calling once.</summary>
     public void StartMusic()
     {
         if (isPlaying) return;
@@ -78,7 +75,6 @@ public class MusicManager : MonoBehaviour
         isPlaying = true;
     }
 
-    /// <summary>Stop all music, with an optional fade in milliseconds.</summary>
     public void StopMusic(int fadeMs = 1000)
     {
         if (!isPlaying) return;

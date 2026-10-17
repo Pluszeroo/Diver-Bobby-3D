@@ -26,6 +26,7 @@ public class DialogueTrigger : MonoBehaviour
 
     protected bool playerInRange = false;
 
+
     private void Awake()
     {
         playerInRange = false;
