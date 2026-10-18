@@ -32995,6 +32995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710304189}
   - component: {fileID: 710304190}
+  - component: {fileID: 710304191}
   m_Layer: 0
   m_Name: PauseManager
   m_TagString: Untagged
@@ -33037,6 +33038,30 @@ MonoBehaviour:
   settingsFirstSelected: {fileID: 0}
   settingsButton: {fileID: 0}
   mainMenuSceneName: MainMenu
+--- !u!114 &710304191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710304188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcabd167d8a70d248ad490dbdeff714a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 0}
+  soundSlider: {fileID: 0}
+  saturationSlider: {fileID: 0}
+  musicVolumeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d01255d1c0e89504484f70aef4cba223, type: 2}
+  soundVolumeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0864cb2473731164884044a44c7cb5cc, type: 2}
+  postProcessVolume: {fileID: 1832646694}
 --- !u!1 &710755559
 GameObject:
   m_ObjectHideFlags: 0
