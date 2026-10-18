@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "653457998",
+    "Type": "Event",
+    "GUID": "{11F66E96-CC3A-4D85-84B0-8017ABA966AF}",
+    "Language": "SFX",
+    "Hash": "{96B502E7-4016-E276-6237-F4333EA8A334}",
+    "ObjectPath": "Stop_Fish_Bubbles",
+    "ShortName": "Stop_Fish_Bubbles",
+    "Path": "Event/Stop_Fish_Bubbles.bnk",
+    "Events": [
+     {
+      "Id": "653457998",
+      "Name": "Stop_Fish_Bubbles",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Stop_Fish_Bubbles",
+      "GUID": "{11F66E96-CC3A-4D85-84B0-8017ABA966AF}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{17EFE396-0E59-6590-61CD-EBE6BBE026CA}"
+ }
+}

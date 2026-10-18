@@ -265,4 +265,12 @@ public class BobbySwim : MonoBehaviour
             _ => throw new System.NotImplementedException(),
         };
     }
+
+    public bool IsSwimming =>
+        moveInput != Vector2.zero
+        && CanSwim()
+        && !DialogueManager.GetInstance().dialogueIsPlaying;
+
+    public bool IsSprinting => isSprinting;
+
 }

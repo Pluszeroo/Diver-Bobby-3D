@@ -114,7 +114,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5a4973edae30a0408dd7c6364eeb1d06
     GuidInternal: 
-    m_lastTime: -8584092548215398074
+    m_lastTime: -8584092516556830316
     List:
     - name: Environment
       guid: 29394802ac32804da29e630dda956458
@@ -187,6 +187,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6fd73a4ac72acc459c8c8102a06105e2
       Path: Events\Default Work Unit\Environment\Play_Bubbles
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Fish_Bubbles
+      guid: d027f5ed016aee4f9131712f3f5d3c5d
+      id: 1178349444
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Environment
+        ObjectType: 4
+        guid: 29394802ac32804da29e630dda956458
+      - ElementName: Play_Fish_Bubbles
+        ObjectType: 3
+        guid: d027f5ed016aee4f9131712f3f5d3c5d
+      Path: Events\Default Work Unit\Environment\Play_Fish_Bubbles
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -541,6 +561,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_Bubbles
+      guid: 2182830b964641479828cf2b9c6ef3db
+      id: 1962155989
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Environment
+        ObjectType: 4
+        guid: 29394802ac32804da29e630dda956458
+      - ElementName: Stop_Bubbles
+        ObjectType: 3
+        guid: 2182830b964641479828cf2b9c6ef3db
+      Path: Events\Default Work Unit\Environment\Stop_Bubbles
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Fish_Bubbles
+      guid: 966ef6113acc854d84b08017aba966af
+      id: 653457998
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Environment
+        ObjectType: 4
+        guid: 29394802ac32804da29e630dda956458
+      - ElementName: Stop_Fish_Bubbles
+        ObjectType: 3
+        guid: 966ef6113acc854d84b08017aba966af
+      Path: Events\Default Work Unit\Environment\Stop_Fish_Bubbles
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: UI
       guid: c820856c030ed049ac788876af184ad3
       id: 1551306167
@@ -1051,7 +1111,7 @@ MonoBehaviour:
     m_lastTime: -8584104118019499031
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c000000140000001500000016000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c000000140000001500000016000000370000003800000039000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

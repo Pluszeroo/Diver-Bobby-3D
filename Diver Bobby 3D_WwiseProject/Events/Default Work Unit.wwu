@@ -42,6 +42,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Fish_Bubbles" ID="{EDF527D0-6A01-4FEE-9131-712F3F5D3C5D}">
+							<ChildrenList>
+								<Action Name="" ID="{22C08A58-D297-45FE-BEA3-01212032516E}" ShortID="1053749036">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fish_Bubbles" ID="{790C0A63-449A-48B1-B416-3FABF452A8D0}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Fish_Bubbles" ID="{11F66E96-CC3A-4D85-84B0-8017ABA966AF}">
+							<ChildrenList>
+								<Action Name="" ID="{4ECCF937-385A-4A9E-8584-DCE37FDD398A}" ShortID="779668985">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fish_Bubbles" ID="{790C0A63-449A-48B1-B416-3FABF452A8D0}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="NPC" ID="{21FA012A-37F9-404D-81EB-5C52BC7A1D4D}" ShortID="746367177">

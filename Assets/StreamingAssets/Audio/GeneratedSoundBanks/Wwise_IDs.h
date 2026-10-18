@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_BOBBY_INVENTORY_SWITCH = 1462235116U;
         static const AkUniqueID PLAY_BUBBLES = 3381697299U;
+        static const AkUniqueID PLAY_FISH_BUBBLES = 1178349444U;
         static const AkUniqueID PLAY_ITEM_PICK_PUT_BEERBOTTLE = 2873562748U;
         static const AkUniqueID PLAY_ITEM_PICK_PUT_GLASSTANK = 251743618U;
         static const AkUniqueID PLAY_ITEM_PICK_PUT_GLOVES = 3356981552U;
@@ -32,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_MAP_OPEN = 3630763854U;
         static const AkUniqueID PLAY_UI_QUEST = 162630791U;
         static const AkUniqueID STOP_BUBBLES = 1962155989U;
+        static const AkUniqueID STOP_FISH_BUBBLES = 653457998U;
     } // namespace EVENTS
 
     namespace STATES

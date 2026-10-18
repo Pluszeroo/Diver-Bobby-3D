@@ -1,0 +1,130 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1178349444",
+    "Type": "Event",
+    "GUID": "{EDF527D0-6A01-4FEE-9131-712F3F5D3C5D}",
+    "Language": "SFX",
+    "Hash": "{5E958792-C5C6-B570-B5FD-8C1A546EE49C}",
+    "ObjectPath": "Play_Fish_Bubbles",
+    "ShortName": "Play_Fish_Bubbles",
+    "Path": "Event/Play_Fish_Bubbles.bnk",
+    "Media": [
+     {
+      "Id": "23916618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_05.wav",
+      "Path": "Media/23916618.wem",
+      "CachePath": "DD/{DD2AF792-47EB-7163-9F56-8F3C7E7CB7A2}.wem"
+     },
+     {
+      "Id": "176942203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_06.wav",
+      "Path": "Media/176942203.wem",
+      "CachePath": "21/{21958D48-6776-777B-B1CB-361ACD385178}.wem"
+     },
+     {
+      "Id": "183946749",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_01.wav",
+      "Path": "Media/183946749.wem",
+      "CachePath": "EF/{EF977ED0-8E0B-4225-1E02-1D3116645D37}.wem"
+     },
+     {
+      "Id": "204318124",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_04.wav",
+      "Path": "Media/204318124.wem",
+      "CachePath": "6E/{6EE2D534-4F2F-664B-95DD-0FBD6686267E}.wem"
+     },
+     {
+      "Id": "561873665",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_02.wav",
+      "Path": "Media/561873665.wem",
+      "CachePath": "1A/{1A36935D-F8EE-D3C3-9BEA-7749D78AAF6B}.wem"
+     },
+     {
+      "Id": "719488817",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_07.wav",
+      "Path": "Media/719488817.wem",
+      "CachePath": "1E/{1EC65EDF-393A-1D08-B92D-D214B36B350A}.wem"
+     },
+     {
+      "Id": "769177623",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_08.wav",
+      "Path": "Media/769177623.wem",
+      "CachePath": "1A/{1A83F53C-AA5F-6663-1337-94AE2D4A0C77}.wem"
+     },
+     {
+      "Id": "801610391",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BG_Bubbles_Random_03.wav",
+      "Path": "Media/801610391.wem",
+      "CachePath": "EE/{EED928BC-5AC1-D342-59B7-B2C354AD57AB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1178349444",
+      "Name": "Play_Fish_Bubbles",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Fish_Bubbles",
+      "GUID": "{EDF527D0-6A01-4FEE-9131-712F3F5D3C5D}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "23916618"
+       },
+       {
+        "Id": "176942203"
+       },
+       {
+        "Id": "183946749"
+       },
+       {
+        "Id": "204318124"
+       },
+       {
+        "Id": "561873665"
+       },
+       {
+        "Id": "719488817"
+       },
+       {
+        "Id": "769177623"
+       },
+       {
+        "Id": "801610391"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{505284ED-54EB-C17B-A9E6-4BD9732D04DE}"
+ }
+}
