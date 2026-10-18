@@ -32,6 +32,18 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Sprite JarPortrait;
     [SerializeField] private Sprite GlovePortrait;
 
+    [Header("Speaker Name Tags")]
+    [SerializeField] private Image speakerNameBackground;
+    [SerializeField] private Sprite defaultNameTag;
+    [SerializeField] private SpeakerNameTag[] speakerNameTags;
+
+    [System.Serializable]
+    public class SpeakerNameTag
+    {
+        public string speaker;
+        public Sprite nameTag;
+    }
+
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
@@ -345,6 +357,7 @@ public class DialogueManager : MonoBehaviour
             if (key == "speaker")
             {
                 speakerName.text = value;
+                SetNameTag(value);
 
                 switch (value)
                 {
@@ -412,6 +425,21 @@ public class DialogueManager : MonoBehaviour
             }
 
         }
+    }
+
+    private void SetNameTag(string speaker)
+    {
+        if (speakerNameBackground == null) return;
+
+        foreach (var s in speakerNameTags)
+        {
+            if (s.speaker == speaker)
+            {
+                speakerNameBackground.sprite = s.nameTag;
+                return;
+            }
+        }
+        if (defaultNameTag != null) speakerNameBackground.sprite = defaultNameTag;
     }
 
     private void DisplayChoices()
