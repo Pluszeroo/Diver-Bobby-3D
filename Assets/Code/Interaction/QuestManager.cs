@@ -38,6 +38,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Transform mirrorPlacePoint;
     [SerializeField] private float placeDistance = 3f;
     [SerializeField] private GameObject mirrorLightRay;
+    [SerializeField] private AK.Wwise.Event mirrorPlaceSound;
 
     [Header("Scale Puzzle")]
     [SerializeField] private ItemPlacement waterBottlePlacement;
@@ -236,6 +237,7 @@ public class QuestManager : MonoBehaviour
         if (!ItemHolder.Instance.Has(ItemType.Mirror)) return;
 
         ItemHolder.Instance.Consume(ItemType.Mirror);
+        UISound.PlayEvent(mirrorPlaceSound);
         mirrorObject.transform.position = mirrorPlacePoint.position;
         mirrorObject.SetActive(true);
         mirrorLightRay.SetActive(true);

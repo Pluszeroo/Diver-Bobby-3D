@@ -9,6 +9,8 @@ public class QuestListManager : MonoBehaviour
     [SerializeField] private List<QuestEntry> _allQuestEntries;
     private Dictionary<QuestType, GameObject> _questDictionary = new();
 
+    [SerializeField] private AK.Wwise.Event _openSound;
+
     private void Awake()
     {
         if(Instance == null)
@@ -48,6 +50,7 @@ public class QuestListManager : MonoBehaviour
     {
         BobbyGameState.Instance.SetBobbyState(BobbyState.Stele);
         _questCanvas.SetActive(true);
+        UISound.PlayEvent(_openSound);
     }
 
     public void InteractWithQuestList()
@@ -63,6 +66,7 @@ public class QuestListManager : MonoBehaviour
         {
             BobbyGameState.Instance.SetBobbyState(BobbyState.Stele);
             _questCanvas.SetActive(true);
+            UISound.PlayEvent(_openSound);
         }
     }
 

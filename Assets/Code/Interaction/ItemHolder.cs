@@ -8,6 +8,8 @@ public class InventoryEntry
     public ItemType type;
     public Sprite icon;
     public GameObject placePrefab;
+    public AK.Wwise.Event pickupSound;
+    public AK.Wwise.Event dropSound;
 }
 
 public class ItemHolder : MonoBehaviour
@@ -22,7 +24,10 @@ public class ItemHolder : MonoBehaviour
     [SerializeField] private GameObject fullHint;
 
     [Header("Item Icons")]
-    [SerializeField] private InventoryEntry[] entries; 
+    [SerializeField] private InventoryEntry[] entries;
+
+    [Header("Audio")]   
+    [SerializeField] private AK.Wwise.Event switchSound;
 
     private const int MAX = 3;
     List<ItemType> held = new List<ItemType>();
@@ -60,8 +65,9 @@ public class ItemHolder : MonoBehaviour
         held.Add(type);
         selected = held.Count - 1;   // auto select previous one
         RefreshBar();
+        PlayEntrySound(type, true);
 
-        if(!_shownCycleInstruction && held.Count >= 2)
+        if (!_shownCycleInstruction && held.Count >= 2)
         {
             PopupManager.Instance.PopupTutorialInstruction(Tutorial.itemCycle);
             _shownCycleInstruction = true;
@@ -86,6 +92,7 @@ public class ItemHolder : MonoBehaviour
         if (held.Count == 0) return;
         selected = (selected + dir + held.Count) % held.Count;
         RefreshBar();
+        if (held.Count > 1) UISound.PlayEvent(switchSound);
     }
 
     // Q/B Discard currently selected item
@@ -97,6 +104,7 @@ public class ItemHolder : MonoBehaviour
         held.RemoveAt(selected);
         if (selected >= held.Count) selected = Mathf.Max(0, held.Count - 1);
         RefreshBar();
+        PlayEntrySound(droppedType, false);
         // To drop the item back into the scene, Instantiate the corresponding prefab here
         // Temporarily remove from hand only.
         foreach (var e in entries)
@@ -106,6 +114,18 @@ public class ItemHolder : MonoBehaviour
                 e.placePrefab.transform.position = player.position;
                 e.placePrefab.SetActive(true);
                 break;
+            }
+        }
+    }
+
+    private void PlayEntrySound(ItemType t, bool pickup)
+    {
+        foreach (var e in entries)
+        {
+            if (e.type == t)
+            {
+                UISound.PlayEvent(pickup ? e.pickupSound : e.dropSound);
+                return;
             }
         }
     }
