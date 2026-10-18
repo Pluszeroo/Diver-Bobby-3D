@@ -31,6 +31,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_MAINMENU_START = 907179948U;
         static const AkUniqueID PLAY_UI_MAP_OPEN = 3630763854U;
         static const AkUniqueID PLAY_UI_QUEST = 162630791U;
+        static const AkUniqueID STOP_BUBBLES = 1962155989U;
     } // namespace EVENTS
 
     namespace STATES

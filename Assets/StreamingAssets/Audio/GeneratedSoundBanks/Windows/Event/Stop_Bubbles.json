@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1962155989",
+    "Type": "Event",
+    "GUID": "{0B838221-4696-4741-9828-CF2B9C6EF3DB}",
+    "Language": "SFX",
+    "Hash": "{5E326D08-1658-4A6D-6412-5E3DB1CA2E86}",
+    "ObjectPath": "Stop_Bubbles",
+    "ShortName": "Stop_Bubbles",
+    "Path": "Event/Stop_Bubbles.bnk",
+    "Events": [
+     {
+      "Id": "1962155989",
+      "Name": "Stop_Bubbles",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Stop_Bubbles",
+      "GUID": "{0B838221-4696-4741-9828-CF2B9C6EF3DB}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9EFBCFB8-52B0-A5CD-744A-D757E1BF4317}"
+ }
+}

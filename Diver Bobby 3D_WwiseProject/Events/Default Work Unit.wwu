@@ -27,6 +27,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_Bubbles" ID="{0B838221-4696-4741-9828-CF2B9C6EF3DB}">
+							<ChildrenList>
+								<Action Name="" ID="{D0D3BB89-8C47-4C40-8E43-507CF0D55E14}" ShortID="85114040">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bubbles" ID="{3A78B098-AF8E-4665-8CF3-2C178A6EB56F}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="NPC" ID="{21FA012A-37F9-404D-81EB-5C52BC7A1D4D}" ShortID="746367177">

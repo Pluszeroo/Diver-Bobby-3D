@@ -2089,6 +2089,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Bubbles" ID="{3A78B098-AF8E-4665-8CF3-2C178A6EB56F}" ShortID="278673683">
 							<PropertyList>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>

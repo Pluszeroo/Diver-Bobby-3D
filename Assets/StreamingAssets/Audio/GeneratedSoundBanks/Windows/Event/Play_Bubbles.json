@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4A3AD76F-2AC7-45CC-9C8C-8102A06105E2}",
     "Language": "SFX",
-    "Hash": "{ADE2029B-DFF8-13F9-06C0-B4E7D719BAC0}",
+    "Hash": "{E6D5721E-0220-93DA-2F87-AF8936521895}",
     "ObjectPath": "Play_Bubbles",
     "ShortName": "Play_Bubbles",
     "Path": "Event/Play_Bubbles.bnk",
@@ -125,6 +125,6 @@
     ]
    }
   ],
-  "FileHash": "{E87B06CF-D4F6-0026-94AA-0A49F490AE63}"
+  "FileHash": "{73620CD8-ACF1-8966-E902-B0ECD570704D}"
  }
 }

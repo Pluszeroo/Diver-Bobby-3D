@@ -114,8 +114,282 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5a4973edae30a0408dd7c6364eeb1d06
     GuidInternal: 
-    m_lastTime: -8584092778090961263
+    m_lastTime: -8584092548215398074
     List:
+    - name: Environment
+      guid: 29394802ac32804da29e630dda956458
+      id: 1229948536
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Environment
+        ObjectType: 4
+        guid: 29394802ac32804da29e630dda956458
+      Path: Events\Default Work Unit\Environment
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: NPC
+      guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      id: 662417162
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      Path: Events\Default Work Unit\NPC
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Bobby_Inventory_Switch
+      guid: 939e60fc47f4ed4da0e4065c96a52aeb
+      id: 1462235116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Player
+        ObjectType: 4
+        guid: 1ed0ad16820f2d479ce475068fc81b78
+      - ElementName: Play_Bobby_Inventory_Switch
+        ObjectType: 3
+        guid: 939e60fc47f4ed4da0e4065c96a52aeb
+      Path: Events\Default Work Unit\Player\Play_Bobby_Inventory_Switch
+      maxAttenuation: 0
+      maxDuration: 0.058625
+      minDuration: 0.043875
+    - name: Play_Bubbles
+      guid: 6fd73a4ac72acc459c8c8102a06105e2
+      id: 3381697299
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Environment
+        ObjectType: 4
+        guid: 29394802ac32804da29e630dda956458
+      - ElementName: Play_Bubbles
+        ObjectType: 3
+        guid: 6fd73a4ac72acc459c8c8102a06105e2
+      Path: Events\Default Work Unit\Environment\Play_Bubbles
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Item_Pick_Put_BeerBottle
+      guid: a3a1bbea7eb9cb4a9e7ce71607f90122
+      id: 2873562748
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_Pick_Put_BeerBottle
+        ObjectType: 3
+        guid: a3a1bbea7eb9cb4a9e7ce71607f90122
+      Path: Events\Default Work Unit\Puzzle\Play_Item_Pick_Put_BeerBottle
+      maxAttenuation: 0
+      maxDuration: 0.22510417
+      minDuration: 0.22510417
+    - name: Play_Item_Pick_Put_GlassTank
+      guid: e4cb9083e3ca76469044bbbd486ed55f
+      id: 251743618
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_Pick_Put_GlassTank
+        ObjectType: 3
+        guid: e4cb9083e3ca76469044bbbd486ed55f
+      Path: Events\Default Work Unit\Puzzle\Play_Item_Pick_Put_GlassTank
+      maxAttenuation: 0
+      maxDuration: 0.16666667
+      minDuration: 0.16666667
+    - name: Play_Item_Pick_Put_Gloves
+      guid: 051966290f3e1841befc29361bb9de81
+      id: 3356981552
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_Pick_Put_Gloves
+        ObjectType: 3
+        guid: 051966290f3e1841befc29361bb9de81
+      Path: Events\Default Work Unit\Puzzle\Play_Item_Pick_Put_Gloves
+      maxAttenuation: 0
+      maxDuration: 0.6946875
+      minDuration: 0.6946875
+    - name: Play_Item_Pick_Put_Legs
+      guid: 4e2e786f49807e42a899974bc8e421ef
+      id: 4062299717
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_Pick_Put_Legs
+        ObjectType: 3
+        guid: 4e2e786f49807e42a899974bc8e421ef
+      Path: Events\Default Work Unit\Puzzle\Play_Item_Pick_Put_Legs
+      maxAttenuation: 0
+      maxDuration: 0.25608334
+      minDuration: 0.25608334
+    - name: Play_Item_Pick_Put_Scissors
+      guid: 0a4a20301b4e8b47a2a887509a4f0da1
+      id: 1418045907
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_Pick_Put_Scissors
+        ObjectType: 3
+        guid: 0a4a20301b4e8b47a2a887509a4f0da1
+      Path: Events\Default Work Unit\Puzzle\Play_Item_Pick_Put_Scissors
+      maxAttenuation: 0
+      maxDuration: 0.7409375
+      minDuration: 0.7409375
+    - name: Play_Item_Pick_Put_WaterBottle
+      guid: bf7c265e74ff1d47a0a28c5f97050408
+      id: 369747731
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_Pick_Put_WaterBottle
+        ObjectType: 3
+        guid: bf7c265e74ff1d47a0a28c5f97050408
+      Path: Events\Default Work Unit\Puzzle\Play_Item_Pick_Put_WaterBottle
+      maxAttenuation: 0
+      maxDuration: 0.4116875
+      minDuration: 0.4116875
+    - name: Play_Item_PickUp_Mirror_V2
+      guid: fdf754fe8146244da6ec02fed20d39eb
+      id: 3183585919
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_PickUp_Mirror_V2
+        ObjectType: 3
+        guid: fdf754fe8146244da6ec02fed20d39eb
+      Path: Events\Default Work Unit\Puzzle\Play_Item_PickUp_Mirror_V2
+      maxAttenuation: 0
+      maxDuration: 0.52991664
+      minDuration: 0.52991664
+    - name: Play_Item_Placing_Mirror
+      guid: bed736685b62214c98e70c22c56b8666
+      id: 3724947980
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_Placing_Mirror
+        ObjectType: 3
+        guid: bed736685b62214c98e70c22c56b8666
+      Path: Events\Default Work Unit\Puzzle\Play_Item_Placing_Mirror
+      maxAttenuation: 0
+      maxDuration: 1.71925
+      minDuration: 1.71925
+    - name: Play_Item_PutOnScale_BeerBottle
+      guid: 100205843a0c8747b60a6a5ed9125c31
+      id: 3389815557
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_PutOnScale_BeerBottle
+        ObjectType: 3
+        guid: 100205843a0c8747b60a6a5ed9125c31
+      Path: Events\Default Work Unit\Puzzle\Play_Item_PutOnScale_BeerBottle
+      maxAttenuation: 0
+      maxDuration: 0.225625
+      minDuration: 0.225625
+    - name: Play_Item_PutOnScale_WaterBottle
+      guid: a164e8e58eca074386e7d953afe1c39b
+      id: 2947940636
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_PutOnScale_WaterBottle
+        ObjectType: 3
+        guid: a164e8e58eca074386e7d953afe1c39b
+      Path: Events\Default Work Unit\Puzzle\Play_Item_PutOnScale_WaterBottle
+      maxAttenuation: 0
+      maxDuration: 0.4116875
+      minDuration: 0.4116875
     - name: Play_Music
       guid: f8b32a601672ed4fa958bb29d482ba62
       id: 2932040671
@@ -133,6 +407,157 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_NPC_Voice
+      guid: 7f73b4d5984dfd4e8d3d046275cf2513
+      id: 253233444
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      - ElementName: Play_NPC_Voice
+        ObjectType: 3
+        guid: 7f73b4d5984dfd4e8d3d046275cf2513
+      Path: Events\Default Work Unit\NPC\Play_NPC_Voice
+      maxAttenuation: 0
+      maxDuration: 2.2543957
+      minDuration: 0
+    - name: Play_Swim_Bobby
+      guid: bdc7d107c6eba34fa4ce4ba1cacbee1e
+      id: 3287540045
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Player
+        ObjectType: 4
+        guid: 1ed0ad16820f2d479ce475068fc81b78
+      - ElementName: Play_Swim_Bobby
+        ObjectType: 3
+        guid: bdc7d107c6eba34fa4ce4ba1cacbee1e
+      Path: Events\Default Work Unit\Player\Play_Swim_Bobby
+      maxAttenuation: 0
+      maxDuration: 1.0404149
+      minDuration: 0.6338312
+    - name: Play_UI_MainMenu_Start
+      guid: 29671d1dec692d4caabe683ffad37ac3
+      id: 907179948
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      - ElementName: Play_UI_MainMenu_Start
+        ObjectType: 3
+        guid: 29671d1dec692d4caabe683ffad37ac3
+      Path: Events\Default Work Unit\UI\Play_UI_MainMenu_Start
+      maxAttenuation: 0
+      maxDuration: 2.0371876
+      minDuration: 2.0371876
+    - name: Play_UI_Map_Open
+      guid: 61cb4b08a396f241a5ecd860fe0ce4ad
+      id: 3630763854
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      - ElementName: Play_UI_Map_Open
+        ObjectType: 3
+        guid: 61cb4b08a396f241a5ecd860fe0ce4ad
+      Path: Events\Default Work Unit\UI\Play_UI_Map_Open
+      maxAttenuation: 0
+      maxDuration: 0.78747916
+      minDuration: 0.78747916
+    - name: Play_UI_Quest
+      guid: 29aaa8ac043be249932f9cb469dbbd8e
+      id: 162630791
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      - ElementName: Play_UI_Quest
+        ObjectType: 3
+        guid: 29aaa8ac043be249932f9cb469dbbd8e
+      Path: Events\Default Work Unit\UI\Play_UI_Quest
+      maxAttenuation: 0
+      maxDuration: 1.5516666
+      minDuration: 1.5516666
+    - name: Player
+      guid: 1ed0ad16820f2d479ce475068fc81b78
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Player
+        ObjectType: 4
+        guid: 1ed0ad16820f2d479ce475068fc81b78
+      Path: Events\Default Work Unit\Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Puzzle
+      guid: ef984261fc58ed439d1eec058d511433
+      id: 1780448749
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      Path: Events\Default Work Unit\Puzzle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI
+      guid: c820856c030ed049ac788876af184ad3
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -315,8 +740,268 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 8572a870b6fefc4091b9285cfc8df495
     GuidInternal: 
-    m_lastTime: -8584100213354354629
+    m_lastTime: -8584092633415157910
     List:
+    - name: Emotion
+      guid: 334782bee8179b4fa4b13a11f0e8f2a7
+      id: 3146275604
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8572a870b6fefc4091b9285cfc8df495
+      - ElementName: Emotion
+        ObjectType: 11
+        guid: 334782bee8179b4fa4b13a11f0e8f2a7
+      Path: Switches\Default Work Unit\Emotion
+      values:
+      - name: Angry
+        guid: 3fa072ef8ea4aa49976e2d840c407d7d
+        id: 1206605712
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Angry
+          ObjectType: 10
+          guid: 3fa072ef8ea4aa49976e2d840c407d7d
+      - name: Happy
+        guid: 8d9b2c8c1ffba0479f56fa70a1be59f2
+        id: 1427264549
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Happy
+          ObjectType: 10
+          guid: 8d9b2c8c1ffba0479f56fa70a1be59f2
+      - name: Normal
+        guid: 8fbbca757705904386c2bdf4398f1e68
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Normal
+          ObjectType: 10
+          guid: 8fbbca757705904386c2bdf4398f1e68
+      - name: Shock
+        guid: 3c1797b7bbdf1f4b9fbb6bbadd44429a
+        id: 2836875581
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Shock
+          ObjectType: 10
+          guid: 3c1797b7bbdf1f4b9fbb6bbadd44429a
+      - name: Sigh
+        guid: bb99e5f7c2d0654f88092194798504c4
+        id: 654222264
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Sigh
+          ObjectType: 10
+          guid: bb99e5f7c2d0654f88092194798504c4
+      - name: Singing
+        guid: 63177f54049fb146bd0ad089f64a1baa
+        id: 4177142508
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Singing
+          ObjectType: 10
+          guid: 63177f54049fb146bd0ad089f64a1baa
+      - name: Thinking
+        guid: a0d37b9ee730404c90cc8d0d777828fd
+        id: 1885240893
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Thinking
+          ObjectType: 10
+          guid: a0d37b9ee730404c90cc8d0d777828fd
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Fish
+      guid: e90792ebbc19af4e85ac3dd74987da20
+      id: 2695658327
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8572a870b6fefc4091b9285cfc8df495
+      - ElementName: Fish
+        ObjectType: 11
+        guid: e90792ebbc19af4e85ac3dd74987da20
+      Path: Switches\Default Work Unit\Fish
+      values:
+      - name: Goldfish
+        guid: 2c9ce589e02a544181b358240120d8f2
+        id: 1328262521
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Goldfish
+          ObjectType: 10
+          guid: 2c9ce589e02a544181b358240120d8f2
+      - name: Lumpfish
+        guid: 8c7605b251da8d48a13952f4142873f8
+        id: 3871916941
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Lumpfish
+          ObjectType: 10
+          guid: 8c7605b251da8d48a13952f4142873f8
+      - name: Napoleon
+        guid: 3c92bc8de5c9ca48b83771f1408084aa
+        id: 308218583
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Napoleon
+          ObjectType: 10
+          guid: 3c92bc8de5c9ca48b83771f1408084aa
+      - name: Pufferfish
+        guid: 202fdb3168398848bd1b4be136376fd8
+        id: 2790259467
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Pufferfish
+          ObjectType: 10
+          guid: 202fdb3168398848bd1b4be136376fd8
+      - name: Scientish
+        guid: 219c2d00f61dfc4195c1f4ab2b5a9f38
+        id: 1369185857
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Scientish
+          ObjectType: 10
+          guid: 219c2d00f61dfc4195c1f4ab2b5a9f38
+      - name: Shellfish
+        guid: a6e3165e41186a469364d4ca2f25f410
+        id: 1402661147
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Shellfish
+          ObjectType: 10
+          guid: a6e3165e41186a469364d4ca2f25f410
+      - name: Starfish
+        guid: ceab67ad50916640ba3f7d0a5a9520a5
+        id: 1406231147
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Starfish
+          ObjectType: 10
+          guid: ceab67ad50916640ba3f7d0a5a9520a5
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: MUSIC_STATE
       guid: 4efa066acfa3204e858e3c1e14be1cc5
       id: 3826569560
