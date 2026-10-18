@@ -63,6 +63,8 @@ public class DialogueManager : MonoBehaviour
         public Sprite portrait;
     }
 
+    [SerializeField] private NPCVoice npcVoice;
+
     private bool isHoldingSpace = false;
     private float spaceHoldTimer = 0f;
     private bool skipFired = false;
@@ -271,6 +273,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueText.text = line;
         HandleTags(currentStory.currentTags);
+        if (npcVoice != null) npcVoice.OnLine(currentStory.currentTags);
     }
 
     private void ContinueStory()

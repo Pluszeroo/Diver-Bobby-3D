@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "123138974",
+    "Type": "Event",
+    "GUID": "{487690C6-CF06-4B8B-A710-98FDF6E62877}",
+    "Language": "SFX",
+    "Hash": "{1BCE13EF-8FCA-3E50-5AB0-223E969544D0}",
+    "ObjectPath": "Stop_NPC_Voice",
+    "ShortName": "Stop_NPC_Voice",
+    "Path": "Event/Stop_NPC_Voice.bnk",
+    "Events": [
+     {
+      "Id": "123138974",
+      "Name": "Stop_NPC_Voice",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_NPC_Voice",
+      "GUID": "{487690C6-CF06-4B8B-A710-98FDF6E62877}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BE9B84B8-9991-2E25-CA03-F65E45F242AE}"
+ }
+}

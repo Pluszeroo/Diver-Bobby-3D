@@ -6,7 +6,7 @@ Nom nom nom. # speaker: Starfish
 Yeah I don’t think those are from gods... # speaker: Bobby # mood: Begging
 What are you talking about, of course they are! # speaker: Starfish
 I’m waiting for more right now... # speaker: Starfish
-Maybe your gods meant for me to have some too...
+Maybe your gods meant for me to have some too...# speaker: Bobby
 No. Sorry. These are meant just for me. # speaker: Starfish
 Greedy guts. I’d kill for some seafood. I have to eat scraps from behind the bins. # speaker: Bobby
 Bleh bin scraps. # speaker: Starfish

@@ -34,6 +34,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_QUEST = 162630791U;
         static const AkUniqueID STOP_BUBBLES = 1962155989U;
         static const AkUniqueID STOP_FISH_BUBBLES = 653457998U;
+        static const AkUniqueID STOP_NPC_VOICE = 123138974U;
     } // namespace EVENTS
 
     namespace STATES

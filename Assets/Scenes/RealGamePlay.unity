@@ -85881,6 +85881,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1886238731}
   - component: {fileID: 1886238732}
+  - component: {fileID: 1886238734}
+  - component: {fileID: 1886238733}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -85967,9 +85969,79 @@ MonoBehaviour:
     portrait: {fileID: 21300000, guid: 22480c37f35e0f842baf65395350a9be, type: 3}
   - mood: Shock
     portrait: {fileID: 21300000, guid: 4f40eafdfeadb374da424af5648bfbea, type: 3}
+  npcVoice: {fileID: 1886238733}
   closestTrigger: {fileID: 0}
   closestInteractTrigger: {fileID: 0}
   ClosestItemPlacement: {fileID: 0}
+--- !u!114 &1886238733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886238730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a654e0c9642feec4985d6d0978acef1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3e5f1cc0808a0304085e39919c96c7fd, type: 2}
+  stopVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 19d95a72792b4344cad88aa6113410ee, type: 2}
+  voices:
+  - speakerTag: Pufferfish
+    fishSwitch: Pufferfish
+    defaultEmotion: Normal
+  - speakerTag: Shellfish
+    fishSwitch: Shellfish
+    defaultEmotion: Normal
+  - speakerTag: Lump
+    fishSwitch: Lumpfish
+    defaultEmotion: Normal
+  - speakerTag: Napoleon
+    fishSwitch: Napoleon
+    defaultEmotion: Thinking
+  - speakerTag: Scientish
+    fishSwitch: Scientish
+    defaultEmotion: Sigh
+  - speakerTag: Starfish
+    fishSwitch: Starfish
+    defaultEmotion: Normal
+  - speakerTag: Starfish Legless
+    fishSwitch: Starfish
+    defaultEmotion: Normal
+  - speakerTag: Goldfish
+    fishSwitch: Goldfish
+    defaultEmotion: Normal
+--- !u!114 &1886238734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886238730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c755afb00623e94294bfdcc528f242b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1886247529
 GameObject:
   m_ObjectHideFlags: 0
