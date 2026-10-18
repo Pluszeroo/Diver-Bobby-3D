@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class MainMenuPlayButton : MonoBehaviour
 {
     public void PlayGame()
     {

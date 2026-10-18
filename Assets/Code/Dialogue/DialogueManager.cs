@@ -125,6 +125,8 @@ public class DialogueManager : MonoBehaviour
 
     public void OnSpaceStarted(InputAction.CallbackContext ctx)
     {
+        if (PauseMenu.IsPaused) return;
+
         if (!dialogueIsPlaying && CanGetInDialogue())
         {
             if (closestTrigger != null) EnterDialogueMode();
@@ -319,6 +321,8 @@ public class DialogueManager : MonoBehaviour
     {
 
         if (!isHoldingSpace) return;
+
+        if (PauseMenu.IsPaused) { CancelHold(); return; }
 
         if (!dialogueIsPlaying) { CancelHold(); return; }
 
