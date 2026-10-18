@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3389815557",
+    "Type": "Event",
+    "GUID": "{84050210-0C3A-4787-B60A-6A5ED9125C31}",
+    "Language": "SFX",
+    "Hash": "{CA79993B-2509-32D6-62F4-777A603A5410}",
+    "ObjectPath": "Play_Item_PutOnScale_BeerBottle",
+    "ShortName": "Play_Item_PutOnScale_BeerBottle",
+    "Path": "Event/Play_Item_PutOnScale_BeerBottle.bnk",
+    "Media": [
+     {
+      "Id": "889017141",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_PutOnScale_BeerBottle.wav",
+      "Path": "Media/889017141.wem",
+      "CachePath": "DD/{DD29556B-9823-EBDD-DD9B-7B0F3FCE1C72}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3389815557",
+      "Name": "Play_Item_PutOnScale_BeerBottle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_PutOnScale_BeerBottle",
+      "GUID": "{84050210-0C3A-4787-B60A-6A5ED9125C31}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.225625",
+      "DurationMax": "0.225625",
+      "MediaRefs": [
+       {
+        "Id": "889017141"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CB794531-A3D3-259F-84E4-424481B524D9}"
+ }
+}

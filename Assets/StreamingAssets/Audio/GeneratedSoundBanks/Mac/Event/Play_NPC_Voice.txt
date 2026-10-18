@@ -1,0 +1,23 @@
+Event	ID	Name			Wwise Object Path	Notes
+	253233444	Play_NPC_Voice			\Default Work Unit\NPC\Play_NPC_Voice	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2695658327	Fish			\Default Work Unit\Fish	
+	3146275604	Emotion			\Default Work Unit\Emotion	
+
+Switch	ID	Name	Switch Group			Notes
+	308218583	Napoleon	Fish			
+	1328262521	Goldfish	Fish			
+	1369185857	Scientish	Fish			
+	1402661147	Shellfish	Fish			
+	1406231147	Starfish	Fish			
+	2790259467	Pufferfish	Fish			
+	3871916941	Lumpfish	Fish			
+	654222264	Sigh	Emotion			
+	1160234136	Normal	Emotion			
+	1206605712	Angry	Emotion			
+	1427264549	Happy	Emotion			
+	1885240893	Thinking	Emotion			
+	2836875581	Shock	Emotion			
+	4177142508	Singing	Emotion			
+

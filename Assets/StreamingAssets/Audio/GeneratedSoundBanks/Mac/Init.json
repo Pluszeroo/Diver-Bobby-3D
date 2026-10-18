@@ -116,6 +116,106 @@
     ],
     "SwitchGroups": [
      {
+      "Id": "2695658327",
+      "Name": "Fish",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Fish",
+      "GUID": "{EB9207E9-19BC-4EAF-85AC-3DD74987DA20}",
+      "Switches": [
+       {
+        "Id": "308218583",
+        "Name": "Napoleon",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Napoleon",
+        "GUID": "{8DBC923C-C9E5-48CA-B837-71F1408084AA}"
+       },
+       {
+        "Id": "1328262521",
+        "Name": "Goldfish",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Goldfish",
+        "GUID": "{89E59C2C-2AE0-4154-81B3-58240120D8F2}"
+       },
+       {
+        "Id": "1369185857",
+        "Name": "Scientish",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Scientish",
+        "GUID": "{002D9C21-1DF6-41FC-95C1-F4AB2B5A9F38}"
+       },
+       {
+        "Id": "1402661147",
+        "Name": "Shellfish",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Shellfish",
+        "GUID": "{5E16E3A6-1841-466A-9364-D4CA2F25F410}"
+       },
+       {
+        "Id": "1406231147",
+        "Name": "Starfish",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Starfish",
+        "GUID": "{AD67ABCE-9150-4066-BA3F-7D0A5A9520A5}"
+       },
+       {
+        "Id": "2790259467",
+        "Name": "Pufferfish",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Pufferfish",
+        "GUID": "{31DB2F20-3968-4888-BD1B-4BE136376FD8}"
+       },
+       {
+        "Id": "3871916941",
+        "Name": "Lumpfish",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Lumpfish",
+        "GUID": "{B205768C-DA51-488D-A139-52F4142873F8}"
+       }
+      ]
+     },
+     {
+      "Id": "3146275604",
+      "Name": "Emotion",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Emotion",
+      "GUID": "{BE824733-17E8-4F9B-A4B1-3A11F0E8F2A7}",
+      "Switches": [
+       {
+        "Id": "654222264",
+        "Name": "Sigh",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Sigh",
+        "GUID": "{F7E599BB-D0C2-4F65-8809-2194798504C4}"
+       },
+       {
+        "Id": "1160234136",
+        "Name": "Normal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Normal",
+        "GUID": "{75CABB8F-0577-4390-86C2-BDF4398F1E68}"
+       },
+       {
+        "Id": "1206605712",
+        "Name": "Angry",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Angry",
+        "GUID": "{EF72A03F-A48E-49AA-976E-2D840C407D7D}"
+       },
+       {
+        "Id": "1427264549",
+        "Name": "Happy",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Happy",
+        "GUID": "{8C2C9B8D-FB1F-47A0-9F56-FA70A1BE59F2}"
+       },
+       {
+        "Id": "1885240893",
+        "Name": "Thinking",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Thinking",
+        "GUID": "{9E7BD3A0-30E7-4C40-90CC-8D0D777828FD}"
+       },
+       {
+        "Id": "2836875581",
+        "Name": "Shock",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Shock",
+        "GUID": "{B797173C-DFBB-4B1F-9FBB-6BBADD44429A}"
+       },
+       {
+        "Id": "4177142508",
+        "Name": "Singing",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Singing",
+        "GUID": "{547F1763-9F04-46B1-BD0A-D089F64A1BAA}"
+       }
+      ]
+     },
+     {
       "Id": "3826569560",
       "Name": "MUSIC_STATE",
       "ObjectPath": "\\Switches\\Default Work Unit\\MUSIC_STATE",
@@ -132,6 +232,6 @@
     ]
    }
   ],
-  "FileHash": "{1F928253-78BC-09CA-D383-403E9B6ACA4A}"
+  "FileHash": "{80ACE0D9-7BFB-3F5E-0EF5-30B6FAC3D992}"
  }
 }

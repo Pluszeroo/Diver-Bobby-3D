@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1462235116",
+    "Type": "Event",
+    "GUID": "{FC609E93-F447-4DED-A0E4-065C96A52AEB}",
+    "Language": "SFX",
+    "Hash": "{BCB7C740-1705-D051-B70A-7442ACB9412D}",
+    "ObjectPath": "Play_Bobby_Inventory_Switch",
+    "ShortName": "Play_Bobby_Inventory_Switch",
+    "Path": "Event/Play_Bobby_Inventory_Switch.bnk",
+    "Media": [
+     {
+      "Id": "784090578",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_Switch_Selection_05.wav",
+      "Path": "Media/784090578.wem",
+      "CachePath": "70/{7044004C-2ABB-B754-B686-194C5A38648C}.wem"
+     },
+     {
+      "Id": "1030107800",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_Switch_Selection_04.wav",
+      "Path": "Media/1030107800.wem",
+      "CachePath": "6C/{6C7DF6B2-B6DA-0FB4-5296-5A3593BF9CF9}.wem"
+     },
+     {
+      "Id": "1060818200",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_Switch_Selection_03.wav",
+      "Path": "Media/1060818200.wem",
+      "CachePath": "6E/{6E90F2ED-8B34-4995-D31C-6A2754493D40}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1462235116",
+      "Name": "Play_Bobby_Inventory_Switch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Bobby_Inventory_Switch",
+      "GUID": "{FC609E93-F447-4DED-A0E4-065C96A52AEB}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.043875",
+      "DurationMax": "0.058625",
+      "MediaRefs": [
+       {
+        "Id": "784090578"
+       },
+       {
+        "Id": "1030107800"
+       },
+       {
+        "Id": "1060818200"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3F0E0F84-93D0-745B-105A-75E986055995}"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "251743618",
+    "Type": "Event",
+    "GUID": "{8390CBE4-CAE3-4676-9044-BBBD486ED55F}",
+    "Language": "SFX",
+    "Hash": "{621C618E-0E60-952C-A271-FDE4D88F00D7}",
+    "ObjectPath": "Play_Item_Pick_Put_GlassTank",
+    "ShortName": "Play_Item_Pick_Put_GlassTank",
+    "Path": "Event/Play_Item_Pick_Put_GlassTank.bnk",
+    "Media": [
+     {
+      "Id": "173307065",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_Pick+Put_GlassTank.wav",
+      "Path": "Media/173307065.wem",
+      "CachePath": "A3/{A3D7A7D1-924D-14C3-849A-31E5690262CC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "251743618",
+      "Name": "Play_Item_Pick_Put_GlassTank",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_Pick_Put_GlassTank",
+      "GUID": "{8390CBE4-CAE3-4676-9044-BBBD486ED55F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.16666667",
+      "DurationMax": "0.16666667",
+      "MediaRefs": [
+       {
+        "Id": "173307065"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{75848812-AC88-A419-FBBE-806E22F9C2BC}"
+ }
+}

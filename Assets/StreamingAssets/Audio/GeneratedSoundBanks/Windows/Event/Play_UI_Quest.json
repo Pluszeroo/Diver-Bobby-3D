@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "162630791",
+    "Type": "Event",
+    "GUID": "{ACA8AA29-3B04-49E2-932F-9CB469DBBD8E}",
+    "Language": "SFX",
+    "Hash": "{E94E86F7-79FF-6837-3EDA-EC078CA84CEF}",
+    "ObjectPath": "Play_UI_Quest",
+    "ShortName": "Play_UI_Quest",
+    "Path": "Event/Play_UI_Quest.bnk",
+    "Media": [
+     {
+      "Id": "149462755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_Quest.wav",
+      "Path": "Media/149462755.wem",
+      "CachePath": "CF/{CFB3EFD4-AC9C-F72C-CBE1-D0CA18CEAA0B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "162630791",
+      "Name": "Play_UI_Quest",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Quest",
+      "GUID": "{ACA8AA29-3B04-49E2-932F-9CB469DBBD8E}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5516666",
+      "DurationMax": "1.5516666",
+      "MediaRefs": [
+       {
+        "Id": "149462755"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2265DAB2-3E75-DC4A-94F2-628169E58BF7}"
+ }
+}

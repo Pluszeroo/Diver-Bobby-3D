@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2873562748",
+    "Type": "Event",
+    "GUID": "{EABBA1A3-B97E-4ACB-9E7C-E71607F90122}",
+    "Language": "SFX",
+    "Hash": "{95A5979B-CC0A-25C0-4AAC-9FA5C2437FCA}",
+    "ObjectPath": "Play_Item_Pick_Put_BeerBottle",
+    "ShortName": "Play_Item_Pick_Put_BeerBottle",
+    "Path": "Event/Play_Item_Pick_Put_BeerBottle.bnk",
+    "Media": [
+     {
+      "Id": "848885589",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_Pick+Put_BeerBottle.wav",
+      "Path": "Media/848885589.wem",
+      "CachePath": "B2/{B2E51291-362E-6F97-059A-29429612793D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2873562748",
+      "Name": "Play_Item_Pick_Put_BeerBottle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_Pick_Put_BeerBottle",
+      "GUID": "{EABBA1A3-B97E-4ACB-9E7C-E71607F90122}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22510417",
+      "DurationMax": "0.22510417",
+      "MediaRefs": [
+       {
+        "Id": "848885589"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E7857C7B-87A4-6604-BE36-73D02EB37A12}"
+ }
+}

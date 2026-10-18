@@ -14,6 +14,213 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Environment" ID="{02483929-32AC-4D80-A29E-630DDA956458}" ShortID="455170701">
+					<ChildrenList>
+						<Event Name="Play_Bubbles" ID="{4A3AD76F-2AC7-45CC-9C8C-8102A06105E2}">
+							<ChildrenList>
+								<Action Name="" ID="{40FDF3B2-BC75-4121-9A28-BEFB6D61E7E0}" ShortID="619243950">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bubbles" ID="{3A78B098-AF8E-4665-8CF3-2C178A6EB56F}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="NPC" ID="{21FA012A-37F9-404D-81EB-5C52BC7A1D4D}" ShortID="746367177">
+					<ChildrenList>
+						<Event Name="Play_NPC_Voice" ID="{D5B4737F-4D98-4EFD-8D3D-046275CF2513}">
+							<ChildrenList>
+								<Action Name="" ID="{2F5F67F2-D80F-4FD3-B10A-7ADA608B65CB}" ShortID="521308967">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_Voice" ID="{D84F870F-04FC-448B-9DF1-A894FFD3A301}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{16ADD01E-0F82-472D-9CE4-75068FC81B78}" ShortID="296540277">
+					<ChildrenList>
+						<Event Name="Play_Bobby_Inventory_Switch" ID="{FC609E93-F447-4DED-A0E4-065C96A52AEB}">
+							<ChildrenList>
+								<Action Name="" ID="{FB11E486-8CFF-4557-9831-B923558C1B29}" ShortID="278754372">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bobby_Inventory_Switch" ID="{86678195-BE66-4288-A22B-E505318F6213}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Swim_Bobby" ID="{07D1C7BD-EBC6-4FA3-A4CE-4BA1CACBEE1E}">
+							<ChildrenList>
+								<Action Name="" ID="{47E7A466-FD78-4495-968F-9E0DE19884D7}" ShortID="901533071">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Swim_Bobby" ID="{1B15403D-8966-47B2-A5DE-2AD8FA34A811}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Puzzle" ID="{614298EF-58FC-43ED-9D1E-EC058D511433}" ShortID="651030084">
+					<ChildrenList>
+						<Event Name="Play_Item_Pick_Put_BeerBottle" ID="{EABBA1A3-B97E-4ACB-9E7C-E71607F90122}">
+							<ChildrenList>
+								<Action Name="" ID="{93B7F17A-01AC-4804-940D-C7E7E7327315}" ShortID="812902568">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Pick_Put_BeerBottle" ID="{2D9CF9A6-E860-4242-B0E1-7A88EF833DB3}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_Pick_Put_GlassTank" ID="{8390CBE4-CAE3-4676-9044-BBBD486ED55F}">
+							<ChildrenList>
+								<Action Name="" ID="{86C02CDA-295E-4814-B744-E1E95D391C52}" ShortID="650048460">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Pick_Put_GlassTank" ID="{E38A4590-0832-4E79-B935-7E9666EE6DA0}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_Pick_Put_Gloves" ID="{29661905-3E0F-4118-BEFC-29361BB9DE81}">
+							<ChildrenList>
+								<Action Name="" ID="{6C87CE87-7677-4B49-A71A-ED4DD0DF98CB}" ShortID="46591653">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Pick_Put_Gloves" ID="{0A46A095-A4FB-4F0F-8135-6DD32B11EB4B}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_Pick_Put_Legs" ID="{6F782E4E-8049-427E-A899-974BC8E421EF}">
+							<ChildrenList>
+								<Action Name="" ID="{E79AD95D-A105-41F2-8694-46E6EFA8F66B}" ShortID="718920185">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Pick_Put_Legs" ID="{13379757-A984-4C04-A867-D2B50367C3BB}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_PutOnScale_BeerBottle" ID="{84050210-0C3A-4787-B60A-6A5ED9125C31}">
+							<ChildrenList>
+								<Action Name="" ID="{3FCF968F-0B64-4026-A622-6A52986B2EA6}" ShortID="1063404890">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_PutOnScale_BeerBottle" ID="{D95831D7-4A81-49C0-AAD6-0B94D11795B5}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_PutOnScale_WaterBottle" ID="{E5E864A1-CA8E-4307-86E7-D953AFE1C39B}">
+							<ChildrenList>
+								<Action Name="" ID="{CECEC1AF-2E9B-46B7-B904-63A999D5257C}" ShortID="482848879">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_PutOnScale_WaterBottle" ID="{DF2932FD-C369-44B5-84C6-E4D75B930982}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_PickUp_Mirror_V2" ID="{FE54F7FD-4681-4D24-A6EC-02FED20D39EB}">
+							<ChildrenList>
+								<Action Name="" ID="{559E7EE8-8B92-4ECE-A528-6E9B6F026CBE}" ShortID="490777639">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_PickUp_Mirror_V2" ID="{22D8B91A-389A-4A7B-92D5-8BC17865DA61}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_Pick_Put_WaterBottle" ID="{5E267CBF-FF74-471D-A0A2-8C5F97050408}">
+							<ChildrenList>
+								<Action Name="" ID="{AE2A9A1B-A9EC-4DAD-9A03-B31ABF2C07AD}" ShortID="552567091">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Pick_Put_WaterBottle" ID="{3C65BD30-CFAB-4C68-BC7E-81B24B94FCAD}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_Pick_Put_Scissors" ID="{30204A0A-4E1B-478B-A2A8-87509A4F0DA1}">
+							<ChildrenList>
+								<Action Name="" ID="{CC4583C8-AE42-436D-B471-3EB99C58ED06}" ShortID="910912847">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Pick_Put_Scissors" ID="{A04E2524-1EDD-4D9F-91BA-FFA7C9294022}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_Placing_Mirror" ID="{6836D7BE-625B-4C21-98E7-0C22C56B8666}">
+							<ChildrenList>
+								<Action Name="" ID="{31EF6FAE-0B6C-46D6-A702-C890A51638FD}" ShortID="83103162">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Placing_Mirror" ID="{33818540-D725-4227-A262-A39D3DEBB824}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{6C8520C8-0E03-49D0-AC78-8876AF184AD3}" ShortID="376992411">
+					<ChildrenList>
+						<Event Name="Play_UI_MainMenu_Start" ID="{1D1D6729-69EC-4C2D-AABE-683FFAD37AC3}">
+							<ChildrenList>
+								<Action Name="" ID="{7E7BE357-FBCD-4B05-A894-4F91753D59F2}" ShortID="1006257719">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_MainMenu_Start" ID="{6BA66143-A894-4522-8248-46194491BF24}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Map_Open" ID="{084BCB61-96A3-41F2-A5EC-D860FE0CE4AD}">
+							<ChildrenList>
+								<Action Name="" ID="{205B50D2-314F-4EC9-BB07-AF8EF35B2715}" ShortID="650442060">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Map_Open" ID="{60315C1B-5149-4041-B997-44312C283E17}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Quest" ID="{ACA8AA29-3B04-49E2-932F-9CB469DBBD8E}">
+							<ChildrenList>
+								<Action Name="" ID="{32AF1052-BF60-488E-9399-E6D74D5C6FD2}" ShortID="350850605">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Quest" ID="{54F91FCE-E1EE-434A-9247-D39FF0776DDC}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

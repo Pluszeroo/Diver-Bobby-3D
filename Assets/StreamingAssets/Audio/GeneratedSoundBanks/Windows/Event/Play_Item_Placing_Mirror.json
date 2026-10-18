@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3724947980",
+    "Type": "Event",
+    "GUID": "{6836D7BE-625B-4C21-98E7-0C22C56B8666}",
+    "Language": "SFX",
+    "Hash": "{4D600B37-2C6A-8AB3-06C5-E63C20E8DCF9}",
+    "ObjectPath": "Play_Item_Placing_Mirror",
+    "ShortName": "Play_Item_Placing_Mirror",
+    "Path": "Event/Play_Item_Placing_Mirror.bnk",
+    "Media": [
+     {
+      "Id": "119063530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_Placing_Mirror.wav",
+      "Path": "Media/119063530.wem",
+      "CachePath": "66/{66A4F67B-460D-C1F1-F4CC-1709E5FB1703}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3724947980",
+      "Name": "Play_Item_Placing_Mirror",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_Placing_Mirror",
+      "GUID": "{6836D7BE-625B-4C21-98E7-0C22C56B8666}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.71925",
+      "DurationMax": "1.71925",
+      "MediaRefs": [
+       {
+        "Id": "119063530"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FBC60C68-228E-BE93-1ED3-916C4FF3F9E7}"
+ }
+}

@@ -1,0 +1,132 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3287540045",
+    "Type": "Event",
+    "GUID": "{07D1C7BD-EBC6-4FA3-A4CE-4BA1CACBEE1E}",
+    "Language": "SFX",
+    "Hash": "{11FDFCFE-5DCE-0334-3701-51607DD6B632}",
+    "ObjectPath": "Play_Swim_Bobby",
+    "ShortName": "Play_Swim_Bobby",
+    "Path": "Event/Play_Swim_Bobby.bnk",
+    "Media": [
+     {
+      "Id": "231424606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_5.wav",
+      "Path": "Media/231424606.wem",
+      "CachePath": "96/{966B8B08-FFD9-8488-4DD3-7CDDB896805B}.wem"
+     },
+     {
+      "Id": "385499399",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_4.wav",
+      "Path": "Media/385499399.wem",
+      "CachePath": "AE/{AEF0F5BA-5BF2-3AEE-6461-8F23FB89C622}.wem"
+     },
+     {
+      "Id": "483782944",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_1.wav",
+      "Path": "Media/483782944.wem",
+      "CachePath": "EF/{EF134610-7B66-0086-8B19-5109959EECBD}.wem"
+     },
+     {
+      "Id": "533097461",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_3.wav",
+      "Path": "Media/533097461.wem",
+      "CachePath": "8A/{8AA52470-5417-0A20-A9D4-059BEA4A4014}.wem"
+     },
+     {
+      "Id": "622069762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_6.wav",
+      "Path": "Media/622069762.wem",
+      "CachePath": "B4/{B4510732-81CE-7765-F67F-F6428CD40903}.wem"
+     },
+     {
+      "Id": "794167639",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_2.wav",
+      "Path": "Media/794167639.wem",
+      "CachePath": "71/{7168D91E-6FC0-A201-8E3E-E5EF7CA8534B}.wem"
+     },
+     {
+      "Id": "801828080",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_8.wav",
+      "Path": "Media/801828080.wem",
+      "CachePath": "B8/{B87F9353-D309-D74C-F5C3-A10100C0E7B5}.wem"
+     },
+     {
+      "Id": "979832869",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement_Swiming_Normal_7.wav",
+      "Path": "Media/979832869.wem",
+      "CachePath": "F7/{F7527DFE-078B-12AA-32F8-7AA42A01E82C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3287540045",
+      "Name": "Play_Swim_Bobby",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Swim_Bobby",
+      "GUID": "{07D1C7BD-EBC6-4FA3-A4CE-4BA1CACBEE1E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6338312",
+      "DurationMax": "1.0404149",
+      "MediaRefs": [
+       {
+        "Id": "231424606"
+       },
+       {
+        "Id": "385499399"
+       },
+       {
+        "Id": "483782944"
+       },
+       {
+        "Id": "533097461"
+       },
+       {
+        "Id": "622069762"
+       },
+       {
+        "Id": "794167639"
+       },
+       {
+        "Id": "801828080"
+       },
+       {
+        "Id": "979832869"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4396953F-986C-6284-2551-76C7C95715B7}"
+ }
+}

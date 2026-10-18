@@ -13,7 +13,24 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BOBBY_INVENTORY_SWITCH = 1462235116U;
+        static const AkUniqueID PLAY_BUBBLES = 3381697299U;
+        static const AkUniqueID PLAY_ITEM_PICK_PUT_BEERBOTTLE = 2873562748U;
+        static const AkUniqueID PLAY_ITEM_PICK_PUT_GLASSTANK = 251743618U;
+        static const AkUniqueID PLAY_ITEM_PICK_PUT_GLOVES = 3356981552U;
+        static const AkUniqueID PLAY_ITEM_PICK_PUT_LEGS = 4062299717U;
+        static const AkUniqueID PLAY_ITEM_PICK_PUT_SCISSORS = 1418045907U;
+        static const AkUniqueID PLAY_ITEM_PICK_PUT_WATERBOTTLE = 369747731U;
+        static const AkUniqueID PLAY_ITEM_PICKUP_MIRROR_V2 = 3183585919U;
+        static const AkUniqueID PLAY_ITEM_PLACING_MIRROR = 3724947980U;
+        static const AkUniqueID PLAY_ITEM_PUTONSCALE_BEERBOTTLE = 3389815557U;
+        static const AkUniqueID PLAY_ITEM_PUTONSCALE_WATERBOTTLE = 2947940636U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_NPC_VOICE = 253233444U;
+        static const AkUniqueID PLAY_SWIM_BOBBY = 3287540045U;
+        static const AkUniqueID PLAY_UI_MAINMENU_START = 907179948U;
+        static const AkUniqueID PLAY_UI_MAP_OPEN = 3630763854U;
+        static const AkUniqueID PLAY_UI_QUEST = 162630791U;
     } // namespace EVENTS
 
     namespace STATES
@@ -37,6 +54,38 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace EMOTION
+        {
+            static const AkUniqueID GROUP = 3146275604U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ANGRY = 1206605712U;
+                static const AkUniqueID HAPPY = 1427264549U;
+                static const AkUniqueID NORMAL = 1160234136U;
+                static const AkUniqueID SHOCK = 2836875581U;
+                static const AkUniqueID SIGH = 654222264U;
+                static const AkUniqueID SINGING = 4177142508U;
+                static const AkUniqueID THINKING = 1885240893U;
+            } // namespace SWITCH
+        } // namespace EMOTION
+
+        namespace FISH
+        {
+            static const AkUniqueID GROUP = 2695658327U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID GOLDFISH = 1328262521U;
+                static const AkUniqueID LUMPFISH = 3871916941U;
+                static const AkUniqueID NAPOLEON = 308218583U;
+                static const AkUniqueID PUFFERFISH = 2790259467U;
+                static const AkUniqueID SCIENTISH = 1369185857U;
+                static const AkUniqueID SHELLFISH = 1402661147U;
+                static const AkUniqueID STARFISH = 1406231147U;
+            } // namespace SWITCH
+        } // namespace FISH
+
         namespace MUSIC_STATE
         {
             static const AkUniqueID GROUP = 3826569560U;

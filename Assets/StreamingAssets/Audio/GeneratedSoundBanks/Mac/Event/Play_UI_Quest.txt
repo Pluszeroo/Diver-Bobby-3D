@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	162630791	Play_UI_Quest			\Default Work Unit\UI\Play_UI_Quest	
+

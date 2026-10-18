@@ -8,6 +8,28 @@
 						<Switch Name="MENU" ID="{75DB7AAD-9F93-4632-93CF-DE37CDDB1F06}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Fish" ID="{EB9207E9-19BC-4EAF-85AC-3DD74987DA20}">
+					<ChildrenList>
+						<Switch Name="Goldfish" ID="{89E59C2C-2AE0-4154-81B3-58240120D8F2}"/>
+						<Switch Name="Lumpfish" ID="{B205768C-DA51-488D-A139-52F4142873F8}"/>
+						<Switch Name="Starfish" ID="{AD67ABCE-9150-4066-BA3F-7D0A5A9520A5}"/>
+						<Switch Name="Shellfish" ID="{5E16E3A6-1841-466A-9364-D4CA2F25F410}"/>
+						<Switch Name="Napoleon" ID="{8DBC923C-C9E5-48CA-B837-71F1408084AA}"/>
+						<Switch Name="Pufferfish" ID="{31DB2F20-3968-4888-BD1B-4BE136376FD8}"/>
+						<Switch Name="Scientish" ID="{002D9C21-1DF6-41FC-95C1-F4AB2B5A9F38}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Emotion" ID="{BE824733-17E8-4F9B-A4B1-3A11F0E8F2A7}">
+					<ChildrenList>
+						<Switch Name="Normal" ID="{75CABB8F-0577-4390-86C2-BDF4398F1E68}"/>
+						<Switch Name="Happy" ID="{8C2C9B8D-FB1F-47A0-9F56-FA70A1BE59F2}"/>
+						<Switch Name="Angry" ID="{EF72A03F-A48E-49AA-976E-2D840C407D7D}"/>
+						<Switch Name="Sigh" ID="{F7E599BB-D0C2-4F65-8809-2194798504C4}"/>
+						<Switch Name="Singing" ID="{547F1763-9F04-46B1-BD0A-D089F64A1BAA}"/>
+						<Switch Name="Thinking" ID="{9E7BD3A0-30E7-4C40-90CC-8D0D777828FD}"/>
+						<Switch Name="Shock" ID="{B797173C-DFBB-4B1F-9FBB-6BBADD44429A}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

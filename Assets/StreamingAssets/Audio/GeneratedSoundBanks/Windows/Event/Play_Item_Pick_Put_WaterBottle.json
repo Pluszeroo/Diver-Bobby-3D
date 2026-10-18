@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "369747731",
+    "Type": "Event",
+    "GUID": "{5E267CBF-FF74-471D-A0A2-8C5F97050408}",
+    "Language": "SFX",
+    "Hash": "{0316CBD5-A016-C362-02CC-24A1950F65FE}",
+    "ObjectPath": "Play_Item_Pick_Put_WaterBottle",
+    "ShortName": "Play_Item_Pick_Put_WaterBottle",
+    "Path": "Event/Play_Item_Pick_Put_WaterBottle.bnk",
+    "Media": [
+     {
+      "Id": "823392689",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_Pick+Put_WaterBottle.wav",
+      "Path": "Media/823392689.wem",
+      "CachePath": "4E/{4E13DDD0-20C2-0D49-1F21-B3A3BD8C89A7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "369747731",
+      "Name": "Play_Item_Pick_Put_WaterBottle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_Pick_Put_WaterBottle",
+      "GUID": "{5E267CBF-FF74-471D-A0A2-8C5F97050408}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4116875",
+      "DurationMax": "0.4116875",
+      "MediaRefs": [
+       {
+        "Id": "823392689"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D133F7A1-0E6A-7E94-97E5-9F7862CD684B}"
+ }
+}

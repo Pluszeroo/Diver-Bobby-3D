@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3724947980	Play_Item_Placing_Mirror			\Default Work Unit\Puzzle\Play_Item_Placing_Mirror	
+

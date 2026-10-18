@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2947940636",
+    "Type": "Event",
+    "GUID": "{E5E864A1-CA8E-4307-86E7-D953AFE1C39B}",
+    "Language": "SFX",
+    "Hash": "{836E4528-7900-10E5-527C-A9C863125983}",
+    "ObjectPath": "Play_Item_PutOnScale_WaterBottle",
+    "ShortName": "Play_Item_PutOnScale_WaterBottle",
+    "Path": "Event/Play_Item_PutOnScale_WaterBottle.bnk",
+    "Media": [
+     {
+      "Id": "911983928",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_PutOnScale_WaterBottle.wav",
+      "Path": "Media/911983928.wem",
+      "CachePath": "C1/{C1280A1A-AA52-EDC2-CCFD-AE929692EDE7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2947940636",
+      "Name": "Play_Item_PutOnScale_WaterBottle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_PutOnScale_WaterBottle",
+      "GUID": "{E5E864A1-CA8E-4307-86E7-D953AFE1C39B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4116875",
+      "DurationMax": "0.4116875",
+      "MediaRefs": [
+       {
+        "Id": "911983928"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{83A8A12F-55D9-B119-0B9F-CC468E97A8F1}"
+ }
+}
