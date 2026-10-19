@@ -9,7 +9,7 @@ public class PopupManager : MonoBehaviour
     [SerializeField] private GameObject _scalePuzzle;
 
     [Header("Tutorial")]
-    [SerializeField] private TutorialPopupManager _tutorialPopupManager;
+    public TutorialPopupManager _tutorialPopupManager;
 
     private GameObject _currentPopUp;
 
@@ -48,6 +48,12 @@ public class PopupManager : MonoBehaviour
     public void ClosePopup()
     {
         BobbyGameState.Instance.SetBobbyState(BobbyState.Idle);
+
+        if (_currentPopUp == null)
+        {
+            return;
+        }
+
         _currentPopUp.SetActive(false);
         _currentPopUp = null;
     }

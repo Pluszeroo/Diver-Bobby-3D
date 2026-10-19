@@ -74,6 +74,11 @@ public class BobbySwim : MonoBehaviour
     private void OnMovePerformed(InputAction.CallbackContext ctx)
     {
         moveInput = ctx.ReadValue<Vector2>();
+
+        if (PopupManager.Instance._tutorialPopupManager.CurrentTutorial == Tutorial.moving)
+        {
+            PopupManager.Instance.ClosePopup();
+        }
     }
 
     private void OnMoveCanceled(InputAction.CallbackContext ctx)
