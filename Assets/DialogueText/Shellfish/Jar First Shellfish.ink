@@ -1,1 +1,1 @@
-Jar is too slippery to hold, I need something with more grip! # Speaker: Bobby
+Jar is too slippery to hold, I need something with more grip! # speaker: Bobby

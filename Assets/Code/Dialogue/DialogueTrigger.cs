@@ -15,6 +15,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public UnityEvent onEnd;
 
+    [SerializeField] private Animator _animator;
+
     [Header("Play Once")]
     [SerializeField] protected bool playOnce = false;
     protected bool hasPlayed = false;
@@ -46,6 +48,16 @@ public class DialogueTrigger : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         return currentStory;
+    }
+
+    public void PlayTalkingAnimation()
+    {
+        if(_animator != null) _animator.SetBool("IsTalking", true);
+    }
+
+    public void StopTalkingAnimation()
+    {
+        if (_animator != null) _animator.SetBool("IsTalking", false);
     }
 
     //Call this when dialogue actually starts

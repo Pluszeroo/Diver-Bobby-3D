@@ -240,6 +240,7 @@ public class DialogueManager : MonoBehaviour
 
         trigger.MarkPlayed();
         currentStory = trigger.GetStory();
+        trigger.PlayTalkingAnimation();
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
@@ -265,6 +266,8 @@ public class DialogueManager : MonoBehaviour
             if (closestTrigger == finished) closestTrigger = null;
             if (closestInteractTrigger == finished) closestInteractTrigger = null;
         }
+
+        finished.StopTalkingAnimation();
 
         finished.onEnd?.Invoke();
     }
