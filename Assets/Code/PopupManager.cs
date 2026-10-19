@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +9,7 @@ public class PopupManager : MonoBehaviour
     [SerializeField] private GameObject _scalePuzzle;
 
     [Header("Tutorial")]
-    [SerializeField] private GameObject _tutorialPopupObject;
-    [SerializeField] private Animator _tutorialAnimator;
-    [SerializeField] private AnimationClip _moveTutorialClip;
-    [SerializeField] private AnimationClip _speakTutorialClip;
-    [SerializeField] private AnimationClip _pickupTutorialClip;
-    [SerializeField] private AnimationClip _cycleTutorialClip;
+    [SerializeField] private TutorialPopupManager _tutorialPopupManager;
 
     private GameObject _currentPopUp;
 
@@ -44,24 +40,9 @@ public class PopupManager : MonoBehaviour
     public void PopupTutorialInstruction(Tutorial tutorial)
     {
         BobbyGameState.Instance.SetBobbyState(BobbyState.Popup);
-        _currentPopUp = _tutorialPopupObject;
+        _currentPopUp = _tutorialPopupManager.gameObject;
         _currentPopUp.SetActive(true);
-
-        switch (tutorial)
-        {
-            case Tutorial.moving:
-                _tutorialAnimator.CrossFade(_moveTutorialClip.name, 0, 0);
-                break;
-            case Tutorial.speaking:
-                _tutorialAnimator.CrossFade(_speakTutorialClip.name, 0, 0);
-                break;
-            case Tutorial.pickup:
-                _tutorialAnimator.CrossFade(_pickupTutorialClip.name, 0, 0);
-                break;
-            case Tutorial.itemCycle:
-                _tutorialAnimator.CrossFade(_cycleTutorialClip.name, 0, 0);
-                break;
-        }
+        _tutorialPopupManager.CurrentTutorial = tutorial;
     }
 
     public void ClosePopup()
@@ -78,4 +59,5 @@ public enum Tutorial
     speaking,
     pickup,
     itemCycle,
+    tip,
 }
