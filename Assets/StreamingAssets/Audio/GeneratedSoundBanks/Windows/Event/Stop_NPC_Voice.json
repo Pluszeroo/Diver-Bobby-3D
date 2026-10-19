@@ -18,7 +18,7 @@
      {
       "Id": "123138974",
       "Name": "Stop_NPC_Voice",
-      "ObjectPath": "\\Events\\Default Work Unit\\Stop_NPC_Voice",
+      "ObjectPath": "\\Events\\Default Work Unit\\NPC\\Stop_NPC_Voice",
       "GUID": "{487690C6-CF06-4B8B-A710-98FDF6E62877}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{FD871005-E5BD-A585-79EC-EE112120E55E}"
+  "FileHash": "{98EF5B79-DB7F-6A6F-95FF-58A99E680791}"
  }
 }

@@ -17,6 +17,7 @@
 						<Switch Name="Napoleon" ID="{8DBC923C-C9E5-48CA-B837-71F1408084AA}"/>
 						<Switch Name="Pufferfish" ID="{31DB2F20-3968-4888-BD1B-4BE136376FD8}"/>
 						<Switch Name="Scientish" ID="{002D9C21-1DF6-41FC-95C1-F4AB2B5A9F38}"/>
+						<Switch Name="Bobby" ID="{A9116E05-96A6-46FC-A866-8804A5E85665}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="Emotion" ID="{BE824733-17E8-4F9B-A4B1-3A11F0E8F2A7}">
@@ -28,6 +29,12 @@
 						<Switch Name="Singing" ID="{547F1763-9F04-46B1-BD0A-D089F64A1BAA}"/>
 						<Switch Name="Thinking" ID="{9E7BD3A0-30E7-4C40-90CC-8D0D777828FD}"/>
 						<Switch Name="Shock" ID="{B797173C-DFBB-4B1F-9FBB-6BBADD44429A}"/>
+						<Switch Name="Begging" ID="{DB18A7F8-5BDD-4EC8-B0A0-F15CEA843C82}"/>
+						<Switch Name="Mock" ID="{4858067E-23CE-4C6A-87BE-0F4CB904CD8B}"/>
+						<Switch Name="Evil" ID="{48C70E65-890D-4C43-8355-BBD9FF57E319}"/>
+						<Switch Name="Mur" ID="{AD85D462-8BD7-42CD-A165-E41939183A2C}"/>
+						<Switch Name="Num" ID="{9A02BF15-6DE1-405A-A9E5-09303AB64664}"/>
+						<Switch Name="Pain" ID="{E89EF091-2ECA-499A-A2F1-12E68C92D928}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

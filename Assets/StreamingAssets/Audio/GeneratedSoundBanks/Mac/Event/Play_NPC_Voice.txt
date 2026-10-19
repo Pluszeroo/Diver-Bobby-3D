@@ -11,13 +11,20 @@ Switch	ID	Name	Switch Group			Notes
 	1369185857	Scientish	Fish			
 	1402661147	Shellfish	Fish			
 	1406231147	Starfish	Fish			
+	2373367069	Bobby	Fish			
 	2790259467	Pufferfish	Fish			
 	3871916941	Lumpfish	Fish			
 	654222264	Sigh	Emotion			
+	712750159	Num	Emotion			
+	712897227	Mur	Emotion			
 	1160234136	Normal	Emotion			
 	1206605712	Angry	Emotion			
 	1427264549	Happy	Emotion			
 	1885240893	Thinking	Emotion			
+	1996139369	Pain	Emotion			
 	2836875581	Shock	Emotion			
+	3195758403	Mock	Emotion			
+	3678625172	Begging	Emotion			
 	4177142508	Singing	Emotion			
+	4254973567	Evil	Emotion			
 

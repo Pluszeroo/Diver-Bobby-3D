@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "724628678",
+    "Type": "Event",
+    "GUID": "{5D0D55A9-DADB-4E22-A17C-7D18F80E0B45}",
+    "Language": "SFX",
+    "Hash": "{BF7B3CE4-90D0-0B5E-49D2-175A55BEF79F}",
+    "ObjectPath": "Play_Item_PickUp_Coin",
+    "ShortName": "Play_Item_PickUp_Coin",
+    "Path": "Event/Play_Item_PickUp_Coin.bnk",
+    "Media": [
+     {
+      "Id": "601085799",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_PickUp_Coin.wav",
+      "Path": "Media/601085799.wem",
+      "CachePath": "8A/{8AE9A6D7-D05E-4717-8A29-0D509DE67D5A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "724628678",
+      "Name": "Play_Item_PickUp_Coin",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_PickUp_Coin",
+      "GUID": "{5D0D55A9-DADB-4E22-A17C-7D18F80E0B45}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1739792",
+      "DurationMax": "1.1739792",
+      "MediaRefs": [
+       {
+        "Id": "601085799"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F1DECA62-5F4A-31B3-22D7-E2EFFF19747F}"
+ }
+}

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	141690214	Play_UI_Dialogue_SpeedUP			\Default Work Unit\UI\Play_UI_Dialogue_SpeedUP	
+

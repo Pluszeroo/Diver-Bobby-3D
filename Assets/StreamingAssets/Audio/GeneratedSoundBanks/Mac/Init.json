@@ -152,6 +152,12 @@
         "GUID": "{AD67ABCE-9150-4066-BA3F-7D0A5A9520A5}"
        },
        {
+        "Id": "2373367069",
+        "Name": "Bobby",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Bobby",
+        "GUID": "{A9116E05-96A6-46FC-A866-8804A5E85665}"
+       },
+       {
         "Id": "2790259467",
         "Name": "Pufferfish",
         "ObjectPath": "\\Switches\\Default Work Unit\\Fish\\Pufferfish",
@@ -178,6 +184,18 @@
         "GUID": "{F7E599BB-D0C2-4F65-8809-2194798504C4}"
        },
        {
+        "Id": "712750159",
+        "Name": "Num",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Num",
+        "GUID": "{9A02BF15-6DE1-405A-A9E5-09303AB64664}"
+       },
+       {
+        "Id": "712897227",
+        "Name": "Mur",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Mur",
+        "GUID": "{AD85D462-8BD7-42CD-A165-E41939183A2C}"
+       },
+       {
         "Id": "1160234136",
         "Name": "Normal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Normal",
@@ -202,16 +220,40 @@
         "GUID": "{9E7BD3A0-30E7-4C40-90CC-8D0D777828FD}"
        },
        {
+        "Id": "1996139369",
+        "Name": "Pain",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Pain",
+        "GUID": "{E89EF091-2ECA-499A-A2F1-12E68C92D928}"
+       },
+       {
         "Id": "2836875581",
         "Name": "Shock",
         "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Shock",
         "GUID": "{B797173C-DFBB-4B1F-9FBB-6BBADD44429A}"
        },
        {
+        "Id": "3195758403",
+        "Name": "Mock",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Mock",
+        "GUID": "{4858067E-23CE-4C6A-87BE-0F4CB904CD8B}"
+       },
+       {
+        "Id": "3678625172",
+        "Name": "Begging",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Begging",
+        "GUID": "{DB18A7F8-5BDD-4EC8-B0A0-F15CEA843C82}"
+       },
+       {
         "Id": "4177142508",
         "Name": "Singing",
         "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Singing",
         "GUID": "{547F1763-9F04-46B1-BD0A-D089F64A1BAA}"
+       },
+       {
+        "Id": "4254973567",
+        "Name": "Evil",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Emotion\\Evil",
+        "GUID": "{48C70E65-890D-4C43-8355-BBD9FF57E319}"
        }
       ]
      },
@@ -232,6 +274,6 @@
     ]
    }
   ],
-  "FileHash": "{80ACE0D9-7BFB-3F5E-0EF5-30B6FAC3D992}"
+  "FileHash": "{6B485EE7-08E5-BA70-0A9E-1ACCB52083A3}"
  }
 }

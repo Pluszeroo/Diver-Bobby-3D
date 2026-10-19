@@ -22,15 +22,20 @@ namespace AK
         static const AkUniqueID PLAY_ITEM_PICK_PUT_LEGS = 4062299717U;
         static const AkUniqueID PLAY_ITEM_PICK_PUT_SCISSORS = 1418045907U;
         static const AkUniqueID PLAY_ITEM_PICK_PUT_WATERBOTTLE = 369747731U;
+        static const AkUniqueID PLAY_ITEM_PICKUP_COIN = 724628678U;
         static const AkUniqueID PLAY_ITEM_PICKUP_MIRROR_V2 = 3183585919U;
+        static const AkUniqueID PLAY_ITEM_PICKUP_PLASTICBAG = 3675032351U;
         static const AkUniqueID PLAY_ITEM_PLACING_MIRROR = 3724947980U;
         static const AkUniqueID PLAY_ITEM_PUTONSCALE_BEERBOTTLE = 3389815557U;
         static const AkUniqueID PLAY_ITEM_PUTONSCALE_WATERBOTTLE = 2947940636U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_NPC_VOICE = 253233444U;
+        static const AkUniqueID PLAY_SHELLFISH_MOVEMENT = 77562218U;
         static const AkUniqueID PLAY_SWIM_BOBBY = 3287540045U;
+        static const AkUniqueID PLAY_UI_DIALOGUE_SPEEDUP = 141690214U;
         static const AkUniqueID PLAY_UI_MAINMENU_START = 907179948U;
         static const AkUniqueID PLAY_UI_MAP_OPEN = 3630763854U;
+        static const AkUniqueID PLAY_UI_PAPER_POP = 3618020627U;
         static const AkUniqueID PLAY_UI_QUEST = 162630791U;
         static const AkUniqueID STOP_BUBBLES = 1962155989U;
         static const AkUniqueID STOP_FISH_BUBBLES = 653457998U;
@@ -65,8 +70,14 @@ namespace AK
             namespace SWITCH
             {
                 static const AkUniqueID ANGRY = 1206605712U;
+                static const AkUniqueID BEGGING = 3678625172U;
+                static const AkUniqueID EVIL = 4254973567U;
                 static const AkUniqueID HAPPY = 1427264549U;
+                static const AkUniqueID MOCK = 3195758403U;
+                static const AkUniqueID MUR = 712897227U;
                 static const AkUniqueID NORMAL = 1160234136U;
+                static const AkUniqueID NUM = 712750159U;
+                static const AkUniqueID PAIN = 1996139369U;
                 static const AkUniqueID SHOCK = 2836875581U;
                 static const AkUniqueID SIGH = 654222264U;
                 static const AkUniqueID SINGING = 4177142508U;
@@ -80,6 +91,7 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID BOBBY = 2373367069U;
                 static const AkUniqueID GOLDFISH = 1328262521U;
                 static const AkUniqueID LUMPFISH = 3871916941U;
                 static const AkUniqueID NAPOLEON = 308218583U;

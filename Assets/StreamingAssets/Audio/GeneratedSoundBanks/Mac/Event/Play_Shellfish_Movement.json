@@ -1,0 +1,180 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "77562218",
+    "Type": "Event",
+    "GUID": "{93F54F8F-B807-41AE-8632-E6B577F52385}",
+    "Language": "SFX",
+    "Hash": "{5DC6FAC3-AF07-4988-1636-8C34A78FBF59}",
+    "ObjectPath": "Play_Shellfish_Movement",
+    "ShortName": "Play_Shellfish_Movement",
+    "Path": "Event/Play_Shellfish_Movement.bnk",
+    "Media": [
+     {
+      "Id": "54281813",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_08.wav",
+      "Path": "Media/54281813.wem",
+      "CachePath": "6B/{6B478621-C3FC-9006-99F4-0DA65F514509}.wem"
+     },
+     {
+      "Id": "67375410",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_10.wav",
+      "Path": "Media/67375410.wem",
+      "CachePath": "F1/{F1A5ACE3-4DBF-9DE3-002B-208A182EBC55}.wem"
+     },
+     {
+      "Id": "322082190",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_09.wav",
+      "Path": "Media/322082190.wem",
+      "CachePath": "ED/{ED54E682-75B8-3D2E-5263-126F294EACB6}.wem"
+     },
+     {
+      "Id": "394850412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_06.wav",
+      "Path": "Media/394850412.wem",
+      "CachePath": "8E/{8E6F9A3C-396A-E1FB-46EA-D4A980145D2E}.wem"
+     },
+     {
+      "Id": "696104421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_07.wav",
+      "Path": "Media/696104421.wem",
+      "CachePath": "26/{2652D041-94A8-B3F8-4DF1-8469060845F8}.wem"
+     },
+     {
+      "Id": "717507163",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_11.wav",
+      "Path": "Media/717507163.wem",
+      "CachePath": "91/{91AA1DAF-9D1A-E816-4400-D734308B5141}.wem"
+     },
+     {
+      "Id": "726917687",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_03.wav",
+      "Path": "Media/726917687.wem",
+      "CachePath": "2B/{2BC3D375-63AE-07B9-6D35-E0D505F8851A}.wem"
+     },
+     {
+      "Id": "835975623",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_12.wav",
+      "Path": "Media/835975623.wem",
+      "CachePath": "D8/{D8FF57CA-37A2-73E4-03B0-5EF6367114EF}.wem"
+     },
+     {
+      "Id": "851507671",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_05.wav",
+      "Path": "Media/851507671.wem",
+      "CachePath": "48/{48E7A487-5F36-761C-2C28-685432F577D2}.wem"
+     },
+     {
+      "Id": "855747121",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_01.wav",
+      "Path": "Media/855747121.wem",
+      "CachePath": "DB/{DB43E77A-9922-C038-3D37-A793F6751A0B}.wem"
+     },
+     {
+      "Id": "990857417",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_04.wav",
+      "Path": "Media/990857417.wem",
+      "CachePath": "C2/{C27B2CBC-A89D-497D-9215-5746C6C8E9D7}.wem"
+     },
+     {
+      "Id": "1020695011",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Movement_02.wav",
+      "Path": "Media/1020695011.wem",
+      "CachePath": "39/{39518E52-68E5-8914-5AC0-DD6471783DCA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "77562218",
+      "Name": "Play_Shellfish_Movement",
+      "ObjectPath": "\\Events\\Default Work Unit\\NPC\\Play_Shellfish_Movement",
+      "GUID": "{93F54F8F-B807-41AE-8632-E6B577F52385}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.14333333",
+      "DurationMax": "0.22083333",
+      "MediaRefs": [
+       {
+        "Id": "54281813"
+       },
+       {
+        "Id": "67375410"
+       },
+       {
+        "Id": "322082190"
+       },
+       {
+        "Id": "394850412"
+       },
+       {
+        "Id": "696104421"
+       },
+       {
+        "Id": "717507163"
+       },
+       {
+        "Id": "726917687"
+       },
+       {
+        "Id": "835975623"
+       },
+       {
+        "Id": "851507671"
+       },
+       {
+        "Id": "855747121"
+       },
+       {
+        "Id": "990857417"
+       },
+       {
+        "Id": "1020695011"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A8CA4EB0-1F57-2D5E-8083-F027D080975D}"
+ }
+}

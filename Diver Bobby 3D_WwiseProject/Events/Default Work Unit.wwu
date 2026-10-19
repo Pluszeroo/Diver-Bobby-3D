@@ -83,6 +83,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Shellfish_Movement" ID="{93F54F8F-B807-41AE-8632-E6B577F52385}">
+							<ChildrenList>
+								<Action Name="" ID="{DA59E202-278A-4071-A030-482DB9925CA2}" ShortID="490009551">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shellfish_Movement" ID="{14A43E04-8290-4A61-BB55-8ADB7CC7D400}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_NPC_Voice" ID="{487690C6-CF06-4B8B-A710-98FDF6E62877}">
+							<ChildrenList>
+								<Action Name="" ID="{F28B9199-EDDA-4DB2-8C68-B2F6D65FBE7A}" ShortID="159892029">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_Voice" ID="{D84F870F-04FC-448B-9DF1-A894FFD3A301}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{16ADD01E-0F82-472D-9CE4-75068FC81B78}" ShortID="296540277">
@@ -223,6 +249,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Item_PickUp_Coin" ID="{5D0D55A9-DADB-4E22-A17C-7D18F80E0B45}">
+							<ChildrenList>
+								<Action Name="" ID="{067AC471-46A5-4E61-87B3-AB9C1CE4D928}" ShortID="674255613">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_PickUp_Coin" ID="{47765866-7629-46A2-8D7D-97AC6D2B40FC}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Item_PickUp_PlasticBag" ID="{96BB937F-FA47-4833-AB47-ACEE7964B54E}">
+							<ChildrenList>
+								<Action Name="" ID="{CFF47BAA-A0C7-4A40-B807-EE24B6CB6165}" ShortID="143568706">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_PickUp_PlasticBag" ID="{28170368-91B7-4727-857A-3039279EA6A3}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{6C8520C8-0E03-49D0-AC78-8876AF184AD3}" ShortID="376992411">
@@ -255,6 +303,31 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="UI_Quest" ID="{54F91FCE-E1EE-434A-9247-D39FF0776DDC}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Dialogue_SpeedUP" ID="{27CA50B8-16FF-4D41-AF0F-345DC5D30C2F}">
+							<ChildrenList>
+								<Action Name="" ID="{82BEF8CF-4624-4537-BCA1-A2A494BCDA5A}" ShortID="4154492">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Dialogue_SpeedUP" ID="{D0D90455-9680-4F71-AB8D-83A92DC5E146}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Paper_pop" ID="{0D34CCE5-5030-4714-99D2-22D9BC46285F}">
+							<ChildrenList>
+								<Action Name="" ID="{800E3DAF-AE84-49A5-83A0-16874130FB47}" ShortID="477619556">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Paper_pop" ID="{0A15064A-B6C9-4E2D-B126-7A7EDE7F6120}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

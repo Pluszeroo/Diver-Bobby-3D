@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3675032351",
+    "Type": "Event",
+    "GUID": "{96BB937F-FA47-4833-AB47-ACEE7964B54E}",
+    "Language": "SFX",
+    "Hash": "{1937C32C-CEC8-7E9E-40C9-97136F59C3F8}",
+    "ObjectPath": "Play_Item_PickUp_PlasticBag",
+    "ShortName": "Play_Item_PickUp_PlasticBag",
+    "Path": "Event/Play_Item_PickUp_PlasticBag.bnk",
+    "Media": [
+     {
+      "Id": "540321292",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Item_PickUp_PlasticBag.wav",
+      "Path": "Media/540321292.wem",
+      "CachePath": "68/{6850E9C4-F922-CDE9-D94E-523D52B184AC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3675032351",
+      "Name": "Play_Item_PickUp_PlasticBag",
+      "ObjectPath": "\\Events\\Default Work Unit\\Puzzle\\Play_Item_PickUp_PlasticBag",
+      "GUID": "{96BB937F-FA47-4833-AB47-ACEE7964B54E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5800833",
+      "DurationMax": "0.5800833",
+      "MediaRefs": [
+       {
+        "Id": "540321292"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7C77E18D-045F-018A-B080-D5BDE5A063E1}"
+ }
+}

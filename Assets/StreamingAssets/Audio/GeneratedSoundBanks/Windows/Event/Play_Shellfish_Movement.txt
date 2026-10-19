@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	77562218	Play_Shellfish_Movement			\Default Work Unit\NPC\Play_Shellfish_Movement	
+

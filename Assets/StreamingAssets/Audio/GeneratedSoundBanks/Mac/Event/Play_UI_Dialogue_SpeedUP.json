@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "141690214",
+    "Type": "Event",
+    "GUID": "{27CA50B8-16FF-4D41-AF0F-345DC5D30C2F}",
+    "Language": "SFX",
+    "Hash": "{1E931647-52D6-4E1E-E283-02C5A8FEBC1B}",
+    "ObjectPath": "Play_UI_Dialogue_SpeedUP",
+    "ShortName": "Play_UI_Dialogue_SpeedUP",
+    "Path": "Event/Play_UI_Dialogue_SpeedUP.bnk",
+    "Media": [
+     {
+      "Id": "1009357165",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_Dialogue_SpeedUP.wav",
+      "Path": "Media/1009357165.wem",
+      "CachePath": "59/{59CFD375-9472-8F57-DE9E-89BE5A8127BD}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "141690214",
+      "Name": "Play_UI_Dialogue_SpeedUP",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Dialogue_SpeedUP",
+      "GUID": "{27CA50B8-16FF-4D41-AF0F-345DC5D30C2F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.87833333",
+      "DurationMax": "0.87833333",
+      "MediaRefs": [
+       {
+        "Id": "1009357165"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FC2EE5B2-D3AC-93DF-E578-98892EE77865}"
+ }
+}

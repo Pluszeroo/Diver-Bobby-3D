@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3618020627",
+    "Type": "Event",
+    "GUID": "{0D34CCE5-5030-4714-99D2-22D9BC46285F}",
+    "Language": "SFX",
+    "Hash": "{DF0FFE38-A947-6E47-3698-6CD459CE683A}",
+    "ObjectPath": "Play_UI_Paper_pop",
+    "ShortName": "Play_UI_Paper_pop",
+    "Path": "Event/Play_UI_Paper_pop.bnk",
+    "Media": [
+     {
+      "Id": "783455917",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_Paper_pop.wav",
+      "Path": "Media/783455917.wem",
+      "CachePath": "E1/{E1B8F59F-3723-D743-E4CE-56B12CE393C8}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3618020627",
+      "Name": "Play_UI_Paper_pop",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Paper_pop",
+      "GUID": "{0D34CCE5-5030-4714-99D2-22D9BC46285F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.62291664",
+      "DurationMax": "0.62291664",
+      "MediaRefs": [
+       {
+        "Id": "783455917"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A4F31209-3D93-E767-B9C5-1BC5D1CFF452}"
+ }
+}
