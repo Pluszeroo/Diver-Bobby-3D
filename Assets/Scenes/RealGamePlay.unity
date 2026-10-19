@@ -3227,6 +3227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fa9cbbe5751774c9d781d818f7ad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: 2
 --- !u!4 &80142904
 Transform:
   m_ObjectHideFlags: 0
@@ -16877,9 +16878,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6607009830343746747, guid: dc7d5ce37d7bb0f449082d5925a777fb, type: 3}
+      propertyPath: m_Name
+      value: Head.002
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dc7d5ce37d7bb0f449082d5925a777fb, type: 3}
       propertyPath: m_Name
       value: Scientish_IdleAnim_V02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468551188479771725, guid: dc7d5ce37d7bb0f449082d5925a777fb, type: 3}
+      propertyPath: m_Name
+      value: Head.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: dc7d5ce37d7bb0f449082d5925a777fb, type: 3}
+      propertyPath: m_Name
+      value: Armature.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
