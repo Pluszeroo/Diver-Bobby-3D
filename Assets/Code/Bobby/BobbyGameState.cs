@@ -6,7 +6,7 @@ public class BobbyGameState : MonoBehaviour
 
     [field:SerializeField] public BobbyState CurrentState { get; private set; } = BobbyState.Idle;
 
-    private void Start()
+    private void Awake()
     {
         if(Instance == null)
         {
