@@ -88481,12 +88481,12 @@ MonoBehaviour:
   LumpPortrait: {fileID: 21300000, guid: 3677aaabb120b134ab2cdc1142701ef1, type: 3}
   NapoleanPortrait: {fileID: 21300000, guid: 97c471336a21b104fae6fb411079b457, type: 3}
   GoldfishPorttrait: {fileID: 21300000, guid: d163590259bc02741a576550de1a91b9, type: 3}
-  BhasiPortrait: {fileID: 21300000, guid: 2e5c959d3ebb6e74390bc11aecb3d017, type: 3}
-  WaterBottlePortrait: {fileID: 21300000, guid: 3c21904531109ea4ab380190b02522de, type: 3}
+  BhasiPortrait: {fileID: 21300000, guid: a1eeab18bbf0744408e056112e265abb, type: 3}
+  WaterBottlePortrait: {fileID: 21300000, guid: a1eeab18bbf0744408e056112e265abb, type: 3}
   PearlNecklacePortrait: {fileID: 21300000, guid: ead356b6ff6519d4388c7301b0987846, type: 3}
-  CoinPortrait: {fileID: 21300000, guid: 336c88a54db20b54ebad735c8e526d8e, type: 3}
-  JarPortrait: {fileID: 21300000, guid: 28b9d7af54230bc44b92657ff4d4810c, type: 3}
-  GlovePortrait: {fileID: 21300000, guid: 6f8622aa5b6420a4da3d372e153f8602, type: 3}
+  CoinPortrait: {fileID: 21300000, guid: ecb9f80dcdcf1c84fbc806b7e65491f2, type: 3}
+  JarPortrait: {fileID: 21300000, guid: de496936b7e4f6a4088b083fa336aa99, type: 3}
+  GlovePortrait: {fileID: 21300000, guid: 0c76ef43ac13c86418b977b93c191f13, type: 3}
   speakerNameBackground: {fileID: 4439793}
   defaultNameTag: {fileID: 21300000, guid: 3a6a8d520e6163043a9506affd2eafd5, type: 3}
   speakerNameTags:
