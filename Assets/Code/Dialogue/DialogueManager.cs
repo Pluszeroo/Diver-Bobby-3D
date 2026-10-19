@@ -31,6 +31,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Sprite CoinPortrait;
     [SerializeField] private Sprite JarPortrait;
     [SerializeField] private Sprite GlovePortrait;
+    [SerializeField] private Sprite GarbagePortrait;
+    [SerializeField] private Sprite LegsPortrait;
+    [SerializeField] private Sprite MirrorPortrait;
+    [SerializeField] private Sprite SpiralShellPortrait;
 
     [Header("Speaker Name Tags")]
     [SerializeField] private Image speakerNameBackground;
@@ -415,6 +419,18 @@ public class DialogueManager : MonoBehaviour
                         break;
                     case "Glove":
                         speakerPortrait.sprite = GlovePortrait;
+                        break;
+                    case "Garbage":
+                        speakerPortrait.sprite = GarbagePortrait;
+                        break;
+                    case "Legs":
+                        speakerPortrait.sprite = LegsPortrait;
+                        break;
+                    case "Mirror":
+                        speakerPortrait.sprite = MirrorPortrait;
+                        break;
+                    case "Spiral Shell":
+                        speakerPortrait.sprite = SpiralShellPortrait;
                         break;
                     default:
                         Debug.LogWarning("Unknown speaker: " + value);

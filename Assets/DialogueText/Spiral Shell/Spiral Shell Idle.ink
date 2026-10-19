@@ -1,1 +1,0 @@
-It's a tiny white spiral shell # speaker: Bobby

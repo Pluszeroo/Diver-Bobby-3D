@@ -11,6 +11,7 @@ public class PufferFishGarbageCollection : MonoBehaviour
     public void PlaceGarbage()
     {
         _currentGarbageCount++;
+        Debug.Log($"[Puffer] {name} count={_currentGarbageCount}");
 
         if (_currentGarbageCount >= _garbageRequirement)
         {

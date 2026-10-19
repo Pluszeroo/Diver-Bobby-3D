@@ -43,7 +43,8 @@ public class ItemPlacement : MonoBehaviour
     public bool TryPlaceItem()
     {
         ItemType? selectedItem = ItemHolder.Instance.GetSelected();
-        
+        Debug.Log($"[Placement] {name} selected={selectedItem} canPlace={CanPlaceItem()} locked={Locked}");
+
         if (!CanPlaceItem() || selectedItem == null || Locked) return false;
 
         if(_wontConsume)
