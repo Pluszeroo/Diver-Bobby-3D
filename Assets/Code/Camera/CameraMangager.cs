@@ -8,6 +8,7 @@ public class CameraMangager : MonoBehaviour
     public CinemachineCamera panorama;
     public CinemachineCamera FollowBobbyCamera;
     private bool hasSwitchedToFollowBobbyCamera = false;
+    [SerializeField] private GameObject _tipTutorial;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,8 +44,11 @@ public class CameraMangager : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
-        BobbyGameState.Instance.SetBobbyState(BobbyState.Idle);
         panorama.gameObject.SetActive(false);
         FollowBobbyCamera.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2);
+        BobbyGameState.Instance.SetBobbyState(BobbyState.Idle);
+        _tipTutorial.SetActive(true);
     }
 }
