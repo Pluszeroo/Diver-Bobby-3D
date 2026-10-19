@@ -20,6 +20,14 @@ public class ItemPlacement : MonoBehaviour
         if (_visualCue != null) _visualCue.SetActive(false);
     }
 
+    private void OnDisable()
+    {
+        if (QuestManager.GetInstance().ClosestPlacement == this)
+        {
+            QuestManager.GetInstance().ClosestPlacement = null;
+        }
+    }
+
     private void Update()
     {
         if (_visualCue == null) return;

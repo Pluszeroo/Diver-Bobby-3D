@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 public enum QuestStage
 {
@@ -76,7 +75,7 @@ public class QuestManager : MonoBehaviour
     //[SerializeField] private TextAsset starfishAfterPhilosophyInk;
 
     [Header("Shellfish Goodbye")]
-    [SerializeField] private DialogueTrigger shellfishMouth; 
+    [SerializeField] private DialogueTrigger shellfishMouth;
     [SerializeField] private DialogueTrigger shellfishCantCapture;
     [SerializeField] private TextAsset shellfishRescuedInk;
 
@@ -92,6 +91,8 @@ public class QuestManager : MonoBehaviour
 
     public InteractableItem ClosestInteractable { get; set; }
 
+    [field: Header("Debug")]
+    [field: SerializeField]
     public ItemPlacement ClosestPlacement { get; set; }
 
     //[SerializeField] private GameObject tryPickUpShellDialogue;
@@ -197,7 +198,10 @@ public class QuestManager : MonoBehaviour
 
             ItemHolder.Instance.Consume(ItemType.ShellInJar);
             starfishNormalRenderer.GetComponent<Animator>().enabled = false;
+
+            giveStarfishDialogue.GetComponent<DialogueTrigger>().onEnd.AddListener(OnGiveStarfishDialogueEnd);
             PlayDialogue(giveStarfishDialogue);
+
             legsObtained = true;
             return true;
         }
@@ -223,6 +227,16 @@ public class QuestManager : MonoBehaviour
         return false;
     }
 
+    private void OnGiveStarfishDialogueEnd()
+    {
+        ReleaseShellfish();
+
+        starfishNormalRenderer.SetActive(false);
+        starfishCrawlRenderer.SetActive(true);
+
+        giveStarfishDialogue.GetComponent<DialogueTrigger>().onEnd.RemoveListener(OnGiveStarfishDialogueEnd);
+    }
+
     // Shellfish will showing up on starfish's position
     private void ReleaseShellfish()
     {
@@ -233,7 +247,7 @@ public class QuestManager : MonoBehaviour
         Debug.Log("Shellfish released at " + shellfish.transform.position);
 
         shellfishMouth.inkJSON = shellfishRescuedInk;
-        shellfishCantCapture.gameObject.SetActive(false); 
+        shellfishCantCapture.gameObject.SetActive(false);
     }
 
     public void OnMirrorConfirmEnd()
@@ -255,12 +269,12 @@ public class QuestManager : MonoBehaviour
 
         starfishNormalRenderer.SetActive(false);
         starfishCrawlRenderer.SetActive(true);
-        
+
         if (shellfish != null)
         {
             Destroy(shellfish.GetComponent<InteractableItem>());
-            
-            foreach(DialogueTrigger trigger in shellfish.GetComponentsInChildren<DialogueTrigger>())
+
+            foreach (DialogueTrigger trigger in shellfish.GetComponentsInChildren<DialogueTrigger>())
             {
                 Destroy(trigger.gameObject);
             }
@@ -269,15 +283,11 @@ public class QuestManager : MonoBehaviour
         if (ItemHolder.Instance.Has(ItemType.ShellInJar))
         {
             ItemHolder.Instance.Consume(ItemType.ShellInJar);
-            shellRescued = true;
         }
         else if (shellInJarObject != null && shellInJarObject.activeSelf)
         {
             shellInJarObject.SetActive(false);
-            shellRescued = true;
         }
-
-        if (shellRescued) ReleaseShellfish();
 
         if (poisonFish != null) poisonFish.SetActive(true);
         PlayDialogue(mirrorPoisonDialogue);
@@ -328,7 +338,7 @@ public class QuestManager : MonoBehaviour
         //starfish.transform.position = new Vector3(StarfishNewSpot.x, StarfishNewSpot.y, starfish.transform.position.z);
 
         //starfish.transform.position = starfishRetreatPoint.position;
-        starfishMouth.inkJSON = mirrorPlaced ? goodbyeSadInk : goodbyePhilosophyInk;
+        starfishMouth.inkJSON = mirrorPlaced ? goodbyePhilosophyInk : goodbyeSadInk;
         starfishMouth.onEnd.RemoveListener(OnStarfishGoodbyeEnd);
         starfishMouth.onEnd.AddListener(OnStarfishGoodbyeEnd);
         starfishMouth.gameObject.SetActive(true);
@@ -337,8 +347,6 @@ public class QuestManager : MonoBehaviour
             DialogueManager.GetInstance().closestTrigger = starfishMouth;
 
         starfishFirstTalk.gameObject.SetActive(false);
-
-        if (!mirrorPlaced) PlayDialogue(shellfishRevengeDialogue);
     }
 
     public void OnStarfishGoodbyeEnd()
@@ -347,6 +355,11 @@ public class QuestManager : MonoBehaviour
         {
             starfishCrawlRenderer.GetComponent<Animator>().enabled = true;
             StartCoroutine(StarfishDisappearCoroutine());
+        }
+        else
+        {
+            shellfish.GetComponentInChildren<Animator>().SetTrigger("Leave");
+            StartCoroutine(ShellfishDisappearCoroutine());
         }
 
         // starfishMouth.inkJSON = starfishAfterPhilosophyInk;
@@ -359,6 +372,12 @@ public class QuestManager : MonoBehaviour
         starfish.SetActive(false);
     }
 
+    private IEnumerator ShellfishDisappearCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+        shellfish.SetActive(false);
+    }
+
     public void SpawnScissor()
     {
         scissorObject.transform.position = spiralshell.transform.position;
@@ -368,7 +387,7 @@ public class QuestManager : MonoBehaviour
 
     public void SpawnGlove()
     {
-        if(gloveObject != null)
+        if (gloveObject != null)
         {
             gloveObject.transform.position = gloveSpawnPosition.position;
             gloveObject.SetActive(true);
@@ -381,7 +400,7 @@ public class QuestManager : MonoBehaviour
 
     public void SpawnMirror()
     {
-        if(waterBottlePlacement.ItemPlaced && glassBottlePlacement.ItemPlaced)
+        if (waterBottlePlacement.ItemPlaced && glassBottlePlacement.ItemPlaced)
         {
             mirrorObject.SetActive(true);
             mirrorObject.transform.position = mirrorSpawnPoint.position;
