@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2027875493",
+    "Type": "Event",
+    "GUID": "{A1C1D28C-02CA-47FE-9222-FCBD6D3F2A56}",
+    "Language": "SFX",
+    "Hash": "{6127E529-5559-E7B9-B041-1B7D33D0E452}",
+    "ObjectPath": "Play_Starfish_Cut_01",
+    "ShortName": "Play_Starfish_Cut_01",
+    "Path": "Event/Play_Starfish_Cut_01.bnk",
+    "Media": [
+     {
+      "Id": "198506136",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Cut_01.wav",
+      "Path": "Media/198506136.wem",
+      "CachePath": "CC/{CC9C2432-2EF0-7982-D3DF-59F653DE6FF7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2027875493",
+      "Name": "Play_Starfish_Cut_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\NPC\\Play_Starfish_Cut_01",
+      "GUID": "{A1C1D28C-02CA-47FE-9222-FCBD6D3F2A56}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.4053335",
+      "DurationMax": "4.4053335",
+      "MediaRefs": [
+       {
+        "Id": "198506136"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3BDF455D-FA05-7FC0-9A5A-F7E127A95A76}"
+ }
+}

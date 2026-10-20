@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "526696767",
+    "Type": "Event",
+    "GUID": "{C004F34A-6926-4C43-A541-3FA50FE8E8D8}",
+    "Language": "SFX",
+    "Hash": "{F0F9D635-E8BB-28B4-F138-6684FF807314}",
+    "ObjectPath": "Play_UI_SwitchSelection_01",
+    "ShortName": "Play_UI_SwitchSelection_01",
+    "Path": "Event/Play_UI_SwitchSelection_01.bnk",
+    "Media": [
+     {
+      "Id": "399754100",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_SwitchSelection_01.wav",
+      "Path": "Media/399754100.wem",
+      "CachePath": "6E/{6E6A2E42-B241-FB2D-BABA-D16749174E9B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "526696767",
+      "Name": "Play_UI_SwitchSelection_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_SwitchSelection_01",
+      "GUID": "{C004F34A-6926-4C43-A541-3FA50FE8E8D8}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.060479168",
+      "DurationMax": "0.060479168",
+      "MediaRefs": [
+       {
+        "Id": "399754100"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D5840F7F-B0CF-5DA3-6000-99916432BBEF}"
+ }
+}

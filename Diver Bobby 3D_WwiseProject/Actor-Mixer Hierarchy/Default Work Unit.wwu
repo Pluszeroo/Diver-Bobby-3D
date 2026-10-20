@@ -37,6 +37,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -339,6 +344,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<SwitchContainer Name="Pufferfish" ID="{C78579C4-7228-40B8-8DD7-067C3A903EBC}" ShortID="220909617">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -603,6 +615,13 @@
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="Starfish" ID="{A9D5B9B8-3645-4878-86CE-2EA7C446E031}" ShortID="186193853">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -1069,9 +1088,42 @@
 												<ItemRef Name="Num_Starfish" ID="{3175EBA7-7380-4CC6-A403-27CD5EE6B689}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Num" ID="{9A02BF15-6DE1-405A-A9E5-09303AB64664}"/>
+												<ItemList>
+													<ItemRef Name="Num_Starfish" ID="{3175EBA7-7380-4CC6-A403-27CD5EE6B689}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Mur" ID="{AD85D462-8BD7-42CD-A165-E41939183A2C}"/>
+												<ItemList>
+													<ItemRef Name="Mur_Starfish" ID="{56C1148E-647A-48F1-8C62-4AF09EE34D08}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Evil" ID="{48C70E65-890D-4C43-8355-BBD9FF57E319}"/>
+												<ItemList>
+													<ItemRef Name="Evil_Starfish" ID="{A10CEB4A-538D-4FF9-8827-7A40CF8DB59B}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Pain" ID="{E89EF091-2ECA-499A-A2F1-12E68C92D928}"/>
+												<ItemList>
+													<ItemRef Name="Pain_Starfish" ID="{31A0B735-FBAB-4873-B3F4-FB84CA6D9765}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="Scientish" ID="{4AC40BDD-5680-4A06-8DF3-4585966D7649}" ShortID="768486054">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -1640,6 +1692,13 @@
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="Lumpfish" ID="{A1053CDF-F529-45F6-BCB1-A0D975C3143E}" ShortID="950523028">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -1922,6 +1981,13 @@
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="Napoleon" ID="{047CC5D6-3DB3-4F71-A9DF-516F1A22657F}" ShortID="71704639">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -2205,6 +2271,13 @@
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="Shellfish" ID="{E0BEE165-3F2F-4854-A0D3-DD296394F82B}" ShortID="634142089">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -2521,6 +2594,18 @@
 												<SwitchRef Name="Angry" ID="{EF72A03F-A48E-49AA-976E-2D840C407D7D}"/>
 												<ItemList>
 													<ItemRef Name="Angry_Shellfish" ID="{53ABB5EF-6D83-4D3F-AAA5-143CC62B0AF5}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Evil" ID="{48C70E65-890D-4C43-8355-BBD9FF57E319}"/>
+												<ItemList>
+													<ItemRef Name="Evil_Shellfish" ID="{944738EF-D8BE-40F1-B45B-A5072CA71432}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Thinking" ID="{9E7BD3A0-30E7-4C40-90CC-8D0D777828FD}"/>
+												<ItemList>
+													<ItemRef Name="Thinking_Shellfish" ID="{586309CC-410C-4D27-9E9C-492F5E8C9914}"/>
 												</ItemList>
 											</Grouping>
 										</GroupingList>
@@ -2999,9 +3084,36 @@
 												<ItemRef Name="Normal_Goldfish" ID="{80DFBAC8-4051-4C51-AF64-56183FCE611D}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Singing" ID="{547F1763-9F04-46B1-BD0A-D089F64A1BAA}"/>
+												<ItemList>
+													<ItemRef Name="Singing_Goldfish" ID="{C2933347-F021-4289-96C4-F7E72FD11F3F}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Happy" ID="{8C2C9B8D-FB1F-47A0-9F56-FA70A1BE59F2}"/>
+												<ItemList>
+													<ItemRef Name="Happy_Goldfish" ID="{7995F252-2D48-4373-A902-55C1EC37C076}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Normal" ID="{75CABB8F-0577-4390-86C2-BDF4398F1E68}"/>
+												<ItemList>
+													<ItemRef Name="Normal_Goldfish" ID="{80DFBAC8-4051-4C51-AF64-56183FCE611D}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
 								<SwitchContainer Name="Bobby" ID="{C72D6EC9-19DE-45F4-A507-E0E0E5F41774}" ShortID="612216614">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -3537,6 +3649,32 @@
 												<ItemRef Name="Mock_Bobby" ID="{8DE8A6DF-CD0C-428A-A783-D86F568DCEB3}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Shock" ID="{B797173C-DFBB-4B1F-9FBB-6BBADD44429A}"/>
+												<ItemList>
+													<ItemRef Name="Shock_Bobby" ID="{E04FC1D8-6DEC-4D96-A3BF-9E9370711C4F}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Mock" ID="{4858067E-23CE-4C6A-87BE-0F4CB904CD8B}"/>
+												<ItemList>
+													<ItemRef Name="Mock_Bobby" ID="{8DE8A6DF-CD0C-428A-A783-D86F568DCEB3}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Normal" ID="{75CABB8F-0577-4390-86C2-BDF4398F1E68}"/>
+												<ItemList>
+													<ItemRef Name="Normal_Bobby" ID="{72953072-71AA-4EA1-A147-1D7DE2D96EB0}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Begging" ID="{DB18A7F8-5BDD-4EC8-B0A0-F15CEA843C82}"/>
+												<ItemList>
+													<ItemRef Name="Begging_Bobby" ID="{BAAF7142-E1F9-4066-B970-6A26AEC50125}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
 							</ChildrenList>
@@ -3568,6 +3706,12 @@
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Bobby" ID="{A9116E05-96A6-46FC-A866-8804A5E85665}"/>
+										<ItemList>
+											<ItemRef Name="Bobby" ID="{C72D6EC9-19DE-45F4-A507-E0E0E5F41774}"/>
+										</ItemList>
+									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Pufferfish" ID="{31DB2F20-3968-4888-BD1B-4BE136376FD8}"/>
 										<ItemList>
@@ -3615,8 +3759,30 @@
 						</SwitchContainer>
 						<RandomSequenceContainer Name="Shellfish_Movement" ID="{14A43E04-8290-4A61-BB55-8ADB7CC7D400}" ShortID="871541157">
 							<PropertyList>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{08850C8C-6A5D-4EAD-8A80-C64726D7BF31}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1.5"/>
+													<Property Name="Min" Type="Real64" Value="-0.5"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3893,6 +4059,28 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Starfish_Cut_01" ID="{2E95A36B-A4AE-4730-BE67-348DD15B6720}" ShortID="681863343">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0982200B-EE0E-4C19-8089-6D9812DB0FD9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Starfish_Cut_01" ID="{36C632D1-6423-4820-AE73-953F554F9305}">
+									<Language>SFX</Language>
+									<AudioFile>Starfish_Cut_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="198506136"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Starfish_Cut_01" ID="{36C632D1-6423-4820-AE73-953F554F9305}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="UI" ID="{92697D46-CD3F-4BB0-9F59-99AB4B197E22}" ShortID="520028475">
@@ -3906,6 +4094,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="UI_MainMenu_Start" ID="{6BA66143-A894-4522-8248-46194491BF24}" ShortID="133790057">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
@@ -4013,6 +4208,50 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="UI_Paper_pop" ID="{02242490-700C-4AC1-BABE-775DB1F08150}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_SwitchSelection_01" ID="{27AB8364-656C-46D5-9DB6-C4260ABD242B}" ShortID="395334647">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0982200B-EE0E-4C19-8089-6D9812DB0FD9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_SwitchSelection_01" ID="{36E8BD0C-429F-406C-9F71-91CD831F2836}">
+									<Language>SFX</Language>
+									<AudioFile>UI_SwitchSelection_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="399754100"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_SwitchSelection_01" ID="{36E8BD0C-429F-406C-9F71-91CD831F2836}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_SwitchSelection_02" ID="{A1C4DC19-747B-48A4-8457-9A872A6CDDDC}" ShortID="647414613">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0982200B-EE0E-4C19-8089-6D9812DB0FD9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_SwitchSelection_02" ID="{6ECB546D-761C-4F93-BD08-480E0466ECE7}">
+									<Language>SFX</Language>
+									<AudioFile>UI_SwitchSelection_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="661278148"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_SwitchSelection_02" ID="{6ECB546D-761C-4F93-BD08-480E0466ECE7}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -4697,28 +4936,6 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Item_Pick+Put_Gloves" ID="{7BD51D1A-5507-47E5-A326-1EC45CF1B03C}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Item_Pick+Put_GlassTank" ID="{EA676195-320C-4707-BC02-D2E4083C2D0D}" ShortID="500404437">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0982200B-EE0E-4C19-8089-6D9812DB0FD9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Item_Pick+Put_GlassTank" ID="{3DF06082-5591-4596-B8F3-5DC709C8BD4B}">
-									<Language>SFX</Language>
-									<AudioFile>Item_Pick+Put_GlassTank.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="173307065"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Item_Pick+Put_GlassTank" ID="{3DF06082-5591-4596-B8F3-5DC709C8BD4B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Item_PickUp_Coin" ID="{47765866-7629-46A2-8D7D-97AC6D2B40FC}" ShortID="652385095">

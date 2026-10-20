@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{93F54F8F-B807-41AE-8632-E6B577F52385}",
     "Language": "SFX",
-    "Hash": "{5DC6FAC3-AF07-4988-1636-8C34A78FBF59}",
+    "Hash": "{3BFEC145-8250-D742-9C67-84C5E0701EFE}",
     "ObjectPath": "Play_Shellfish_Movement",
     "ShortName": "Play_Shellfish_Movement",
     "Path": "Event/Play_Shellfish_Movement.bnk",
@@ -130,9 +130,7 @@
       "Name": "Play_Shellfish_Movement",
       "ObjectPath": "\\Events\\Default Work Unit\\NPC\\Play_Shellfish_Movement",
       "GUID": "{93F54F8F-B807-41AE-8632-E6B577F52385}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.14333333",
-      "DurationMax": "0.22083333",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "54281813"
@@ -175,6 +173,6 @@
     ]
    }
   ],
-  "FileHash": "{49A5B38A-28BA-E1DB-CD89-7F12E4B02B8A}"
+  "FileHash": "{9B284540-2214-1348-468B-5A110244A51C}"
  }
 }

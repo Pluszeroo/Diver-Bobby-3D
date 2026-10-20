@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "283247699",
+    "Type": "Event",
+    "GUID": "{7202567B-B947-4571-97BB-737B1A35405E}",
+    "Language": "SFX",
+    "Hash": "{DC749D79-B5AB-2CC2-29AA-BCE7E2F83A32}",
+    "ObjectPath": "Stop_Starfish_Cut_01",
+    "ShortName": "Stop_Starfish_Cut_01",
+    "Path": "Event/Stop_Starfish_Cut_01.bnk",
+    "Events": [
+     {
+      "Id": "283247699",
+      "Name": "Stop_Starfish_Cut_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\NPC\\Stop_Starfish_Cut_01",
+      "GUID": "{7202567B-B947-4571-97BB-737B1A35405E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F2307584-14FC-0864-3741-4526F6333488}"
+ }
+}

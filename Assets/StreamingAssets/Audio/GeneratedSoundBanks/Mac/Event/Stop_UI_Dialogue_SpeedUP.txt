@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1963659060	Stop_UI_Dialogue_SpeedUP			\Default Work Unit\Stop_UI_Dialogue_SpeedUP	
+

@@ -109,6 +109,46 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_Shellfish_Movement" ID="{50036911-FF0A-4A7C-BF00-28208FAFC547}">
+							<ChildrenList>
+								<Action Name="" ID="{C8A9A1E5-67FF-42CF-8AAF-722D68BF4188}" ShortID="448353943">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shellfish_Movement" ID="{14A43E04-8290-4A61-BB55-8ADB7CC7D400}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Starfish_Cut_01" ID="{A1C1D28C-02CA-47FE-9222-FCBD6D3F2A56}">
+							<ChildrenList>
+								<Action Name="" ID="{8C9EA165-51D4-4132-84F4-D8F709ADC3B5}" ShortID="3202884">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Starfish_Cut_01" ID="{2E95A36B-A4AE-4730-BE67-348DD15B6720}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Starfish_Cut_01" ID="{7202567B-B947-4571-97BB-737B1A35405E}">
+							<ChildrenList>
+								<Action Name="" ID="{27304BCE-5F01-465E-A000-666627737D79}" ShortID="232143651">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Starfish_Cut_01" ID="{2E95A36B-A4AE-4730-BE67-348DD15B6720}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{16ADD01E-0F82-472D-9CE4-75068FC81B78}" ShortID="296540277">
@@ -333,8 +373,45 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_UI_SwitchSelection_02" ID="{A5FDCD22-EBA0-4859-ACE9-652FB4FAE811}">
+							<ChildrenList>
+								<Action Name="" ID="{12D5FE75-5682-4B51-A2DD-8BD639A208AA}" ShortID="741001014">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SwitchSelection_02" ID="{A1C4DC19-747B-48A4-8457-9A872A6CDDDC}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_SwitchSelection_01" ID="{C004F34A-6926-4C43-A541-3FA50FE8E8D8}">
+							<ChildrenList>
+								<Action Name="" ID="{714D31BF-C451-4266-B3AA-E27F99FAA2C5}" ShortID="705956307">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SwitchSelection_01" ID="{27AB8364-656C-46D5-9DB6-C4260ABD242B}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Stop_UI_Dialogue_SpeedUP" ID="{020CC797-5849-4EE3-9E00-7206EDFE1FEB}">
+					<ChildrenList>
+						<Action Name="" ID="{E320E3FD-1852-4A2D-BEA9-7548F97FDB1E}" ShortID="289957446">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Dialogue_SpeedUP" ID="{D0D90455-9680-4F71-AB8D-83A92DC5E146}" WorkUnitID="{710ADDA8-E13F-4909-8691-1A3796A12F70}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

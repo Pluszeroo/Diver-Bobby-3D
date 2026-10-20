@@ -31,15 +31,21 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_NPC_VOICE = 253233444U;
         static const AkUniqueID PLAY_SHELLFISH_MOVEMENT = 77562218U;
+        static const AkUniqueID PLAY_STARFISH_CUT_01 = 2027875493U;
         static const AkUniqueID PLAY_SWIM_BOBBY = 3287540045U;
         static const AkUniqueID PLAY_UI_DIALOGUE_SPEEDUP = 141690214U;
         static const AkUniqueID PLAY_UI_MAINMENU_START = 907179948U;
         static const AkUniqueID PLAY_UI_MAP_OPEN = 3630763854U;
         static const AkUniqueID PLAY_UI_PAPER_POP = 3618020627U;
         static const AkUniqueID PLAY_UI_QUEST = 162630791U;
+        static const AkUniqueID PLAY_UI_SWITCHSELECTION_01 = 526696767U;
+        static const AkUniqueID PLAY_UI_SWITCHSELECTION_02 = 526696764U;
         static const AkUniqueID STOP_BUBBLES = 1962155989U;
         static const AkUniqueID STOP_FISH_BUBBLES = 653457998U;
         static const AkUniqueID STOP_NPC_VOICE = 123138974U;
+        static const AkUniqueID STOP_SHELLFISH_MOVEMENT = 3613868068U;
+        static const AkUniqueID STOP_STARFISH_CUT_01 = 283247699U;
+        static const AkUniqueID STOP_UI_DIALOGUE_SPEEDUP = 1963659060U;
     } // namespace EVENTS
 
     namespace STATES

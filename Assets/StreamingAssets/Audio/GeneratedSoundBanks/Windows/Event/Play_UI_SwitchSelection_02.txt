@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	526696764	Play_UI_SwitchSelection_02			\Default Work Unit\UI\Play_UI_SwitchSelection_02	
+

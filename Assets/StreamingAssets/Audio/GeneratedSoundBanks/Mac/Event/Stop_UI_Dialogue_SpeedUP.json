@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1963659060",
+    "Type": "Event",
+    "GUID": "{020CC797-5849-4EE3-9E00-7206EDFE1FEB}",
+    "Language": "SFX",
+    "Hash": "{0445A850-A50F-A51D-23CB-19B75B1709F8}",
+    "ObjectPath": "Stop_UI_Dialogue_SpeedUP",
+    "ShortName": "Stop_UI_Dialogue_SpeedUP",
+    "Path": "Event/Stop_UI_Dialogue_SpeedUP.bnk",
+    "Events": [
+     {
+      "Id": "1963659060",
+      "Name": "Stop_UI_Dialogue_SpeedUP",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_UI_Dialogue_SpeedUP",
+      "GUID": "{020CC797-5849-4EE3-9E00-7206EDFE1FEB}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6D22D8B2-5175-E26A-1F7F-4489E2C5FE35}"
+ }
+}

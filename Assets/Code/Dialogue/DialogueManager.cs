@@ -68,6 +68,10 @@ public class DialogueManager : MonoBehaviour
     }
 
     [SerializeField] private NPCVoice npcVoice;
+    [SerializeField] private AK.Wwise.Event skipSoundPlay;  
+    [SerializeField] private AK.Wwise.Event skipSoundStop;  
+    [SerializeField] private float skipSoundDelay = 0.15f; 
+    private bool skipSoundPlaying = false;
 
     private bool isHoldingSpace = false;
     private float spaceHoldTimer = 0f;
@@ -325,6 +329,14 @@ public class DialogueManager : MonoBehaviour
         spaceHoldTimer = 0f;
         UpdateSkipRing();
         if (skipProgressRoot != null) skipProgressRoot.SetActive(false);
+        StopSkipSound();
+    }
+
+    private void StopSkipSound()
+    {
+        if (!skipSoundPlaying) return;
+        UISound.PlayEvent(skipSoundStop);
+        skipSoundPlaying = false;
     }
 
     private void Update()
@@ -341,8 +353,15 @@ public class DialogueManager : MonoBehaviour
         spaceHoldTimer += Time.unscaledDeltaTime;
         UpdateSkipRing();
 
+        if (!skipSoundPlaying && spaceHoldTimer >= skipSoundDelay)
+        {
+            UISound.PlayEvent(skipSoundPlay);
+            skipSoundPlaying = true;
+        }
+
         if (spaceHoldTimer >= skipHoldDuration)
         {
+            StopSkipSound();
             skipFired = true;
             isHoldingSpace = false;
             spaceHoldTimer = 0f;

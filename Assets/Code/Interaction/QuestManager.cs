@@ -40,6 +40,10 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject mirrorLightRay;
     [SerializeField] private AK.Wwise.Event mirrorPlaceSound;
 
+    [Header("Audio")]     
+    [SerializeField] private AK.Wwise.Event giveSound;      
+    [SerializeField] private AK.Wwise.Event cutGuitarSound;
+
     [Header("Scale Puzzle")]
     [SerializeField] private ItemPlacement waterBottlePlacement;
     [SerializeField] private ItemPlacement glassBottlePlacement;
@@ -158,6 +162,7 @@ public class QuestManager : MonoBehaviour
                 //if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
 
                 //ItemHolder.Instance.Consume(ItemType.Jar);
+                UISound.PlayEvent(giveSound);
                 shellfish.SetActive(false);
                 SpawnShellInJar();
                 return true;
@@ -197,6 +202,7 @@ public class QuestManager : MonoBehaviour
             if (mirrorPlaced) { PlayDialogue(shellRouteLockedDialogue); return true; }
 
             ItemHolder.Instance.Consume(ItemType.ShellInJar);
+            UISound.PlayEvent(giveSound);
             starfishNormalRenderer.GetComponent<Animator>().enabled = false;
 
             giveStarfishDialogue.GetComponent<DialogueTrigger>().onEnd.AddListener(OnGiveStarfishDialogueEnd);
@@ -211,6 +217,7 @@ public class QuestManager : MonoBehaviour
         {
             if (spiralshell != null) spiralshell.SetActive(false);
             ItemHolder.Instance.Consume(ItemType.StarfishLeg);
+            UISound.PlayEvent(giveSound);
             PlayDialogue(makeScissorDialogue);
             return true;
         }
@@ -219,6 +226,7 @@ public class QuestManager : MonoBehaviour
         if (item == ItemType.Scissor && target.itemType == ItemType.Guitar)
         {
             ItemHolder.Instance.Consume(ItemType.Scissor);
+            UISound.PlayEvent(cutGuitarSound);
             PlayDialogue(cutGuitarDialogue);
             return true;
         }

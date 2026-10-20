@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	283247699	Stop_Starfish_Cut_01			\Default Work Unit\NPC\Stop_Starfish_Cut_01	
+

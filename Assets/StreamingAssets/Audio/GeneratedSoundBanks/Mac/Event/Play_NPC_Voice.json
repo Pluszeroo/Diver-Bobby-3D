@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D5B4737F-4D98-4EFD-8D3D-046275CF2513}",
     "Language": "SFX",
-    "Hash": "{F63E9169-FB08-8E1C-EE35-C8F1016DDA1A}",
+    "Hash": "{6BEC99B2-F9E3-3613-4860-F3D6F1258D1B}",
     "ObjectPath": "Play_NPC_Voice",
     "ShortName": "Play_NPC_Voice",
     "Path": "Event/Play_NPC_Voice.bnk",
@@ -23,6 +23,24 @@
       "ShortName": "Scientish_Sigh_02.wav",
       "Path": "Media/897637.wem",
       "CachePath": "25/{25DA52AE-B16A-8007-5D56-AD5BD38165E4}.wem"
+     },
+     {
+      "Id": "2209937",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Happy_02.wav",
+      "Path": "Media/2209937.wem",
+      "CachePath": "4A/{4A44D51F-EEC0-450A-6B8B-4F3B1DF35E79}.wem"
+     },
+     {
+      "Id": "16045710",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Happy_05.wav",
+      "Path": "Media/16045710.wem",
+      "CachePath": "F4/{F4A4219C-687B-F04A-D2C1-E3B60EEE3A92}.wem"
      },
      {
       "Id": "18182308",
@@ -79,6 +97,24 @@
       "CachePath": "F9/{F9A31009-004B-7246-BF5E-26A0E2313AD0}.wem"
      },
      {
+      "Id": "82412558",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Evil_01.wav",
+      "Path": "Media/82412558.wem",
+      "CachePath": "16/{169FD817-619F-9C27-303A-6DBF32FBC936}.wem"
+     },
+     {
+      "Id": "88186127",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Shock_05.wav",
+      "Path": "Media/88186127.wem",
+      "CachePath": "97/{97539ACF-95FF-C168-2A2C-1898A3EE57DA}.wem"
+     },
+     {
       "Id": "94796019",
       "Language": "SFX",
       "Streaming": "false",
@@ -86,6 +122,33 @@
       "ShortName": "Napoleon_Thinking_01.wav",
       "Path": "Media/94796019.wem",
       "CachePath": "37/{37E6497E-CAB7-8784-93F6-B98B5F00A3EE}.wem"
+     },
+     {
+      "Id": "122434421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Pain_01.wav",
+      "Path": "Media/122434421.wem",
+      "CachePath": "69/{694FFA5D-FE93-5812-0109-E973321B7A05}.wem"
+     },
+     {
+      "Id": "155787145",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Num_07.wav",
+      "Path": "Media/155787145.wem",
+      "CachePath": "08/{08E5F34A-1BF3-C240-5BE4-12BA116E6DDF}.wem"
+     },
+     {
+      "Id": "178272850",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Normal_01.wav",
+      "Path": "Media/178272850.wem",
+      "CachePath": "EE/{EE00AEEF-C798-1B2E-49D5-419450D444A2}.wem"
      },
      {
       "Id": "178588346",
@@ -115,6 +178,33 @@
       "CachePath": "53/{53E7A48A-19F8-A8F7-A8EA-6BE0E1F0B220}.wem"
      },
      {
+      "Id": "219200317",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Normal_02.wav",
+      "Path": "Media/219200317.wem",
+      "CachePath": "8A/{8A078F07-62FC-25A3-7AC8-2ABE79A065CA}.wem"
+     },
+     {
+      "Id": "242849367",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Mur_02.wav",
+      "Path": "Media/242849367.wem",
+      "CachePath": "05/{0507B650-EFE3-AA7A-50F9-5D4B39DDFDB6}.wem"
+     },
+     {
+      "Id": "243854425",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Thinking_01-01.wav",
+      "Path": "Media/243854425.wem",
+      "CachePath": "E4/{E4792E8E-8185-AB30-0BC6-A2456802E45C}.wem"
+     },
+     {
       "Id": "258376198",
       "Language": "SFX",
       "Streaming": "false",
@@ -140,6 +230,51 @@
       "ShortName": "Scientish_Happy_04.wav",
       "Path": "Media/267389385.wem",
       "CachePath": "84/{846D6268-C631-A1D7-D312-B4E93EC22C09}.wem"
+     },
+     {
+      "Id": "268259053",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Sing_07.wav",
+      "Path": "Media/268259053.wem",
+      "CachePath": "2B/{2BA7D2DA-4D48-C828-DFE6-94B5C9DDBCD8}.wem"
+     },
+     {
+      "Id": "275790332",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Happy_03.wav",
+      "Path": "Media/275790332.wem",
+      "CachePath": "0D/{0D5BC8AC-0939-0EE6-0608-81766E3950F8}.wem"
+     },
+     {
+      "Id": "275828723",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Beg_02.wav",
+      "Path": "Media/275828723.wem",
+      "CachePath": "F2/{F2AFF941-69B5-69A7-A4B4-227C029C857D}.wem"
+     },
+     {
+      "Id": "281563347",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Nromal_01.wav",
+      "Path": "Media/281563347.wem",
+      "CachePath": "4F/{4FAFC470-82BB-745B-B659-3BE935B1F975}.wem"
+     },
+     {
+      "Id": "282784352",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Num_04.wav",
+      "Path": "Media/282784352.wem",
+      "CachePath": "8E/{8EB60F31-7847-D1BD-5E0B-819D7E25D586}.wem"
      },
      {
       "Id": "291614046",
@@ -178,6 +313,24 @@
       "CachePath": "91/{919EFDD0-4703-B082-EE18-49544B9494EE}.wem"
      },
      {
+      "Id": "340487496",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Mur_04.wav",
+      "Path": "Media/340487496.wem",
+      "CachePath": "41/{41AB3709-9BB5-C070-CBE2-455CA5AA59FA}.wem"
+     },
+     {
+      "Id": "344008250",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Shock_04.wav",
+      "Path": "Media/344008250.wem",
+      "CachePath": "EA/{EA34EFFD-7AF0-F86E-FE4D-2658F172EFD0}.wem"
+     },
+     {
       "Id": "344956170",
       "Language": "SFX",
       "Streaming": "false",
@@ -214,6 +367,33 @@
       "CachePath": "75/{75FAF6EB-5814-9459-4894-E85DAEFE1B41}.wem"
      },
      {
+      "Id": "386782240",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Num_03.wav",
+      "Path": "Media/386782240.wem",
+      "CachePath": "F6/{F677C779-4190-85B7-237E-C426C32D3F33}.wem"
+     },
+     {
+      "Id": "427605001",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Thinking_06.wav",
+      "Path": "Media/427605001.wem",
+      "CachePath": "A6/{A6595B9D-30D4-85E7-E986-7AB8561A5FF8}.wem"
+     },
+     {
+      "Id": "434388759",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Sing_02.wav",
+      "Path": "Media/434388759.wem",
+      "CachePath": "F3/{F34BA8AF-F74A-EF43-9EBE-FBDEB11D25AA}.wem"
+     },
+     {
       "Id": "443861878",
       "Language": "SFX",
       "Streaming": "false",
@@ -230,6 +410,24 @@
       "ShortName": "Lumpfish_Singing_02.wav",
       "Path": "Media/452043734.wem",
       "CachePath": "2D/{2D4AE5DE-01CA-6598-FCD2-F2495F273852}.wem"
+     },
+     {
+      "Id": "456130670",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Mur_01.wav",
+      "Path": "Media/456130670.wem",
+      "CachePath": "C6/{C6A92C8F-D36F-6088-FF07-366D5ADF5D2E}.wem"
+     },
+     {
+      "Id": "460747039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Mock_01.wav",
+      "Path": "Media/460747039.wem",
+      "CachePath": "6D/{6D79BF3E-17FE-0307-78A9-948510028758}.wem"
      },
      {
       "Id": "460758529",
@@ -277,6 +475,24 @@
       "CachePath": "6E/{6E5D85F4-7E55-D0EB-7467-4F3F6E667946}.wem"
      },
      {
+      "Id": "483026653",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Nromal_03.wav",
+      "Path": "Media/483026653.wem",
+      "CachePath": "1F/{1FE11991-0933-C13F-1CC3-769216149274}.wem"
+     },
+     {
+      "Id": "499517297",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Sing_03.wav",
+      "Path": "Media/499517297.wem",
+      "CachePath": "C1/{C1AEEA94-FAF8-5441-6FA9-79231416FB75}.wem"
+     },
+     {
       "Id": "510674391",
       "Language": "SFX",
       "Streaming": "false",
@@ -284,6 +500,33 @@
       "ShortName": "Napoleon_Happy_05.wav",
       "Path": "Media/510674391.wem",
       "CachePath": "95/{95D80503-A566-1FE8-5552-967B7F917732}.wem"
+     },
+     {
+      "Id": "516008052",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Sing_06.wav",
+      "Path": "Media/516008052.wem",
+      "CachePath": "C4/{C48283D8-2F51-B9AA-BBE6-0FA93D680C29}.wem"
+     },
+     {
+      "Id": "522781171",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Beg_07.wav",
+      "Path": "Media/522781171.wem",
+      "CachePath": "98/{98C440B2-97B3-ADAB-0F4A-97776C81F0DF}.wem"
+     },
+     {
+      "Id": "546312976",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Beg_01.wav",
+      "Path": "Media/546312976.wem",
+      "CachePath": "62/{621281CA-314A-411C-63BE-CFB2EFF360DF}.wem"
      },
      {
       "Id": "548364010",
@@ -295,6 +538,15 @@
       "CachePath": "AE/{AE4D2C3F-5FB3-F7EA-F8D7-EAD639FC3DC7}.wem"
      },
      {
+      "Id": "551025920",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Mock_03.wav",
+      "Path": "Media/551025920.wem",
+      "CachePath": "DE/{DE3E644C-B636-43E4-D4A6-CBA1C19E791D}.wem"
+     },
+     {
       "Id": "557112180",
       "Language": "SFX",
       "Streaming": "false",
@@ -302,6 +554,42 @@
       "ShortName": "Lumpfish_Normal_02.wav",
       "Path": "Media/557112180.wem",
       "CachePath": "DC/{DC74E89C-A608-E534-EE6E-2300738512E3}.wem"
+     },
+     {
+      "Id": "572250871",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Nromal_05.wav",
+      "Path": "Media/572250871.wem",
+      "CachePath": "9A/{9A36AF63-3B7C-8E07-79F8-CA3180934F66}.wem"
+     },
+     {
+      "Id": "603237293",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Thinking_07.wav",
+      "Path": "Media/603237293.wem",
+      "CachePath": "E7/{E74614F0-4118-48AC-21FA-B2701507A44D}.wem"
+     },
+     {
+      "Id": "628268643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Shock_01.wav",
+      "Path": "Media/628268643.wem",
+      "CachePath": "C1/{C17B14A2-B3BD-B941-6CBC-BF93F044D0C8}.wem"
+     },
+     {
+      "Id": "632698050",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Normal_03.wav",
+      "Path": "Media/632698050.wem",
+      "CachePath": "EC/{ECBAB953-6D1C-D6B6-73CC-ED5E6BC914E7}.wem"
      },
      {
       "Id": "640627006",
@@ -313,6 +601,24 @@
       "CachePath": "92/{92CCDF6C-6651-F787-E178-96B149640467}.wem"
      },
      {
+      "Id": "641361591",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Sing_05.wav",
+      "Path": "Media/641361591.wem",
+      "CachePath": "76/{7632C50A-81C7-4A4A-20F3-2E3AFC2F1645}.wem"
+     },
+     {
+      "Id": "646148297",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Evil_02.wav",
+      "Path": "Media/646148297.wem",
+      "CachePath": "5C/{5C523615-3D65-F59F-0E68-049E01CC7191}.wem"
+     },
+     {
       "Id": "647773348",
       "Language": "SFX",
       "Streaming": "false",
@@ -322,6 +628,33 @@
       "CachePath": "31/{3129A03B-2DF7-BEBE-531F-AC813EDD4517}.wem"
      },
      {
+      "Id": "661825842",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Shock_06.wav",
+      "Path": "Media/661825842.wem",
+      "CachePath": "F4/{F4BFBDE1-DC4D-D505-F489-A7452C7D5432}.wem"
+     },
+     {
+      "Id": "663833603",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Evil_01.wav",
+      "Path": "Media/663833603.wem",
+      "CachePath": "77/{770B5DAB-B98D-F2CD-8EB7-C07B40C46C1F}.wem"
+     },
+     {
+      "Id": "669955695",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Thinking_05.wav",
+      "Path": "Media/669955695.wem",
+      "CachePath": "C5/{C514E7B8-5260-F383-1811-AFB53FEB2210}.wem"
+     },
+     {
       "Id": "678878708",
       "Language": "SFX",
       "Streaming": "false",
@@ -329,6 +662,15 @@
       "ShortName": "Pufferfish_Angry_08.wav",
       "Path": "Media/678878708.wem",
       "CachePath": "BA/{BA2CFC97-FE29-7915-9F07-154DAA37C8E8}.wem"
+     },
+     {
+      "Id": "683667020",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Pain_03.wav",
+      "Path": "Media/683667020.wem",
+      "CachePath": "80/{804E7F9E-97CB-269E-923A-185C965CF1B7}.wem"
      },
      {
       "Id": "685706608",
@@ -367,6 +709,15 @@
       "CachePath": "FF/{FF887B82-7E82-CA72-A0AC-A8BF3BEB8040}.wem"
      },
      {
+      "Id": "734527732",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Happy_04.wav",
+      "Path": "Media/734527732.wem",
+      "CachePath": "68/{6893C1F6-5F8D-2223-2F8D-FB0BB939E8CB}.wem"
+     },
+     {
       "Id": "734830642",
       "Language": "SFX",
       "Streaming": "false",
@@ -374,6 +725,15 @@
       "ShortName": "Napoleon_Thinking_05.wav",
       "Path": "Media/734830642.wem",
       "CachePath": "50/{50E18841-6584-2310-5F53-34338A3905EE}.wem"
+     },
+     {
+      "Id": "736442081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Normal_05.wav",
+      "Path": "Media/736442081.wem",
+      "CachePath": "4A/{4AA4E248-6F58-AEDA-82A6-F6DCEC1F18AB}.wem"
      },
      {
       "Id": "749808346",
@@ -394,6 +754,24 @@
       "CachePath": "08/{080F163F-3598-1CB6-B983-E2B3BC01EBDE}.wem"
      },
      {
+      "Id": "788178649",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Num_02.wav",
+      "Path": "Media/788178649.wem",
+      "CachePath": "5F/{5FA8256D-7661-9405-0768-501F1C8EC3D4}.wem"
+     },
+     {
+      "Id": "789080582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Nromal_02.wav",
+      "Path": "Media/789080582.wem",
+      "CachePath": "3A/{3AFCB035-6BF1-3F20-F008-CA40E5BBF0F1}.wem"
+     },
+     {
       "Id": "822583142",
       "Language": "SFX",
       "Streaming": "false",
@@ -403,6 +781,15 @@
       "CachePath": "0C/{0C8B3F1B-F1BF-8536-2296-2C045AB8F86A}.wem"
      },
      {
+      "Id": "829399238",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Evil_06.wav",
+      "Path": "Media/829399238.wem",
+      "CachePath": "EB/{EB8077D0-3005-94BB-DE76-39839B69A4FC}.wem"
+     },
+     {
       "Id": "834863079",
       "Language": "SFX",
       "Streaming": "false",
@@ -410,6 +797,24 @@
       "ShortName": "Scientish_Happy_07.wav",
       "Path": "Media/834863079.wem",
       "CachePath": "2C/{2C6963C3-B08E-A342-2922-F8C20480071B}.wem"
+     },
+     {
+      "Id": "841295871",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Evil_05.wav",
+      "Path": "Media/841295871.wem",
+      "CachePath": "F1/{F183C8BE-D716-450D-BBF8-8D703BB75869}.wem"
+     },
+     {
+      "Id": "860779871",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Num_01.wav",
+      "Path": "Media/860779871.wem",
+      "CachePath": "02/{021A3CF2-FC2E-62AA-20ED-9DF849D9C9D0}.wem"
      },
      {
       "Id": "864345297",
@@ -430,6 +835,15 @@
       "CachePath": "90/{902D5323-BBF0-28CC-79A0-FDE1931314A6}.wem"
      },
      {
+      "Id": "867927774",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Sing_04.wav",
+      "Path": "Media/867927774.wem",
+      "CachePath": "05/{052130B4-77A0-4818-3C60-1BE313FB1048}.wem"
+     },
+     {
       "Id": "889782592",
       "Language": "SFX",
       "Streaming": "false",
@@ -448,6 +862,69 @@
       "CachePath": "AC/{ACD762E4-1150-AA63-C4ED-FF497FB4E360}.wem"
      },
      {
+      "Id": "899617189",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Shock_02.wav",
+      "Path": "Media/899617189.wem",
+      "CachePath": "8B/{8BCF18BA-F0D1-AC5C-253F-E242356F10A3}.wem"
+     },
+     {
+      "Id": "901432214",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Shock_03.wav",
+      "Path": "Media/901432214.wem",
+      "CachePath": "56/{56E13AE1-020D-0164-CAE4-7BF92E799106}.wem"
+     },
+     {
+      "Id": "908168762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Num_06.wav",
+      "Path": "Media/908168762.wem",
+      "CachePath": "14/{1461B26D-F1D5-C5F0-F12D-6AE5895E0671}.wem"
+     },
+     {
+      "Id": "911266500",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Mur_03.wav",
+      "Path": "Media/911266500.wem",
+      "CachePath": "F1/{F17563BF-A23F-8915-F870-31570C13AC42}.wem"
+     },
+     {
+      "Id": "923024563",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Sing_01.wav",
+      "Path": "Media/923024563.wem",
+      "CachePath": "DC/{DCF02CA3-7248-A527-B24F-C2151D7114E5}.wem"
+     },
+     {
+      "Id": "943169753",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Evil_03.wav",
+      "Path": "Media/943169753.wem",
+      "CachePath": "E7/{E710CE7A-DF5E-158F-776E-482FFF28B4D9}.wem"
+     },
+     {
+      "Id": "951272941",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Nromal_04.wav",
+      "Path": "Media/951272941.wem",
+      "CachePath": "EA/{EAB934E8-B782-65E5-301B-CA1023378168}.wem"
+     },
+     {
       "Id": "952585574",
       "Language": "SFX",
       "Streaming": "false",
@@ -455,6 +932,51 @@
       "ShortName": "Scientish_Happy_01.wav",
       "Path": "Media/952585574.wem",
       "CachePath": "13/{13020FEF-8AE0-0EB8-11C0-81A80865C6EF}.wem"
+     },
+     {
+      "Id": "954283535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Evil_04.wav",
+      "Path": "Media/954283535.wem",
+      "CachePath": "54/{546B4C92-9D71-4003-226B-1752CFB5907E}.wem"
+     },
+     {
+      "Id": "958156049",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Happy_01.wav",
+      "Path": "Media/958156049.wem",
+      "CachePath": "6A/{6A9DEF20-11BE-1A64-343E-48B650D99328}.wem"
+     },
+     {
+      "Id": "960219352",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Beg_06.wav",
+      "Path": "Media/960219352.wem",
+      "CachePath": "03/{032C4A36-8A56-3609-B117-E404C735BC34}.wem"
+     },
+     {
+      "Id": "961873771",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Mock_02.wav",
+      "Path": "Media/961873771.wem",
+      "CachePath": "C6/{C67B15F5-0917-AA84-4F6D-51A5F238EB4D}.wem"
+     },
+     {
+      "Id": "976851339",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Mock_04.wav",
+      "Path": "Media/976851339.wem",
+      "CachePath": "FD/{FD730906-D110-0382-1B3E-165D4B637C69}.wem"
      },
      {
       "Id": "1000859079",
@@ -466,6 +988,15 @@
       "CachePath": "DA/{DA45651D-6FBF-67B2-8FDD-E6A6B956F867}.wem"
      },
      {
+      "Id": "1022229883",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Normal_04.wav",
+      "Path": "Media/1022229883.wem",
+      "CachePath": "C8/{C8234F8A-544B-1B39-058C-176D29162C6F}.wem"
+     },
+     {
       "Id": "1042405069",
       "Language": "SFX",
       "Streaming": "false",
@@ -475,6 +1006,15 @@
       "CachePath": "10/{10519E06-1ABC-BD8C-9743-3BA48388D64A}.wem"
      },
      {
+      "Id": "1050457498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Num_05.wav",
+      "Path": "Media/1050457498.wem",
+      "CachePath": "01/{01247D7B-B8EF-6E78-8123-CB603F7EC320}.wem"
+     },
+     {
       "Id": "1051705627",
       "Language": "SFX",
       "Streaming": "false",
@@ -482,6 +1022,42 @@
       "ShortName": "Pufferfish_Angry_02.wav",
       "Path": "Media/1051705627.wem",
       "CachePath": "4E/{4E7EEF5E-F825-9E9D-59D6-A98FE7954DC0}.wem"
+     },
+     {
+      "Id": "1053085488",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cat_Beg_03.wav",
+      "Path": "Media/1053085488.wem",
+      "CachePath": "D4/{D4E5BB52-71F8-30E9-5996-A520BBE41A97}.wem"
+     },
+     {
+      "Id": "1058756714",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shellfish_Evil_03.wav",
+      "Path": "Media/1058756714.wem",
+      "CachePath": "B0/{B0EFC5CB-B38B-C264-23E0-5AB7BEF8CD6A}.wem"
+     },
+     {
+      "Id": "1058878384",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Starfish_Pain_02.wav",
+      "Path": "Media/1058878384.wem",
+      "CachePath": "DE/{DE0D22F9-B8A6-8F47-8FD2-53F95BA0BB28}.wem"
+     },
+     {
+      "Id": "1063013996",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Goldfish_Normal_06.wav",
+      "Path": "Media/1063013996.wem",
+      "CachePath": "45/{45EBFE34-A59B-9AF9-2A8F-540018840C32}.wem"
      }
     ],
     "Events": [
@@ -491,9 +1067,120 @@
       "ObjectPath": "\\Events\\Default Work Unit\\NPC\\Play_NPC_Voice",
       "GUID": "{D5B4737F-4D98-4EFD-8D3D-046275CF2513}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
+      "DurationMin": "0.33341667",
       "DurationMax": "2.2543957",
       "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2695658327",
+         "Id": "2373367069",
+         "GUID": "{A9116E05-96A6-46FC-A866-8804A5E85665}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "2836875581",
+           "GUID": "{B797173C-DFBB-4B1F-9FBB-6BBADD44429A}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "88186127"
+           },
+           {
+            "Id": "344008250"
+           },
+           {
+            "Id": "628268643"
+           },
+           {
+            "Id": "661825842"
+           },
+           {
+            "Id": "899617189"
+           },
+           {
+            "Id": "901432214"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "3195758403",
+           "GUID": "{4858067E-23CE-4C6A-87BE-0F4CB904CD8B}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "460747039"
+           },
+           {
+            "Id": "551025920"
+           },
+           {
+            "Id": "961873771"
+           },
+           {
+            "Id": "976851339"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "1160234136",
+           "GUID": "{75CABB8F-0577-4390-86C2-BDF4398F1E68}",
+           "Default": "true"
+          },
+          "MediaRefs": [
+           {
+            "Id": "281563347"
+           },
+           {
+            "Id": "483026653"
+           },
+           {
+            "Id": "572250871"
+           },
+           {
+            "Id": "789080582"
+           },
+           {
+            "Id": "951272941"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "3678625172",
+           "GUID": "{DB18A7F8-5BDD-4EC8-B0A0-F15CEA843C82}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "275828723"
+           },
+           {
+            "Id": "522781171"
+           },
+           {
+            "Id": "546312976"
+           },
+           {
+            "Id": "960219352"
+           },
+           {
+            "Id": "1053085488"
+           }
+          ]
+         }
+        ]
+       },
        {
         "SwitchValue": {
          "GroupType": "Switch",
@@ -662,6 +1349,101 @@
         "SwitchValue": {
          "GroupType": "Switch",
          "GroupId": "2695658327",
+         "Id": "1328262521",
+         "GUID": "{89E59C2C-2AE0-4154-81B3-58240120D8F2}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "4177142508",
+           "GUID": "{547F1763-9F04-46B1-BD0A-D089F64A1BAA}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "268259053"
+           },
+           {
+            "Id": "434388759"
+           },
+           {
+            "Id": "499517297"
+           },
+           {
+            "Id": "516008052"
+           },
+           {
+            "Id": "641361591"
+           },
+           {
+            "Id": "867927774"
+           },
+           {
+            "Id": "923024563"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "1427264549",
+           "GUID": "{8C2C9B8D-FB1F-47A0-9F56-FA70A1BE59F2}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "2209937"
+           },
+           {
+            "Id": "16045710"
+           },
+           {
+            "Id": "275790332"
+           },
+           {
+            "Id": "734527732"
+           },
+           {
+            "Id": "958156049"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "1160234136",
+           "GUID": "{75CABB8F-0577-4390-86C2-BDF4398F1E68}",
+           "Default": "true"
+          },
+          "MediaRefs": [
+           {
+            "Id": "178272850"
+           },
+           {
+            "Id": "219200317"
+           },
+           {
+            "Id": "632698050"
+           },
+           {
+            "Id": "736442081"
+           },
+           {
+            "Id": "1022229883"
+           },
+           {
+            "Id": "1063013996"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2695658327",
          "Id": "308218583",
          "GUID": "{8DBC923C-C9E5-48CA-B837-71F1408084AA}"
         },
@@ -806,6 +1588,154 @@
            },
            {
             "Id": "751174860"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "4254973567",
+           "GUID": "{48C70E65-890D-4C43-8355-BBD9FF57E319}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "663833603"
+           },
+           {
+            "Id": "829399238"
+           },
+           {
+            "Id": "841295871"
+           },
+           {
+            "Id": "954283535"
+           },
+           {
+            "Id": "1058756714"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "1885240893",
+           "GUID": "{9E7BD3A0-30E7-4C40-90CC-8D0D777828FD}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "243854425"
+           },
+           {
+            "Id": "427605001"
+           },
+           {
+            "Id": "603237293"
+           },
+           {
+            "Id": "669955695"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2695658327",
+         "Id": "1406231147",
+         "GUID": "{AD67ABCE-9150-4066-BA3F-7D0A5A9520A5}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "712750159",
+           "GUID": "{9A02BF15-6DE1-405A-A9E5-09303AB64664}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "155787145"
+           },
+           {
+            "Id": "282784352"
+           },
+           {
+            "Id": "386782240"
+           },
+           {
+            "Id": "788178649"
+           },
+           {
+            "Id": "860779871"
+           },
+           {
+            "Id": "908168762"
+           },
+           {
+            "Id": "1050457498"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "712897227",
+           "GUID": "{AD85D462-8BD7-42CD-A165-E41939183A2C}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "242849367"
+           },
+           {
+            "Id": "340487496"
+           },
+           {
+            "Id": "456130670"
+           },
+           {
+            "Id": "911266500"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "4254973567",
+           "GUID": "{48C70E65-890D-4C43-8355-BBD9FF57E319}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "82412558"
+           },
+           {
+            "Id": "646148297"
+           },
+           {
+            "Id": "943169753"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3146275604",
+           "Id": "1996139369",
+           "GUID": "{E89EF091-2ECA-499A-A2F1-12E68C92D928}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "122434421"
+           },
+           {
+            "Id": "683667020"
+           },
+           {
+            "Id": "1058878384"
            }
           ]
          }
@@ -960,6 +1890,6 @@
     ]
    }
   ],
-  "FileHash": "{0E895393-25C6-300C-93A8-BEEADA7AA2F8}"
+  "FileHash": "{395E9F78-F5D9-2252-7451-F105448319E3}"
  }
 }

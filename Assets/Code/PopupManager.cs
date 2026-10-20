@@ -11,6 +11,10 @@ public class PopupManager : MonoBehaviour
     [Header("Tutorial")]
     public TutorialPopupManager _tutorialPopupManager;
 
+    [Header("Audio")]     
+    [SerializeField] private AK.Wwise.Event _scalePuzzleSound; 
+    [SerializeField] private AK.Wwise.Event _tutorialSound;
+
     private GameObject _currentPopUp;
 
     private void Awake()
@@ -35,6 +39,7 @@ public class PopupManager : MonoBehaviour
         BobbyGameState.Instance.SetBobbyState(BobbyState.Popup);
         _currentPopUp = _scalePuzzle;
         _currentPopUp.SetActive(true);
+        UISound.PlayEvent(_scalePuzzleSound);
     }
 
     public void PopupTutorialInstruction(Tutorial tutorial)
@@ -43,6 +48,7 @@ public class PopupManager : MonoBehaviour
         _currentPopUp = _tutorialPopupManager.gameObject;
         _currentPopUp.SetActive(true);
         _tutorialPopupManager.CurrentTutorial = tutorial;
+        UISound.PlayEvent(_tutorialSound);
     }
 
     public void ClosePopup()

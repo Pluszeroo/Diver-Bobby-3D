@@ -114,7 +114,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5a4973edae30a0408dd7c6364eeb1d06
     GuidInternal: 
-    m_lastTime: -8584092380118747267
+    m_lastTime: -8584091483462903171
     List:
     - name: Environment
       guid: 29394802ac32804da29e630dda956458
@@ -330,6 +330,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.4116875
       minDuration: 0.4116875
+    - name: Play_Item_PickUp_Coin
+      guid: a9550d5ddbda224ea17c7d18f80e0b45
+      id: 724628678
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_PickUp_Coin
+        ObjectType: 3
+        guid: a9550d5ddbda224ea17c7d18f80e0b45
+      Path: Events\Default Work Unit\Puzzle\Play_Item_PickUp_Coin
+      maxAttenuation: 0
+      maxDuration: 1.1739792
+      minDuration: 1.1739792
     - name: Play_Item_PickUp_Mirror_V2
       guid: fdf754fe8146244da6ec02fed20d39eb
       id: 3183585919
@@ -350,6 +370,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.52991664
       minDuration: 0.52991664
+    - name: Play_Item_PickUp_PlasticBag
+      guid: 7f93bb9647fa3348ab47acee7964b54e
+      id: 3675032351
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Puzzle
+        ObjectType: 4
+        guid: ef984261fc58ed439d1eec058d511433
+      - ElementName: Play_Item_PickUp_PlasticBag
+        ObjectType: 3
+        guid: 7f93bb9647fa3348ab47acee7964b54e
+      Path: Events\Default Work Unit\Puzzle\Play_Item_PickUp_PlasticBag
+      maxAttenuation: 0
+      maxDuration: 0.5800833
+      minDuration: 0.5800833
     - name: Play_Item_Placing_Mirror
       guid: bed736685b62214c98e70c22c56b8666
       id: 3724947980
@@ -446,7 +486,47 @@ MonoBehaviour:
       Path: Events\Default Work Unit\NPC\Play_NPC_Voice
       maxAttenuation: 0
       maxDuration: 2.2543957
+      minDuration: 0.33341667
+    - name: Play_Shellfish_Movement
+      guid: 8f4ff59307b8ae418632e6b577f52385
+      id: 77562218
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      - ElementName: Play_Shellfish_Movement
+        ObjectType: 3
+        guid: 8f4ff59307b8ae418632e6b577f52385
+      Path: Events\Default Work Unit\NPC\Play_Shellfish_Movement
+      maxAttenuation: 0
+      maxDuration: 0
       minDuration: 0
+    - name: Play_Starfish_Cut_01
+      guid: 8cd2c1a1ca02fe479222fcbd6d3f2a56
+      id: 2027875493
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      - ElementName: Play_Starfish_Cut_01
+        ObjectType: 3
+        guid: 8cd2c1a1ca02fe479222fcbd6d3f2a56
+      Path: Events\Default Work Unit\NPC\Play_Starfish_Cut_01
+      maxAttenuation: 0
+      maxDuration: 4.4053335
+      minDuration: 4.4053335
     - name: Play_Swim_Bobby
       guid: bdc7d107c6eba34fa4ce4ba1cacbee1e
       id: 3287540045
@@ -467,6 +547,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.0404149
       minDuration: 0.6338312
+    - name: Play_UI_Dialogue_SpeedUP
+      guid: b850ca27ff16414daf0f345dc5d30c2f
+      id: 141690214
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      - ElementName: Play_UI_Dialogue_SpeedUP
+        ObjectType: 3
+        guid: b850ca27ff16414daf0f345dc5d30c2f
+      Path: Events\Default Work Unit\UI\Play_UI_Dialogue_SpeedUP
+      maxAttenuation: 0
+      maxDuration: 0.87833333
+      minDuration: 0.87833333
     - name: Play_UI_MainMenu_Start
       guid: 29671d1dec692d4caabe683ffad37ac3
       id: 907179948
@@ -507,6 +607,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.78747916
       minDuration: 0.78747916
+    - name: Play_UI_Paper_pop
+      guid: e5cc340d3050144799d222d9bc46285f
+      id: 3618020627
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      - ElementName: Play_UI_Paper_pop
+        ObjectType: 3
+        guid: e5cc340d3050144799d222d9bc46285f
+      Path: Events\Default Work Unit\UI\Play_UI_Paper_pop
+      maxAttenuation: 0
+      maxDuration: 0.62291664
+      minDuration: 0.62291664
     - name: Play_UI_Quest
       guid: 29aaa8ac043be249932f9cb469dbbd8e
       id: 162630791
@@ -527,6 +647,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.5516666
       minDuration: 1.5516666
+    - name: Play_UI_SwitchSelection_01
+      guid: 4af304c02669434ca5413fa50fe8e8d8
+      id: 526696767
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      - ElementName: Play_UI_SwitchSelection_01
+        ObjectType: 3
+        guid: 4af304c02669434ca5413fa50fe8e8d8
+      Path: Events\Default Work Unit\UI\Play_UI_SwitchSelection_01
+      maxAttenuation: 0
+      maxDuration: 0.060479168
+      minDuration: 0.060479168
+    - name: Play_UI_SwitchSelection_02
+      guid: 22cdfda5a0eb5948ace9652fb4fae811
+      id: 526696764
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: UI
+        ObjectType: 4
+        guid: c820856c030ed049ac788876af184ad3
+      - ElementName: Play_UI_SwitchSelection_02
+        ObjectType: 3
+        guid: 22cdfda5a0eb5948ace9652fb4fae811
+      Path: Events\Default Work Unit\UI\Play_UI_SwitchSelection_02
+      maxAttenuation: 0
+      maxDuration: 0.29921874
+      minDuration: 0.29921874
     - name: Player
       guid: 1ed0ad16820f2d479ce475068fc81b78
       id: 1069431850
@@ -598,6 +758,83 @@ MonoBehaviour:
         ObjectType: 3
         guid: 966ef6113acc854d84b08017aba966af
       Path: Events\Default Work Unit\Environment\Stop_Fish_Bubbles
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_NPC_Voice
+      guid: c690764806cf8b4ba71098fdf6e62877
+      id: 123138974
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      - ElementName: Stop_NPC_Voice
+        ObjectType: 3
+        guid: c690764806cf8b4ba71098fdf6e62877
+      Path: Events\Default Work Unit\NPC\Stop_NPC_Voice
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Shellfish_Movement
+      guid: 116903500aff7c4abf0028208fafc547
+      id: 3613868068
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      - ElementName: Stop_Shellfish_Movement
+        ObjectType: 3
+        guid: 116903500aff7c4abf0028208fafc547
+      Path: Events\Default Work Unit\NPC\Stop_Shellfish_Movement
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Starfish_Cut_01
+      guid: 7b56027247b9714597bb737b1a35405e
+      id: 283247699
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 2a01fa21f9374d4081eb5c52bc7a1d4d
+      - ElementName: Stop_Starfish_Cut_01
+        ObjectType: 3
+        guid: 7b56027247b9714597bb737b1a35405e
+      Path: Events\Default Work Unit\NPC\Stop_Starfish_Cut_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_UI_Dialogue_SpeedUP
+      guid: 97c70c024958e34e9e007206edfe1feb
+      id: 1963659060
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a4973edae30a0408dd7c6364eeb1d06
+      - ElementName: Stop_UI_Dialogue_SpeedUP
+        ObjectType: 3
+        guid: 97c70c024958e34e9e007206edfe1feb
+      Path: Events\Default Work Unit\Stop_UI_Dialogue_SpeedUP
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -800,7 +1037,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 8572a870b6fefc4091b9285cfc8df495
     GuidInternal: 
-    m_lastTime: -8584092380118447638
+    m_lastTime: -8584091579778991912
     List:
     - name: Emotion
       guid: 334782bee8179b4fa4b13a11f0e8f2a7
@@ -833,6 +1070,38 @@ MonoBehaviour:
         - ElementName: Angry
           ObjectType: 10
           guid: 3fa072ef8ea4aa49976e2d840c407d7d
+      - name: Begging
+        guid: f8a718dbdd5bc84eb0a0f15cea843c82
+        id: 3678625172
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Begging
+          ObjectType: 10
+          guid: f8a718dbdd5bc84eb0a0f15cea843c82
+      - name: Evil
+        guid: 650ec7480d89434c8355bbd9ff57e319
+        id: 4254973567
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Evil
+          ObjectType: 10
+          guid: 650ec7480d89434c8355bbd9ff57e319
       - name: Happy
         guid: 8d9b2c8c1ffba0479f56fa70a1be59f2
         id: 1427264549
@@ -849,6 +1118,38 @@ MonoBehaviour:
         - ElementName: Happy
           ObjectType: 10
           guid: 8d9b2c8c1ffba0479f56fa70a1be59f2
+      - name: Mock
+        guid: 7e065848ce236a4c87be0f4cb904cd8b
+        id: 3195758403
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Mock
+          ObjectType: 10
+          guid: 7e065848ce236a4c87be0f4cb904cd8b
+      - name: Mur
+        guid: 62d485add78bcd42a165e41939183a2c
+        id: 712897227
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Mur
+          ObjectType: 10
+          guid: 62d485add78bcd42a165e41939183a2c
       - name: Normal
         guid: 8fbbca757705904386c2bdf4398f1e68
         id: 1160234136
@@ -865,6 +1166,38 @@ MonoBehaviour:
         - ElementName: Normal
           ObjectType: 10
           guid: 8fbbca757705904386c2bdf4398f1e68
+      - name: Num
+        guid: 15bf029ae16d5a40a9e509303ab64664
+        id: 712750159
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Num
+          ObjectType: 10
+          guid: 15bf029ae16d5a40a9e509303ab64664
+      - name: Pain
+        guid: 91f09ee8ca2e9a49a2f112e68c92d928
+        id: 1996139369
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Emotion
+          ObjectType: 11
+          guid: 334782bee8179b4fa4b13a11f0e8f2a7
+        - ElementName: Pain
+          ObjectType: 10
+          guid: 91f09ee8ca2e9a49a2f112e68c92d928
       - name: Shock
         guid: 3c1797b7bbdf1f4b9fbb6bbadd44429a
         id: 2836875581
@@ -947,6 +1280,22 @@ MonoBehaviour:
         guid: e90792ebbc19af4e85ac3dd74987da20
       Path: Switches\Default Work Unit\Fish
       values:
+      - name: Bobby
+        guid: 056e11a9a696fc46a8668804a5e85665
+        id: 2373367069
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8572a870b6fefc4091b9285cfc8df495
+        - ElementName: Fish
+          ObjectType: 11
+          guid: e90792ebbc19af4e85ac3dd74987da20
+        - ElementName: Bobby
+          ObjectType: 10
+          guid: 056e11a9a696fc46a8668804a5e85665
       - name: Goldfish
         guid: 2c9ce589e02a544181b358240120d8f2
         id: 1328262521
@@ -1111,7 +1460,7 @@ MonoBehaviour:
     m_lastTime: -8584104118019499031
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a000000140000001500000016000000370000003800000039000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000e0000000f00000014000000150000001600000027000000280000002a000000370000003800000039000000590000005a0000005c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{07D1C7BD-EBC6-4FA3-A4CE-4BA1CACBEE1E}",
     "Language": "SFX",
-    "Hash": "{11FDFCFE-5DCE-0334-3701-51607DD6B632}",
+    "Hash": "{2CE06ED3-7B93-80B0-C489-642FCD08C235}",
     "ObjectPath": "Play_Swim_Bobby",
     "ShortName": "Play_Swim_Bobby",
     "Path": "Event/Play_Swim_Bobby.bnk",
@@ -127,6 +127,6 @@
     ]
    }
   ],
-  "FileHash": "{15005FB2-2FBE-5C4F-1C06-C159C90F0ED0}"
+  "FileHash": "{C943B76B-0C24-F461-56D7-05738F553DA5}"
  }
 }

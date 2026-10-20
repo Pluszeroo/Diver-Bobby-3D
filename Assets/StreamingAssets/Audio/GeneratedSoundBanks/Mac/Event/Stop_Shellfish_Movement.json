@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3613868068",
+    "Type": "Event",
+    "GUID": "{50036911-FF0A-4A7C-BF00-28208FAFC547}",
+    "Language": "SFX",
+    "Hash": "{B8459AF1-994D-6D99-A106-A7BB188B5E14}",
+    "ObjectPath": "Stop_Shellfish_Movement",
+    "ShortName": "Stop_Shellfish_Movement",
+    "Path": "Event/Stop_Shellfish_Movement.bnk",
+    "Events": [
+     {
+      "Id": "3613868068",
+      "Name": "Stop_Shellfish_Movement",
+      "ObjectPath": "\\Events\\Default Work Unit\\NPC\\Stop_Shellfish_Movement",
+      "GUID": "{50036911-FF0A-4A7C-BF00-28208FAFC547}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{74904975-1417-61A5-968B-4074BF9D9A80}"
+ }
+}

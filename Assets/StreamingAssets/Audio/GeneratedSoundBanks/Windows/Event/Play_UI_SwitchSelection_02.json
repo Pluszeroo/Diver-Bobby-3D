@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "526696764",
+    "Type": "Event",
+    "GUID": "{A5FDCD22-EBA0-4859-ACE9-652FB4FAE811}",
+    "Language": "SFX",
+    "Hash": "{3A852C10-EE84-DD5C-5AA2-83AFE64CDDA9}",
+    "ObjectPath": "Play_UI_SwitchSelection_02",
+    "ShortName": "Play_UI_SwitchSelection_02",
+    "Path": "Event/Play_UI_SwitchSelection_02.bnk",
+    "Media": [
+     {
+      "Id": "661278148",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_SwitchSelection_02.wav",
+      "Path": "Media/661278148.wem",
+      "CachePath": "AC/{ACDB836C-A192-5A2D-4989-DC3D64949CF5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "526696764",
+      "Name": "Play_UI_SwitchSelection_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_SwitchSelection_02",
+      "GUID": "{A5FDCD22-EBA0-4859-ACE9-652FB4FAE811}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.29921874",
+      "DurationMax": "0.29921874",
+      "MediaRefs": [
+       {
+        "Id": "661278148"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0FC9568B-C70E-A213-4635-73E9869DF0A7}"
+ }
+}
