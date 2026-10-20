@@ -71,6 +71,19 @@ public class DialogueTrigger : MonoBehaviour
         return playOnce && hasPlayed;
     }
 
+    public void Lock()
+    {
+        playOnce = true;
+        hasPlayed = true;
+        playerInRange = false;
+        if (visualCue != null) visualCue.SetActive(false);
+
+        var dm = DialogueManager.GetInstance();
+        if (dm == null) return;
+        if (dm.closestTrigger == this) dm.closestTrigger = null;
+        if (dm.closestInteractTrigger == this) dm.closestInteractTrigger = null;
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))

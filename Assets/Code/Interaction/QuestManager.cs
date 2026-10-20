@@ -82,6 +82,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private DialogueTrigger shellfishMouth;
     [SerializeField] private DialogueTrigger shellfishCantCapture;
     [SerializeField] private TextAsset shellfishRescuedInk;
+    [SerializeField] private GameObject shellfishIntroTrigger;
 
     [SerializeField] private DialogueTrigger starfishMouth;
 
@@ -248,6 +249,8 @@ public class QuestManager : MonoBehaviour
     // Shellfish will showing up on starfish's position
     private void ReleaseShellfish()
     {
+        if (shellfishIntroTrigger != null) shellfishIntroTrigger.SetActive(false);
+
         // Starfish say goodbye
         Vector3 spot = starfish.transform.position;
         shellfish.transform.position = new Vector3(spot.x + positionOffset, spot.y, shellfish.transform.position.z);
@@ -361,6 +364,12 @@ public class QuestManager : MonoBehaviour
     {
         if (mirrorPlaced)
         {
+
+            foreach (DialogueTrigger t in starfish.GetComponentsInChildren<DialogueTrigger>(true))
+            {
+                t.Lock();
+            }
+
             starfishCrawlRenderer.GetComponent<Animator>().enabled = true;
             StartCoroutine(StarfishDisappearCoroutine());
         }

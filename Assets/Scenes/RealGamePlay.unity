@@ -7895,7 +7895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 0}
-  inkJSON: {fileID: 4900000, guid: 9a09b183bbb72a14faa93221feae59ae, type: 3}
+  inkJSON: {fileID: 4900000, guid: 3e3cad9fc046a3b4a99cb3936d1f4070, type: 3}
   onEnd:
     m_PersistentCalls:
       m_Calls:
@@ -54509,7 +54509,7 @@ Transform:
   m_GameObject: {fileID: 1167755123}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.19, y: 18.18, z: 0}
+  m_LocalPosition: {x: 13.67, y: 10.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -96778,6 +96778,7 @@ MonoBehaviour:
   shellfishMouth: {fileID: 1163556234}
   shellfishCantCapture: {fileID: 1474071743}
   shellfishRescuedInk: {fileID: 4900000, guid: 81cc6965907e5374cbe487ccabb8705f, type: 3}
+  shellfishIntroTrigger: {fileID: 1663699387}
   starfishMouth: {fileID: 66030613}
   positionOffset: 5
   <ClosestPlacement>k__BackingField: {fileID: 0}
