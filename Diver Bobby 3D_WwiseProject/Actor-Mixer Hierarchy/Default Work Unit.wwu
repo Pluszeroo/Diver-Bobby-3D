@@ -4097,7 +4097,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -4145,6 +4145,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="UI_Quest" ID="{54F91FCE-E1EE-434A-9247-D39FF0776DDC}" ShortID="414175995">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{632C01EE-C305-4782-AC2E-E523AD14977A}"/>
