@@ -15,7 +15,8 @@ public class NPCVoice : MonoBehaviour
 
     [Header("Wwise Events")]
     [SerializeField] private AK.Wwise.Event playVoice; 
-    [SerializeField] private AK.Wwise.Event stopVoice;  
+    [SerializeField] private AK.Wwise.Event stopVoice;
+    [SerializeField] private AK.Wwise.Event itemVoice;
 
     [Header("Speakers")]
     [SerializeField]
@@ -53,7 +54,14 @@ public class NPCVoice : MonoBehaviour
         if (stopVoice != null && stopVoice.IsValid()) stopVoice.Post(gameObject);
 
         Voice v = FindVoice(currentSpeaker);
-        if (v == null) return;
+        
+        if (v == null)
+        {
+            if (itemVoice == null || !itemVoice.IsValid()) return;
+            itemVoice.Post(gameObject);
+            return;
+        }
+
         if (playVoice == null || !playVoice.IsValid()) return;
 
         AkSoundEngine.SetSwitch("Fish", v.fishSwitch, gameObject);
