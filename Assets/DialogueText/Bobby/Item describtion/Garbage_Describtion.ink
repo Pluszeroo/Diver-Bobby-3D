@@ -1,1 +1,2 @@
-Japanese beer! Nothing beats it with yakitori at an izakaya! #speaker: Garbage
+I’ve heard there’s millions of these plastic bags in the ocean from that nice, old British man on TV. #speaker: Garbage
+I don’t understand why humans think they need them, they have perfectly good mouths to carry things. #speaker: Garbage
