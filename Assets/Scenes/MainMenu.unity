@@ -1775,8 +1775,8 @@ GameObject:
   - component: {fileID: 1277720638}
   - component: {fileID: 1277720637}
   - component: {fileID: 1277720636}
-  - component: {fileID: 1277720635}
   - component: {fileID: 1277720639}
+  - component: {fileID: 1277720640}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -1804,18 +1804,6 @@ RectTransform:
   m_AnchoredPosition: {x: -478.99997, y: -308.99997}
   m_SizeDelta: {x: 203.9, y: 70.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1277720635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277720633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07749dac4503234caae4b4a65cdd7be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1277720636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1860,9 +1848,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1277720635}
-        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 1277720640}
+        m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1938,6 +1926,18 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: de2481e4b8d0ded4b851beff7d9b39c0, type: 2}
+--- !u!114 &1277720640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277720633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcef9624d43f50a41ad596350e7ea025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1364163041
 GameObject:
   m_ObjectHideFlags: 0
