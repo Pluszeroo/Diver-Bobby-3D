@@ -1,1 +1,1 @@
-Japanese beer! Nothing beats it with yakitori at an izakaya! #speaker: Legs
+starfish legs. Sure, it'll grow back. But with all five gone, how's it supposed to get anywhere? #speaker: Legs

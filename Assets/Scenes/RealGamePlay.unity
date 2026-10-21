@@ -64298,7 +64298,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _animator: {fileID: 0}
-  playOnce: 1
+  playOnce: 0
   isInteractTrigger: 0
   isOnHitTrigger: 0
 --- !u!1001 &1163732463
