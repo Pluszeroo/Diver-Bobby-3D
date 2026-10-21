@@ -10,8 +10,6 @@ public class ScalePuzzle : MonoBehaviour
 
     [SerializeField] private Animator _scaleAnimator;
 
-    [SerializeField] private UISound _sound;
-
     private void LateUpdate()
     {
         if (IsCurrentFinished(_scaleAnimator) && _coinPlacement.Locked) _coinPlacement.Locked = false;
@@ -24,7 +22,6 @@ public class ScalePuzzle : MonoBehaviour
         _coinPlacement.Locked = true;
         _currentCoinCount++;
         _scaleAnimator.SetTrigger("Next Stage");
-        //_sound.Play();
 
         if (_currentCoinCount >= _coinRequirement)
         {
