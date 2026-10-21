@@ -9,11 +9,9 @@ But…but I like the colour… #speaker: Lump
 Hand them over, Lump! #speaker: Napoleon
 Did you find the balance in your life? #speaker: Napoleon
     *[Fun and Beer]
-        Cool #speaker: Napoleon
-        I’m smitten… Original KITTEN MITTENS! Now I can grip anything! #speaker: Napoleon
+        I’m smitten… Original KITTEN MITTENS! Now I can grip anything! #speaker: Bobby
         -> END
     *[Success for sure]
-        Nice #speaker: Napoleon
-        I’m smitten… Original KITTEN MITTENS! Now I can grip anything! #speaker: Napoleon
+        I’m smitten… Original KITTEN MITTENS! Now I can grip anything! #speaker: Bobby
         -> END
 -> END

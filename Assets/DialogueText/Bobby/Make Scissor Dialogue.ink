@@ -1,1 +1,1 @@
-It looks like I got the scissor
+Starfish legs scissors. Will these actually snip a guitar string, though?

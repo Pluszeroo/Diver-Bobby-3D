@@ -1,0 +1,1 @@
+You don't see crystals this sparkly very often. I really want to take it and give it to Eleni. #speaker: Bobby
