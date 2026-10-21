@@ -23,6 +23,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject spiralshell;
     [SerializeField] private GameObject mirrorObject;
 
+    [SerializeField] private Animator _guitarAnimator;
+
     [Header("Spawned Objects")]
     [SerializeField] private GameObject shellInJarObject;
     [SerializeField] private GameObject starfishLegObject;
@@ -227,8 +229,9 @@ public class QuestManager : MonoBehaviour
         if (item == ItemType.Scissor && target.itemType == ItemType.Guitar)
         {
             ItemHolder.Instance.Consume(ItemType.Scissor);
+            _guitarAnimator.SetTrigger("Cut Guitar");
             UISound.PlayEvent(cutGuitarSound);
-            PlayDialogue(cutGuitarDialogue);
+            //PlayDialogue(cutGuitarDialogue);
             return true;
         }
 
