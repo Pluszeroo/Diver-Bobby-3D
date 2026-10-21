@@ -996,7 +996,6 @@ GameObject:
   - component: {fileID: 2007492614}
   - component: {fileID: 2007492615}
   - component: {fileID: 2007492617}
-  - component: {fileID: 2007492616}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -1067,37 +1066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd688bc6f1a3b8547a65cc56ec0d9cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2007492616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007492612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22fd67cd9e137964486a397148ffb1f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 2007492614}
-  audioSource: {fileID: 2007492617}
-  playOnStart: 1
-  syncVideoToAudio: 1
-  onCutsceneFinished:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2007492615}
-        m_TargetAssemblyTypeName: CutSceneVideoController, Assembly-CSharp
-        m_MethodName: LoadGameplay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!82 &2007492617
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1108,8 +1076,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: deb158e9030940c419a877b17fdb89c0, type: 3}
-  m_Resource: {fileID: 8300000, guid: deb158e9030940c419a877b17fdb89c0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 208b9954709c8ce49bc9f84a2703648d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 208b9954709c8ce49bc9f84a2703648d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

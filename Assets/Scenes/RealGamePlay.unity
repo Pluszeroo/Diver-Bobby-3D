@@ -97184,7 +97184,7 @@ MonoBehaviour:
   itemVoice:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: b757aea06a25ede4196c15c1609373de, type: 2}
   voices:
   - speakerTag: Bobby
     fishSwitch: Bobby
