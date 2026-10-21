@@ -1,4 +1,4 @@
-It worked! I was right! I am still the smartest fish around! # speaker: Scientish Bobby # emotion: Happy
+It worked! I was right! I am still the smartest fish around! # speaker: Scientish
 I’m the one that made the scissors…but okay, sure. # speaker: Bobby # mood: Begging # emotion: Begging
 I have already figured out the next task. # speaker: Scientish
 It should be on your stone now. # speaker: Scientish

@@ -5,11 +5,15 @@ public class QuestListManager : MonoBehaviour
 {
     public static QuestListManager Instance;
 
+    [SerializeField] GameObject _scientishDialogue;
+
     [SerializeField] private GameObject _questCanvas;
     [SerializeField] private List<QuestEntry> _allQuestEntries;
     private Dictionary<QuestType, GameObject> _questDictionary = new();
 
     [SerializeField] private AK.Wwise.Event _openSound;
+
+    public bool TriggerEnding = false;
 
     private void Awake()
     {
@@ -57,10 +61,15 @@ public class QuestListManager : MonoBehaviour
     {
         if (!CanInteractWithQuestList()) return;
 
-        if (_questCanvas.activeSelf == true)
+        if (_questCanvas.activeSelf == true && !TriggerEnding)
         {
             BobbyGameState.Instance.SetBobbyState(BobbyState.Idle);
             _questCanvas.SetActive(false);
+        }
+        else if(_questCanvas.activeSelf == true && TriggerEnding)
+        {
+            _questCanvas.SetActive(false);
+            PlayDialogue(_scientishDialogue);
         }
         else
         {
@@ -82,5 +91,16 @@ public class QuestListManager : MonoBehaviour
             BobbyState.Popup => false,
             _ => throw new System.NotImplementedException(),
         };
+    }
+
+    private void PlayDialogue(GameObject dialogueObj)
+    {
+        if (dialogueObj == null) { Debug.Log("dialogueObj NULL"); return; }
+        var trigger = dialogueObj.GetComponent<DialogueTrigger>();
+        if (trigger == null) { Debug.Log("trigger NULL"); return; }
+        Debug.Log("PlayDialogue: playing " + dialogueObj.name + " ink=" + (trigger.inkJSON == null ? "NULL" : trigger.inkJSON.name));
+        Debug.Log("DialogueManager instance=" + (DialogueManager.GetInstance() == null ? "NULL" : "OK"));
+        DialogueManager.GetInstance().closestTrigger = trigger;
+        DialogueManager.GetInstance().EnterDialogueMode();
     }
 }

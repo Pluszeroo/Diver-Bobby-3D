@@ -19614,7 +19614,19 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 6ff70e98463fcb540b186e1ba9066c15, type: 3}
   onEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2060603684}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: GoToCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _animator: {fileID: 0}
   playOnce: 1
   isInteractTrigger: 0
@@ -65548,7 +65560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1167755125
 Transform:
   m_ObjectHideFlags: 0
@@ -86900,7 +86912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220291aae8aba914eb147e036670d62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scientishDialogue: {fileID: 0}
 --- !u!1 &1681610655
 GameObject:
   m_ObjectHideFlags: 0
@@ -108418,6 +108429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9baa694548c659346a776c122bc84efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scientishDialogue: {fileID: 347729006}
   _questCanvas: {fileID: 1922801211}
   _allQuestEntries:
   - {fileID: 2092710090}
@@ -108425,6 +108437,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 1e6396b1ddb3fbe4a9eaa580f44f6a37, type: 2}
+  TriggerEnding: 0
 --- !u!114 &2147461073
 MonoBehaviour:
   m_ObjectHideFlags: 0

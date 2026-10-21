@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public enum QuestStage
 {
     Intro, FreeExploring, MetNPC, InProgress, GotLegs, ScissorMade, Done
@@ -326,6 +327,11 @@ public class QuestManager : MonoBehaviour
     public void OnTutorialComplete()
     {
         PlayDialogue(_tutorialCompleteDialogue);
+    }
+    
+    public void GoToCredits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 
     public void SpawnShellInJar()
