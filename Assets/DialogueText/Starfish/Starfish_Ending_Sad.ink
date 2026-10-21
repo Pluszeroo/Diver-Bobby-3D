@@ -1,8 +1,8 @@
-What did I do to deserve this? The gods have been very unkind to me. I’ve been cursed. # speaker: Starfish Legless
-I’m so sorry... # speaker: Bobby mood: Begging
-Yes! The spot is finally mine. # speaker: Shellfish
-Divinity is mine! I rule the ocean! # speaker: Shellfish
-Enjoy it...whilst it lasts. Why would the gods do this to me?  # speaker: Starfish Legless
-Why must they do terrible things to good people... # speaker: Starfish Legless
-I didn’t know that would happen...How could you let me hurt that fish? # speaker: Bobby
-We did what we had to do. # speaker: Shellfish
+What did I do to deserve this? # speaker: Starfish Legless 
+I have accepted every gift from the gods. Disgusting gifts, smelly gifts, even inedible. I have been forsaken!! # speaker: Starfish Legless
+Wait! I didn’t mean…I didn’t think…Shellfish! # speaker: Bobby # mood: Shock # emotion: Shock
+Maniacal laughter* Yes! Now I will get all the gifts! Divinity is mine, finally! I am this ocean's chosen one! # speaker: Shellfish # emotion: Evil
+Enjoy it...whilst it lasts. Gods are fickle. You’ll be next! Next, I say!! # speaker: Starfish Legless
+I didn’t know that would happen...How could you let me hurt him!? You used me! Not very divine of you. # speaker: Bobby  # mood: Shock # emotion: Shock
+Why should he get everything!? While I survive on tiny plankton I can’t even see!? # speaker: Shellfish # emotion: Angry
+This is terrible. Though, that leg looks kinda sharp…not like he has any use of it anymore. # speaker: Shellfish # emotion: Thinking

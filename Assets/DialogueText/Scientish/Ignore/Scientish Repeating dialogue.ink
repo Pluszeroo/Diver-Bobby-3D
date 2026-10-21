@@ -3,7 +3,7 @@ VAR ShowStele = false
 -> main
 
 === main ===
-What can I do for you? #speaker: Scientish
+Get the tools you need to break this thing apart and get it out of here. My patience is running thin. #speaker: Scientish
     *[Let's talk!]
         -> convo
     *[Let me see the Stele]
@@ -14,5 +14,5 @@ What can I do for you? #speaker: Scientish
 
 === convo ===
 Hey! #speaker: Bobby
-Sup! #speaker: Scientish
+Stop. #speaker: Scientish
 -> END
