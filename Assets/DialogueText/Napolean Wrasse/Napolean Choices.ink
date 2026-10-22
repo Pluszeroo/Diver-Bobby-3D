@@ -9,9 +9,12 @@ But…but I like the colour… #speaker: Lump
 Hand them over, Lump! #speaker: Napoleon
 Did you find the balance in your life? #speaker: Napoleon
     *[Fun and Beer]
+        Let's grab a drink! #speaker: Bobby
+        I mean milk, of course.  #speaker: Bobby
         I’m smitten… Original KITTEN MITTENS! Now I can grip anything! #speaker: Bobby
         -> END
     *[Success for sure]
+        My Middle name actually is Success. #speaker: Bobby
         I’m smitten… Original KITTEN MITTENS! Now I can grip anything! #speaker: Bobby
         -> END
 -> END

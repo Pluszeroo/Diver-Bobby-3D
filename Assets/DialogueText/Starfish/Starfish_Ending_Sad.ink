@@ -5,4 +5,4 @@ Maniacal laughter* Yes! Now I will get all the gifts! Divinity is mine, finally!
 Enjoy it...whilst it lasts. Gods are fickle. You’ll be next! Next, I say!! # speaker: Starfish Legless
 I didn’t know that would happen...How could you let me hurt him!? You used me! Not very divine of you. # speaker: Bobby  # mood: Shock # emotion: Shock
 Why should he get everything!? While I survive on tiny plankton I can’t even see!? # speaker: Shellfish # emotion: Angry
-This is terrible. Though, that leg looks kinda sharp…not like he has any use of it anymore. # speaker: Shellfish # emotion: Thinking
+This is terrible. Though, that leg looks kinda sharp…not like he has any use of it anymore. # speaker: Bobby

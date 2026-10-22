@@ -7,3 +7,4 @@ Lump here doesn’t know the right balance to life. That’s why he can’t get 
 What contraption? #speaker: Bobby
 But nothing is more important than beer. #speaker: Lump # emotion: Singing
 You’ll never learn. You need to make money then you can have beer. #speaker: Napoleon
+Such an interesting question. I‘ll come back to talk to them later  #speaker: Bobby
