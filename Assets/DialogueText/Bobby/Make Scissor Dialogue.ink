@@ -1,1 +1,1 @@
-Starfish legs scissors. Will these actually snip a guitar string, though?
+Starfish legs scissors. Will these actually snip a guitar string, though? # speaker: Bobby

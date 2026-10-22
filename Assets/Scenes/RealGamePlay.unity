@@ -48485,13 +48485,13 @@ MonoBehaviour:
   _tutorialSprites:
   - Type: 0
     TuotorialImagesController:
-    - {fileID: 21300000, guid: f2ce3f5c586428b48bf337a555d15e73, type: 3}
-    - {fileID: 21300000, guid: 522df74c7daa4724dbca9a8996f1f86b, type: 3}
-    - {fileID: 21300000, guid: 44ab87909648c5d4e9a7c49f8affbb5f, type: 3}
+    - {fileID: 21300000, guid: 292ebaaeb53db4a43a43c06a103b936f, type: 3}
+    - {fileID: 21300000, guid: 4490c4d9636f21b4c9090e6d83e81e18, type: 3}
+    - {fileID: 21300000, guid: 46fa6b4aca3333c4c9620431ca0ae4ca, type: 3}
     TuotorialImagesKeyboard:
-    - {fileID: 21300000, guid: f83a143bca4622d4281e7bf23032a5f2, type: 3}
-    - {fileID: 21300000, guid: 5b74f95aac2c36644ab2edd53316ddb1, type: 3}
-    - {fileID: 21300000, guid: e2922427b2349354bae8897219cc6d1c, type: 3}
+    - {fileID: 21300000, guid: 79de938df3138b44a8dc2a8d42372795, type: 3}
+    - {fileID: 21300000, guid: 33a0433c3ad946340b92d80f2bdefe93, type: 3}
+    - {fileID: 21300000, guid: f77543548e9c105458fab6f5c6953308, type: 3}
   - Type: 1
     TuotorialImagesController:
     - {fileID: 21300000, guid: 291124cec6a8e1341ada218302bef0fe, type: 3}
