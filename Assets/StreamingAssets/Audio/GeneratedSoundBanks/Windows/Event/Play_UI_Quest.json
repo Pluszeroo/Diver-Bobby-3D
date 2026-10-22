@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{ACA8AA29-3B04-49E2-932F-9CB469DBBD8E}",
     "Language": "SFX",
-    "Hash": "{E94E86F7-79FF-6837-3EDA-EC078CA84CEF}",
+    "Hash": "{DE61233E-B6DE-1A99-F4EE-08F08A3E93FA}",
     "ObjectPath": "Play_UI_Quest",
     "ShortName": "Play_UI_Quest",
     "Path": "Event/Play_UI_Quest.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{2265DAB2-3E75-DC4A-94F2-628169E58BF7}"
+  "FileHash": "{3FC4F8D0-AF47-A1F9-7E28-53FAAC947977}"
  }
 }

@@ -3,7 +3,12 @@ guid: b1b145a063cb97b4a9deb2def063947d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bobby_Rig_02_Material.006
+    second: {fileID: 2100000, guid: bd22b6c6f1229c14f8983ece5ab9a174, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
