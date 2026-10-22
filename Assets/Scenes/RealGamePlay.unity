@@ -7612,7 +7612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _animator: {fileID: 0}
-  playOnce: 0
+  playOnce: 1
   isInteractTrigger: 0
   isOnHitTrigger: 0
 --- !u!1001 &66915196
@@ -32040,7 +32040,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8400006, y: 3.22, z: -25}
+  m_LocalPosition: {x: -9.000001, y: 53.550003, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40143,7 +40143,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2.5, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 1}
   m_Center: {x: 0, y: -0.22, z: 0}
 --- !u!114 &592141321
 MonoBehaviour:
@@ -40172,7 +40172,7 @@ Transform:
   m_GameObject: {fileID: 592141319}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.39, y: 9.98, z: -1.5539179}
+  m_LocalPosition: {x: 96.42, y: 9.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -50286,9 +50286,9 @@ RectTransform:
   - {fileID: 662423323}
   m_Father: {fileID: 1605015890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 66.666664, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812288468
@@ -58416,7 +58416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &999021439
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58481,7 +58481,7 @@ Transform:
   m_GameObject: {fileID: 999021438}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.84, y: 3.22, z: 0}
+  m_LocalPosition: {x: -3.87, y: 46.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -64954,9 +64954,9 @@ RectTransform:
   - {fileID: 996527742}
   m_Father: {fileID: 1605015890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 333.3333, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160667386
@@ -65621,7 +65621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1167755125
 Transform:
   m_ObjectHideFlags: 0
@@ -77346,7 +77346,7 @@ Transform:
   m_GameObject: {fileID: 1434920459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.84, y: 3.22, z: -25}
+  m_LocalPosition: {x: -9, y: 53.55, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77392,7 +77392,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 999021440}
+    TrackingTarget: {fileID: 1698685896}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -88129,7 +88129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1698685896
 Transform:
   m_ObjectHideFlags: 0
@@ -88908,9 +88908,9 @@ RectTransform:
   - {fileID: 1833759247}
   m_Father: {fileID: 1605015890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713491279
@@ -104875,6 +104875,7 @@ MonoBehaviour:
   starfishRetreatPoint: {fileID: 388910216}
   goodbyePhilosophyInk: {fileID: 4900000, guid: aedbbd352cdf6134384cc59a903d08f7, type: 3}
   goodbyeSadInk: {fileID: 4900000, guid: 2cbfe6255cb8d80468be6820ff0667fe, type: 3}
+  _starfishRepeatingDialogue: {fileID: 1643454618}
   shellfishMouth: {fileID: 1163556234}
   shellfishCantCapture: {fileID: 1474071743}
   shellfishRescuedInk: {fileID: 4900000, guid: 81cc6965907e5374cbe487ccabb8705f, type: 3}

@@ -26,6 +26,7 @@ public class QuestManager : MonoBehaviour
 
     [SerializeField] private Animator _guitarAnimator;
 
+
     [Header("Spawned Objects")]
     [SerializeField] private GameObject shellInJarObject;
     [SerializeField] private GameObject starfishLegObject;
@@ -80,6 +81,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private TextAsset goodbyePhilosophyInk;
     [SerializeField] private TextAsset goodbyeSadInk;
     //[SerializeField] private TextAsset starfishAfterPhilosophyInk;
+    [SerializeField] private GameObject _starfishRepeatingDialogue;
 
     [Header("Shellfish Goodbye")]
     [SerializeField] private DialogueTrigger shellfishMouth;
@@ -358,6 +360,7 @@ public class QuestManager : MonoBehaviour
         //starfish.transform.position = new Vector3(StarfishNewSpot.x, StarfishNewSpot.y, starfish.transform.position.z);
 
         //starfish.transform.position = starfishRetreatPoint.position;
+        _starfishRepeatingDialogue.SetActive(false);
         starfishMouth.inkJSON = mirrorPlaced ? goodbyePhilosophyInk : goodbyeSadInk;
         starfishMouth.onEnd.RemoveListener(OnStarfishGoodbyeEnd);
         starfishMouth.onEnd.AddListener(OnStarfishGoodbyeEnd);
