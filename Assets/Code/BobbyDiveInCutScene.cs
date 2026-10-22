@@ -7,6 +7,7 @@ public class BobbyDiveInCutScene : MonoBehaviour
     [SerializeField] private Transform _Bobby;
     [SerializeField] private GameObject _moveTutorial;
 
+
     public void SwitchToRealBobby()
     {
         _camera.Follow = _Bobby;
