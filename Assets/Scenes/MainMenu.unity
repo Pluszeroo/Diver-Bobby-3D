@@ -603,7 +603,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 975153472711588046, guid: 2def8a400878499439a12a1260ac8179, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1888858231}
+    - targetCorrespondingSourceObject: {fileID: 6373710881784345198, guid: 2def8a400878499439a12a1260ac8179, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1913431086}
+    - targetCorrespondingSourceObject: {fileID: 4050720912780618888, guid: 2def8a400878499439a12a1260ac8179, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1414707151}
   m_SourcePrefab: {fileID: 100100000, guid: 2def8a400878499439a12a1260ac8179, type: 3}
 --- !u!1 &172135847
 GameObject:
@@ -1047,12 +1056,17 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!1 &343613188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4050720912780618888, guid: 2def8a400878499439a12a1260ac8179, type: 3}
+  m_PrefabInstance: {fileID: 153306594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &435790291 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1245615711614033894, guid: 2def8a400878499439a12a1260ac8179, type: 3}
   m_PrefabInstance: {fileID: 153306594}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1913431084}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -2018,12 +2032,29 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4694705693548067316, guid: 2def8a400878499439a12a1260ac8179, type: 3}
   m_PrefabInstance: {fileID: 153306594}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 343613188}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1414707151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343613188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41e0bed7eceb41448cab427a9c79f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b757aea06a25ede4196c15c1609373de, type: 2}
+  minInterval: 0.08
 --- !u!1 &1469753937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2620,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1888858231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888858227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41e0bed7eceb41448cab427a9c79f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b757aea06a25ede4196c15c1609373de, type: 2}
+  minInterval: 0.08
+--- !u!1 &1913431084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6373710881784345198, guid: 2def8a400878499439a12a1260ac8179, type: 3}
+  m_PrefabInstance: {fileID: 153306594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1913431086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913431084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41e0bed7eceb41448cab427a9c79f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b757aea06a25ede4196c15c1609373de, type: 2}
+  minInterval: 0.08
 --- !u!1 &2012331451
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,6 @@ If I did, I’d stop and spend the rest of my days relaxing in the Red Sea. # sp
 But I know I can never stop, because we will never know everything. # speaker: Scientish
 ...yeah maybe she is wrong. # speaker: Bobby # mood: Begging # emotion:Begging
 If that’s how you feel then why do you want to help her? # speaker: Scientish
-Eleni is different…maybe other humans are too. # speaker: Bobby Bobby
-And if I don’t help her, she could lose faith in the world and become like the rest of them. # speaker: Bobby Bobby # mood: Begging
+Eleni is different…maybe other humans are too. # speaker: Bobby
+And if I don’t help her, she could lose faith in the world and become like the rest of them. # speaker: Bobby # mood: Begging
 I will bring her guitar back to her. # speaker: Bobby
